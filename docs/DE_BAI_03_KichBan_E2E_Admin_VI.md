@@ -2,7 +2,7 @@
 
 > **Nguồn:** `Kịch-bản-E2E-Test-Flow-Luồng-Admin.md`.
 > File gốc **đã là tiếng Việt**, nên đây không phải bản dịch mà là **bản chuẩn hoá để chạy được**: giữ nguyên 100% nội dung yêu cầu, thêm mã test case, checkbox thao tác, và bảng ghi kết quả (Actual / Pass-Fail / Bug-ID / Ảnh).
-> **Trạng thái: ĐÃ CHẠY XONG.** Giữ lại làm tham chiếu — các finding thu được nằm ở `04-findings-log.md` với prefix `E2E-`, và bộ sự kiện dựng ra trong lượt này là dữ liệu thử cho kịch bản B.
+> **Trạng thái: CHƯA CHẠY — giữ làm TÀI LIỆU THAM CHIẾU.** Kịch bản này mô tả chi tiết các chức năng phía admin của EMS, dùng để biết hệ thống có những widget gì khi thiết kế checklist và khi dựng dữ liệu thử. Không phải hạng mục chấm điểm của HW03.
 
 **WEB:** https://prod-dev.ems-fitus.cloud _(link ngrok ghi trong file gốc đã ngừng hoạt động — đã thay bằng link hiện hành)_
 **LƯU Ý:** Tài khoản dùng để test phải có role **ADMIN** trên hệ thống EMS.

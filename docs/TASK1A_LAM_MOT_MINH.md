@@ -2,7 +2,7 @@
 
 **Tình huống:** nhóm không làm phần checklist chung. Bạn tự làm để không bị kẹt bài của mình.
 **Điểm liên quan:** 15đ trực tiếp (Task 1A) **+ chặn 15đ** của Task 1B — không có checklist thì không chạy được gì.
-**Thời gian thực tế:** 2–2.5 giờ nếu làm theo đúng 6 bước dưới.
+**Thời gian thực tế:** ~3 giờ nếu làm theo đúng 6 bước dưới (trong đó 50 phút là khảo sát EMS — không bỏ qua được).
 **File sẽ điền:** `team/gui-checklist.md` · `team/references.md` · `team/ai-prompts.md`
 
 ---
@@ -53,20 +53,30 @@ Format cũ 5 cột (có cột "Cách kiểm") làm mỗi dòng dài gấp đôi,
 
 ## 3. Sáu bước làm — có hộp thời gian
 
-### Bước 1 · 20 phút — Khảo sát EMS để có nguyên liệu thật
+### Bước 1 · 50 phút — Khảo sát EMS để có nguyên liệu thật
 
-**Đây là bước quyết định chất lượng.** AI không nhìn thấy màn hình; checklist chỉ tốt bằng đúng mức chi tiết bạn mô tả cho nó.
+**Đây là bước quyết định chất lượng cả Task 1A.** AI không nhìn thấy màn hình; checklist chỉ tốt bằng đúng mức chi tiết bạn mô tả cho nó. Bỏ qua bước này thì 4 prompt ở Bước 3 sẽ cho ra toàn item chung chung, và bạn sẽ mất luôn phần "human review" — vốn là chỗ chấm nặng nhất.
 
-Mở EMS, đi qua các màn hình và **ghi lại danh sách widget thật** thấy được. Chú ý cả hai phía:
+> **Làm theo phiếu đã dựng sẵn: [`KHAO_SAT_EMS.md`](KHAO_SAT_EMS.md).**
+> Phiếu đó là dạng **điền vào chỗ trống** — mở song song với EMS, tick từng dòng, điền từng ô. Không phải nghĩ xem "cần ghi gì".
 
-| Phía | Widget cần ghi |
-|---|---|
-| User (kịch bản của bạn) | Carousel trang chủ · thẻ sự kiện · bộ lọc danh mục · ô tìm kiếm · banner trang chi tiết · nút Đăng ký ở các trạng thái khác nhau · thông báo waitlist · form chọn vai trò · dialog xác nhận · badge trạng thái đăng ký · mã QR/barcode · empty state khi chưa có đăng ký · công tắc EN/VI |
-| Admin (để checklist đủ dùng cho cả nhóm) | Upload thumbnail 4:3 + banner 24:9 · RichTextEditor · kéo-thả reorder · icon picker · toggle làm form hiện thêm trường · progress bar duyệt · 6 màu trạng thái participant · toast · export Excel |
+Phiếu gồm 7 phần, tổng ~50 phút:
 
-Bạn **đã chạy lượt E2E Admin** rồi nên phần admin có sẵn trong đầu — moi lại từ ghi chú và ảnh trong `evidence/e2e/`.
+| Phần | Nội dung | Thời gian |
+|---|---|---:|
+| 0 | Chuẩn bị: tài khoản user riêng, thư mục ảnh, quy ước đặt tên | 5' |
+| 1 | **Dựng 4 sự kiện dữ liệu thử** bằng quyền admin (còn chỗ / hết chỗ + waitlist / đã đóng đăng ký / đã ENDED) | 20' |
+| 2 | Khảo sát phía **user** — B1…B5, riêng B2/B3/B4 soi kỹ vì là màn chấm điểm | 25' |
+| 3 | Khảo sát phía **admin** — chỉ lấy danh mục widget để checklist dùng được cho cả nhóm | 15' |
+| 4 | **8 phép thử xuyên suốt** — i18n EN/VI, ngôn ngữ có được nhớ, zoom 200%, bề rộng 375px, mạng chậm, mã trạng thái nội bộ… | 10' |
+| 5 | **Danh mục widget** — khối văn bản dán thẳng vào prompt ở Bước 2 | — |
+| 6 | Quan sát nghi vấn `SV-xxx` — chụp ảnh ngay, kiểm chứng lại ở Task 1B | — |
 
-Ghi thành một danh sách gạch đầu dòng. Danh sách này là input cho Bước 2.
+**Ba điều dễ làm sai ở bước này:**
+
+1. **Có, phải chụp ảnh** — nhưng phân biệt rõ ba loại: ảnh tổng quan mỗi màn (để viết item mà không phải mở lại EMS) · ảnh widget lạ (nguyên liệu mô tả cho AI) · ảnh chỗ nghi ngờ có lỗi (bằng chứng, chụp ngay vì dữ liệu dev có thể reset). Ảnh khảo sát **không** dùng làm bằng chứng Task 1B — 1B đòi ảnh chụp trong lúc chạy checklist.
+2. **Phải khảo sát cả phía admin**, dù bạn chấm điểm phía user. Checklist là sản phẩm chung của cả nhóm, phải dùng được cho cả 4 kịch bản; chỉ khảo sát phía user thì checklist thiếu hẳn nhóm item upload / rich-text / kéo-thả và bạn không giải trình được với nhóm.
+3. **Phần 5 là sản phẩm thật của cả buổi.** Nếu khối đó còn chỗ `___` chưa điền thì quay lại EMS xem tiếp — đừng sang Bước 2 vội.
 
 ### Bước 2 · 15 phút — Nạp bối cảnh cho AI (chưa sinh item)
 
@@ -93,7 +103,7 @@ Checklist chia theo 4 khía cạnh:
 - IA-04 (prefix S-) feedback/state: toast, badge, dialog xác nhận, progress bar, màu trạng thái, real-time
 
 Đây là các widget THẬT tôi đã quan sát trên EMS:
-[DÁN DANH SÁCH TỪ BƯỚC 1]
+[DÁN KHỐI "DANH MỤC WIDGET" Ở PHẦN 5 CỦA KHAO_SAT_EMS.md]
 
 CHƯA sinh checklist. Hãy: (1) xác nhận bạn đã hiểu khung; (2) hỏi lại tôi những thông tin
 về SUT còn thiếu mà nếu có sẽ giúp checklist bám sát hệ thống này hơn.

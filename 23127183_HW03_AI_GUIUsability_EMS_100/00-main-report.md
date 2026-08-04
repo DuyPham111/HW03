@@ -10,17 +10,20 @@
 
 ---
 
-## 0. Chuẩn bị — Exploratory pass qua luồng E2E Admin
+## 0. Chuẩn bị — Khảo sát EMS trước khi thiết kế checklist
 
-> Ghi lại minh bạch: trước khi thiết kế checklist, đã chạy một lượt kịch bản `TC_E2E_ADMIN` (11 bước) trên phía quản trị. Đây **không** phải kết quả của Task nào trong HW03. Lượt chạy này phục vụ hai mục đích: (1) **thăm dò** để nắm widget và trạng thái thật của hệ thống trước khi thiết kế checklist; (2) **dựng dữ liệu thử** cho kịch bản B — dùng quyền admin tạo sẵn các sự kiện ở những trạng thái mà phía user cần để bộc lộ đủ giao diện: còn chỗ, hết chỗ + bật Waitlist, đã đóng đăng ký, và đã kết thúc.
+> Trước khi soạn checklist, tôi khảo sát trực tiếp EMS để lập **danh mục widget thật** của hệ thống. Lý do: checklist GUI sinh từ mô tả chung chung sẽ cho ra item chung chung — chất lượng checklist tỉ lệ thuận với mức chi tiết của khảo sát này. Trong cùng lượt khảo sát, tôi dùng quyền admin **dựng sẵn dữ liệu thử** để ba màn hình B2/B3/B4 bộc lộ đủ trạng thái khi chạy Task 1B, 2 và 3.
 
 | Chỉ số | Giá trị |
 |---|---|
-| Số bước E2E đã chạy | _(TODO)_ / 11 |
-| Số phát hiện ghi nhận (prefix `E2E-`) | _(TODO)_ |
-| Bằng chứng | `evidence/e2e/` |
+| Ngày khảo sát | _(TODO)_ |
+| Số màn hình đã đi qua (user / admin) | _(TODO)_ / _(TODO)_ |
+| Số widget ghi nhận vào danh mục | _(TODO)_ |
+| Số quan sát nghi vấn ghi lại (prefix `SV-`) | _(TODO)_ |
+| Sự kiện dữ liệu thử đã dựng | _(TODO)_ / 4 |
+| Bằng chứng | `evidence/survey/` · phiếu khảo sát đã điền: `docs/KHAO_SAT_EMS.md` |
 
-**Những quan sát GUI thu được từ lượt này đã dẫn tới item checklist nào:**
+**Những quan sát thu được từ khảo sát đã dẫn tới item checklist nào** — đây là bằng chứng cho phần *human review* của Task 1A: các item này được thêm vì **đã thấy thật trên hệ thống**, không phải vì AI gợi ý.
 
 | Quan sát trên EMS | Màn hình | Dẫn tới item checklist |
 |---|---|---|
@@ -158,7 +161,7 @@ _(cấu trúc như trên)_
 | Checklist execution | `CL-` | | | |
 | User testing | `US-` | | | |
 | Cross-platform | `CP-` | | | |
-| E2E admin (exploratory) | `E2E-` | | | |
+| Khảo sát EMS | `SV-` | | | |
 | **Tổng** | | | | |
 
 Toàn bộ đã được submit lên Google Form (https://forms.gle/CJQFQCAXcsDbXDMM9) bằng email `pvnduy23@clc.fitus.edu.vn` và hợp nhất tại `04-findings-log.md`.

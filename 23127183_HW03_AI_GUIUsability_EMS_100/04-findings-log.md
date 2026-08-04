@@ -16,7 +16,7 @@
 | `CL-` | Từ việc chạy checklist GUI trên các màn hình | 1B |
 | `US-` | Từ 5 phiên user testing | 2 |
 | `CP-` | Từ chạy cross-browser / cross-platform | 3 |
-| `E2E-` | Từ lượt chạy E2E Admin (exploratory pass — đã hoàn thành trước khi làm HW03) | phụ trợ |
+| `SV-` | Từ lượt khảo sát EMS ban đầu, trước khi thiết kế checklist | phụ trợ |
 
 ## Thang Severity
 
@@ -38,7 +38,7 @@
 | CL-002 | | Usability | | | | | | |
 | US-001 | | | | | | | | |
 | CP-001 | | | | | | | | |
-| E2E-001 | | | | | | | | |
+| SV-001 | | | | | | | | |
 
 > **Cột bắt buộc theo đề:** *ID · Scenario/Screen · Type (Bug \| Usability) · Description · Steps/Heuristic · Severity · Suggested fix · Screenshot ref · Form-submission timestamp.*
 > **Timestamp** ghi theo thời điểm bấm Submit trên Google Form (định dạng `YYYY-MM-DD HH:MM`), để đối chiếu được với bản ghi của TA.
@@ -79,7 +79,7 @@
 | `CL-` Checklist | | | | |
 | `US-` User testing | | | | |
 | `CP-` Cross-platform | | | | |
-| `E2E-` Exploratory | | | | |
+| `SV-` Khảo sát | | | | |
 | **Tổng** | | | | |
 
 ### Theo severity

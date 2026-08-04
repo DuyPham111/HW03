@@ -74,7 +74,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
     ├── task1b/ ...................... ảnh — chỉ cho item Failed
     ├── task2/ ....................... transcript 5 phiên + link bản ghi màn hình
     ├── task3/ ....................... ảnh mọi ô ma trận, có overlay MSSV
-    └── e2e/ ......................... ảnh lượt E2E Admin (exploratory, đã xong)
+    └── survey/ ...................... ảnh khảo sát EMS ban đầu
 ```
 
 | Hạng mục chấm | File chính |
@@ -143,7 +143,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 | Checklist execution | `CL-` | | | | |
 | User testing | `US-` | | | | |
 | Cross-platform | `CP-` | | | | |
-| E2E admin (exploratory) | `E2E-` | | | | |
+| Khảo sát EMS | `SV-` | | | | |
 | **Tổng** | | | | | |
 
 > Số dòng trong `04-findings-log.md` **phải bằng** số lần submit Google Form — TA đối chiếu chéo.

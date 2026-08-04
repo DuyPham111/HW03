@@ -334,7 +334,7 @@ Ba cách overlay email `pvnduy23@clc.fitus.edu.vn`, ưu tiên từ trên xuống
 | `CL-` | Chạy checklist (hạng mục 1B) |
 | `US-` | 5 phiên user testing (hạng mục 2) |
 | `CP-` | Cross-platform (hạng mục 3) |
-| `E2E-` | Lượt chạy E2E Admin trước đó |
+| `SV-` | Khảo sát EMS ban đầu (trước khi thiết kế checklist) |
 
 **9 cột bắt buộc theo đề:**
 `ID · Scenario/Screen · Type (Bug \| Usability) · Description · Steps/Heuristic · Severity · Suggested fix · Screenshot ref · Form-submission timestamp`

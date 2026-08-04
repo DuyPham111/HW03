@@ -17,11 +17,10 @@ git push
 
 - [x] `chore(repo): scaffold HW03 submission structure for scenario B` ← đã push
 - [ ] `docs(repo): lock team assignment and screen split for 5-member group`
-- [ ] `docs(repo): record EMS survey notes and test data fixtures for scenario B`
+- [ ] `docs(task1a): add EMS survey notes, widget inventory and test fixtures`
 
 ## Giai đoạn 1 — Task 1A · Checklist chung (15đ)
 
-- [ ] `docs(task1a): add EMS widget survey as checklist input`
 - [ ] `docs(task1a): generate IA-01 general UI items from AI draft`
 - [ ] `docs(task1a): generate IA-02 form items from AI draft`
 - [ ] `docs(task1a): generate IA-03 navigation items from AI draft`

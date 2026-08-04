@@ -138,6 +138,29 @@ Viết thành bug entry cho 04-findings-log.md, mỗi entry một block:
 | Chạy phiên | — | **Toàn bộ.** AI không tham gia được phần này |
 | Phân tích | Cấu trúc hoá ghi chú thô thành bảng dòng thời gian · tính SUS · gom pain point · gợi ý severity | **Kiểm verbatim có bị "làm mượt" không** · tự tính tay 1 phiếu SUS · chốt severity |
 
+## ⚠️ Về việc dùng Maze (như phiên bạn từng tham gia với tư cách người test)
+
+Bạn đã trải nghiệm phía *người được test* qua link Maze, và muốn chạy 5 phiên của mình theo cách đó. Được — nhưng **Maze thuần một mình KHÔNG đủ để lấy điểm Task 2**.
+
+Lý do: đề Phase 2 yêu cầu tường minh **moderated** — *"Run sessions — moderated, think-aloud, observe neutrally"*, *"ask them to think aloud"*, *"Record the screen (and audio, with consent) and take structured notes on friction points, errors, hesitations, and verbalised frustration"*. Maze là công cụ **unmoderated remote**: nó đo được click và thời gian, nhưng không có ai ngồi đó nghe người dùng **nói ra** vì sao họ phân vân — mà đúng cái "verbalised frustration" ấy mới là dữ liệu đề đòi.
+
+**Cách làm đúng — chạy hybrid:**
+
+| Thành phần | Ai lo | Cho ra cái gì |
+|---|---|---|
+| Maze (hoặc chỉ cần link EMS trần) | Công cụ | Time on task, đường click, tỉ lệ hoàn thành — số liệu khách quan, đỡ phải bấm giờ tay |
+| **Cuộc gọi có chia sẻ màn hình** (Meet/Zalo) | Bạn ngồi cùng participant | Think-aloud, verbatim, quan sát do dự, ghi màn hình + audio |
+| Phiếu SUS 10 câu | Điền cuối phiên | Điểm SUS |
+
+Nghĩa là: participant vẫn làm tác vụ qua link như bạn từng làm, **nhưng bạn có mặt trong cuộc gọi**, yêu cầu họ nói to suy nghĩ, và ghi chú. Vừa có số liệu tự động của Maze, vừa thoả yêu cầu moderated của đề.
+
+**Nếu không dùng được Maze** (trial không cho test live URL cần đăng nhập chẳng hạn) thì bỏ Maze cũng không sao — chỉ cần cuộc gọi + chia sẻ màn hình + ghi màn hình + bấm giờ tay. Đề không yêu cầu công cụ nào cụ thể cho Task 2.
+
+**Nên hỏi lại bạn của bạn ba câu** trước khi quyết định:
+1. Dùng gói Maze nào, có giới hạn số người test không?
+2. Có test được **live website cần đăng nhập** không, hay chỉ test được prototype?
+3. Có xuất được bản ghi màn hình từng người không?
+
 ## Prompt 2-1 — Task scenario
 
 ```
@@ -326,7 +349,7 @@ hãy ghi rõ "không đủ dữ liệu" thay vì suy đoán.
 - Từ checklist (prefix CL-): [DÁN]
 - Từ user testing (prefix US-): [DÁN]
 - Từ cross-platform (prefix CP-): [DÁN]
-- Từ lượt E2E admin (prefix E2E-): [DÁN]
+- Từ khảo sát EMS ban đầu (prefix SV-): [DÁN]
 
 1) Hợp nhất thành một bảng đúng 9 cột theo yêu cầu đề:
    ID · Scenario/Screen · Type (Bug|Usability) · Description · Steps/Heuristic
@@ -358,7 +381,7 @@ Với mỗi chỗ lệch: nêu file nào ghi số nào, và số nào có khả 
 
 ## Recheck
 
-- [ ] `grep -c "^| CL-\|^| US-\|^| CP-\|^| E2E-" 04-findings-log.md` = số lần submit
+- [ ] `grep -c "^| CL-\|^| US-\|^| CP-\|^| SV-" 04-findings-log.md` = số lần submit
 - [ ] Mọi Screenshot ref trỏ tới file có thật: kiểm bằng `ls evidence/`
 - **Commit:** `docs(findings): aggregate 3 sources into findings log`
 

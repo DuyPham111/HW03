@@ -43,7 +43,7 @@ Xong một bước có ý nghĩa (một màn hình chạy xong, một phiên use
 **Trailer `Co-Authored-By`:** commit do AI hỗ trợ có kèm trailer, nhất quán với việc đề bắt buộc khai báo dùng AI (§10). Nếu sinh viên muốn git log chỉ đứng tên mình thì nói rõ để bỏ trailer — khi đó việc dùng AI vẫn được khai đầy đủ ở `appendix/a3-ai-audit-report.md`.
 
 **R3 — Mọi phát hiện vào findings log.** *(đề §7)*
-Bất kỳ lỗi hay vấn đề usability nào xuất hiện trong hội thoại → thêm ngay vào `04-findings-log.md` đủ 9 cột, kèm đề xuất severity 0–4 và lý do chấm. Prefix theo nguồn: `CL-` checklist · `US-` user testing · `CP-` cross-platform · `E2E-` lượt E2E admin.
+Bất kỳ lỗi hay vấn đề usability nào xuất hiện trong hội thoại → thêm ngay vào `04-findings-log.md` đủ 9 cột, kèm đề xuất severity 0–4 và lý do chấm. Prefix theo nguồn: `CL-` checklist · `US-` user testing · `CP-` cross-platform · `SV-` khảo sát EMS ban đầu.
 
 Cột `Form-submission timestamp` để trống cho tới khi sinh viên tự submit form — **không tự điền**.
 
@@ -90,6 +90,7 @@ Chạy checklist trên EMS · chụp ảnh · tuyển và chạy 5 phiên user t
 | Từng hạng mục làm gì & nộp gì | `docs/HUONG_DAN_CHI_TIET_TUNG_PHAN.md` |
 | AI làm gì / tôi làm gì + prompt sẵn | `docs/QUY_TRINH_AI_VA_TOI.md` |
 | Làm checklist nhóm một mình | `docs/TASK1A_LAM_MOT_MINH.md` |
+| Phiếu khảo sát EMS (điền vào chỗ trống) | `docs/KHAO_SAT_EMS.md` |
 | Danh sách commit các bước tiếp theo | `docs/COMMIT_PLAN.md` |
 | Đề chi tiết (bản chấm điểm) | `docs/DE_BAI_02_Spec_HW03_VI.md` |
 | Đề gốc tiếng Anh | `docs/de-goc/` |

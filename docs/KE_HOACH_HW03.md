@@ -45,7 +45,7 @@ Cách đọc bảng: hạng mục nặng điểm nhất **và** rủi ro nhất 
 | Rủi ro | Xử lý |
 |---|---|
 | Nhiều item checklist về upload / rich-text / kéo-thả sẽ N/A ở phía user | **Đánh ➖ N/A kèm lý do**, tuyệt đối không bỏ trống. Đề chấp nhận N/A có giải trình; bỏ trống mới bị trừ. Bù lại bằng cách chọn B2/B3/B4 — bộ màn hình nhiều **trạng thái** nhất Pool B |
-| Cần sự kiện ở đúng trạng thái mới lộ đủ giao diện (hết chỗ → waitlist, đã đóng đăng ký, đã kết thúc) | **Đây chính là chỗ lượt chạy E2E Admin trả công.** Dùng quyền admin tự tạo sẵn các sự kiện ở đúng trạng thái cần, đặt tiền tố `[23127183]` |
+| Cần sự kiện ở đúng trạng thái mới lộ đủ giao diện (hết chỗ → waitlist, đã đóng đăng ký, đã kết thúc) | Dùng quyền admin `admin@gmail.com` tự dựng sẵn 4 sự kiện ở đúng trạng thái cần, đặt tiền tố `[23127183]` — làm trong bước khảo sát EMS |
 | Mỗi participant cần một tài khoản EMS | Cho họ tự đăng ký ngay đầu phiên, **bấm giờ chỉ tính từ lúc bắt đầu luồng đăng ký sự kiện**; khó khăn ở bước tạo tài khoản vẫn ghi lại làm finding phụ |
 
 ### D2 — Vì sao là B2 + B3 + B4 (chứ không phải B1 + B2 + B3)
@@ -123,7 +123,7 @@ Cảnh báo cho SV2 ở phương án 2: **B5 cần một sự kiện đã `ENDED
 ## 2. Lộ trình 6 giai đoạn (tick khi xong)
 
 ### GIAI ĐOẠN 0 — Chuẩn bị (~30 phút)
-- [x] ~~Chạy lượt E2E Admin (11 bước) — ĐÃ XONG~~ → ghi kết quả vào `00-main-report.md` mục 0 và đưa finding vào `04-findings-log.md` với prefix `E2E-`
+- [ ] ⭐ **Khảo sát EMS theo phiếu [`KHAO_SAT_EMS.md`](KHAO_SAT_EMS.md)** (~50 phút) — vừa lập danh mục widget làm input cho Task 1A, vừa dựng 4 sự kiện dữ liệu thử cho Task 1B/2/3. **Đây là việc chặn mọi thứ phía sau, làm đầu tiên.**
 - [ ] Vào SUT https://prod-dev.ems-fitus.cloud, xác nhận hệ thống còn sống (môi trường dev, dữ liệu có thể bị reset → **chụp ảnh liền tay, đừng để dành**)
 - [ ] Tự đăng ký 1 tài khoản **user riêng** (student/guest) — bắt buộc, không dùng chung với nhóm
 - [ ] **Kiểm tra bộ dữ liệu thử cho kịch bản B còn sống không** — cần ít nhất: 1 sự kiện `PUBLISHED`+`UPCOMING` còn chỗ · 1 sự kiện hết chỗ + bật **Waitlist** · 1 sự kiện đã đóng đăng ký · 1 sự kiện đã `ENDED`. Nếu dữ liệu đã bị reset → dùng lại quyền admin dựng lại, đặt tiền tố `[23127183]`
@@ -242,6 +242,7 @@ HW03/                                    ← repo git (github.com/DuyPham111/HW0
 │   ├── KE_HOACH_HW03.md ................ file này — làm gì, thứ tự nào, khi nào
 │   ├── HUONG_DAN_CHI_TIET_TUNG_PHAN.md . từng hạng mục: làm gì & NỘP GÌ
 │   ├── TASK1A_LAM_MOT_MINH.md .......... làm checklist nhóm một mình
+│   ├── KHAO_SAT_EMS.md ................. phiếu khảo sát EMS — điền vào chỗ trống
 │   ├── QUY_TRINH_AI_VA_TOI.md .......... AI làm gì (prompt sẵn) / tôi làm gì
 │   ├── DE_BAI_0*_*_VI.md ............... 3 bản dịch đề
 │   └── de-goc/ ......................... đề gốc EN + kịch bản E2E gốc
@@ -266,5 +267,5 @@ HW03/                                    ← repo git (github.com/DuyPham111/HW0
         ├── task1b/ ..................... ảnh item Failed
         ├── task2/ ...................... transcript + phiếu SUS + link ghi màn hình
         ├── task3/ ...................... ảnh mọi ô ma trận (có overlay MSSV)
-        └── e2e/ ........................ ảnh lượt E2E Admin (đã chạy xong)
+        └── survey/ ..................... ảnh khảo sát EMS ban đầu
 ```
