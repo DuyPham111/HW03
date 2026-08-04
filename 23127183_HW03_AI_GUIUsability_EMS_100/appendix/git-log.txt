@@ -1,0 +1,27 @@
+HW03 — Git commit log
+Sinh viên: Pham Vu Ngoc Duy (23127183)
+
+=== CÁCH TẠO FILE NÀY (xoá phần hướng dẫn trước khi nộp) ===
+
+Đề §13 yêu cầu: mỗi bước của quy trình kiểm thử = 1 commit riêng.
+
+Sinh log bằng lệnh:
+
+  git log --pretty=format:"%h | %ad | %s" --date=format:"%Y-%m-%d %H:%M" > appendix/git-log.txt
+
+Quy ước message commit dùng cho HW03:
+
+  [setup]              khoi tao skeleton, chot scenario/screens
+  [e2e]                chay luong E2E Admin (exploratory pass)
+  [task1a]             thiet ke checklist chung cua nhom
+  [task1b][screen-XX]  chay checklist tren tung man hinh
+  [bug]                log bug + them anh bang chung
+  [task2][phase-N]     thiet ke / chay phien / phan tich usability
+  [task3][os-browser]  moi dot chay cross-platform
+  [task4]              tong hop findings log + submit form
+  [task5]              agent skills + video demo
+  [final]              AI audit, AI critique, README, xuat PDF
+
+=== LOG ===
+
+(TODO: dán output lệnh git log vào đây trước khi nộp)

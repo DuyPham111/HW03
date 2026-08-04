@@ -1,0 +1,23 @@
+# Bài làm của sinh viên khác — chỉ để tham khảo cục bộ, KHÔNG đẩy lên GitHub
+example/
+
+# Bài tập khác, đã có repo riêng
+23127183_HW02_AI_DomainTesting_100/
+
+# File tạm của hệ điều hành / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# File nén bài nộp (tạo lúc nộp, không version)
+*.zip
+
+# Bản ghi màn hình phiên user testing (dung lượng lớn — up YouTube Unlisted và dán link
+# vào evidence/task2/recordings.md thay vì commit file)
+*.mp4
+*.mov
+*.mkv
