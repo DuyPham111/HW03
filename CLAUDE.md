@@ -90,6 +90,7 @@ Chạy checklist trên EMS · chụp ảnh · tuyển và chạy 5 phiên user t
 | Từng hạng mục làm gì & nộp gì | `docs/HUONG_DAN_CHI_TIET_TUNG_PHAN.md` |
 | AI làm gì / tôi làm gì + prompt sẵn | `docs/QUY_TRINH_AI_VA_TOI.md` |
 | Làm checklist nhóm một mình | `docs/TASK1A_LAM_MOT_MINH.md` |
+| Danh sách commit các bước tiếp theo | `docs/COMMIT_PLAN.md` |
 | Đề chi tiết (bản chấm điểm) | `docs/DE_BAI_02_Spec_HW03_VI.md` |
 | Đề gốc tiếng Anh | `docs/de-goc/` |
 | Cấu trúc bài nộp, trạng thái, self-assessment | `23127183_HW03_AI_GUIUsability_EMS_100/README.md` |
