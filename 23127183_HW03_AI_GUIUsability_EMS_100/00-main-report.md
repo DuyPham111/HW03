@@ -16,12 +16,15 @@
 
 | Chỉ số | Giá trị |
 |---|---|
-| Ngày khảo sát | _(TODO)_ |
-| Số màn hình đã đi qua (user / admin) | _(TODO)_ / _(TODO)_ |
-| Số widget ghi nhận vào danh mục | _(TODO)_ |
-| Số quan sát nghi vấn ghi lại (prefix `SV-`) | _(TODO)_ |
-| Sự kiện dữ liệu thử đã dựng | _(TODO)_ / 4 |
-| Bằng chứng | `evidence/survey/` · phiếu khảo sát đã điền: `docs/KHAO_SAT_EMS.md` |
+| Ngày khảo sát | 05/08/2026 *(đợt 1)* · _(TODO: đợt 2)_ |
+| Tài khoản user dùng khảo sát | `23127183@student.hcmus.edu.vn` (đăng nhập qua nút **STUDENT**) |
+| Số màn hình đã đi qua (user / admin) | 3 / _(TODO)_ — *đăng nhập · B1 danh sách · B2 chi tiết (4 trạng thái)* |
+| Số ảnh khảo sát | 10 *(đợt 1)* |
+| Số quan sát nghi vấn ghi lại (prefix `SV-`) | 10 — **chưa kiểm chứng**, sẽ xác nhận lại khi chạy Task 1B |
+| Sự kiện dữ liệu thử đã dựng | 3 / 4 — *thiếu Workshop D (`ENDED`)* |
+| Bằng chứng | phiếu khảo sát đã điền: `docs/KHAO_SAT_EMS.md` · ảnh: `docs/khao-sat/` |
+
+**⚠️ Phát hiện làm đổi kế hoạch:** trang chi tiết sự kiện (B2) **không truy cập được khi chưa đăng nhập** — hệ thống chặn cả trang bằng thông báo *"Please sign in to view this event."* Điều này khiến cả ba màn hình B2/B3/B4 đều yêu cầu đăng nhập, nên mỗi phiên trình duyệt sạch ở Task 3 đều phải đăng nhập lại, và ở Task 2 người tham gia phải tạo tài khoản trước khi bắt đầu tính giờ.
 
 **Những quan sát thu được từ khảo sát đã dẫn tới item checklist nào** — đây là bằng chứng cho phần *human review* của Task 1A: các item này được thêm vì **đã thấy thật trên hệ thống**, không phải vì AI gợi ý.
 

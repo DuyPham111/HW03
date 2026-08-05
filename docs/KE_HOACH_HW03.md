@@ -21,7 +21,7 @@
 | D1 | Chọn kịch bản A / B / C / D | ✅ CHỐT | **Kịch bản B — User đăng ký tham dự sự kiện** |
 | D2 | Chọn ≥ 3 màn hình | ✅ CHỐT | **B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Registrations + vé QR** (nửa *registration core* của Pool B) |
 | D3 | Nhóm 5 người + phân chia | ⬜ CHỜ NHÓM XÁC NHẬN | Nhóm 5 người ⇒ **một kịch bản bị đôi**, hai người đó phải chọn **bộ màn hình rời nhau** — xem D3 bên dưới |
-| D4 | Email MSSV overlay ảnh | ✅ CHỐT | `pvnduy23@clc.fitus.edu.vn` |
+| D4 | Email MSSV overlay ảnh | ⚠️ **MỞ LẠI** | Đang ghi `pvnduy23@clc.fitus.edu.vn`, nhưng email đăng nhập EMS là `23127183@student.hcmus.edu.vn`. Đề đòi mẫu `MSSV@....edu.vn` — chỉ cái thứ hai khớp. **Hỏi TA rồi chốt**, xem `KHAO_SAT_EMS.md` mục ⚠️ 2 |
 
 **SUT đã đổi link:** link ngrok cũ đã chết, link hiện hành là **https://prod-dev.ems-fitus.cloud** (đã cập nhật trong toàn bộ file). Đây là môi trường dev từ xa nên **dữ liệu vẫn có thể bị reset** — nguyên tắc "chụp ảnh liền tay" giữ nguyên.
 
@@ -33,7 +33,7 @@ Cách đọc bảng: hạng mục nặng điểm nhất **và** rủi ro nhất 
 
 | Kịch bản | Task 2 (25đ) — tuyển & chạy 5 người | Task 1B (15đ) — độ dày widget | Task 3 (25đ) — tái lập trên mọi thiết bị |
 |---|---|---|---|
-| **B — User đăng ký sự kiện** ✅ | **Dễ nhất.** Tác vụ "đăng ký workshop, lấy vé QR" ai cũng hiểu ngay; mỗi người **tự tạo tài khoản riêng** ⇒ 5 phiên không đụng dữ liệu nhau | Mỏng hơn admin (không upload / rich-text / drag-drop) — bù bằng cách chọn màn nhiều **trạng thái** và ghi rõ lý do N/A | Dễ: B2 công khai không cần đăng nhập; B3/B4 chỉ cần đăng nhập tài khoản thường |
+| **B — User đăng ký sự kiện** ✅ | **Dễ nhất.** Tác vụ "đăng ký workshop, lấy vé QR" ai cũng hiểu ngay; mỗi người **tự tạo tài khoản riêng** ⇒ 5 phiên không đụng dữ liệu nhau | Mỏng hơn admin (không upload / rich-text / drag-drop) — bù bằng cách chọn màn nhiều **trạng thái** và ghi rõ lý do N/A | Trung bình: cả B2/B3/B4 đều cần đăng nhập (đã kiểm 05/08/2026) ⇒ phải đăng nhập lại ở từng ô BrowserStack. Bù lại không cần dựng trạng thái phức tạp như A5 Check-in |
 | A — Admin quản lý sự kiện | Phải đưa `admin@gmail.com` (dùng chung cả lớp) cho người ngoài thao tác; tác vụ kém tự nhiên | Dày nhất | A5 Check-in cần mã hợp lệ + đúng khung giờ ⇒ rất khó lặp trên 7+ ô |
 | C — Admin quản lý user | Tệ nhất: người ngoài Block/Reset password trên tài khoản thật của lớp | Trung bình | Trung bình |
 | D — Support request | Khá: phía user dễ nhờ, nhưng phải chờ admin phản hồi mới khép được luồng | Mỏng | Trung bình |
@@ -62,7 +62,7 @@ Cách đọc bảng: hạng mục nặng điểm nhất **và** rủi ro nhất 
 2. **B4 là màn duy nhất trong Pool B có badge trạng thái nhiều màu** (chờ duyệt / đã duyệt / danh sách chờ / bị từ chối) + empty state. Không có nó, nhóm item IA-04 gần như rỗng — đúng cái điểm yếu của kịch bản B.
 3. **B3 phải có mặt** vì đó là form duy nhất phía user; thiếu nó thì IA-02 (12+ item) chết gần hết.
 
-> **B1 (trang chủ + carousel + tìm kiếm)** vẫn là đường vào của tác vụ, vẫn quan sát trong lúc chạy phiên, nhưng **để ngoài phạm vi chấm** — vừa tránh chồng lấn với người thứ hai nếu nhóm đôi ở B, vừa giữ khối lượng Task 3 ở mức 3 màn × ~7 ô. Nếu cuối cùng **không ai đôi ở B**, thêm B1 làm màn thứ 4 (rẻ vì nó công khai, không cần đăng nhập).
+> **B1 (trang chủ + carousel + tìm kiếm)** vẫn là đường vào của tác vụ, vẫn quan sát trong lúc chạy phiên, nhưng **để ngoài phạm vi chấm** — vừa tránh chồng lấn với người thứ hai nếu nhóm đôi ở B, vừa giữ khối lượng Task 3 ở mức 3 màn × ~7 ô. Nếu cuối cùng **không ai đôi ở B**, thêm B1 làm màn thứ 4 — vẫn phải đăng nhập như 3 màn kia, nhưng rẻ vì không cần dựng trạng thái dữ liệu riêng.
 
 ### D3 — Nhóm 5 người thì chia thế nào
 
@@ -123,7 +123,7 @@ Cảnh báo cho SV2 ở phương án 2: **B5 cần một sự kiện đã `ENDED
 ## 2. Lộ trình 6 giai đoạn (tick khi xong)
 
 ### GIAI ĐOẠN 0 — Chuẩn bị (~30 phút)
-- [ ] ⭐ **Khảo sát EMS theo phiếu [`KHAO_SAT_EMS.md`](KHAO_SAT_EMS.md)** (~50 phút) — vừa lập danh mục widget làm input cho Task 1A, vừa dựng 4 sự kiện dữ liệu thử cho Task 1B/2/3. **Đây là việc chặn mọi thứ phía sau, làm đầu tiên.**
+- [~] ⭐ **Khảo sát EMS theo phiếu [`KHAO_SAT_EMS.md`](KHAO_SAT_EMS.md)** — **ĐANG DỞ (~60%)**: đã có 10 ảnh, xong màn đăng nhập + B1 + B2 (4 trạng thái), dựng được 3/4 sự kiện thử. **Còn thiếu: Workshop D · toàn bộ B3 · toàn bộ B4 · phía admin · 8 phép thử.** Ước tính 35 phút nữa
 - [ ] Vào SUT https://prod-dev.ems-fitus.cloud, xác nhận hệ thống còn sống (môi trường dev, dữ liệu có thể bị reset → **chụp ảnh liền tay, đừng để dành**)
 - [ ] Tự đăng ký 1 tài khoản **user riêng** (student/guest) — bắt buộc, không dùng chung với nhóm
 - [ ] **Kiểm tra bộ dữ liệu thử cho kịch bản B còn sống không** — cần ít nhất: 1 sự kiện `PUBLISHED`+`UPCOMING` còn chỗ · 1 sự kiện hết chỗ + bật **Waitlist** · 1 sự kiện đã đóng đăng ký · 1 sự kiện đã `ENDED`. Nếu dữ liệu đã bị reset → dùng lại quyền admin dựng lại, đặt tiền tố `[23127183]`

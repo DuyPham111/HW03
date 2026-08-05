@@ -282,7 +282,7 @@ Ba cách overlay email `pvnduy23@clc.fitus.edu.vn`, ưu tiên từ trên xuống
 | Hành vi | Nút bấm được · form nhập được · dropdown/modal mở đúng · toast hiện đúng chỗ |
 | Responsive | Ở tablet/phone: menu có thu gọn không · bảng có scroll trong khung riêng không |
 
-**Lưu ý riêng cho bộ màn hình B:** B2 công khai (không cần đăng nhập) nên chạy rất nhanh; B3 và B4 cần đăng nhập — mỗi phiên BrowserStack là trình duyệt sạch nên **phải đăng nhập lại ở từng ô**, tính thêm thời gian. **B4 chứa mã QR** — đây là chỗ lỗi render dễ lộ nhất trên WebKit/mobile, soi kỹ.
+**Lưu ý riêng cho bộ màn hình B — đã kiểm chứng ngày 05/08/2026:** cả **B2, B3 và B4 đều CHẶN khi chưa đăng nhập** (B2 hiện "Please sign in to view this event."). Mỗi phiên BrowserStack là một trình duyệt sạch ⇒ **phải đăng nhập lại ở TỪNG ô** — 7 ô × 3 màn nghĩa là ~7 lần đăng nhập, không phải 0. Cộng thêm ~15–20 phút vào ước tính Task 3, và cân nhắc chạy cả 3 màn trong **cùng một phiên** trước khi đổi sang tổ hợp khác. **B4 chứa mã QR** — chỗ lỗi render dễ lộ nhất trên WebKit/mobile, soi kỹ.
 
 **Bước 4. Phân biệt lỗi tương thích với bug chung.** Lỗi xuất hiện ở **mọi** môi trường **không phải** lỗi tương thích — đó là bug ứng dụng. Chỉ ghi là lỗi tương thích khi nó **chỉ** xảy ra ở một số ô. Ghi rõ điều này vào cột "có tái hiện ở môi trường khác không".
 
