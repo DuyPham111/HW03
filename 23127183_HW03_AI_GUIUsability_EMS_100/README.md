@@ -58,8 +58,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 │
 ├── team/ ............................ sản phẩm cấp nhóm (Task 1A)
 │   ├── gui-checklist.md ............. checklist > 40 item, phủ IA-01…IA-04
-│   ├── references.md ................ nguồn tham khảo
-│   └── ai-prompts.md ................ prompt dựng checklist + lý do AI bỏ sót
+│   └── references-and-prompts.md .... nguồn tham khảo + prompt + lý do AI bỏ sót
 │
 ├── skills/ .......................... Task 5 — 3 Agent Skill + link video demo
 │
@@ -79,7 +78,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Hạng mục chấm | File chính |
 |---|---|
-| 1a (15đ) | `team/gui-checklist.md` · `team/references.md` · `team/ai-prompts.md` |
+| 1a (15đ) | `team/gui-checklist.md` · `team/references-and-prompts.md` |
 | 1b (15đ) | `01-checklist-execution.md` + `evidence/task1b/` |
 | 2 (25đ) | `02-usability-report.md` + `appendix/a1` · `a2` + `evidence/task2/` |
 | 3 (25đ) | `03-compatibility-matrix.md` + `evidence/task3/` |
@@ -157,17 +156,38 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 ## 6. Self-Assessment
 
-| No. | Criteria | Grade | Self-Assessed |
-|---|---|:--:|:--:|
-| 1a | Task 1A — Shared checklist (> 40 items, IA-01…IA-04) + sources + AI prompts *(group)* | 15 | |
-| 1b | Task 1B — Checklist execution on ≥ 3 screens + bug reports *(individual)* | 15 | |
-| 2 | Task 2 — User testing với 5 người thật → Usability Report | 25 | |
-| 3 | Task 3 — Cross-Browser / Cross-Platform matrix | 25 | |
-| 4 | Bug & Usability Findings submission (Google Form) + aggregated log | 10 | |
-| 5 | Agent Skills | 10 | |
-| | **Total** | **100** | |
+| No. | Criteria | Grade | Self-Assessed | Minh chứng — mở đúng file này để chấm |
+|---|---|:--:|:--:|---|
+| **1a** | Task 1A — Shared checklist (> 40 items, IA-01…IA-04) + sources + AI prompts *(group)* | 15 | | [team/gui-checklist.md](team/gui-checklist.md)<br>[team/references-and-prompts.md](team/references-and-prompts.md) |
+| **1b** | Task 1B — Checklist execution on ≥ 3 screens + bug reports *(individual)* | 15 | | [01-checklist-execution.md](01-checklist-execution.md)<br>[00-main-report.md](00-main-report.md) §2 · ảnh: [evidence/task1b/](evidence/task1b/) |
+| **2** | Task 2 — User testing với 5 người thật → Usability Report | 25 | | [02-usability-report.md](02-usability-report.md)<br>[appendix/a1-session-notes.md](appendix/a1-session-notes.md) · [appendix/a2-sus-scoring.md](appendix/a2-sus-scoring.md) · [evidence/task2/](evidence/task2/) |
+| **3** | Task 3 — Cross-Browser / Cross-Platform matrix | 25 | | [03-compatibility-matrix.md](03-compatibility-matrix.md)<br>ảnh: [evidence/task3/](evidence/task3/) |
+| **4** | Bug & Usability Findings submission (Google Form) + aggregated log | 10 | | [04-findings-log.md](04-findings-log.md) |
+| **5** | Agent Skills + demo video | 10 | | [skills/](skills/) · [skills/demo-video-link.md](skills/demo-video-link.md) |
+| | **Total** | **100** | | |
 
-**Tên file nộp:** `23127183_HW03_AI_GUIUsability_EMS_<điểm tự chấm>.zip`
+**Căn cứ tự chấm** *(mỗi mục chấm dưới điểm tối đa phải nêu lý do có thật, không viết chung chung)*:
+- _(TODO — ví dụ: "Task 2 tự trừ 2 điểm vì không đo được số lần do dự ở phiên P4 do participant nói liên tục không có khoảng lặng; đã tự khai ở `02-usability-report.md` §3.1")_
+
+**Tên file nộp:** `23127183_HW03_AI_GUIUsability_EMS_<điểm tự chấm>.zip` — số này **phải khớp** tổng ở bảng trên.
+
+## 6b. Trạng thái hoàn thành
+
+| # | Hạng mục | Trạng thái |
+|---|---|---|
+| 0 | Khảo sát EMS + dựng dữ liệu thử | ⬜ |
+| 1a | Checklist chung > 40 item | ⬜ |
+| 1b | Chạy checklist trên B2/B3/B4 | ⬜ |
+| 2 | 5 phiên user testing + SUS | ⬜ |
+| 3 | Ma trận cross-platform | ⬜ |
+| 4 | Findings log khớp Google Form | ⬜ |
+| 5 | Agent Skills + video demo | ⬜ |
+| — | AI Audit Report | ⬜ |
+| — | AI Critique 200–300 từ *(đếm bằng `wc -w`)* | ⬜ |
+| — | Git commit log | ⬜ |
+| — | PDF cho mọi file `.md` chính | ⬜ |
+
+> 🔴 Đề §18: **thiếu bất kỳ tài liệu bắt buộc nào → 0 điểm cả bài.**
 
 ## 7. Khai báo AI
 

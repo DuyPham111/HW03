@@ -8,7 +8,7 @@
 **Đóng góp:** _(TODO — ghi trung thực ai dựng phần nào. Nếu tự dựng một mình: "Bản v1 (toàn bộ 4 khía cạnh) do Phạm Vũ Ngọc Duy (23127183) dựng ngày __, dựa trên khảo sát trực tiếp EMS ngày __. Đã gửi cả nhóm rà soát ngày __; [kết quả rà soát]")_
 
 > Checklist này **giống hệt nhau giữa các thành viên trong nhóm** — đề §18 nói rõ đây là trường hợp được phép trùng. Mọi thứ khác (chọn màn hình, thực thi, usability, cross-platform, findings) phải riêng của từng người.
-> Nguồn tham khảo: [`references.md`](references.md) · Prompt và lý do AI bỏ sót: [`ai-prompts.md`](ai-prompts.md)
+> Nguồn tham khảo: [`references-and-prompts.md`](references-and-prompts.md)
 > Cách làm chi tiết từng bước: `docs/TASK1A_LAM_MOT_MINH.md`
 
 ---
@@ -38,7 +38,7 @@ Mỗi mục đánh **một** trong ba giá trị, **theo từng màn hình**:
 > Tỉ lệ pass tính trên `Passed / (Passed + Failed)`, **không tính N/A vào mẫu số**.
 
 **Ký hiệu cột Nguồn:** `N1`–`N10` Nielsen · `P1`–`P6` Norman · `S1`–`S8` Shneiderman · `SL` slide môn học · `W` WCAG 2.2 · `E` tài liệu E2E EMS
-**Ký hiệu cột Nguồn gốc:** `AI` = AI sinh ở lượt đầu · `RV` = người bổ sung khi review *(bắt buộc có lý do ở [`ai-prompts.md`](ai-prompts.md) mục 3)*
+**Ký hiệu cột Nguồn gốc:** `AI` = AI sinh ở lượt đầu · `RV` = người bổ sung khi review *(bắt buộc có lý do ở [`references-and-prompts.md`](references-and-prompts.md) mục 3)*
 
 ---
 
@@ -102,4 +102,4 @@ for p in G F N S; do echo -n "$p: "; grep -c "^| $p-" team/gui-checklist.md; don
 ```
 
 - [ ] Tổng > 40 · [ ] mỗi IA đạt mục tiêu tối thiểu · [ ] mọi mục có mã nguồn · [ ] mọi mục có `AI` hoặc `RV`
-- [ ] Số mục `RV` khớp số dòng giải thích ở [`ai-prompts.md`](ai-prompts.md) mục 3
+- [ ] Số mục `RV` khớp số dòng giải thích ở [`references-and-prompts.md`](references-and-prompts.md) mục 3

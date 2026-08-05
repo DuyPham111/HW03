@@ -135,18 +135,18 @@ Dữ liệu thô của từng phiên (dòng thời gian, lời nói nguyên văn
 
 | # | Finding | Màn hình | Heuristic vi phạm | Số người gặp | Severity | Ảnh | Finding-ID |
 |---|---|---|---|:--:|:--:|---|---|
-| 1 | | | | /5 | | | US-001 |
-| 2 | | | | /5 | | | US-002 |
-| 3 | | | | /5 | | | US-003 |
+| 1 | | | | /5 | | | US-B2-01 |
+| 2 | | | | /5 | | | US-B3-01 |
+| 3 | | | | /5 | | | US-B4-01 |
 
 **Chi tiết từng finding:**
 
-#### US-001 — _(tên)_ · Severity _(0–4)_
+#### US-B2-01 — _(tên)_ · Severity _(0–4)_
 
 - **Mô tả:** _(TODO)_
 - **Bằng chứng từ phiên:** _(TODO — trích lời + participant nào)_
 - **Heuristic vi phạm:** _(TODO)_
-- **Ảnh:** ![US-001](evidence/task2/US-001.png)
+- **Ảnh:** ![US-B2-01](evidence/task2/US-B2-01.png)
 - **Khuyến nghị sửa:** _(TODO — cụ thể, làm được ngay, không viết chung chung)_
 
 ### 3.5 Danh sách khuyến nghị có ưu tiên

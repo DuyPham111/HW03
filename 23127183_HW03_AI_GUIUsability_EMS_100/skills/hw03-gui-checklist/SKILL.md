@@ -78,7 +78,7 @@ Sinh tối thiểu [12/12/8/10] item cho IA-0X.
 
 ### Bước A4 — Người bổ sung item + ghi lý do AI sót
 
-Với mỗi item tự thêm, ghi vào `team/ai-prompts.md` mục 3, phân loại lý do:
+Với mỗi item tự thêm, ghi vào `team/references-and-prompts.md` mục 3, phân loại lý do:
 - **(a) prompt của mình thiếu ngữ cảnh** → nêu rõ thiếu thông tin gì
 - **(b) giới hạn của model** → nêu rõ giới hạn nào (không thấy màn hình, không biết dữ liệu, không chạy được app)
 - **(c) đặc thù riêng của EMS** → nêu rõ chi tiết nào chỉ lộ ra khi thao tác thật
@@ -102,7 +102,7 @@ Nguyên tắc chạy:
 - Đi tuần tự theo ID, không nhảy cóc — nhảy cóc là sót.
 - Item không áp dụng cho màn hình đó → đánh `➖ N/A` và **ghi lý do**, không để trống.
 - Thấy Failed → **chụp ảnh ngay** (SUT là môi trường dev, dữ liệu có thể bị reset).
-- Ảnh đặt tên đúng bằng Bug-ID sẽ dùng: `CL-001.png`.
+- Ảnh đặt tên đúng bằng Bug-ID sẽ dùng: `CL-B3-01.png` (nguồn-màn hình-số).
 
 ### Bước B3 — Nhờ AI phân tích cụm lỗi (sau khi đã có dữ liệu thật)
 

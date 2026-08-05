@@ -20,22 +20,27 @@
 
 ---
 
-## Bảng câu hỏi đã dùng (bản tiếng Việt)
+## Bảng 10 câu hỏi đã dùng — bản song ngữ
 
-| # | Chiều | Câu |
-|---|:--:|---|
-| 1 | + | _(TODO)_ |
-| 2 | − | _(TODO)_ |
-| 3 | + | _(TODO)_ |
-| 4 | − | _(TODO)_ |
-| 5 | + | _(TODO)_ |
-| 6 | − | _(TODO)_ |
-| 7 | + | _(TODO)_ |
-| 8 | − | _(TODO)_ |
-| 9 | + | _(TODO)_ |
-| 10 | − | _(TODO)_ |
+Thang Likert **1 = Rất không đồng ý** → **5 = Rất đồng ý**. Đây là bộ câu chuẩn của Brooke (1996), giữ nguyên thứ tự và chiều; **không tự viết lại** vì công thức tính điểm phụ thuộc vào việc câu lẻ mang nghĩa tích cực và câu chẵn mang nghĩa tiêu cực.
 
-- [ ] Đã kiểm chiều +/− xen kẽ đúng như bản gốc (AI hay dịch sai chiều câu chẵn)
+| # | Chiều | Tiếng Việt | Nguyên bản |
+|---|:--:|---|---|
+| Q1 | **+** | Tôi nghĩ rằng tôi sẽ muốn sử dụng hệ thống này thường xuyên. | *I think that I would like to use this system frequently.* |
+| Q2 | **−** | Tôi thấy hệ thống này phức tạp một cách không cần thiết. | *I found the system unnecessarily complex.* |
+| Q3 | **+** | Tôi thấy hệ thống này dễ sử dụng. | *I thought the system was easy to use.* |
+| Q4 | **−** | Tôi nghĩ tôi sẽ cần người có chuyên môn kỹ thuật hỗ trợ mới dùng được hệ thống này. | *I think that I would need the support of a technical person to be able to use this system.* |
+| Q5 | **+** | Tôi thấy các chức năng trong hệ thống này được tích hợp ăn khớp với nhau. | *I found the various functions in this system were well integrated.* |
+| Q6 | **−** | Tôi thấy hệ thống này có quá nhiều điểm thiếu nhất quán. | *I thought there was too much inconsistency in this system.* |
+| Q7 | **+** | Tôi cho rằng hầu hết mọi người sẽ học cách dùng hệ thống này rất nhanh. | *I would imagine that most people would learn to use this system very quickly.* |
+| Q8 | **−** | Tôi thấy hệ thống này rườm rà, khó thao tác. | *I found the system very cumbersome to use.* |
+| Q9 | **+** | Tôi cảm thấy tự tin khi sử dụng hệ thống này. | *I felt very confident using the system.* |
+| Q10 | **−** | Tôi cần học khá nhiều thứ trước khi có thể bắt đầu dùng hệ thống này. | *I needed to learn a lot of things before I could get going with this system.* |
+
+- [x] Chiều +/− xen kẽ đúng bản gốc — đã đối chiếu với nguyên bản tiếng Anh ở cột phải
+- [ ] Đã đưa đúng 10 câu này vào form phát cho participant (Google Form hoặc phiếu giấy)
+
+> **Vì sao phải giữ nguyên bộ câu:** SUS chỉ so sánh được với mốc 68 / 80.3 khi dùng đúng thang chuẩn. Tự chế câu hỏi thì điểm tính ra không còn ý nghĩa tham chiếu, và người chấm sẽ thấy ngay.
 
 ---
 

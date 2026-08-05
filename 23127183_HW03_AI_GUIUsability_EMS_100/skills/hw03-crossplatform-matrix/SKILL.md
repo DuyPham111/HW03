@@ -46,7 +46,7 @@ Tôi cần một ma trận tương thích cho 3 màn hình web, ràng buộc:
   1. Mở một tab/cửa sổ phụ hiển thị email, đặt cạnh cửa sổ EMS trước khi chụp
   2. Dán email vào ô tìm kiếm/URL bar trong khung hình
   3. Chèn text lên ảnh sau khi chụp (yếu nhất về mặt bằng chứng — dùng cuối cùng)
-- [ ] Quy ước tên file: `S<số màn>_C<số ô>.png`, ví dụ `S1_C4.png`; ô Fail đặt thêm bản `CP-00X.png`
+- [ ] Quy ước tên file: `<màn>_<browser>_<os>_<device>.png`, ví dụ `B2_safari_macos_desktop.png`; ô Fail đặt thêm bản theo Bug-ID `CP-B2-01.png`
 
 ## Bước 3 — Chạy & chụp
 

@@ -55,7 +55,7 @@
 
 | Ô | OS | Browser | Device | Kết quả | Lỗi quan sát được | Ảnh |
 |---|---|---|---|:--:|---|---|
-| C1 | Windows 11 | Chrome | Desktop | ⬜ | | `evidence/task3/S1_C1.png` |
+| C1 | Windows 11 | Chrome | Desktop | ⬜ | | `evidence/task3/B2_chrome_windows_desktop.png` |
 | C2 | Windows 11 | Edge | Desktop | ⬜ | | |
 | C3 | Windows 11 | Firefox | Desktop | ⬜ | | |
 | C4 | macOS | Safari | Desktop | ⬜ | | |
@@ -77,7 +77,7 @@ _(bảng như trên)_
 
 > Mỗi Fail → 1 block, kèm ảnh và ghi chú loại lỗi. Loại lỗi thường gặp: **tràn nội dung (overflow) · chồng lấn (overlap) · vỡ layout · chữ không đọc được · control không bấm được / không responsive · font hoặc icon không load · scroll ngang không mong muốn**.
 
-### [CP-001] Màn hình _(TODO)_ · Ô _(TODO)_ — _(loại lỗi)_
+### [CP-B2-01] Màn hình _(TODO)_ · Ô _(TODO)_ — _(loại lỗi)_
 
 | Mục | Nội dung |
 |---|---|
@@ -86,11 +86,11 @@ _(bảng như trên)_
 | Mô tả | _(TODO)_ |
 | Có tái hiện trên môi trường khác không? | _(TODO — nếu chỉ 1 môi trường ⇒ lỗi tương thích thật; nếu mọi nơi ⇒ là bug chung, không phải lỗi tương thích)_ |
 | Severity | _(TODO)_ |
-| Ảnh | `evidence/task3/CP-001.png` |
+| Ảnh | `evidence/task3/CP-B2-01.png` |
 
-![CP-001](evidence/task3/CP-001.png)
+![CP-B2-01](evidence/task3/CP-B2-01.png)
 
-### [CP-002] …
+### [CP-B3-01] …
 
 ---
 

@@ -104,8 +104,8 @@ Viết thành bug entry cho 04-findings-log.md, mỗi entry một block:
 | Type (Bug hoặc Usability) | Scenario/Screen | Description | Steps to reproduce (đánh số)
 | Expected | Actual | Heuristic vi phạm | Severity | Suggested fix | Screenshot ref |
 
-- ID dạng CL-001, CL-002...
-- Screenshot ref dạng evidence/task1b/CL-00X_B3.png
+- ID dạng <NGUỒN>-<MÀN HÌNH>-<SỐ>, ví dụ CL-B3-01 — nhìn ID biết ngay lỗi ở màn nào, tìm ra bằng cách nào
+- Screenshot ref dạng evidence/task1b/CL-B3-01.png
 - Steps to reproduce phải bắt đầu từ trạng thái sạch (chưa đăng nhập hoặc vừa đăng nhập),
   không giả định trạng thái nào tôi không nêu
 - Suggested fix phải là thay đổi CỤ THỂ, không phải mục tiêu chung chung
@@ -115,7 +115,7 @@ Viết thành bug entry cho 04-findings-log.md, mỗi entry một block:
 
 - [ ] Chạy từng item trên EMS thật, tuần tự theo ID
 - [ ] **Chụp ảnh ngay khi thấy Failed** — dữ liệu dev có thể reset
-- [ ] Đặt tên ảnh `CL-00X_B3.png`, lưu vào `evidence/task1b/`
+- [ ] Đặt tên ảnh `CL-B3-01.png` (trùng Bug-ID), lưu vào `evidence/task1b/`
 - [ ] Ô N/A phải tự ghi lý do (AI chỉ dự đoán, bạn xác nhận)
 
 ## Recheck trước khi commit

@@ -13,7 +13,7 @@
 
 | Hạng mục | Điểm | Ai làm | File bắt buộc nộp |
 |---|---:|---|---|
-| **1A** Checklist GUI chung | 15 | **Nhóm** | `team/gui-checklist.md` + `team/references.md` + `team/ai-prompts.md` |
+| **1A** Checklist GUI chung | 15 | **Nhóm** | `team/gui-checklist.md` + `team/references-and-prompts.md` + `team/references-and-prompts.md` |
 | **1B** Chạy checklist trên 3 màn | 15 | Cá nhân | `01-checklist-execution.md` + `00-main-report.md` (ch.2) + ảnh trong `evidence/task1b/` |
 | **2** User testing 5 người | 25 | Cá nhân | `02-usability-report.md` (+PDF) + `evidence/task2/` |
 | **3** Cross-browser/platform | 25 | Cá nhân | `03-compatibility-matrix.md` (+PDF) + `evidence/task3/` |
@@ -69,8 +69,8 @@ Bốn khía cạnh (IA) bắt buộc phủ:
 | File | Nội dung phải có |
 |---|---|
 | `team/gui-checklist.md` | Bảng item với cột: **ID · Item · Cách kiểm · Nguồn heuristic · Nguồn tạo (AI/Người)**. ID dạng `IA01-01` — **dùng lại y nguyên** ở hạng mục 1B |
-| `team/references.md` | Danh sách nguồn: sách, bài báo, tiêu chuẩn, slide môn học. Kèm cột "dùng cho item nào" |
-| `team/ai-prompts.md` | **Prompt nguyên văn** từng lần + output + human review. Mục 3: bảng item tự thêm kèm lý do AI sót |
+| `team/references-and-prompts.md` | Danh sách nguồn: sách, bài báo, tiêu chuẩn, slide môn học. Kèm cột "dùng cho item nào" |
+| `team/references-and-prompts.md` | **Prompt nguyên văn** từng lần + output + human review. Mục 3: bảng item tự thêm kèm lý do AI sót |
 
 > Ba file này **giống hệt nhau giữa 5 thành viên** — đây là trường hợp DUY NHẤT được phép trùng. Nội dung prompt ở đây **cũng phải copy vào `appendix/a3-ai-audit-report.md`** (đề §10 nói rõ).
 
@@ -81,7 +81,7 @@ Bốn khía cạnh (IA) bắt buộc phủ:
 - [ ] Mỗi item trả lời được Passed/Failed khi nhìn màn hình, không mơ hồ
 - [ ] Mỗi item có mã heuristic nguồn
 - [ ] Mỗi item cột "Nguồn tạo" ghi rõ AI hay Người
-- [ ] Mọi item "Người" đều có dòng giải thích vì sao AI sót trong `team/ai-prompts.md`
+- [ ] Mọi item "Người" đều có dòng giải thích vì sao AI sót trong `team/references-and-prompts.md`
 
 ## Bẫy mất điểm
 
@@ -118,7 +118,7 @@ Chạy **toàn bộ** checklist chung lên **từng màn hình** trong 3 màn c�
 
 **Bước 4. Xử lý item không áp dụng được.** Kịch bản B không có upload ảnh / rich-text / kéo-thả reorder. Những item đó đánh **➖ N/A và GHI LÝ DO** — tuyệt đối không để trống. Đề chấp nhận N/A có giải trình; ô trống mới bị trừ.
 
-**Bước 5. Thấy Failed → chụp ảnh NGAY.** SUT là môi trường dev, dữ liệu có thể bị reset. Đặt tên file đúng bằng Bug-ID sẽ dùng: `CL-001.png`.
+**Bước 5. Thấy Failed → chụp ảnh NGAY.** SUT là môi trường dev, dữ liệu có thể bị reset. Đặt tên file đúng bằng Bug-ID sẽ dùng: `CL-B2-01.png`.
 
 **Bước 6. Biến mỗi Failed thành một bug entry** trong `04-findings-log.md`, prefix `CL-`.
 
@@ -291,7 +291,7 @@ Ba cách overlay email `pvnduy23@clc.fitus.edu.vn`, ưu tiên từ trên xuống
 | File / thư mục | Nội dung |
 |---|---|
 | `03-compatibility-matrix.md` **+ PDF** | 3 bảng ma trận (1 bảng/màn hình) · bảng kiểm tra độ phủ 3 chiều · block chi tiết mỗi ô Fail · bảng phân bố lỗi theo OS/engine/device · mục giới hạn |
-| `evidence/task3/` | Ảnh **mọi ô** (3 màn × 7 ô ≈ 21 ảnh), đặt tên `S1_C1.png`… Ô Fail thêm bản `CP-00X.png` |
+| `evidence/task3/` | Ảnh **mọi ô** (3 màn × 7 ô ≈ 21 ảnh), đặt tên `B2_chrome_windows_desktop.png`. Ô Fail thêm bản đặt theo Bug-ID `CP-B2-01.png` |
 | `04-findings-log.md` | Lỗi tương thích, prefix `CP-` |
 
 ## Coi như xong khi
@@ -487,8 +487,8 @@ Phải có **bảng self-assessment** (6 dòng theo §16 của đề) **và** te
 
 **Nhóm nộp 1 lần (mỗi người giữ 1 bản copy):**
 - [ ] `team/gui-checklist.md` (> 40 item, IA-01…IA-04)
-- [ ] `team/references.md`
-- [ ] `team/ai-prompts.md`
+- [ ] `team/references-and-prompts.md`
+- [ ] `team/references-and-prompts.md`
 
 **Zip cá nhân — `23127183_HW03_AI_GUIUsability_EMS_<điểm 3 chữ số>.zip`:**
 - [ ] `00-main-report.md` **+ PDF**

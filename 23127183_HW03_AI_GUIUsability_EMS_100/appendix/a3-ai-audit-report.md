@@ -7,7 +7,7 @@
 > **Phụ lục BẮT BUỘC.** Thiếu file này = 0 điểm toàn bài.
 > **Quy tắc:** ghi 1 block **NGAY SAU** mỗi phiên dùng AI — đừng dồn về cuối, sẽ quên prompt và giờ.
 > **Human Review Notes là phần quan trọng nhất:** bạn đã kiểm chứng gì, sửa gì, loại gì, và vì sao.
-> **Các prompt dựng checklist của nhóm** (ở `team/ai-prompts.md`) **cũng phải được ghi vào đây** — đề §10 nói rõ điều này.
+> **Các prompt dựng checklist của nhóm** (ở `team/references-and-prompts.md`) **cũng phải được ghi vào đây** — đề §10 nói rõ điều này.
 
 ## Công cụ AI đã dùng
 

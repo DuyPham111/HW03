@@ -53,10 +53,10 @@ Mỗi item Failed → 1 block. Đây là nguồn trực tiếp để tạo bug e
   2. _(TODO)_
 - **Heuristic bị vi phạm:** _(TODO — N?/P?/S?)_
 - **Severity:** _(TODO: 0–4)_
-- **Bug-ID trong log:** `CL-00X`
-- **Ảnh:** `evidence/task1b/CL-00X.png` _(chụp lúc _(TODO giờ)_)_
+- **Bug-ID trong log:** `CL-B2-01`
+- **Ảnh:** `evidence/task1b/CL-B2-01.png` _(chụp lúc _(TODO giờ)_)_
 
-![CL-00X](evidence/task1b/CL-00X.png)
+![CL-B2-01](evidence/task1b/CL-B2-01.png)
 
 ### [F-02] …
 

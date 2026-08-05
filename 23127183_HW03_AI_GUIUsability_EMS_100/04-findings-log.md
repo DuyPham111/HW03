@@ -9,14 +9,16 @@
 
 ---
 
-## Quy ước ID theo nguồn phát hiện
+## Quy ước ID
 
-| Prefix | Nguồn | Task |
-|---|---|---|
-| `CL-` | Từ việc chạy checklist GUI trên các màn hình | 1B |
-| `US-` | Từ 5 phiên user testing | 2 |
-| `CP-` | Từ chạy cross-browser / cross-platform | 3 |
-| `SV-` | Từ lượt khảo sát EMS ban đầu, trước khi thiết kế checklist | phụ trợ |
+Dạng `<NGUỒN>-<MÀN HÌNH>-<SỐ>` — nhìn ID là biết ngay lỗi tìm ra ở đâu và bằng cách nào.
+
+| Nguồn | Prefix | Task | Ví dụ |
+|---|---|---|---|
+| Chạy checklist GUI | `CL-` | 1B | `CL-B3-01` |
+| 5 phiên user testing | `US-` | 2 | `US-B2-01` |
+| Cross-browser / cross-platform | `CP-` | 3 | `CP-B4-01` |
+| Khảo sát EMS ban đầu | `SV-` | phụ trợ | `SV-B1-01` |
 
 ## Thang Severity
 
@@ -30,43 +32,33 @@
 
 ---
 
-## Bảng hợp nhất
+## Bảng hợp nhất — 9 cột bắt buộc
+
+> Mỗi finding **một dòng duy nhất**, không tách block riêng để tránh lệch số liệu.
+> Xuống dòng trong ô dùng `<br>`. Ảnh dùng link `[Xem ảnh](evidence/task1b/…)`.
 
 | ID | Scenario / Screen | Type | Description | Steps / Heuristic | Severity | Suggested fix | Screenshot ref | Form-submission timestamp |
 |---|---|---|---|---|:--:|---|---|---|
-| CL-001 | | Bug | | | | | | |
-| CL-002 | | Usability | | | | | | |
-| US-001 | | | | | | | | |
-| CP-001 | | | | | | | | |
-| SV-001 | | | | | | | | |
+| `CL-B2-01` | Screen B2 — Trang chi tiết sự kiện | Bug | _(mô tả lỗi, 1–2 câu, nêu hiện tượng quan sát được)_ | 1. …<br>2. …<br>3. …<br>**Heuristic:** N? | | _(thay đổi cụ thể, không phải mục tiêu chung chung)_ | [Xem ảnh](evidence/task1b/CL-B2-01.png) | |
+| `CL-B3-01` | Screen B3 — Form đăng ký | Usability | | | | | | |
+| `US-B2-01` | Screen B2 | | | | | | | |
+| `CP-B4-01` | Screen B4 | | | | | | | |
+| `SV-B1-01` | Screen B1 | | | | | | | |
 
-> **Cột bắt buộc theo đề:** *ID · Scenario/Screen · Type (Bug \| Usability) · Description · Steps/Heuristic · Severity · Suggested fix · Screenshot ref · Form-submission timestamp.*
-> **Timestamp** ghi theo thời điểm bấm Submit trên Google Form (định dạng `YYYY-MM-DD HH:MM`), để đối chiếu được với bản ghi của TA.
+**Cột bắt buộc theo đề:** *ID · Scenario/Screen · Type (Bug \| Usability) · Description · Steps/Heuristic · Severity · Suggested fix · Screenshot ref · Form-submission timestamp.*
+**Timestamp:** thời điểm bấm Submit trên Google Form, định dạng `YYYY-MM-DD HH:MM` — để TA đối chiếu được với bản ghi của họ.
 
 ---
 
-## Chi tiết từng finding
+## Ảnh nhúng cho các finding nặng
 
-> Mỗi finding 1 block, có nhúng ảnh để hiện được khi xuất PDF.
+> Chỉ nhúng ảnh cho finding **severity ≥ 3** hoặc finding cần nhìn ảnh mới hiểu. Còn lại đã có link trong bảng, không nhúng để file không phình.
 
-### [CL-001] _(tên ngắn)_
+### `CL-B?-0?` — _(tên ngắn)_
 
-| Mục | Nội dung |
-|---|---|
-| **Type** | Bug / Usability |
-| **Scenario / Screen** | |
-| **Item checklist / Heuristic** | |
-| **Severity** | |
-| **Môi trường** | _(OS + browser + ngày giờ quan sát)_ |
-| **Steps to reproduce** | 1. …<br>2. …<br>3. … |
-| **Expected** | |
-| **Actual** | |
-| **Suggested fix** | |
-| **Đã submit form lúc** | |
+![CL-B?-0?](evidence/task1b/CL-B2-01.png)
 
-![CL-001](evidence/task1b/CL-001.png)
-
-### [CL-002] …
+_(Ghi 1 câu chỉ ra chỗ cần nhìn trong ảnh.)_
 
 ---
 
@@ -76,10 +68,10 @@
 
 | Nguồn | Bug | Usability | Tổng | Đã submit form |
 |---|:--:|:--:|:--:|:--:|
-| `CL-` Checklist | | | | |
-| `US-` User testing | | | | |
-| `CP-` Cross-platform | | | | |
-| `SV-` Khảo sát | | | | |
+| `CL-` Checklist (Task 1B) | | | | |
+| `US-` User testing (Task 2) | | | | |
+| `CP-` Cross-platform (Task 3) | | | | |
+| `SV-` Khảo sát EMS | | | | |
 | **Tổng** | | | | |
 
 ### Theo severity
@@ -92,16 +84,25 @@
 
 | Màn hình | Số finding | Severity cao nhất |
 |---|:--:|:--:|
-| S1 | | |
-| S2 | | |
-| S3 | | |
+| B2 Trang chi tiết sự kiện | | |
+| B3 Form đăng ký | | |
+| B4 My Registrations + vé QR | | |
+| Khác (B1…) | | |
 
 ---
 
 ## Đối chiếu cuối cùng trước khi nộp
 
+```bash
+# đếm số finding trong bảng hợp nhất
+grep -cE "^\| \`(CL|US|CP|SV)-" 04-findings-log.md
+# đối chiếu ảnh có thật
+ls evidence/task1b evidence/task3
+```
+
 - [ ] Số dòng trong bảng hợp nhất = số lần submit Google Form
-- [ ] Mọi finding đều có `Screenshot ref` trỏ tới file có thật
-- [ ] Mọi finding đều có `Form-submission timestamp`
+- [ ] Mọi finding có `Screenshot ref` trỏ tới file **có thật**
+- [ ] Mọi finding có `Form-submission timestamp`
 - [ ] Đã dùng **đúng email MSSV** cho toàn bộ lần submit (không lẫn email cá nhân)
-- [ ] Không có ID bị trùng hoặc bị nhảy cóc
+- [ ] Không có ID trùng hoặc nhảy cóc trong cùng một nhóm prefix
+- [ ] Số liệu ở 3 bảng thống kê khớp với `README.md` mục 4.4 và `00-main-report.md` mục 5

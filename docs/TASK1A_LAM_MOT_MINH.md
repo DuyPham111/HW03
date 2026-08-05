@@ -3,7 +3,7 @@
 **Tình huống:** nhóm không làm phần checklist chung. Bạn tự làm để không bị kẹt bài của mình.
 **Điểm liên quan:** 15đ trực tiếp (Task 1A) **+ chặn 15đ** của Task 1B — không có checklist thì không chạy được gì.
 **Thời gian thực tế:** ~3 giờ nếu làm theo đúng 6 bước dưới (trong đó 50 phút là khảo sát EMS — không bỏ qua được).
-**File sẽ điền:** `team/gui-checklist.md` · `team/references.md` · `team/ai-prompts.md`
+**File sẽ điền:** `team/gui-checklist.md` · `team/references-and-prompts.md`
 
 ---
 
@@ -47,7 +47,7 @@ Format cũ 5 cột (có cột "Cách kiểm") làm mỗi dòng dài gấp đôi,
 | | **Tổng** | **> 40** |
 
 **Ký hiệu cột Nguồn:** `N1`–`N10` Nielsen · `P1`–`P6` Norman · `S1`–`S8` Shneiderman · `SL` slide môn học · `W` WCAG 2.2 · `E` tài liệu E2E EMS
-**Ký hiệu cột Nguồn gốc:** `AI` = AI sinh ở lượt đầu · `RV` = bạn bổ sung khi review (phải có lý do ở `team/ai-prompts.md`)
+**Ký hiệu cột Nguồn gốc:** `AI` = AI sinh ở lượt đầu · `RV` = bạn bổ sung khi review (phải có lý do ở `team/references-and-prompts.md`)
 
 ---
 
@@ -171,7 +171,7 @@ Rà 10 vùng đề nêu đích danh + đặc thù EMS. **Tick vào ô nào đã 
 | 13 | Độ trễ mạng thật (SUT là môi trường dev từ xa) — có phản hồi trong lúc chờ không | ⬜ | |
 | 14 | Responsive dưới 768px (Task 3 sẽ soi lại) | ⬜ | |
 
-Với **mỗi item bạn tự thêm**, ghi ngay một dòng vào `team/ai-prompts.md` mục 3, chọn 1 trong 3 loại lý do:
+Với **mỗi item bạn tự thêm**, ghi ngay một dòng vào `team/references-and-prompts.md` mục 3, chọn 1 trong 3 loại lý do:
 
 | Loại | Nghĩa | Ví dụ cách viết |
 |---|---|---|
@@ -188,8 +188,8 @@ Với **mỗi item bạn tự thêm**, ghi ngay một dòng vào `team/ai-prompt
 - [ ] Mỗi khía cạnh đạt mục tiêu tối thiểu (12/12/8/10)
 - [ ] Mọi item có mã nguồn heuristic
 - [ ] Mọi item có `AI` hoặc `RV` ở cột Nguồn gốc
-- [ ] Số item `RV` khớp với số dòng giải thích ở `team/ai-prompts.md`
-- [ ] Điền `team/references.md`: nguồn nào dùng cho item nào
+- [ ] Số item `RV` khớp với số dòng giải thích ở `team/references-and-prompts.md`
+- [ ] Điền `team/references-and-prompts.md`: nguồn nào dùng cho item nào
 - [ ] Ghi mọi lượt prompt vào `appendix/a3-ai-audit-report.md`
 - **Commit:** `docs(task1a): add shared GUI checklist (N items across IA-01..IA-04)`
 

@@ -116,7 +116,7 @@ _(cấu trúc như trên)_
 
 | Bug-ID | Màn hình | Mô tả ngắn | Severity | Item checklist liên quan | Ảnh |
 |---|---|---|:--:|---|---|
-| CL-001 | | | | | |
+| CL-B2-01 | | | | | |
 
 ---
 
@@ -197,8 +197,8 @@ Toàn bộ đã được submit lên Google Form (https://forms.gle/CJQFQCAXcsDb
 | Tài liệu | Đường dẫn |
 |---|---|
 | Checklist chung của nhóm | `team/gui-checklist.md` |
-| Nguồn tham khảo | `team/references.md` |
-| AI prompts dựng checklist | `team/ai-prompts.md` |
+| Nguồn tham khảo | `team/references-and-prompts.md` |
+| AI prompts dựng checklist | `team/references-and-prompts.md` |
 | Bảng thực thi checklist chi tiết | `01-checklist-execution.md` |
 | Usability Report | `02-usability-report.md` |
 | Cross-Platform Report | `03-compatibility-matrix.md` |

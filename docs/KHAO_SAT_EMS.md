@@ -13,7 +13,7 @@
 
 - [ ] Mở EMS, xác nhận trang chủ load được
 - [ ] **Đăng ký một tài khoản sinh viên riêng** cho mình (không dùng chung với nhóm) — ghi lại:
-  - Email tài khoản user: `________________`
+  - Email tài khoản user: `23127183@student.hcmus.edu.vn`
   - Đây cũng là tài khoản dùng chạy Task 1B và Task 3
 - [ ] Đăng nhập được bằng tài khoản admin `admin@gmail.com` / `Admin@123`
 - [ ] Tạo thư mục ảnh: `docs/khao-sat/`
@@ -27,7 +27,7 @@
 |---|---|---|---|
 | Ảnh toàn màn hình mỗi màn hình khảo sát | `KS_B2_tong-quan.png` | `docs/khao-sat/` | Để viết item checklist mà không phải mở lại EMS |
 | Ảnh chi tiết một widget lạ | `KS_B2_nut-dang-ky-waitlist.png` | `docs/khao-sat/` | Nguyên liệu mô tả widget cho AI |
-| Ảnh chỗ **nghi ngờ có lỗi** | `SV-001.png` | `23127183_HW03_AI_GUIUsability_EMS_100/evidence/survey/` | Bằng chứng finding — dữ liệu dev có thể reset, chụp ngay |
+| Ảnh chỗ **nghi ngờ có lỗi** | `SV-B1-01.png` | `23127183_HW03_AI_GUIUsability_EMS_100/evidence/survey/` | Bằng chứng finding — dữ liệu dev có thể reset, chụp ngay |
 
 > ⚠️ **Ảnh khảo sát KHÔNG phải bằng chứng Task 1B.** Task 1B đòi ảnh chụp **trong lúc chạy checklist**. Chỗ nào khảo sát thấy nghi ngờ thì lúc chạy 1B phải chụp lại một lần nữa cho đúng ngữ cảnh.
 
@@ -231,9 +231,9 @@ HÀNH VI ĐẶC THÙ ĐÁNG CHÚ Ý
 
 | ID | Màn hình | Quan sát | Nghi ngờ vi phạm | Ảnh |
 |---|---|---|---|---|
-| SV-001 | | | | `evidence/survey/SV-001.png` |
-| SV-002 | | | | |
-| SV-003 | | | | |
+| SV-B1-01 | | | | `evidence/survey/SV-B1-01.png` |
+| SV-B2-01 | | | | |
+| SV-B3-01 | | | | |
 
 ---
 
