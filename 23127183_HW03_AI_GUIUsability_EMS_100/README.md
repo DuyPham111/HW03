@@ -58,7 +58,8 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 │
 ├── team/ ............................ sản phẩm cấp nhóm (Task 1A)
 │   ├── gui-checklist.md ............. checklist > 40 item, phủ IA-01…IA-04
-│   └── references-and-prompts.md .... nguồn tham khảo + prompt + lý do AI bỏ sót
+│   ├── references.md ................ nguồn tham khảo + đối chiếu độ phủ heuristic
+│   └── ai-prompts.md ................ prompt AI + lý do AI bỏ sót 14 mục
 │
 ├── skills/ .......................... Task 5 — 3 Agent Skill + link video demo
 │
@@ -78,7 +79,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Hạng mục chấm | File chính |
 |---|---|
-| 1a (15đ) | `team/gui-checklist.md` · `team/references-and-prompts.md` |
+| 1a (15đ) | `team/gui-checklist.md` · `team/references.md` · `team/ai-prompts.md` |
 | 1b (15đ) | `01-checklist-execution.md` + `evidence/task1b/` |
 | 2 (25đ) | `02-usability-report.md` + `appendix/a1` · `a2` + `evidence/task2/` |
 | 3 (25đ) | `03-compatibility-matrix.md` + `evidence/task3/` |
@@ -94,14 +95,14 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Chỉ số | Số lượng |
 |---|:--:|
-| Số item checklist nhóm thiết kế | _(TODO, phải > 40)_ |
-| — IA-01 General UI standards | |
-| — IA-02 Forms | |
-| — IA-03 Navigation | |
-| — IA-04 Feedback / state | |
-| Số item do AI sinh | |
-| Số item do người bổ sung (có giải thích vì sao AI sót) | |
-| Số item đã chạy (= số item × số màn hình) | |
+| Số item checklist nhóm thiết kế | **52** *(> 40 ✅)* |
+| — IA-01 General UI standards (`G-`) | 16 |
+| — IA-02 Forms (`F-`) | 14 |
+| — IA-03 Navigation (`N-`) | 9 |
+| — IA-04 Feedback / state (`S-`) | 13 |
+| Số item do AI sinh | 38 |
+| Số item do người bổ sung (có giải thích vì sao AI sót) | **14** |
+| Số item đã chạy (= 52 × 3 màn) | _(TODO)_ / 156 |
 | Passed | |
 | Failed | |
 
@@ -158,7 +159,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | No. | Criteria | Grade | Self-Assessed | Minh chứng — mở đúng file này để chấm |
 |---|---|:--:|:--:|---|
-| **1a** | Task 1A — Shared checklist (> 40 items, IA-01…IA-04) + sources + AI prompts *(group)* | 15 | | [team/gui-checklist.md](team/gui-checklist.md)<br>[team/references-and-prompts.md](team/references-and-prompts.md) |
+| **1a** | Task 1A — Shared checklist (> 40 items, IA-01…IA-04) + sources + AI prompts *(group)* | 15 | | [team/gui-checklist.md](team/gui-checklist.md)<br>[team/references.md](team/references.md) · [team/ai-prompts.md](team/ai-prompts.md) |
 | **1b** | Task 1B — Checklist execution on ≥ 3 screens + bug reports *(individual)* | 15 | | [01-checklist-execution.md](01-checklist-execution.md)<br>[00-main-report.md](00-main-report.md) §2 · ảnh: [evidence/task1b/](evidence/task1b/) |
 | **2** | Task 2 — User testing với 5 người thật → Usability Report | 25 | | [02-usability-report.md](02-usability-report.md)<br>[appendix/a1-session-notes.md](appendix/a1-session-notes.md) · [appendix/a2-sus-scoring.md](appendix/a2-sus-scoring.md) · [evidence/task2/](evidence/task2/) |
 | **3** | Task 3 — Cross-Browser / Cross-Platform matrix | 25 | | [03-compatibility-matrix.md](03-compatibility-matrix.md)<br>ảnh: [evidence/task3/](evidence/task3/) |

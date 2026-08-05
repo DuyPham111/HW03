@@ -78,7 +78,7 @@ Sinh tối thiểu [12/12/8/10] item cho IA-0X.
 
 ### Bước A4 — Người bổ sung item + ghi lý do AI sót
 
-Với mỗi item tự thêm, ghi vào `team/references-and-prompts.md` mục 3, phân loại lý do:
+Với mỗi item tự thêm, ghi vào `team/references.md` · `team/ai-prompts.md` mục 3, phân loại lý do:
 - **(a) prompt của mình thiếu ngữ cảnh** → nêu rõ thiếu thông tin gì
 - **(b) giới hạn của model** → nêu rõ giới hạn nào (không thấy màn hình, không biết dữ liệu, không chạy được app)
 - **(c) đặc thù riêng của EMS** → nêu rõ chi tiết nào chỉ lộ ra khi thao tác thật

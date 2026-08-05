@@ -109,7 +109,7 @@ Cảnh báo cho SV2 ở phương án 2: **B5 cần một sự kiện đã `ENDED
 
 | # | Hạng mục | Ai làm | Điểm | File kết quả |
 |---|---|---|---:|---|
-| 1a | Checklist GUI chung > 40 item phủ IA-01…IA-04 + nguồn tham khảo + AI prompts | **Nhóm** | 15 | `team/gui-checklist.md` + `team/references-and-prompts.md` |
+| 1a | Checklist GUI chung > 40 item phủ IA-01…IA-04 + nguồn tham khảo + AI prompts | **Nhóm** | 15 | `team/gui-checklist.md` + `team/references.md` · `team/ai-prompts.md` |
 | 1b | Chạy checklist trên ≥ 3 màn hình + bug report | Cá nhân | 15 | `00-main-report.md` (Chương 2) + `01-checklist-execution.md` |
 | 2 | User testing 5 người thật → Usability Report | Cá nhân | 25 | `02-usability-report.md` + `evidence/task2/` |
 | 3 | Ma trận cross-browser / cross-platform (3 OS × 5 browser × 3 device class) | Cá nhân | 25 | `03-compatibility-matrix.md` + `evidence/task3/` |
@@ -134,11 +134,11 @@ Cảnh báo cho SV2 ở phương án 2: **B5 cần một sự kiện đã `ENDED
 
 ### GIAI ĐOẠN 1 — Task 1A: Checklist GUI chung của nhóm (~1.5 giờ, làm cùng nhóm)
 - [ ] Ôn lại slide: Nielsen 10 heuristics · Norman 6 principles · Shneiderman 8 golden rules · per-widget checklist
-- [ ] Dùng AI sinh bản nháp checklist (**lưu nguyên văn prompt + output** vào `team/references-and-prompts.md`)
+- [ ] Dùng AI sinh bản nháp checklist (**lưu nguyên văn prompt + output** vào `team/references.md` · `team/ai-prompts.md`)
 - [ ] Con người review: bỏ item trùng, sửa item mơ hồ, **thêm item AI bỏ sót**
 - [ ] Với **mỗi item tự thêm**: ghi rõ **VÌ SAO AI bỏ sót** (prompt kém / giới hạn model / đặc thù EMS). Gợi ý vùng AI hay sót: accessibility, keyboard navigation, dark mode, RTL, **i18n EN/VI (rất đặc thù EMS)**, empty/loading state, độ trễ mạng thật
 - [ ] Đếm lại: **> 40 item**, phủ đủ IA-01 / IA-02 / IA-03 / IA-04, mỗi aspect ≥ 8 item
-- [ ] Ghi danh sách nguồn tham khảo vào `team/references-and-prompts.md`
+- [ ] Ghi danh sách nguồn tham khảo vào `team/references.md` · `team/ai-prompts.md`
 - **Commit:** `[task1a] Add shared GUI checklist (>40 items, IA-01..IA-04) + sources + AI prompts`
 
 ### GIAI ĐOẠN 2 — Task 1B: Chạy checklist trên ≥ 3 màn hình (~2 giờ)
@@ -255,7 +255,7 @@ HW03/                                    ← repo git (github.com/DuyPham111/HW0
     ├── 03-compatibility-matrix.md ...... Task 3 (25đ)
     ├── 04-findings-log.md .............. Task 4 (10đ)
     ├── team/ ........................... Task 1A (15đ) — sản phẩm nhóm
-    │   ├── gui-checklist.md · references-and-prompts.md
+    │   ├── gui-checklist.md · references.md · ai-prompts.md
     ├── skills/ ......................... Task 5 (10đ) — 3 SKILL.md + link video
     ├── appendix/ ....................... phụ lục BẮT BUỘC
     │   ├── a1-session-notes.md ......... ghi chú 5 phiên user testing

@@ -70,7 +70,7 @@ Chạy checklist trên EMS · chụp ảnh · tuyển và chạy 5 phiên user t
 
 **Chung** — bài viết bằng Markdown. Công việc không được trùng với thành viên khác trong nhóm.
 
-**Task 1A** — checklist > 40 item, phủ IA-01…IA-04. Mỗi item phải kiểm chứng được (nhìn màn hình kết luận Passed/Failed ngay) và có mã heuristic nguồn. Item do người bổ sung phải có lý do "vì sao AI sót" ở `team/references-and-prompts.md`.
+**Task 1A** — checklist > 40 item, phủ IA-01…IA-04. Mỗi item phải kiểm chứng được (nhìn màn hình kết luận Passed/Failed ngay) và có mã heuristic nguồn. Item do người bổ sung phải có lý do "vì sao AI sót" ở `team/references.md` · `team/ai-prompts.md`.
 
 **Task 1B** — mỗi ô phải có `Passed` / `Failed` / `N/A`, **không để trống**. Ảnh **chỉ** cho mục Failed. Ô N/A phải ghi lý do. Tỉ lệ pass không tính N/A vào mẫu số.
 

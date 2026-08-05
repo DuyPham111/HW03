@@ -13,7 +13,7 @@
 
 | Hạng mục | Điểm | Ai làm | File bắt buộc nộp |
 |---|---:|---|---|
-| **1A** Checklist GUI chung | 15 | **Nhóm** | `team/gui-checklist.md` + `team/references-and-prompts.md` + `team/references-and-prompts.md` |
+| **1A** Checklist GUI chung | 15 | **Nhóm** | `team/gui-checklist.md` + `team/references.md` · `team/ai-prompts.md` + `team/references.md` · `team/ai-prompts.md` |
 | **1B** Chạy checklist trên 3 màn | 15 | Cá nhân | `01-checklist-execution.md` + `00-main-report.md` (ch.2) + ảnh trong `evidence/task1b/` |
 | **2** User testing 5 người | 25 | Cá nhân | `02-usability-report.md` (+PDF) + `evidence/task2/` |
 | **3** Cross-browser/platform | 25 | Cá nhân | `03-compatibility-matrix.md` (+PDF) + `evidence/task3/` |
@@ -69,8 +69,8 @@ Bốn khía cạnh (IA) bắt buộc phủ:
 | File | Nội dung phải có |
 |---|---|
 | `team/gui-checklist.md` | Bảng item với cột: **ID · Item · Cách kiểm · Nguồn heuristic · Nguồn tạo (AI/Người)**. ID dạng `IA01-01` — **dùng lại y nguyên** ở hạng mục 1B |
-| `team/references-and-prompts.md` | Danh sách nguồn: sách, bài báo, tiêu chuẩn, slide môn học. Kèm cột "dùng cho item nào" |
-| `team/references-and-prompts.md` | **Prompt nguyên văn** từng lần + output + human review. Mục 3: bảng item tự thêm kèm lý do AI sót |
+| `team/references.md` · `team/ai-prompts.md` | Danh sách nguồn: sách, bài báo, tiêu chuẩn, slide môn học. Kèm cột "dùng cho item nào" |
+| `team/references.md` · `team/ai-prompts.md` | **Prompt nguyên văn** từng lần + output + human review. Mục 3: bảng item tự thêm kèm lý do AI sót |
 
 > Ba file này **giống hệt nhau giữa 5 thành viên** — đây là trường hợp DUY NHẤT được phép trùng. Nội dung prompt ở đây **cũng phải copy vào `appendix/a3-ai-audit-report.md`** (đề §10 nói rõ).
 
@@ -81,7 +81,7 @@ Bốn khía cạnh (IA) bắt buộc phủ:
 - [ ] Mỗi item trả lời được Passed/Failed khi nhìn màn hình, không mơ hồ
 - [ ] Mỗi item có mã heuristic nguồn
 - [ ] Mỗi item cột "Nguồn tạo" ghi rõ AI hay Người
-- [ ] Mọi item "Người" đều có dòng giải thích vì sao AI sót trong `team/references-and-prompts.md`
+- [ ] Mọi item "Người" đều có dòng giải thích vì sao AI sót trong `team/references.md` · `team/ai-prompts.md`
 
 ## Bẫy mất điểm
 
@@ -487,8 +487,8 @@ Phải có **bảng self-assessment** (6 dòng theo §16 của đề) **và** te
 
 **Nhóm nộp 1 lần (mỗi người giữ 1 bản copy):**
 - [ ] `team/gui-checklist.md` (> 40 item, IA-01…IA-04)
-- [ ] `team/references-and-prompts.md`
-- [ ] `team/references-and-prompts.md`
+- [ ] `team/references.md` · `team/ai-prompts.md`
+- [ ] `team/references.md` · `team/ai-prompts.md`
 
 **Zip cá nhân — `23127183_HW03_AI_GUIUsability_EMS_<điểm 3 chữ số>.zip`:**
 - [ ] `00-main-report.md` **+ PDF**

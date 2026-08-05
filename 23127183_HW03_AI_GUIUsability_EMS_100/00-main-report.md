@@ -200,8 +200,8 @@ Toàn bộ đã được submit lên Google Form (https://forms.gle/CJQFQCAXcsDb
 | Tài liệu | Đường dẫn |
 |---|---|
 | Checklist chung của nhóm | `team/gui-checklist.md` |
-| Nguồn tham khảo | `team/references-and-prompts.md` |
-| AI prompts dựng checklist | `team/references-and-prompts.md` |
+| Nguồn tham khảo | `team/references.md` · `team/ai-prompts.md` |
+| AI prompts dựng checklist | `team/references.md` · `team/ai-prompts.md` |
 | Bảng thực thi checklist chi tiết | `01-checklist-execution.md` |
 | Usability Report | `02-usability-report.md` |
 | Cross-Platform Report | `03-compatibility-matrix.md` |
