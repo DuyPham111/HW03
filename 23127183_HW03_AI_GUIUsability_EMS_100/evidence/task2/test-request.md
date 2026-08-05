@@ -3,6 +3,9 @@
 > Đây là bản gửi cho participant trước/đầu phiên. Lưu ở đây làm **bằng chứng quy trình tuyển và dẫn phiên** (đề §12 yêu cầu dữ liệu phiên thô).
 > Kịch bản đầy đủ + tiêu chí chấm: [`../../02-usability-report.md`](../../02-usability-report.md) · Ghi chú phiên: [`../../appendix/a1-session-notes.md`](../../appendix/a1-session-notes.md)
 
+> **Công cụ chạy phiên:** [Vé tham gia kiểm thử EMS](https://claude.ai/code/artifact/aa535ccc-fb5d-4888-aa4b-c5ba924fe107) — trang tương tác có nhiệm vụ, đồng hồ tự động, khảo sát SUS 10 câu và 5 câu hỏi mở, xuất kết quả cuối phiên. **Dùng SONG SONG với cuộc gọi có chia sẻ màn hình** (Zalo/Meet) — trang này không tự ghi âm/ghi màn hình, chỉ đo giờ và thu câu trả lời. Gửi participant link kèm mã của họ, ví dụ `...?p=P3` để mã tự điền sẵn.
+> Nội dung markdown bên dưới vẫn giữ lại làm **bản dự phòng giấy** (đọc miệng qua điện thoại) nếu participant không mở được link, và làm bằng chứng quy trình cho đề §12.
+
 ---
 
 **Xin chào bạn,**

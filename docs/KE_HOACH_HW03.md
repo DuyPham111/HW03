@@ -122,6 +122,8 @@ Cảnh báo cho SV2 ở phương án 2: **B5 cần một sự kiện đã `ENDED
 
 ## 2. Lộ trình 6 giai đoạn (tick khi xong)
 
+> ⚡ **Cho phép chạy song song:** Giai đoạn 3 (Task 2 — tuyển & chạy 5 người) **không phụ thuộc** vào Giai đoạn 1/2 xong hay chưa. Task scenario, phiếu SUS, câu hỏi mở đã chốt xong (xem `02-usability-report.md` §1) — có thể **gửi lời mời + link công cụ ngay bây giờ** để không mất thời gian chờ người. Chỉ cần đã xong Giai đoạn 0 (dữ liệu thử B2/B3/B4 còn sống) là chạy phiên được. Công cụ chạy phiên: [Vé tham gia kiểm thử EMS](https://claude.ai/code/artifact/aa535ccc-fb5d-4888-aa4b-c5ba924fe107) — xem cách dùng ở `docs/QUY_TRINH_AI_VA_TOI.md` Phần 2.
+
 ### GIAI ĐOẠN 0 — Chuẩn bị (~30 phút)
 - [~] ⭐ **Khảo sát EMS theo phiếu [`KHAO_SAT_EMS.md`](KHAO_SAT_EMS.md)** — **ĐANG DỞ (~60%)**: đã có 10 ảnh, xong màn đăng nhập + B1 + B2 (4 trạng thái), dựng được 3/4 sự kiện thử. **Còn thiếu: Workshop D · toàn bộ B3 · toàn bộ B4 · phía admin · 8 phép thử.** Ước tính 35 phút nữa
 - [ ] Vào SUT https://prod-dev.ems-fitus.cloud, xác nhận hệ thống còn sống (môi trường dev, dữ liệu có thể bị reset → **chụp ảnh liền tay, đừng để dành**)

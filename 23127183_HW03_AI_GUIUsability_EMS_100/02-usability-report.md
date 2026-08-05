@@ -45,15 +45,15 @@
 
 ### 1.3 Câu hỏi mở (probe questions)
 
-Phủ đủ 4 chủ đề đề yêu cầu: **clarity · error recovery · speed · trust**.
+Phủ đủ 4 chủ đề đề yêu cầu: **clarity · error recovery · speed · trust**. Câu hỏi trung lập, không dẫn dắt.
 
 | # | Chủ đề | Câu hỏi |
 |---|---|---|
-| Q1 | Clarity | _(TODO)_ |
-| Q2 | Error recovery | _(TODO)_ |
-| Q3 | Speed | _(TODO)_ |
-| Q4 | Trust | _(TODO)_ |
-| Q5 | Tổng quát | _(TODO — ví dụ: "Nếu được đổi một thứ duy nhất trên màn hình này, bạn đổi gì?")_ |
+| Q1 | Clarity | Trong lúc làm nhiệm vụ, có bước nào bạn không chắc mình cần làm gì tiếp theo không? Đó là bước nào? |
+| Q2 | Error recovery | Nếu có lúc bạn bấm nhầm hoặc đi sai hướng, bạn đã nhận ra bằng cách nào, và có dễ quay lại không? |
+| Q3 | Speed | Nhiệm vụ này diễn ra nhanh hơn, chậm hơn, hay đúng như bạn mong đợi? |
+| Q4 | Trust | Ở thời điểm nào trong lúc làm, bạn cảm thấy tự tin nhất là mình đang làm đúng? Có lúc nào bạn nghi ngờ không? |
+| Q5 | Tổng quát | Nếu chỉ được đổi một điều duy nhất trên các màn hình bạn vừa dùng, bạn sẽ đổi gì? |
 
 ### 1.4 Người tham gia (5 người, NGOÀI lớp học)
 

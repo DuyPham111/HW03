@@ -138,9 +138,15 @@ Viết thành bug entry cho 04-findings-log.md, mỗi entry một block:
 | Chạy phiên | — | **Toàn bộ.** AI không tham gia được phần này |
 | Phân tích | Cấu trúc hoá ghi chú thô thành bảng dòng thời gian · tính SUS · gom pain point · gợi ý severity | **Kiểm verbatim có bị "làm mượt" không** · tự tính tay 1 phiếu SUS · chốt severity |
 
-## ⚠️ Về việc dùng Maze (như phiên bạn từng tham gia với tư cách người test)
+## ✅ Đã tự dựng công cụ thay Maze — [Vé tham gia kiểm thử EMS](https://claude.ai/code/artifact/aa535ccc-fb5d-4888-aa4b-c5ba924fe107)
 
-Bạn đã trải nghiệm phía *người được test* qua link Maze, và muốn chạy 5 phiên của mình theo cách đó. Được — nhưng **Maze thuần một mình KHÔNG đủ để lấy điểm Task 2**.
+Thay vì trả phí/tạo tài khoản Maze, đã dựng một trang tương tác riêng làm đúng việc Maze làm cho task này: hiện nhiệm vụ hướng mục tiêu, mở EMS trong tab mới, **tự động đo giờ**, đếm lỗi/do dự (moderator bấm), khảo sát SUS 10 câu đúng chiều, 5 câu hỏi mở, và xuất kết quả (.json + bản sao dạng bảng markdown dán thẳng vào `a1-session-notes.md`). Không thu thập thông tin liên hệ, không tự ghi âm/ghi hình.
+
+**Khác Maze ở đúng chỗ quan trọng:** trang này **không thay thế cuộc gọi có người quan sát** — nó chỉ là giao diện thu dữ liệu. Bắt buộc vẫn phải mở cuộc gọi chia sẻ màn hình (Zalo/Meet) trong lúc participant dùng trang này, để có think-aloud và verbatim thật — xem lý do ở dưới.
+
+## ⚠️ Vì sao không dùng Maze thuần (đã cân nhắc và loại)
+
+Bạn đã trải nghiệm phía *người được test* qua link Maze, và ban đầu muốn chạy 5 phiên của mình theo cách đó. Được — nhưng **Maze thuần một mình KHÔNG đủ để lấy điểm Task 2**.
 
 Lý do: đề Phase 2 yêu cầu tường minh **moderated** — *"Run sessions — moderated, think-aloud, observe neutrally"*, *"ask them to think aloud"*, *"Record the screen (and audio, with consent) and take structured notes on friction points, errors, hesitations, and verbalised frustration"*. Maze là công cụ **unmoderated remote**: nó đo được click và thời gian, nhưng không có ai ngồi đó nghe người dùng **nói ra** vì sao họ phân vân — mà đúng cái "verbalised frustration" ấy mới là dữ liệu đề đòi.
 
