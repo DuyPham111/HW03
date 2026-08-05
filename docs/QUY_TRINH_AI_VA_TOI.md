@@ -138,34 +138,37 @@ Viết thành bug entry cho 04-findings-log.md, mỗi entry một block:
 | Chạy phiên | — | **Toàn bộ.** AI không tham gia được phần này |
 | Phân tích | Cấu trúc hoá ghi chú thô thành bảng dòng thời gian · tính SUS · gom pain point · gợi ý severity | **Kiểm verbatim có bị "làm mượt" không** · tự tính tay 1 phiếu SUS · chốt severity |
 
-## ✅ Đã tự dựng công cụ thay Maze — [Vé tham gia kiểm thử EMS](https://claude.ai/code/artifact/aa535ccc-fb5d-4888-aa4b-c5ba924fe107)
+## ✅ Đã chốt: dùng Maze thật (app.maze.co)
 
-Thay vì trả phí/tạo tài khoản Maze, đã dựng một trang tương tác riêng làm đúng việc Maze làm cho task này: hiện nhiệm vụ hướng mục tiêu, mở EMS trong tab mới, **tự động đo giờ**, đếm lỗi/do dự (moderator bấm), khảo sát SUS 10 câu đúng chiều, 5 câu hỏi mở, và xuất kết quả (.json + bản sao dạng bảng markdown dán thẳng vào `a1-session-notes.md`). Không thu thập thông tin liên hệ, không tự ghi âm/ghi hình.
+Bạn muốn dùng đúng công cụ mình từng trải nghiệm với tư cách người test. Hợp lý — Maze đo time-on-task và click tự động, đỡ phải bấm giờ tay. Có 3 giới hạn cần biết trước khi dựng, cả 3 đều xử lý được:
 
-**Khác Maze ở đúng chỗ quan trọng:** trang này **không thay thế cuộc gọi có người quan sát** — nó chỉ là giao diện thu dữ liệu. Bắt buộc vẫn phải mở cuộc gọi chia sẻ màn hình (Zalo/Meet) trong lúc participant dùng trang này, để có think-aloud và verbatim thật — xem lý do ở dưới.
+**Giới hạn 1 — tôi không đăng nhập hộ được.** `app.maze.co` cần tài khoản; việc tạo tài khoản/nhập mật khẩu là việc **chỉ bạn tự làm** (không phải AI làm hộ được, dù là Claude hay công cụ nào khác). Phần dưới là hướng dẫn để bạn tự bấm.
 
-## ⚠️ Vì sao không dùng Maze thuần (đã cân nhắc và loại)
+**Giới hạn 2 — gói Free chỉ có `1 study / month`.** Đã kiểm tra trang giá công khai của Maze (05/08/2026): gói Free có 5 seats, 1 study/tháng, kèm **Live website testing (bản Basic)** — đủ dùng cho việc này, nhưng vì chỉ có 1 slot, **dựng đúng 1 lần cho chuẩn**, đừng tạo nháp rồi xoá đi tạo lại. Nếu bạn đã có sẵn tài khoản dùng cho HW khác trong tháng này, **đăng ký tài khoản Maze mới bằng email khác** để có slot riêng — quota tính theo workspace, không phải theo người dùng chung.
 
-Bạn đã trải nghiệm phía *người được test* qua link Maze, và ban đầu muốn chạy 5 phiên của mình theo cách đó. Được — nhưng **Maze thuần một mình KHÔNG đủ để lấy điểm Task 2**.
+**Giới hạn 3 — Maze mặc định là unmoderated, không tự đủ điểm Task 2.** Đề yêu cầu tường minh: *"Run sessions — moderated, think-aloud, observe neutrally"*, *"take structured notes on friction points, errors, hesitations, and verbalised frustration"*. Maze tự nó chỉ đo click/giờ, không có ai nghe participant **nói ra** vì sao họ phân vân. **Bắt buộc chạy song song với cuộc gọi chia sẻ màn hình** (Zalo/Meet) — participant làm task qua link Maze, bạn ngồi trong cuộc gọi quan sát + ghi chú, giống hệt nguyên tắc ở phần trên, chỉ đổi công cụ thu số liệu.
 
-Lý do: đề Phase 2 yêu cầu tường minh **moderated** — *"Run sessions — moderated, think-aloud, observe neutrally"*, *"ask them to think aloud"*, *"Record the screen (and audio, with consent) and take structured notes on friction points, errors, hesitations, and verbalised frustration"*. Maze là công cụ **unmoderated remote**: nó đo được click và thời gian, nhưng không có ai ngồi đó nghe người dùng **nói ra** vì sao họ phân vân — mà đúng cái "verbalised frustration" ấy mới là dữ liệu đề đòi.
+### Cách dựng study trong Maze — dùng đúng nội dung đã chốt
 
-**Cách làm đúng — chạy hybrid:**
+1. Đăng nhập `app.maze.co` → **New study** → chọn kiểu **Live website testing** (không phải Prototype testing, vì SUT là site thật chứ không phải Figma).
+2. Nhập URL: `https://prod-dev.ems-fitus.cloud`
+3. Thêm **Mission/Task block**, dán nguyên văn: *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem mã QR check-in của bạn."* — giữ đúng dạng mục tiêu, không thêm bước bấm cụ thể.
+4. Thêm block hỏi kết quả tự nhận (3 lựa chọn, khớp định nghĩa đã chốt ở `02-usability-report.md`): Completed / Partial / Failed.
+5. Thêm khảo sát SUS: tìm block tên **"System Usability Scale"** hoặc **"SUS"** trong danh sách question block. Nếu Maze không có sẵn block này, tự thêm 10 block **Opinion scale (1–5)**, copy nguyên văn 10 câu từ `appendix/a2-sus-scoring.md` — **giữ đúng thứ tự và đúng câu**, đừng để Maze tự sinh câu khác vì sẽ sai công thức tính điểm.
+6. Thêm 5 block **Open question**, dán 5 câu hỏi mở đã chốt ở `02-usability-report.md` §1.3.
+7. **Tự chạy thử một lượt bằng preview** (không tính vào 5 người, không tính vào pilot) để chắc link vào được `prod-dev.ems-fitus.cloud` và participant đăng nhập/đăng ký EMS bình thường trong đó — site yêu cầu đăng nhập nên cứ để participant tự tạo tài khoản như hướng dẫn.
+8. Publish → lấy link → gửi cho từng người kèm khung giờ hẹn cuộc gọi.
+9. Cuối mỗi phiên: mở Maze → xem kết quả của người đó → copy vào `appendix/a1-session-notes.md` theo đúng định dạng bảng đã có sẵn ở đó.
 
-| Thành phần | Ai lo | Cho ra cái gì |
-|---|---|---|
-| Maze (hoặc chỉ cần link EMS trần) | Công cụ | Time on task, đường click, tỉ lệ hoàn thành — số liệu khách quan, đỡ phải bấm giờ tay |
-| **Cuộc gọi có chia sẻ màn hình** (Meet/Zalo) | Bạn ngồi cùng participant | Think-aloud, verbatim, quan sát do dự, ghi màn hình + audio |
-| Phiếu SUS 10 câu | Điền cuối phiên | Điểm SUS |
+### Việc chỉ bạn làm được (không giao lại được cho AI)
 
-Nghĩa là: participant vẫn làm tác vụ qua link như bạn từng làm, **nhưng bạn có mặt trong cuộc gọi**, yêu cầu họ nói to suy nghĩ, và ghi chú. Vừa có số liệu tự động của Maze, vừa thoả yêu cầu moderated của đề.
+- [ ] Tạo tài khoản/đăng nhập Maze
+- [ ] Dựng study đúng 8 bước trên, publish
+- [ ] Tự preview trước khi gửi thật
+- [ ] Mở cuộc gọi chia sẻ màn hình cho từng phiên, ghi chú think-aloud
+- [ ] Xuất/copy kết quả từ Maze sau mỗi phiên
 
-**Nếu không dùng được Maze** (trial không cho test live URL cần đăng nhập chẳng hạn) thì bỏ Maze cũng không sao — chỉ cần cuộc gọi + chia sẻ màn hình + ghi màn hình + bấm giờ tay. Đề không yêu cầu công cụ nào cụ thể cho Task 2.
-
-**Nên hỏi lại bạn của bạn ba câu** trước khi quyết định:
-1. Dùng gói Maze nào, có giới hạn số người test không?
-2. Có test được **live website cần đăng nhập** không, hay chỉ test được prototype?
-3. Có xuất được bản ghi màn hình từng người không?
+> **Dự phòng:** nếu Maze free-tier trục trặc (hết slot, không mở được live website testing, hoặc SUT chặn iframe/tracking script của Maze), vẫn còn [Vé tham gia kiểm thử EMS](https://claude.ai/code/artifact/aa535ccc-fb5d-4888-aa4b-c5ba924fe107) — trang tự dựng làm đúng việc tương tự (nhiệm vụ + đồng hồ + SUS + câu hỏi mở + xuất kết quả), không cần tài khoản, dùng ngay không giới hạn số phiên. Không bắt buộc chọn cái nào — chỉ cần một trong hai, cộng với cuộc gọi có người quan sát.
 
 ## Prompt 2-1 — Task scenario
 

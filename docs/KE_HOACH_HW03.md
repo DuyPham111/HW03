@@ -122,7 +122,8 @@ Cảnh báo cho SV2 ở phương án 2: **B5 cần một sự kiện đã `ENDED
 
 ## 2. Lộ trình 6 giai đoạn (tick khi xong)
 
-> ⚡ **Cho phép chạy song song:** Giai đoạn 3 (Task 2 — tuyển & chạy 5 người) **không phụ thuộc** vào Giai đoạn 1/2 xong hay chưa. Task scenario, phiếu SUS, câu hỏi mở đã chốt xong (xem `02-usability-report.md` §1) — có thể **gửi lời mời + link công cụ ngay bây giờ** để không mất thời gian chờ người. Chỉ cần đã xong Giai đoạn 0 (dữ liệu thử B2/B3/B4 còn sống) là chạy phiên được. Công cụ chạy phiên: [Vé tham gia kiểm thử EMS](https://claude.ai/code/artifact/aa535ccc-fb5d-4888-aa4b-c5ba924fe107) — xem cách dùng ở `docs/QUY_TRINH_AI_VA_TOI.md` Phần 2.
+> ⚡ **Cho phép chạy song song:** Giai đoạn 3 (Task 2 — tuyển & chạy 5 người) **không phụ thuộc** vào Giai đoạn 1/2 xong hay chưa. Task scenario, phiếu SUS, câu hỏi mở đã chốt xong (xem `02-usability-report.md` §1) — có thể **gửi lời mời ngay bây giờ** để không mất thời gian chờ người. Chỉ cần đã xong Giai đoạn 0 (dữ liệu thử B2/B3/B4 còn sống) là chạy phiên được.
+> **Công cụ:** study Maze (`app.maze.co`, Live website testing) + cuộc gọi chia sẻ màn hình song song — cách dựng ở `docs/QUY_TRINH_AI_VA_TOI.md` Phần 2 (⚠️ **bạn tự đăng nhập và dựng study**, AI không log in hộ được). Dự phòng nếu Maze trục trặc: [Vé tham gia kiểm thử EMS](https://claude.ai/code/artifact/aa535ccc-fb5d-4888-aa4b-c5ba924fe107).
 
 ### GIAI ĐOẠN 0 — Chuẩn bị (~30 phút)
 - [~] ⭐ **Khảo sát EMS theo phiếu [`KHAO_SAT_EMS.md`](KHAO_SAT_EMS.md)** — **ĐANG DỞ (~60%)**: đã có 10 ảnh, xong màn đăng nhập + B1 + B2 (4 trạng thái), dựng được 3/4 sự kiện thử. **Còn thiếu: Workshop D · toàn bộ B3 · toàn bộ B4 · phía admin · 8 phép thử.** Ước tính 35 phút nữa
@@ -154,15 +155,16 @@ Cảnh báo cho SV2 ở phương án 2: **B5 cần một sự kiện đã `ENDED
 ### GIAI ĐOẠN 3 — Task 2: User testing 5 người thật (~2.5 giờ) ⚠️ TỐN THỜI GIAN NHẤT, ĐẶT LỊCH SỚM
 > **Đáng lẽ đã bắt đầu tuyển từ Giai đoạn 0**, đừng để đến lúc này mới đi tìm.
 - **Phase 1 — Thiết kế & chuẩn bị**
-  - [ ] Viết **task scenario theo mục tiêu**, KHÔNG chỉ từng bước bấm (vd B: *"đăng ký một workshop sắp diễn ra và cho tôi xem mã QR check-in của bạn"*)
-  - [ ] Chốt số liệu đo: task success (completed/partial/failed) · time on task · số lỗi & lần do dự · **SUS hoặc UEQ-S** · câu hỏi mở (clarity / error recovery / speed / trust)
+  - [x] Viết **task scenario theo mục tiêu**, KHÔNG chỉ từng bước bấm — đã chốt: *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem mã QR check-in của bạn."*
+  - [x] Chốt số liệu đo + 5 câu hỏi mở — xem `02-usability-report.md` §1
+  - [ ] **Dựng study Maze** theo 8 bước ở `docs/QUY_TRINH_AI_VA_TOI.md` Phần 2 — tự đăng nhập `app.maze.co`, chỉ có **1 slot study/tháng** ở gói Free nên dựng đúng 1 lần
   - [ ] Tuyển **5 người NGOÀI LỚP**, có liên hệ kiểm chứng được (Zalo/email/phone, **che 4 số giữa**)
-  - [ ] Chạy **pilot** với người thứ 6 để sửa kịch bản trước khi chạy thật
+  - [ ] Chạy **pilot** với người thứ 6 để sửa kịch bản trước khi chạy thật (dùng chung 1 study Maze, không tính vào 5 người)
 - **Phase 2 — Chạy 5 phiên**
   - [ ] Mở đầu: nói rõ "đang test **sản phẩm**, không test bạn"; yêu cầu **think-aloud**
   - [ ] Quan sát trung lập, không gợi ý; chỉ can thiệp khi bí hoàn toàn
-  - [ ] Ghi màn hình (+ audio nếu có consent) + ghi chú có cấu trúc
-  - [ ] Kết phiên: điền SUS/UEQ-S + hỏi câu hỏi mở
+  - [ ] Mở cuộc gọi chia sẻ màn hình song song với link Maze (Maze không tự đủ — xem lý do ở `QUY_TRINH_AI_VA_TOI.md`); ghi màn hình (+ audio nếu có consent) + ghi chú có cấu trúc
+  - [ ] Kết phiên: xem kết quả Maze của người đó, copy vào `appendix/a1-session-notes.md`
 - **Phase 3 — Phân tích**
   - [ ] Tính điểm SUS/UEQ-S cho 5 người; lập bảng metric (success rate, mean time, errors)
   - [ ] Gom pain point giống nhau; **tách bug đơn lẻ ra khỏi vấn đề thiết kế hệ thống**
