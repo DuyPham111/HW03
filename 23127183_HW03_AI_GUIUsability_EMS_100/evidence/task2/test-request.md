@@ -27,17 +27,19 @@ Bạn đồng ý ghi hình? ⬜ Có ⬜ Không *(không đồng ý cũng không 
 
 ## Bối cảnh
 
-Bạn là sinh viên đang muốn tham gia một buổi workshop học thuật của khoa. Trước giờ khoa nhận đăng ký qua Google Form, năm nay chuyển sang hệ thống EMS. **Đây là lần đầu bạn dùng hệ thống này.**
+Một người quen báo bạn có một buổi workshop học thuật ở Khoa CNTT mà bạn muốn tham dự (bạn không phải sinh viên trường này). Khoa dùng hệ thống EMS để nhận đăng ký, cho phép khách ngoài trường tham gia với vai trò **Guest**. **Đây là lần đầu bạn dùng hệ thống này.**
 
 ## Nhiệm vụ
 
-> **Khoa sắp tổ chức một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem mã QR check-in của bạn.**
+> **Khoa sắp tổ chức một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem xác nhận đăng ký của bạn.**
+
+⚠️ *(Nguyên văn đang ghi "cho mình xem mã QR check-in" trong file gốc — đang xác minh lại xem hệ thống thật có hiển thị mã QR cho sinh viên không, xem `docs/KHAO_SAT_EMS.md` mục ⚠️5. Câu ở trên đã đổi sang bản an toàn "xem xác nhận đăng ký" cho tới khi xác nhận xong. Nếu xác nhận CÓ QR thì đổi lại nguyên câu cũ.)*
 
 Xong việc thì bạn báo mình một tiếng. Cứ thao tác tự nhiên như bạn vẫn dùng web hằng ngày.
 
 > ⚠️ **Lưu ý cho người dẫn phiên (không đưa cho participant đọc):** đề bài phải nêu **mục tiêu**, tuyệt đối **không** liệt kê các bước bấm. Nếu phiếu này ghi kiểu *"bước 1 đăng nhập, bước 2 tìm kiếm, bước 3 chọn vai trò…"* thì participant chỉ làm theo chỉ dẫn, và buổi test **không còn đo được usability** — mất phần lớn điểm Task 2.
 
-**Điều kiện hệ thống:** bạn cần một tài khoản EMS. Mình sẽ để bạn tự đăng ký ở đầu buổi — phần đó **không tính giờ**, nhưng nếu bạn thấy vướng gì ở bước tạo tài khoản thì cứ nói, mình vẫn ghi lại.
+**Điều kiện hệ thống — QUAN TRỌNG:** bạn cần một tài khoản EMS. Ở trang đăng nhập, **bấm link `Create guest account`** (KHÔNG bấm nút `STUDENT` — nút đó yêu cầu tài khoản Microsoft/Office 365 do HCMUS cấp mà bạn không có). Việc tạo tài khoản **không tính giờ**, nhưng nếu bạn thấy vướng gì ở bước này thì cứ nói, mình vẫn ghi lại — xem lý do ở `docs/KHAO_SAT_EMS.md` mục ⚠️4.
 
 ---
 

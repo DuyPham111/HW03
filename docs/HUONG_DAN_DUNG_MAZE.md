@@ -41,7 +41,14 @@ Bạn đang ở đúng màn hình này. Bên trái là danh sách block (Welcome
 
 > Placeholder: *"Give testers details to complete the mission"* — đây mới là chỗ chứa mục tiêu đầy đủ.
 
-**Dán nguyên văn** (đúng câu đã chốt ở `02-usability-report.md`, hướng mục tiêu, không liệt kê bước bấm):
+> 🔴 **DỪNG LẠI — kiểm tra `docs/KHAO_SAT_EMS.md` mục ⚠️5 trước khi dán ô này.** Tài liệu hướng dẫn chính thức của EMS (`/manual/student`) không hề nhắc tới mã QR ở phía sinh viên. Câu dưới đây đã đổi sang bản an toàn "xem xác nhận đăng ký" thay vì "xem mã QR" cho tới khi tự vào EMS xác nhận được QR có thật hay không. **Nếu bạn đã xác nhận CÓ QR rồi thì đổi lại câu gốc**, còn chưa xác nhận thì dùng đúng câu này:
+
+**Dán nguyên văn** (bản an toàn, chờ xác minh QR):
+```
+Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem xác nhận đăng ký của bạn.
+```
+
+**Câu gốc, chỉ dùng SAU KHI đã xác nhận hệ thống thật có hiển thị mã QR:**
 ```
 Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem mã QR check-in của bạn.
 ```
@@ -89,7 +96,7 @@ Ba điều trước khi bắt đầu:
 2. Xin bạn nói to những gì đang nghĩ trong lúc làm — mình đang nghe qua cuộc gọi đang mở song song với bạn.
 3. Mình sẽ không trả lời câu hỏi trong lúc bạn làm, để xem hệ thống tự giải thích được đến đâu.
 
-Bạn cần một tài khoản EMS — cứ tự đăng ký ở bước đầu, phần đó không tính giờ.
+Bạn cần một tài khoản EMS. Ở trang đăng nhập, bấm link "Create guest account" (KHÔNG bấm nút Student — nút đó cần tài khoản Microsoft/Office 365 của HCMUS mà bạn không có). Việc này không tính giờ.
 ```
 
 - [ ] Đã sửa Welcome — ⚠️ đối chiếu lại tên ô thật, báo tôi nếu khác
@@ -111,9 +118,11 @@ Bạn đã hoàn thành nhiệm vụ đến đâu?
 
 | Lựa chọn | Mô tả kèm theo |
 |---|---|
-| Hoàn thành | Tôi tự mở được mã QR/barcode check-in của mình, đúng sự kiện |
-| Một phần | Tôi đăng ký được nhưng không tìm ra vé |
+| Hoàn thành | Tôi tự tìm thấy đúng xác nhận đăng ký của mình (mã QR nếu có, hoặc trạng thái đăng ký đúng sự kiện) |
+| Một phần | Tôi đăng ký được nhưng không tìm ra xác nhận/vé |
 | Không hoàn thành | Tôi không đăng ký xong được |
+
+⚠️ Câu "Hoàn thành" viết bản an toàn vì chưa xác nhận có QR — xem `docs/KHAO_SAT_EMS.md` mục ⚠️5. Nếu đã xác nhận có QR thì đổi lại đúng "Tôi tự mở được mã QR/barcode check-in của mình, đúng sự kiện" cho khớp `02-usability-report.md`.
 
 - [ ] Đã thêm block chọn kết quả — ⚠️ chưa xác nhận đúng loại block
 

@@ -15,7 +15,7 @@
 |---|:--:|:--:|:--:|:--:|:--:|
 | S1 — B2 Trang chi tiết sự kiện | | | | | |
 | S2 — B3 Form đăng ký | | | | | |
-| S3 — B4 My Registrations + vé QR | | | | | |
+| S3 — B4 Profile → My Activities ⚠️QR | | | | | |
 | **Tổng** | | | | | |
 
 ---

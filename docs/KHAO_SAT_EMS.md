@@ -9,7 +9,9 @@
 
 ---
 
-## ⚠️ BA VIỆC PHẢI XỬ LÝ TRƯỚC KHI ĐI TIẾP
+## ⚠️ NĂM VIỆC PHẢI XỬ LÝ TRƯỚC KHI ĐI TIẾP
+
+> Mục 4 và 5 thêm vào ngày 06/08/2026 sau khi đọc **tài liệu hướng dẫn chính thức của hệ thống** (`Hướng dẫn sinh viên | HCMUS EMS`, lấy từ `/manual/student` trên chính SUT). Đây là nguồn đáng tin hơn hẳn suy đoán từ ảnh chụp — sửa theo nguồn này.
 
 ### 1. B2 KHÔNG phải màn hình công khai — kế hoạch Task 2 & 3 phải đổi
 
@@ -45,6 +47,38 @@ Hệ quả:
 | 2 | `[23127183] Workshop B — het cho` | ✅ đã dựng · Slot **0** · "Role is full" · Registered **1/1** | `KS_B2_workshop-b-het-cho.png` |
 | 3 | `[23127183] Workshop C — dong dang ky` | ✅ đã dựng · "Event registration period has ended" | `KS_B2_workshop-c-dong-dang-ky.png` |
 | 4 | `[23127183] Workshop D — da ket thuc` | ⬜ **CHƯA DỰNG** — cần cho badge trạng thái ở B4 và màn đánh giá B5 | — |
+
+### 4. 🔴 Participant bên ngoài KHÔNG đăng nhập được như bạn đã làm — phải đổi hướng dẫn
+
+Tài liệu chính thức, mục 1.3: *"Trong lần đầu đăng nhập, nhấn nút Microsoft - Student. Đăng nhập bằng tài khoản Microsoft/Office 365 của sinh viên do trường cấp."* Và mục 1.1.1 xác nhận trang Login có **2 nhóm nút khác nhau**, đừng nhầm:
+
+| Nhóm nút | Vị trí | Chức năng |
+|---|---|---|
+| `LECTURER` (icon Google) / `STUDENT` (icon Microsoft) | Card đăng nhập chính | **Đăng nhập thật** — bắt buộc dùng lần đầu, cần **tài khoản Microsoft/Office 365 do HCMUS cấp** |
+| `Create guest account` | Link phụ dưới nút đăng nhập | **Đăng ký tài khoản Guest** — không cần tài khoản HCMUS |
+| Nút Lecturer/Student trong khung "Read user guides" | Trên cùng | **CHỈ mở trang manual public**, không đăng nhập, không gọi OAuth |
+
+**Hệ quả:** tài khoản `23127183@student.hcmus.edu.vn` tôi dùng để khảo sát là **tài khoản HCMUS thật của tôi** — hợp lệ cho việc khảo sát cá nhân. Nhưng **5 người tham gia Task 2 là bạn bè ngoài lớp, gần như chắc chắn không có tài khoản Microsoft/Office 365 của HCMUS** ⇒ **họ không đăng nhập được bằng nút STUDENT**. Họ phải đi qua **`Create guest account`**.
+
+**Việc cần làm:**
+- [ ] Tự bấm thử `Create guest account` một lần, xem form yêu cầu gì → chụp `KS_LOGIN_guest-signup.png`
+- [ ] Đăng ký thử 1 tài khoản Guest → thử toàn bộ luồng B2→B3→B4 bằng tài khoản Guest này, xem có khác gì với luồng Student không (đề cũng liệt kê Guest là 1 trong 3 vai trò đăng ký hợp lệ — `allowGuestRegistration` — nên khả năng cao luồng giống nhau)
+- [ ] Sửa lại `evidence/task2/test-request.md`, `docs/QUY_TRINH_AI_VA_TOI.md`, `docs/HUONG_DAN_DUNG_MAZE.md`: đổi mọi chỗ ghi chung chung "tự đăng ký tài khoản EMS" thành **"bấm Create guest account"**, không phải nút Student
+
+### 5. 🔴 "Vé QR" — tài liệu chính thức KHÔNG hề nhắc tới, cần tự vào kiểm tra ngay
+
+Đọc hết 12 trang tài liệu chính thức: có mục Đăng nhập, Dashboard & tìm kiếm, Saved Events, Xem chi tiết sự kiện, Đăng ký & Waitlist, Lịch sự kiện, Thông báo, **Hồ sơ cá nhân**, Support requests, Đánh giá sự kiện. **Không một chữ nào nhắc tới "QR", "barcode", "vé", hay "check-in" từ phía sinh viên.** Mục 4.3 chỉ nói: khi được duyệt từ waitlist thì có **Waitlist Invitation** qua thông báo, và muốn huỷ thì vào trang chi tiết bấm **Cancel Registration**.
+
+Cái gần nhất với "B4 My Registrations" trong tài liệu là mục 7 — **Hồ sơ cá nhân → tab My Activities**: *"hiển thị lịch sử sự kiện, vai trò và trạng thái đăng ký, đánh giá sự kiện đã tham gia"*. Không nói gì về mã QR.
+
+**Điều này không có nghĩa là tính năng QR chắc chắn không tồn tại** — đề bài gốc (`docs/DE_BAI_02_Spec_HW03_VI.md`) mô tả Pool B có "*My Registrations and the barcode/QR ticket*", và tài liệu 12 trang này là bản tóm tắt, có thể bỏ sót chi tiết hình ảnh. Nhưng **không thể tiếp tục giả định** — đây là rủi ro cao nhất hiện tại của cả Task 2 lẫn lựa chọn màn hình B4.
+
+**Việc cần làm NGAY, ưu tiên cao nhất buổi khảo sát tiếp theo:**
+- [ ] Đăng nhập bằng tài khoản `23127183@student.hcmus.edu.vn`, vào **Profile → My Activities**
+- [ ] Đăng ký thật một sự kiện (`Workshop A — con cho`), xem trạng thái chuyển thành gì
+- [ ] Tìm khắp trang chi tiết sự kiện (B2) và trang My Activities: có mã QR/barcode hiển thị ở đâu không? Hay chỉ có trạng thái chữ (Approved/Pending Review/Rejected/Waitlisted)?
+- [ ] Nếu **CÓ** QR: chụp lại đúng vị trí, cập nhật `KHAO_SAT_EMS.md` §2.4 và xoá cảnh báo này
+- [ ] Nếu **KHÔNG CÓ** QR: báo lại ngay — cần đổi tiêu chí "hoàn thành" của Task 2 (hiện đang là *"tự mở được mã QR"*) sang tiêu chí khác quan sát được thật, ví dụ trạng thái đăng ký hiển thị đúng trong My Activities, và cần sửa lại phần "B4" trong `00-main-report.md` §1.2
 
 ---
 
@@ -99,7 +133,7 @@ Hệ quả:
 | Các khối nội dung (trên → dưới) | ✅ (1) Tiêu đề + nút **Save event** · (2) *khối **Important update** nền hồng — chỉ hiện khi admin gửi* · (3) hàng **tag** · (4) 3 card **Event date** / **Registration period** / **Check-in period** · (5) 2 card **Location** / **Slot available** · (6) khối **Registration roles** |
 | Nút hành động chính | ✅ **Save event** (góc phải trên). Nút đăng ký nằm trong khối **Registration roles** phía dưới, dạng **checkbox chọn vai trò** chứ không phải một nút "Đăng ký" đơn lẻ |
 | Nhãn/trạng thái đổi thế nào ở 4 trạng thái | ✅ **Chưa đăng nhập** → chặn cả trang: "Please sign in to view this event." + nút `login`<br>✅ **Còn chỗ** → Slot available nền xanh, `Student: 49`<br>✅ **Hết chỗ** → Slot available **đổi sang nền hồng**, `Student: 0`, thêm chữ đỏ **"Role is full"**, checkbox vai trò bị vô hiệu<br>✅ **Đã đóng đăng ký** → banner cam **"Event registration period has ended"** |
-| Khi hết chỗ có nói rõ "vào danh sách chờ" không? | ⚠️ **KHÔNG.** Workshop B có ô `Waitlisted 0` (⇒ Waitlist có bật) nhưng giao diện chỉ báo "Role is full", **không có lời mời/nút vào danh sách chờ** → xem `SV-B2-01` |
+| Khi hết chỗ có nói rõ "vào danh sách chờ" không? | ⚠️ **KHÔNG thấy ngay tại chỗ** — Workshop B có ô `Waitlisted 0` nhưng giao diện chỉ báo "Role is full". *Cập nhật 06/08: tài liệu chính thức §4.3 nói cơ chế đúng là — hệ thống âm thầm đưa vào waitlist, rồi gửi **Waitlist Invitation qua thông báo** khi có chỗ trống, người dùng vào thông báo bấm **Accept/Decline Invitation**. Vậy có thể KHÔNG PHẢI bug — có thể đúng thiết kế là "im lặng lúc đăng ký, báo sau qua thông báo". Vẫn cần kiểm: lúc BẤM ĐĂNG KÝ một role đã đầy, có dòng chữ nào xác nhận "bạn đã được đưa vào danh sách chờ" không, hay chỉ thấy role bị khoá không phản hồi gì?* → cập nhật lại `SV-B2-01` sau khi kiểm |
 | Hiển thị số chỗ còn lại | ✅ Dạng **số** trong card `Slot available` → `Student: 49`. Trong khối Registration roles còn có `Registered 1/1`, `0/50` |
 | Định dạng thời gian | ✅ `dd/MM/yyyy HH:mm` — ví dụ `25/08/2026 08:00`. **Không hiển thị múi giờ** |
 | Đếm ngược | ✅ "Event starts in 1 day(s)" / "Event starts in 20 day(s)" / "Event is happening now" |
@@ -107,10 +141,15 @@ Hệ quả:
 | Deep link khi chưa đăng nhập | ⚠️ Bị **chặn hoàn toàn**, không vào được nội dung |
 | Sau khi đăng nhập có quay lại đúng sự kiện không? | ⬜ **CHƯA KIỂM** — bấm nút `login` ở màn chặn rồi xem có về đúng trang sự kiện không. Đây là item `N-` quan trọng |
 | Bấm Back của trình duyệt | ⬜ **CHƯA KIỂM** |
+| Nút **Cancel Registration** ⚠️ *mới, theo tài liệu §4.3* | ⬜ **CHƯA KIỂM** — tài liệu chính thức nói trang chi tiết có nút này cho người **đã đăng ký**, có bước xác nhận trước khi huỷ, và **chỉ huỷ được trước thời gian check-in**. Đăng ký Workshop A xong quay lại B2 xem nút này ở đâu, dialog xác nhận nói gì → chụp `KS_B2_cancel-registration.png` |
+| **Tệp đính kèm** + **Organizing Unit** ⚠️ *mới, theo tài liệu bảng "Xem chi tiết sự kiện"* | ⬜ **CHƯA KIỂM** — tài liệu liệt kê B2 còn có nhóm "Địa điểm: Location **và Organizing Unit**" (tôi mới chỉ ghi Location) và nhóm "Tệp đính kèm: tài liệu liên quan hoặc album link" — kiểm xem 2 sự kiện thử của mình có hiện các khối này không |
+| Nút **Save/Saved** ⚠️ *mới, theo tài liệu mục 2.1* | ⬜ **CHƯA KIỂM** — B2 còn có tính năng lưu sự kiện (khác nút đăng ký), đổi trạng thái Save↔Saved. Đã thấy trên ảnh nhưng chưa test hành vi (click, toast, có đồng bộ với B1 không) |
 
 ### 2.3 · B3 — Form đăng ký ⭐ MÀN CHẤM ĐIỂM
 
 > ⚠️ **Đây là màn hình yếu nhất về dữ liệu khảo sát.** Chưa có ảnh nào chụp lúc form ở trạng thái điền/lỗi. Mà B3 gánh gần hết nhóm item `F-` (≥ 12 item) — thiếu phần này thì checklist sẽ hỏng nặng nhất ở đúng chỗ đề chấm kỹ.
+
+> ✅ **Xác nhận từ tài liệu chính thức §4.2.2:** *"Student chỉ chọn đúng một role khi tham gia waitlist; giới hạn nhiều role chỉ áp dụng cho đăng ký thông thường nếu event cấu hình cho phép."* — khớp với ảnh (`Selected 0/1 student roles`). Cũng xác nhận 4 trạng thái đăng ký chính thức: **Approved · Pending Review · Rejected · Waitlisted** (đây là **thuật ngữ phía người đăng ký nhìn thấy**, khác với 4 ô đếm số `Registered/Pending/Confirmed/Waitlisted` tôi thấy trên trang chi tiết — hai bộ từ khác nhau cho hai chỗ khác nhau, kiểm xem có nhất quán không, khả năng là một item `S-04` finding thật).
 
 Những gì **đã suy ra được** từ khối *Registration roles* trong ảnh Workshop B/C:
 
@@ -133,17 +172,27 @@ Những gì **đã suy ra được** từ khối *Registration roles* trong ản
 - [ ] Nhấn **Esc**: có đóng modal/khối đang mở không?
 - [ ] Validate fail xong, lựa chọn đã tick **có còn giữ** không?
 
-### 2.4 · B4 — My Registrations + vé QR ⭐ MÀN CHẤM ĐIỂM
+### 2.4 · B4 — Trạng thái đăng ký + (nếu có) vé QR ⭐ MÀN CHẤM ĐIỂM
 
-> ⚠️ **Chưa có ảnh nào.** Cần cả 4 trạng thái dưới đây — đặc biệt **empty state** và **mã QR**, vì đó là hai thứ gánh nhóm item `S-` và là tiêu chí "hoàn thành" của Task 2.
+> 🔴 **Đọc mục 5 ở đầu file trước khi làm phần này.** Tài liệu chính thức không hề nhắc "QR"/"barcode"/"vé". Cái gần nhất là **Profile → tab My Activities**. Đây là ưu tiên số 1 của buổi khảo sát tiếp theo — cả `00-main-report.md` lẫn `02-usability-report.md` đang giả định có QR, cần xác nhận thật trước khi đi tiếp.
 
-- [ ] Tìm đường vào màn này (menu avatar? `Saved Events`? mục riêng?) → ghi lại đường dẫn: `________`
-- [ ] Tài khoản **chưa đăng ký gì** → empty state hiện gì → `KS_B4_empty.png`
-- [ ] Sau khi đăng ký Workshop A và B → `KS_B4_danh-sach.png`
-- [ ] Mở chi tiết một đăng ký → tìm **mã QR/barcode** → `KS_B4_ve-qr.png`
-- [ ] So sánh badge: Workshop A (`Pending`?) vs Workshop B (`Waitlisted`?) — màu và chữ khác nhau thế nào?
-- [ ] Thu cửa sổ xuống ~375px → mã QR có méo/cắt không → `KS_B4_mobile.png`
-- [ ] Có huỷ đăng ký được không? Có dialog xác nhận không? Nội dung dialog?
+**Đường vào đã sửa theo tài liệu (không còn phải "tìm"):**
+```
+Avatar (góc phải header) → Profile → tab My Activities
+```
+Tài liệu §7 mô tả: *"Tab My Activities hiển thị lịch sử sự kiện, vai trò và trạng thái đăng ký, đánh giá sự kiện đã tham gia. Nhấn Export để tải danh sách nếu cần."* — vậy màn này còn có sẵn tính năng **Export**, chưa có trong danh sách khảo sát trước đây.
+
+**Việc cần làm — làm ĐÚNG THỨ TỰ, dừng ở bước nào tìm ra câu trả lời cho mục 5 thì báo ngay:**
+- [ ] Đăng ký thật Workshop A bằng tài khoản của mình
+- [ ] Avatar → Profile → **My Activities** → chụp toàn màn hình `KS_B4_my-activities.png`
+- [ ] **Tìm mã QR/barcode ở khắp nơi:** trong My Activities, trong trang chi tiết B2 sau khi đăng ký, trong popup/modal nào đó khi bấm vào dòng đăng ký — có hay không, chụp lại đúng vị trí nếu có
+- [ ] Nếu tài khoản **chưa đăng ký gì** → My Activities hiện empty state gì → `KS_B4_empty.png`
+- [ ] Đăng ký thêm Workshop B (waitlist) → xem trạng thái hiển thị đúng 4 từ tài liệu nêu (Approved/Pending Review/Rejected/Waitlisted) hay từ khác → `KS_B4_danh-sach.png`
+- [ ] Bấm nút **Export** — tải về xem đúng định dạng/nội dung gì
+- [ ] Thu cửa sổ xuống ~375px → xem responsive → `KS_B4_mobile.png`
+- [ ] Quay lại B2, thử nút **Cancel Registration** (đã ghi ở mục 2.2) — dialog xác nhận nói gì, huỷ xong My Activities cập nhật thế nào
+
+**Nếu xác nhận KHÔNG có QR:** báo lại ngay để sửa tiêu chí "hoàn thành" của Task 2 trong `02-usability-report.md` (hiện đang là *"tự mở được mã QR"*) sang tiêu chí quan sát được thật, ví dụ *"tự tìm thấy đúng trạng thái đăng ký của mình trong My Activities"*, và sửa mô tả B4 trong `00-main-report.md` §1.2 từ "My Registrations + vé QR" thành "Profile → My Activities — trạng thái đăng ký".
 
 ### 2.5 · B5 — Đánh giá sao
 
@@ -272,11 +321,13 @@ HÀNH VI ĐẶC THÙ ĐÁNG CHÚ Ý
 
 ## Việc còn lại của buổi khảo sát
 
-Ước tính **~35 phút** nữa là xong.
+Ước tính **~45 phút** nữa là xong (thêm ~10' so với trước do mục 4, 5 mới).
 
+- [ ] 🔴 **Mục 5 — tìm mã QR có tồn tại không** (Profile → My Activities) — ưu tiên cao nhất, làm trước tiên — 10'
+- [ ] 🔴 **Mục 4 — tự thử `Create guest account`** một lần — 5'
 - [ ] Dựng **Workshop D** (`ENDED`) — 5'
 - [ ] **B3**: chạy 8 thao tác ở mục 2.3, chụp 3 ảnh — 12'
-- [ ] **B4**: tìm đường vào, chụp 4 ảnh (đặc biệt **empty state** và **mã QR**) — 10'
+- [ ] **B4**: đã có đường vào rõ (Profile → My Activities) — chụp 6 ảnh theo checklist mục 2.4 — 10'
 - [ ] **Phần 3 admin**: 6 nơi, chụp 6 ảnh — 15'
 - [ ] **Phần 4**: chạy 8 phép thử — 10'
 - [ ] Điền nốt các chỗ `___` ở Phần 5

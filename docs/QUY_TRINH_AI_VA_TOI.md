@@ -1,6 +1,6 @@
 # QUY TRÌNH LÀM VIỆC — AI làm gì · Tôi làm gì
 
-**Kịch bản B** · **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Registrations + vé QR
+**Kịch bản B** · **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** Profile → My Activities ⚠️QR *(chờ xác minh — xem `KHAO_SAT_EMS.md` ⚠️5)*
 **SUT:** https://prod-dev.ems-fitus.cloud · **Email:** `pvnduy23@clc.fitus.edu.vn`
 
 > Mỗi phần dưới đây có 3 khối: **bảng chia việc** → **prompt copy-paste được ngay** → **việc tôi phải tự làm + recheck**.
@@ -70,7 +70,7 @@ Chuyển thành một bảng chạy duy nhất cho file 01-checklist-execution.m
 
 ```
 Tôi sắp chạy checklist GUI trên 3 màn hình phía user của EMS:
-B2 trang chi tiết sự kiện, B3 form đăng ký, B4 My Registrations + vé QR.
+B2 trang chi tiết sự kiện, B3 form đăng ký, B4 Profile → My Activities ⚠️QR.
 
 Liệt kê CÁC TRẠNG THÁI DỮ LIỆU tôi cần dựng sẵn (bằng quyền admin) để 3 màn hình này
 bộc lộ hết giao diện — mỗi trạng thái nói rõ nó làm lộ ra widget/thông báo nào.
@@ -154,11 +154,11 @@ Bạn muốn dùng đúng công cụ mình từng trải nghiệm với tư các
 
 1. Đăng nhập `app.maze.co` → **New study** → chọn kiểu **Live website testing** (không phải Prototype testing, vì SUT là site thật chứ không phải Figma).
 2. Nhập URL: `https://prod-dev.ems-fitus.cloud`
-3. Thêm **Mission/Task block**, dán nguyên văn: *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem mã QR check-in của bạn."* — giữ đúng dạng mục tiêu, không thêm bước bấm cụ thể.
+3. Thêm **Mission/Task block**, dán nguyên văn bản **an toàn** (chờ xác minh QR — xem `docs/KHAO_SAT_EMS.md` mục ⚠️5): *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem xác nhận đăng ký của bạn."* — giữ đúng dạng mục tiêu, không thêm bước bấm cụ thể. Đổi lại thành *"...cho mình xem mã QR check-in của bạn"* nếu đã xác nhận hệ thống thật có QR.
 4. Thêm block hỏi kết quả tự nhận (3 lựa chọn, khớp định nghĩa đã chốt ở `02-usability-report.md`): Completed / Partial / Failed.
 5. Thêm khảo sát SUS: tìm block tên **"System Usability Scale"** hoặc **"SUS"** trong danh sách question block. Nếu Maze không có sẵn block này, tự thêm 10 block **Opinion scale (1–5)**, copy nguyên văn 10 câu từ `appendix/a2-sus-scoring.md` — **giữ đúng thứ tự và đúng câu**, đừng để Maze tự sinh câu khác vì sẽ sai công thức tính điểm.
 6. Thêm 5 block **Open question**, dán 5 câu hỏi mở đã chốt ở `02-usability-report.md` §1.3.
-7. **Tự chạy thử một lượt bằng preview** (không tính vào 5 người, không tính vào pilot) để chắc link vào được `prod-dev.ems-fitus.cloud` và participant đăng nhập/đăng ký EMS bình thường trong đó — site yêu cầu đăng nhập nên cứ để participant tự tạo tài khoản như hướng dẫn.
+7. **Tự chạy thử một lượt bằng preview** (không tính vào 5 người, không tính vào pilot) để chắc link vào được `prod-dev.ems-fitus.cloud`, và **đăng ký thử bằng `Create guest account`** (không dùng nút Student — cần tài khoản Microsoft/Office 365 của HCMUS mà participant ngoài trường không có).
 8. Publish → lấy link → gửi cho từng người kèm khung giờ hẹn cuộc gọi.
 9. Cuối mỗi phiên: mở Maze → xem kết quả của người đó → copy vào `appendix/a1-session-notes.md` theo đúng định dạng bảng đã có sẵn ở đó.
 
@@ -176,7 +176,7 @@ Bạn muốn dùng đúng công cụ mình từng trải nghiệm với tư các
 
 ```
 Tôi làm usability testing cho kịch bản B của EMS (user đăng ký tham dự sự kiện),
-trên đúng 3 màn hình: B2 trang chi tiết sự kiện, B3 form đăng ký, B4 My Registrations + vé QR.
+trên đúng 3 màn hình: B2 trang chi tiết sự kiện, B3 form đăng ký, B4 Profile → My Activities ⚠️QR.
 
 Viết 3 phương án task scenario, mỗi phương án:
 - Nêu MỤC TIÊU người dùng cần đạt, TUYỆT ĐỐI không liệt kê bước thao tác
@@ -282,7 +282,7 @@ hãy ghi rõ "không đủ dữ liệu" thay vì suy đoán.
 
 ```
 Tôi cần ma trận tương thích cho 3 màn hình web (B2 trang chi tiết sự kiện,
-B3 form đăng ký, B4 My Registrations + vé QR) của EMS. Ràng buộc:
+B3 form đăng ký, B4 Profile → My Activities ⚠️QR) của EMS. Ràng buộc:
 - 3 OS: Windows, macOS, và Android HOẶC iOS
 - 5 browser: Chrome, Firefox, Safari, Edge, Opera (hoặc Samsung Internet trên mobile)
 - 3 device class: desktop, tablet, phone
@@ -305,11 +305,13 @@ Với bộ tổ hợp đã chốt: [DÁN BẢNG Ô]
 Viết checklist thao tác cho MỖI ô, sao cho mỗi ảnh chụp thể hiện được nhiều thông tin nhất:
 - B2: cần thấy banner, lịch trình, nút Đăng ký ở trạng thái nào
 - B3: cần thấy form ở trạng thái nào (trống / đã điền / đang báo lỗi)
-- B4: cần thấy badge trạng thái và mã QR
+- B4: cần thấy badge trạng thái (và mã QR nếu xác nhận là có — xem docs/KHAO_SAT_EMS.md ⚠️5)
 
 Nêu rõ với mỗi màn: cái gì cần kiểm về HIỂN THỊ, cái gì cần kiểm về HÀNH VI,
 cái gì cần kiểm về RESPONSIVE.
 ```
+
+⚠️ **B4 có mã QR hay không vẫn đang chờ xác minh** — nếu tới lúc chạy Task 3 vẫn chưa chắc, dán câu hỏi này cho AI kèm câu chốt luôn: *"Chỉ dùng dữ liệu tôi dán, không suy đoán."*
 
 ## Prompt 3-3 — Phân tích sau khi chạy
 

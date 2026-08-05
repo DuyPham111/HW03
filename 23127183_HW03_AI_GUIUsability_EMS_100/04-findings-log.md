@@ -86,7 +86,7 @@ _(Ghi 1 câu chỉ ra chỗ cần nhìn trong ảnh.)_
 |---|:--:|:--:|
 | B2 Trang chi tiết sự kiện | | |
 | B3 Form đăng ký | | |
-| B4 My Registrations + vé QR | | |
+| B4 Profile → My Activities ⚠️QR | | |
 | Khác (B1…) | | |
 
 ---

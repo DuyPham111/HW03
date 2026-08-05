@@ -1,7 +1,7 @@
 # Usability Report — Task 2
 
 **Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Kịch bản:** B — User đăng ký tham dự sự kiện
-**Màn hình được test:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Registrations + vé QR
+**Màn hình được test:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 Profile → My Activities ⚠️ *(tên + có QR hay không đang chờ xác minh, xem §1.1)*
 **Thang đo dùng:** _(TODO: SUS hoặc UEQ-S)_
 **Thời gian chạy:** _(TODO)_ → _(TODO)_
 
@@ -14,22 +14,25 @@
 
 ### 1.1 Task scenario
 
+> 🔴 **CẢNH BÁO — chưa chốt được 100%, chờ xác minh:** tài liệu hướng dẫn chính thức của EMS (`/manual/student`, đọc 06/08/2026) **không hề nhắc tới mã QR/barcode** ở phía sinh viên trong toàn bộ 9 mục của nó. Cái gần nhất với "B4 My Registrations" là **Profile → tab My Activities** (hiển thị trạng thái đăng ký, không nói có QR). Đề bài gốc thì có ghi Pool B có "barcode/QR ticket" — nên chưa thể kết luận chắc là sai, chỉ là **chưa xác minh được trên hệ thống thật**. Chi tiết + việc cần làm: `docs/KHAO_SAT_EMS.md` mục ⚠️5.
+> **Cho tới khi xác minh xong**, toàn bộ tài liệu Task 2 (`test-request.md`, `HUONG_DAN_DUNG_MAZE.md`) đang tạm dùng câu an toàn "xem xác nhận đăng ký" thay vì "xem mã QR". Xác minh xong thì quay lại đây đổi câu bên dưới và đồng bộ ngược ra các file kia.
+
 **Mục tiêu giao cho người dùng (viết dưới dạng MỤC TIÊU, tuyệt đối không liệt kê từng bước bấm):**
 
 > **Bản nháp cho kịch bản B — rà lại sau pilot rồi chốt:**
-> *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia và cho mình xem mã QR check-in của bạn."*
+> *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia và cho mình xem mã QR check-in của bạn."* ⚠️ *(đang dùng bản an toàn "...xem xác nhận đăng ký của bạn" ở các file gửi participant, xem cảnh báo ở trên)*
 
-**Bối cảnh kể cho người dùng:** _(TODO — 2–3 câu, đại ý: bạn nghe bạn bè nhắc tới một workshop của khoa; trước giờ việc đăng ký làm qua Google Form, năm nay chuyển sang hệ thống EMS. Đây là lần đầu bạn dùng nó.)_
+**Bối cảnh kể cho người dùng:** bạn nghe người quen nhắc tới một workshop của Khoa CNTT mà bạn muốn tham dự (bạn không phải sinh viên trường này — đăng ký qua vai trò **Guest**, không cần tài khoản HCMUS). Đây là lần đầu bạn dùng hệ thống EMS.
 
-**Điều kiện coi là hoàn thành (success criteria):** người dùng **tự mở được mã QR/barcode check-in của chính mình** trong màn hình My Registrations, ứng với sự kiện đúng. Đăng ký được nhưng không tìm ra vé ⇒ **Partial**. Không hoàn tất đăng ký ⇒ **Failed**.
+**Điều kiện coi là hoàn thành (success criteria):** người dùng **tự tìm thấy đúng xác nhận đăng ký của mình** (mã QR/barcode nếu hệ thống thật có, hoặc trạng thái đăng ký đúng nếu không có QR) trong **Profile → My Activities**, ứng với đúng sự kiện. Đăng ký được nhưng không tìm ra xác nhận ⇒ **Partial**. Không hoàn tất đăng ký ⇒ **Failed**.
 
-**Ba màn hình mà tác vụ này đi qua:** B2 Trang chi tiết sự kiện (đọc thông tin, ra quyết định) → B3 Form đăng ký (chọn vai trò, xác nhận) → B4 My Registrations + vé QR (tìm lại đăng ký và mở mã check-in). Trang chủ B1 là đường vào, được quan sát nhưng không nằm trong phạm vi chấm.
+**Ba màn hình mà tác vụ này đi qua:** B2 Trang chi tiết sự kiện (đọc thông tin, ra quyết định) → B3 Form đăng ký (chọn vai trò, xác nhận) → B4 Profile → My Activities *(tên và có QR hay không đang chờ xác minh, xem cảnh báo đầu mục)* (tìm lại đăng ký và mở xác nhận/mã check-in). Trang chủ B1 là đường vào, được quan sát nhưng không nằm trong phạm vi chấm.
 
 **Biến thể để lộ thêm trạng thái (dùng cho 2/5 participant):** giao sự kiện **đã hết chỗ và có bật Waitlist** thay vì sự kiện còn chỗ — để xem người dùng có hiểu mình đang vào **danh sách chờ** chứ không phải đã được nhận hay không. Đây thường là chỗ hiểu nhầm nặng nhất của luồng đăng ký, và nó chỉ lộ ra khi có người thật thao tác.
 
 **Điểm dừng (khi nào moderator can thiệp):** _(TODO — đề xuất: chỉ can thiệp khi participant bí hoàn toàn quá 2 phút ở cùng một chỗ; ghi lại mọi lần can thiệp)_
 
-**Lưu ý vận hành (thuận lợi của kịch bản B):** mỗi participant **tự đăng ký tài khoản EMS riêng** ngay đầu phiên, nên năm phiên **không đụng dữ liệu của nhau** và có thể chạy linh hoạt về thời gian. Cần chuẩn bị trước bằng quyền admin: ít nhất một sự kiện `PUBLISHED` + `UPCOMING` còn chỗ, một sự kiện hết chỗ + bật Waitlist, đặt tiền tố `[23127183]` để không lẫn với dữ liệu lớp.
+**Lưu ý vận hành (thuận lợi của kịch bản B):** mỗi participant **tự đăng ký tài khoản EMS riêng** ngay đầu phiên — bấm **`Create guest account`** ở trang login, KHÔNG bấm nút Student (cần tài khoản Microsoft/Office 365 của HCMUS mà participant ngoài trường không có; xem `docs/KHAO_SAT_EMS.md` mục ⚠️4). Nhờ vậy năm phiên **không đụng dữ liệu của nhau** và có thể chạy linh hoạt về thời gian. Cần chuẩn bị trước bằng quyền admin: ít nhất một sự kiện `PUBLISHED` + `UPCOMING` còn chỗ, một sự kiện hết chỗ + bật Waitlist, đặt tiền tố `[23127183]` để không lẫn với dữ liệu lớp.
 
 > **Việc đăng ký tài khoản có tính vào tác vụ không?** Không — cho participant đăng ký/đăng nhập xong rồi mới bắt đầu bấm giờ, để `time on task` chỉ đo đúng luồng đăng ký sự kiện. Nhưng **vẫn ghi chú lại** mọi khó khăn họ gặp ở bước tạo tài khoản, coi như finding phụ.
 
@@ -57,7 +60,7 @@ Phủ đủ 4 chủ đề đề yêu cầu: **clarity · error recovery · speed
 
 ### 1.4 Người tham gia (5 người, NGOÀI lớp học)
 
-**Chân dung mục tiêu cho kịch bản B:** **sinh viên có đi dự sự kiện/workshop của trường** — đúng nhóm người dùng thật của phía user trong EMS, và khớp với yêu cầu *"students, lecturers, or event-goers as fits your scenario"* của đề. Không cần họ biết trước EMS; ngược lại, người chưa từng dùng mới lộ ra được vấn đề usability.
+**Chân dung mục tiêu cho kịch bản B:** **người ngoài trường muốn tham dự sự kiện của khoa** (event-goers), đăng ký qua vai trò **Guest** — khớp đúng nghĩa đen với *"students, lecturers, or event-goers as fits your scenario"* của đề, và khớp thực tế kỹ thuật: participant là bạn bè ngoài lớp, không có tài khoản Microsoft/Office 365 của HCMUS nên không đăng nhập được bằng vai trò Student (xem `docs/KHAO_SAT_EMS.md` mục ⚠️4). Không cần họ biết trước EMS; ngược lại, người chưa từng dùng mới lộ ra được vấn đề usability.
 
 **Vì sao kịch bản B dễ tuyển hơn hẳn:** tác vụ "đăng ký một workshop" là việc participant **vốn đã hiểu**, không cần giải thích nghiệp vụ; và mỗi người dùng **tài khoản riêng tự tạo** nên không phải mượn tài khoản admin dùng chung của lớp.
 

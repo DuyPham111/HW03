@@ -19,7 +19,7 @@
 | # | Quyết định | Trạng thái | Nội dung |
 |---|---|---|---|
 | D1 | Chọn kịch bản A / B / C / D | ✅ CHỐT | **Kịch bản B — User đăng ký tham dự sự kiện** |
-| D2 | Chọn ≥ 3 màn hình | ✅ CHỐT | **B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Registrations + vé QR** (nửa *registration core* của Pool B) |
+| D2 | Chọn ≥ 3 màn hình | ✅ CHỐT | **B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 Profile → My Activities ⚠️QR** (nửa *registration core* của Pool B) |
 | D3 | Nhóm 5 người + phân chia | ⬜ CHỜ NHÓM XÁC NHẬN | Nhóm 5 người ⇒ **một kịch bản bị đôi**, hai người đó phải chọn **bộ màn hình rời nhau** — xem D3 bên dưới |
 | D4 | Email MSSV overlay ảnh | ⚠️ **MỞ LẠI** | Đang ghi `pvnduy23@clc.fitus.edu.vn`, nhưng email đăng nhập EMS là `23127183@student.hcmus.edu.vn`. Đề đòi mẫu `MSSV@....edu.vn` — chỉ cái thứ hai khớp. **Hỏi TA rồi chốt**, xem `KHAO_SAT_EMS.md` mục ⚠️ 2 |
 
@@ -33,7 +33,7 @@ Cách đọc bảng: hạng mục nặng điểm nhất **và** rủi ro nhất 
 
 | Kịch bản | Task 2 (25đ) — tuyển & chạy 5 người | Task 1B (15đ) — độ dày widget | Task 3 (25đ) — tái lập trên mọi thiết bị |
 |---|---|---|---|
-| **B — User đăng ký sự kiện** ✅ | **Dễ nhất.** Tác vụ "đăng ký workshop, lấy vé QR" ai cũng hiểu ngay; mỗi người **tự tạo tài khoản riêng** ⇒ 5 phiên không đụng dữ liệu nhau | Mỏng hơn admin (không upload / rich-text / drag-drop) — bù bằng cách chọn màn nhiều **trạng thái** và ghi rõ lý do N/A | Trung bình: cả B2/B3/B4 đều cần đăng nhập (đã kiểm 05/08/2026) ⇒ phải đăng nhập lại ở từng ô BrowserStack. Bù lại không cần dựng trạng thái phức tạp như A5 Check-in |
+| **B — User đăng ký sự kiện** ✅ | **Dễ nhất.** Tác vụ "đăng ký workshop, xem xác nhận" ai cũng hiểu ngay; mỗi người **tự tạo tài khoản Guest riêng** (không cần tài khoản HCMUS) ⇒ 5 phiên không đụng dữ liệu nhau | Mỏng hơn admin (không upload / rich-text / drag-drop) — bù bằng cách chọn màn nhiều **trạng thái** và ghi rõ lý do N/A | Trung bình: cả B2/B3/B4 đều cần đăng nhập (đã kiểm 05/08/2026) ⇒ phải đăng nhập lại ở từng ô BrowserStack. Bù lại không cần dựng trạng thái phức tạp như A5 Check-in |
 | A — Admin quản lý sự kiện | Phải đưa `admin@gmail.com` (dùng chung cả lớp) cho người ngoài thao tác; tác vụ kém tự nhiên | Dày nhất | A5 Check-in cần mã hợp lệ + đúng khung giờ ⇒ rất khó lặp trên 7+ ô |
 | C — Admin quản lý user | Tệ nhất: người ngoài Block/Reset password trên tài khoản thật của lớp | Trung bình | Trung bình |
 | D — Support request | Khá: phía user dễ nhờ, nhưng phải chờ admin phản hồi mới khép được luồng | Mỏng | Trung bình |
@@ -54,11 +54,13 @@ Cách đọc bảng: hạng mục nặng điểm nhất **và** rủi ro nhất 
 |---|---|---|
 | **B2** Trang chi tiết sự kiện — banner, lịch trình, nút Đăng ký, thông báo waitlist | Điểm ra quyết định; nhiều trạng thái nút (còn chỗ / hết chỗ → waitlist / đã đóng / chưa đăng nhập) | IA-01 · IA-04 · IA-03 deep link |
 | **B3** Form đăng ký — chọn vai trò, vai trò phụ, xác nhận | **Màn hình form DUY NHẤT phía user** — bỏ nó là mất gần hết IA-02 | IA-02 · IA-04 |
-| **B4** My Registrations + vé QR — badge trạng thái, empty state, render mã QR | Đầu ra quan sát được, dùng làm tiêu chí "hoàn thành" cho Task 2 | IA-04 · IA-01 · IA-03 |
+| **B4** Profile → My Activities — badge trạng thái, empty state ⚠️QR | Đầu ra quan sát được, dùng làm tiêu chí "hoàn thành" cho Task 2 | IA-04 · IA-01 · IA-03 |
+
+⚠️ **06/08:** tên/đường vào B4 sửa theo tài liệu chính thức EMS (Profile → My Activities, không phải "My Registrations"); QR chưa xác nhận có thật — xem `KHAO_SAT_EMS.md` ⚠️5.
 
 **Ba lý do:**
 
-1. **B4 cho Task 2 một tiêu chí hoàn thành nhìn thấy được.** "Cho mình xem mã QR check-in của bạn" — người quan sát biết ngay xong hay chưa, không phải suy diễn. Bộ B1+B2+B3 kết thúc ở màn xác nhận, mơ hồ hơn nhiều.
+1. **B4 cho Task 2 một tiêu chí hoàn thành nhìn thấy được.** "Cho mình xem xác nhận đăng ký của bạn" — người quan sát biết ngay xong hay chưa, không phải suy diễn. Bộ B1+B2+B3 kết thúc ở màn xác nhận, mơ hồ hơn nhiều.
 2. **B4 là màn duy nhất trong Pool B có badge trạng thái nhiều màu** (chờ duyệt / đã duyệt / danh sách chờ / bị từ chối) + empty state. Không có nó, nhóm item IA-04 gần như rỗng — đúng cái điểm yếu của kịch bản B.
 3. **B3 phải có mặt** vì đó là form duy nhất phía user; thiếu nó thì IA-02 (12+ item) chết gần hết.
 
@@ -78,7 +80,7 @@ Nghĩa là: **một kịch bản sẽ có 2 người cùng làm, và hai ngườ
 
 | SV | Kịch bản | Bộ màn hình |
 |---|---|---|
-| **Duy (23127183)** | **B** | **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Registrations + vé QR *(có thể thêm B1 làm màn thứ 4)* |
+| **Duy (23127183)** | **B** | **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** Profile → My Activities ⚠️QR *(có thể thêm B1 làm màn thứ 4)* |
 | SV2 | A — nửa *authoring* | A1 Events list · A2 Add/Edit Event · A3 Registration & Roles config |
 | SV3 | A — nửa *operation* | A4 Participants approval · A5 Check-in · Dashboard KPI |
 | SV4 | C | chọn 3 trong C1–C4 |
@@ -155,7 +157,7 @@ Cảnh báo cho SV2 ở phương án 2: **B5 cần một sự kiện đã `ENDED
 ### GIAI ĐOẠN 3 — Task 2: User testing 5 người thật (~2.5 giờ) ⚠️ TỐN THỜI GIAN NHẤT, ĐẶT LỊCH SỚM
 > **Đáng lẽ đã bắt đầu tuyển từ Giai đoạn 0**, đừng để đến lúc này mới đi tìm.
 - **Phase 1 — Thiết kế & chuẩn bị**
-  - [x] Viết **task scenario theo mục tiêu**, KHÔNG chỉ từng bước bấm — đã chốt: *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem mã QR check-in của bạn."*
+  - [x] Viết **task scenario theo mục tiêu**, KHÔNG chỉ từng bước bấm — đã chốt (bản an toàn, chờ xác minh QR — xem `KHAO_SAT_EMS.md` ⚠️5): *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem xác nhận đăng ký của bạn."*
   - [x] Chốt số liệu đo + 5 câu hỏi mở — xem `02-usability-report.md` §1
   - [ ] **Dựng study Maze** theo 8 bước ở `docs/QUY_TRINH_AI_VA_TOI.md` Phần 2 — tự đăng nhập `app.maze.co`, chỉ có **1 slot study/tháng** ở gói Free nên dựng đúng 1 lần
   - [ ] Tuyển **5 người NGOÀI LỚP**, có liên hệ kiểm chứng được (Zalo/email/phone, **che 4 số giữa**)

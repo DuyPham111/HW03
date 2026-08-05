@@ -18,9 +18,11 @@
 |---|---|---|---|---|
 | 1 | B2 | Trang chi tiết sự kiện — banner, lịch trình, nút Đăng ký, thông báo waitlist | Điểm ra quyết định của cả luồng. Chứa nhiều trạng thái nút khác nhau (còn chỗ / hết chỗ → waitlist / đã đóng đăng ký / chưa đăng nhập) nên là màn hình giàu IA-04 nhất trong bộ | IA-01 bố cục & typography · IA-04 trạng thái nút + thông báo waitlist · IA-03 deep link & quay lại |
 | 2 | B3 | Form đăng ký — chọn vai trò, vai trò phụ, xác nhận | Màn hình form **duy nhất** ở phía người dùng: bỏ nó thì gần như toàn bộ nhóm item IA-02 (nhãn, trường bắt buộc, validation, vị trí thông báo lỗi, xác nhận) thành N/A và mất điểm Task 1B | IA-02 (toàn bộ phần áp dụng được cho user side) · IA-04 xác nhận & toast |
-| 3 | B4 | My Registrations + vé QR/barcode — trạng thái đăng ký và mã check-in | Đầu ra quan sát được của cả luồng, dùng làm tiêu chí "hoàn thành" cho Task 2. Có badge trạng thái nhiều màu (chờ duyệt / đã duyệt / danh sách chờ / bị từ chối), empty state, và phần render mã QR — nơi lỗi hiển thị cross-platform dễ lộ nhất | IA-04 badge trạng thái · IA-01 empty state & render QR · IA-03 điều hướng vào chi tiết vé |
+| 3 | B4 | Profile → My Activities — trạng thái đăng ký (+ mã check-in ⚠️ nếu có, đang xác minh) | Đầu ra quan sát được của cả luồng, dùng làm tiêu chí "hoàn thành" cho Task 2. Có badge trạng thái nhiều màu (Approved/Pending Review/Rejected/Waitlisted theo tài liệu chính thức), empty state | IA-04 badge trạng thái · IA-01 empty state · IA-03 điều hướng vào chi tiết |
 
-**Giải trình chung:** ba màn hình tạo thành một mạch liền **xem sự kiện → đăng ký → nhận vé**, đúng bằng tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B (*"register for an upcoming workshop and show me your check-in QR"*). Nhờ vậy bộ này: (1) gói được thành **một tác vụ hướng mục tiêu duy nhất** cho Task 2; (2) phủ đủ cả bốn khía cạnh IA-01…IA-04 dù phía user không có upload/rich-text/drag-drop; (3) chạy được bằng **tài khoản riêng của từng người**, không phụ thuộc tài khoản admin dùng chung của lớp — điều kiện then chốt để chạy 5 phiên user testing với người ngoài lớp mà không đụng dữ liệu nhau.
+⚠️ **06/08/2026:** tên/đường vào B4 đã sửa theo tài liệu hướng dẫn chính thức của EMS (Profile → My Activities, không phải "My Registrations"); tài liệu đó không nhắc tới mã QR. Xem `docs/KHAO_SAT_EMS.md` mục ⚠️5 để biết việc cần xác minh.
+
+**Giải trình chung:** ba màn hình tạo thành một mạch liền **xem sự kiện → đăng ký → xem xác nhận**, đúng bằng tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B (*"register for an upcoming workshop and show me your check-in QR"* — đề gốc ghi vậy, đang xác minh hệ thống thật có đúng thế không). Nhờ vậy bộ này: (1) gói được thành **một tác vụ hướng mục tiêu duy nhất** cho Task 2; (2) phủ đủ cả bốn khía cạnh IA-01…IA-04 dù phía user không có upload/rich-text/drag-drop; (3) chạy được bằng **tài khoản riêng của từng người** (vai trò Guest, không cần tài khoản HCMUS), không phụ thuộc tài khoản admin dùng chung của lớp — điều kiện then chốt để chạy 5 phiên user testing với người ngoài lớp mà không đụng dữ liệu nhau.
 
 **Nhóm item sẽ đánh N/A và lý do:** upload ảnh, trình soạn rich-text, kéo-thả reorder, bảng cấu hình quyền — các widget này chỉ tồn tại ở phía admin, không có trong Pool B. Mọi ô N/A đều ghi lý do trong `01-checklist-execution.md` theo yêu cầu của đề.
 
@@ -32,7 +34,7 @@ Nhóm có **5 người** trong khi đề chỉ có 4 kịch bản ⇒ theo §5 c
 
 | Thành viên | MSSV | Kịch bản | Bộ màn hình |
 |---|---|---|---|
-| Phạm Vũ Ngọc Duy | 23127183 | **B** (nửa *registration core*) | B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Registrations + vé QR |
+| Phạm Vũ Ngọc Duy | 23127183 | **B** (nửa *registration core*) | B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 Profile → My Activities ⚠️QR |
 | _(TODO)_ | | _(xem 2 phương án dưới)_ | _(TODO)_ |
 | _(TODO)_ | | A | _(chọn 3 trong A1–A5)_ |
 | _(TODO)_ | | C | _(chọn 3 trong C1–C4)_ |
@@ -110,7 +112,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 |---|:--:|:--:|:--:|:--:|
 | B2 Trang chi tiết sự kiện | | | | |
 | B3 Form đăng ký | | | | |
-| B4 My Registrations + vé QR | | | | |
+| B4 Profile → My Activities ⚠️QR | | | | |
 | **Tổng** | | | | |
 
 ### 4.2 Usability Testing (Task 2)
@@ -133,7 +135,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
 | B2 Trang chi tiết sự kiện | | | | ⬜ | ⬜ | ⬜ |
 | B3 Form đăng ký | | | | ⬜ | ⬜ | ⬜ |
-| B4 My Registrations + vé QR | | | | ⬜ | ⬜ | ⬜ |
+| B4 Profile → My Activities ⚠️QR | | | | ⬜ | ⬜ | ⬜ |
 | **Tổng** | | | | | | |
 
 ### 4.4 Findings (Task 4)

@@ -121,6 +121,8 @@
 | S-12 | Mã QR / barcode hiển thị **đủ lớn và sắc nét** để quét được bằng camera điện thoại thông thường, không bị co méo trên màn hình nhỏ | N1, SL | AI |
 | S-13 | Nhãn nút, tiêu đề và tên mục dùng **cùng một quy ước viết hoa** trên toàn hệ thống | N4, S1 | **RV** |
 
+> ⚠️ **06/08/2026 — `S-12` có nguy cơ N/A cho kịch bản B:** tài liệu hướng dẫn chính thức của EMS không nhắc tới mã QR/barcode phía sinh viên. Nếu Task 1B xác nhận màn B4 (Profile → My Activities) không có QR, đánh `S-12` là **N/A** trên cả 3 màn với lý do "không tìm thấy tính năng QR trong phạm vi kịch bản B" — **giữ nguyên item**, không xoá, vì item vẫn hợp lệ cho kịch bản/thành viên khác (vd A5 Check-in). Xem `docs/KHAO_SAT_EMS.md` mục ⚠️5.
+
 ---
 
 ## 5. Vùng đã cân nhắc nhưng KHÔNG đưa vào — có lý do

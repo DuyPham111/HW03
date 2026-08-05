@@ -2,7 +2,7 @@
 
 **Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Email nộp form / overlay ảnh:** `pvnduy23@clc.fitus.edu.vn`
 **SUT:** https://prod-dev.ems-fitus.cloud · **Kịch bản:** **B — User đăng ký tham dự sự kiện**
-**Màn hình:** **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Registrations + vé QR
+**Màn hình:** **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** Profile → My Activities ⚠️QR *(tên + QR chờ xác minh — `docs/KHAO_SAT_EMS.md` ⚠️5)*
 
 > File này trả lời đúng hai câu cho từng hạng mục: **"phải làm gì?"** và **"nộp cái gì?"**.
 > Kế hoạch theo thời gian nằm ở [`KE_HOACH_HW03.md`](KE_HOACH_HW03.md). Nguyên văn đề nằm ở [`DE_BAI_02_Spec_HW03_VI.md`](DE_BAI_02_Spec_HW03_VI.md).
@@ -162,7 +162,7 @@ Chạy **toàn bộ** checklist chung lên **từng màn hình** trong 3 màn c�
 > Bản nháp cho kịch bản B: *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia và cho mình xem mã QR check-in của bạn."*
 
 **Định nghĩa tiêu chí hoàn thành** (phải quan sát được từ bên ngoài):
-- **Completed** — tự mở được mã QR/barcode của chính mình trong My Registrations, đúng sự kiện
+- **Completed** — tự tìm thấy đúng xác nhận đăng ký của mình (mã QR nếu có, xem ⚠️ ở trên) trong Profile → My Activities, đúng sự kiện
 - **Partial** — đăng ký được nhưng không tìm ra vé
 - **Failed** — không hoàn tất đăng ký
 

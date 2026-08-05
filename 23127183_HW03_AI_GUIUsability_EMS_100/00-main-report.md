@@ -4,7 +4,7 @@
 **Ngày thực hiện:** _(TODO)_ → _(TODO)_
 **SUT:** EMS — Event Management System, Khoa CNTT — https://prod-dev.ems-fitus.cloud
 **Tài khoản admin:** `admin@gmail.com` (dùng chung toàn lớp) · **Tài khoản user riêng:** _(TODO)_
-**Kịch bản đã chọn:** **B — User đăng ký tham dự sự kiện** · **Màn hình:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Registrations + vé QR
+**Kịch bản đã chọn:** **B — User đăng ký tham dự sự kiện** · **Màn hình:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 Profile → My Activities ⚠️QR
 
 > **Lưu ý về môi trường:** SUT là môi trường dev (`prod-dev.ems-fitus.cloud`, thay cho link ngrok cũ đã ngừng hoạt động), dữ liệu có thể bị reset định kỳ. Mọi bằng chứng trong báo cáo này được chụp **ngay tại thời điểm quan sát**; trạng thái mô tả có thể không còn tái hiện được ở phiên sau. Thời điểm chụp được ghi kèm mỗi ảnh.
 
@@ -51,9 +51,11 @@
 |---|---|---|---|---|---|
 | 1 | **B2** | Trang chi tiết sự kiện — banner, lịch trình, nút Đăng ký, thông báo waitlist | Trang chủ → chọn một sự kiện (có deep link riêng) | Điểm ra quyết định của cả luồng; chứa nhiều trạng thái nút khác nhau (còn chỗ / hết chỗ → waitlist / đã đóng đăng ký / chưa đăng nhập) nên là màn hình giàu IA-04 nhất trong bộ | IA-01 · IA-04 · IA-03 |
 | 2 | **B3** | Form đăng ký — chọn vai trò, vai trò phụ, xác nhận | B2 → nút **Đăng ký** | Màn hình form **duy nhất** ở phía người dùng; bỏ nó thì gần như toàn bộ nhóm item IA-02 (nhãn, trường bắt buộc, validation, vị trí thông báo lỗi, xác nhận) thành N/A | IA-02 · IA-04 |
-| 3 | **B4** | My Registrations + vé QR/barcode — trạng thái đăng ký, mã check-in | Menu tài khoản → **My Registrations** | Đầu ra quan sát được của cả luồng, dùng làm tiêu chí "hoàn thành" cho Task 2; có badge trạng thái nhiều màu, empty state, và phần render mã QR — nơi lỗi hiển thị cross-platform dễ lộ nhất | IA-04 · IA-01 · IA-03 |
+| 3 | **B4** | Profile → My Activities — trạng thái đăng ký (+ mã check-in ⚠️ nếu có, đang xác minh) | Avatar (header) → **Profile** → tab **My Activities** | Đầu ra quan sát được của cả luồng, dùng làm tiêu chí "hoàn thành" cho Task 2; có badge trạng thái nhiều màu, empty state | IA-04 · IA-01 · IA-03 |
 
-**Giải trình chung:** ba màn hình tạo thành một mạch liền **xem sự kiện → đăng ký → nhận vé**, trùng đúng với tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B (*"register for an upcoming workshop and show me your check-in QR"*). Bộ này được chọn thay vì B1+B2+B3 vì B4 cung cấp **tiêu chí hoàn thành quan sát được từ bên ngoài** cho Task 2 (nhìn thấy mã QR là xong) và là màn hình duy nhất trong Pool B có badge trạng thái nhiều màu — thứ cần thiết để các item IA-04 của checklist không bị rỗng. B1 (trang chủ + carousel + tìm kiếm) vẫn là đường vào của tác vụ và được quan sát trong lúc chạy phiên, nhưng không nằm trong phạm vi chấm để tránh chồng lấn với thành viên khác trong nhóm.
+⚠️ **Cập nhật 06/08/2026:** tài liệu hướng dẫn chính thức của EMS (`/manual/student`) gọi tên và đường vào màn này là **Profile → My Activities**, không phải "My Registrations" như tôi đoán ban đầu; tài liệu cũng không hề nhắc tới mã QR/barcode. Chi tiết: `docs/KHAO_SAT_EMS.md` mục ⚠️5. Bảng trên đã sửa theo tên chính thức; các mục dưới còn giữ tên cũ "My Registrations + vé QR" ở một vài chỗ lặp lại, sẽ đồng bộ hết sau khi xác minh xong QR có tồn tại hay không.
+
+**Giải trình chung:** ba màn hình tạo thành một mạch liền **xem sự kiện → đăng ký → xem xác nhận**, trùng đúng với tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B (*"register for an upcoming workshop and show me your check-in QR"* — đề gốc ghi vậy, thực tế hệ thống có đúng như thế không đang chờ xác minh). Bộ này được chọn thay vì B1+B2+B3 vì B4 cung cấp **tiêu chí hoàn thành quan sát được từ bên ngoài** cho Task 2 và là màn hình duy nhất trong Pool B có badge trạng thái nhiều màu — thứ cần thiết để các item IA-04 của checklist không bị rỗng. B1 (trang chủ + carousel + tìm kiếm) vẫn là đường vào của tác vụ và được quan sát trong lúc chạy phiên, nhưng không nằm trong phạm vi chấm để tránh chồng lấn với thành viên khác trong nhóm.
 
 **Điều kiện dữ liệu cần chuẩn bị trước:** để ba màn hình này bộc lộ đủ trạng thái, cần có sẵn trên hệ thống ít nhất: một sự kiện `PUBLISHED` + `UPCOMING` còn chỗ, một sự kiện đã **hết chỗ và bật Waitlist**, và một sự kiện đã **đóng đăng ký**. Các sự kiện này được tạo bằng quyền admin trong lượt chạy E2E ở mục 0 và đặt tiền tố `[23127183]`.
 
@@ -85,7 +87,7 @@ Nhóm 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản �
 |---|:--:|:--:|:--:|:--:|:--:|
 | B2 Trang chi tiết sự kiện | | | | | |
 | B3 Form đăng ký | | | | | |
-| B4 My Registrations + vé QR | | | | | |
+| B4 Profile → My Activities ⚠️QR | | | | | |
 | **Tổng** | | | | | |
 
 ### 2.2 Kết quả theo khía cạnh giao diện
@@ -110,7 +112,7 @@ Nhóm 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản �
 ### 2.4 Màn hình B3 — Form đăng ký
 _(cấu trúc như trên)_
 
-### 2.5 Màn hình B4 — My Registrations + vé QR
+### 2.5 Màn hình B4 — Profile → My Activities
 _(cấu trúc như trên)_
 
 ### 2.6 Bug phát hiện từ Task 1B
@@ -151,7 +153,7 @@ _(cấu trúc như trên)_
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
 | B2 Trang chi tiết sự kiện | | | | | | |
 | B3 Form đăng ký | | | | | | |
-| B4 My Registrations + vé QR | | | | | | |
+| B4 Profile → My Activities ⚠️QR | | | | | | |
 
 **Lỗi tương thích nghiêm trọng nhất:** _(TODO)_
 

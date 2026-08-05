@@ -12,7 +12,7 @@
 | Họ tên | `Phạm Vũ Ngọc Duy` |
 | Email MSSV | `pvnduy23@clc.fitus.edu.vn` |
 | Kịch bản | **B — User đăng ký tham dự sự kiện** |
-| 3 màn hình | **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Registrations + vé QR |
+| 3 màn hình | **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** Profile → My Activities ⚠️QR *(tên + QR chờ xác minh — `docs/KHAO_SAT_EMS.md` ⚠️5)* |
 | SUT | https://prod-dev.ems-fitus.cloud *(link ngrok trong đề đã chết)* |
 | Tài khoản admin | `admin@gmail.com` / `Admin@123` — dùng chung cả lớp |
 | Google Form findings | https://forms.gle/CJQFQCAXcsDbXDMM9 |
