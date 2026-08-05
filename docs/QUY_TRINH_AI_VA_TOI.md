@@ -1,6 +1,6 @@
 # QUY TRÌNH LÀM VIỆC — AI làm gì · Tôi làm gì
 
-**Kịch bản B** · **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Profile — nút QR Code + My Activities
+**Kịch bản B** · **B1** Danh sách sự kiện · **B2** Trang chi tiết sự kiện · **B4** My Profile — nút QR Code + My Activities
 **SUT:** https://prod-dev.ems-fitus.cloud · **Email:** `23127183@student.hcmus.edu.vn`
 
 > Mỗi phần dưới đây có 3 khối: **bảng chia việc** → **prompt copy-paste được ngay** → **việc tôi phải tự làm + recheck**.
@@ -38,7 +38,7 @@ Chi tiết đầy đủ ở [`TASK1A_LAM_MOT_MINH.md`](TASK1A_LAM_MOT_MINH.md) �
 
 ---
 
-# PHẦN 1B — Chạy checklist trên B2/B3/B4 (15đ)
+# PHẦN 1B — Chạy checklist trên B1/B2/B4 (15đ)
 
 ## Chia việc
 
@@ -57,10 +57,10 @@ Chi tiết đầy đủ ở [`TASK1A_LAM_MOT_MINH.md`](TASK1A_LAM_MOT_MINH.md) �
 Đây là checklist chung của nhóm: [DÁN TOÀN BỘ team/gui-checklist.md]
 
 Chuyển thành một bảng chạy duy nhất cho file 01-checklist-execution.md, format:
-| ID | Mục kiểm tra (rút gọn ≤ 12 từ) | IA | B2 | B3 | B4 | Notes | Bug-ID | Ảnh |
+| ID | Mục kiểm tra (rút gọn ≤ 12 từ) | IA | B1 | B2 | B4 | Notes | Bug-ID | Ảnh |
 
 - Giữ NGUYÊN ID và thứ tự gốc, không đánh số lại
-- 3 cột B2/B3/B4 để trống — tôi sẽ tự điền khi chạy thật
+- 3 cột B1/B2/B4 để trống — tôi sẽ tự điền khi chạy thật
 - Với mỗi item, đánh dấu trước bằng ký hiệu (?) nếu bạn dự đoán nó sẽ N/A ở phía user
   (EMS phía user không có upload ảnh, rich-text, kéo-thả reorder) — đây chỉ là DỰ ĐOÁN
   để tôi chạy nhanh hơn, tôi vẫn tự xác nhận từng cái
@@ -70,7 +70,7 @@ Chuyển thành một bảng chạy duy nhất cho file 01-checklist-execution.m
 
 ```
 Tôi sắp chạy checklist GUI trên 3 màn hình phía user của EMS:
-B2 trang chi tiết sự kiện, B3 form đăng ký, B4 My Profile — QR Code + My Activities.
+B1 danh sách sự kiện, B2 trang chi tiết sự kiện (khối đăng ký nằm ngay trong đó), B4 My Profile — QR Code + My Activities.
 
 Liệt kê CÁC TRẠNG THÁI DỮ LIỆU tôi cần dựng sẵn (bằng quyền admin) để 3 màn hình này
 bộc lộ hết giao diện — mỗi trạng thái nói rõ nó làm lộ ra widget/thông báo nào.
@@ -176,7 +176,7 @@ Bạn muốn dùng đúng công cụ mình từng trải nghiệm với tư các
 
 ```
 Tôi làm usability testing cho kịch bản B của EMS (user đăng ký tham dự sự kiện),
-trên đúng 3 màn hình: B2 trang chi tiết sự kiện, B3 form đăng ký, B4 My Profile — QR Code + My Activities.
+trên đúng 3 màn hình: B1 danh sách sự kiện, B2 trang chi tiết sự kiện (khối đăng ký nằm ngay trong đó), B4 My Profile — QR Code + My Activities.
 
 Viết 3 phương án task scenario, mỗi phương án:
 - Nêu MỤC TIÊU người dùng cần đạt, TUYỆT ĐỐI không liệt kê bước thao tác
@@ -282,7 +282,7 @@ hãy ghi rõ "không đủ dữ liệu" thay vì suy đoán.
 
 ```
 Tôi cần ma trận tương thích cho 3 màn hình web (B2 trang chi tiết sự kiện,
-B3 form đăng ký, B4 My Profile — QR Code + My Activities) của EMS. Ràng buộc:
+B2 trang chi tiết sự kiện, B4 My Profile — QR Code + My Activities) của EMS. Ràng buộc:
 - 3 OS: Windows, macOS, và Android HOẶC iOS
 - 5 browser: Chrome, Firefox, Safari, Edge, Opera (hoặc Samsung Internet trên mobile)
 - 3 device class: desktop, tablet, phone
@@ -304,7 +304,7 @@ Với bộ tổ hợp đã chốt: [DÁN BẢNG Ô]
 
 Viết checklist thao tác cho MỖI ô, sao cho mỗi ảnh chụp thể hiện được nhiều thông tin nhất:
 - B2: cần thấy banner, lịch trình, nút Đăng ký ở trạng thái nào
-- B3: cần thấy form ở trạng thái nào (trống / đã điền / đang báo lỗi)
+- B2: cần thấy khối đăng ký ở trạng thái nào (chưa tick vai trò / đã tick / đã đăng ký / vừa huỷ)
 - B4: cần thấy badge trạng thái (và mã QR nếu xác nhận là có — xem docs/KHAO_SAT_EMS.md ⚠️5)
 
 Nêu rõ với mỗi màn: cái gì cần kiểm về HIỂN THỊ, cái gì cần kiểm về HÀNH VI,
@@ -335,7 +335,7 @@ hãy ghi rõ "không đủ dữ liệu" thay vì suy đoán.
 - [ ] Đảm bảo mỗi ảnh thấy rõ **3 thứ**: email `23127183@student.hcmus.edu.vn` + URL EMS + tên browser/OS/device
 - [ ] Đặt tên ảnh `B2_chrome_windows_desktop.png`, lưu `evidence/task3/`
 - [ ] Ghi rõ ô nào emulator, ô nào thiết bị thật
-- [ ] B3/B4 cần đăng nhập → mỗi phiên BrowserStack là trình duyệt sạch, phải đăng nhập lại từng ô
+- [ ] B2/B4 cần đăng nhập → mỗi phiên BrowserStack là trình duyệt sạch, phải đăng nhập lại từng ô
 
 ## Recheck trước khi commit
 

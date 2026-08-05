@@ -67,17 +67,17 @@
 
 | # | Quan sát trên EMS | Màn hình | Dẫn tới mục |
 |---|---|---|---|
-| O15 | Menu `User guide` có mặt cả trên header student lẫn sidebar admin, nhưng **chưa mở để đối chiếu nội dung với giao diện đang chạy** ⚠️ | Header B1–B4, sidebar admin | `N-12` |
+| O15 | Menu `User guide` có mặt cả trên header student lẫn sidebar admin. ✅ Đã mở: tài liệu **chỉ có tiếng Việt** dù giao diện đang ở tiếng Anh, và **không chỗ nào nói mã QR nằm ở đâu** | Header B1–B4, sidebar admin | `N-12` |
 | O16 | Upload ảnh sự kiện có **hai tỉ lệ bắt buộc 4:3 và 24:9**, giao diện **không ghi giới hạn dung lượng, định dạng hay số lượng file** ở bất kỳ đâu | Admin — Create Event | `F-15` |
-| O17 | Form có **6 trường thời gian phụ thuộc lẫn nhau** (`Start`/`End`, `Check-in Open`/`Close`, `Registration Open`/`Close`) — cấu hình vô lý về mặt logic là hoàn toàn nhập được ⚠️ *(chưa thử nhập End < Start để xem hệ thống có chặn không)* | Admin — Create Event | `F-16` |
+| O17 | Form có **6 trường thời gian phụ thuộc lẫn nhau** (`Start`/`End`, `Check-in Open`/`Close`, `Registration Open`/`Close`) — ✅ đã thử: nhập End trước Start, Check-in Close trước Check-in Open, Registration Close trước Registration Open đều **nhận hết, không báo gì trong lúc nhập**; lỗi chỉ hiện sau khi bấm Publish | Admin — Create Event | `F-16` |
 | O18 | Mã QR check-in nằm ở **nút riêng trên đầu trang Profile**, tách hoàn toàn khỏi chỗ đăng ký lẫn danh sách My Activities — không có đường dẫn nào nối hai chỗ | B2, B4 | `N-10` |
 | O19 | Phân trang My Activities gồm 4 điều khiển: `Rows per page: 10` · `1-2 of 2 results` · `Go to page __ / 1` · nút `‹ 1 ›` | B4 | `N-11` |
-| O20 | Sau khi đăng ký xong, không thấy chỉ dẫn nào về việc cần làm tiếp (lấy vé ở đâu, check-in thế nào) ⚠️ *(cần chụp lại toàn bộ luồng B3 → sau submit để xác nhận)* | B3 → B4 | `S-14` |
+| O20 | Sau khi đăng ký xong, ✅ đã xác nhận: **không toast, không thông báo, không chỉ dẫn** — trang đứng yên, chỉ mọc thêm badge `Pending review` | B2 → B4 | `S-14` |
 | O21 | **Ba bộ từ vựng khác nhau cho cùng khái niệm trạng thái**: tài liệu chính thức dùng `Approved`/`Pending Review`/`Rejected`/`Waitlisted`; ô đếm trên B2 dùng `Registered`/`Pending`/`Confirmed`/`Waitlisted`; badge trên B4 dùng `Pending review`/`Student participation`/`Upcoming` | Tài liệu, B2, B4 | `S-15` |
-| O22 | Thẻ KPI **`Attendance Rate` hiển thị `0%`** trên dashboard admin ⚠️ *(chưa đối chiếu với số check-in thật để kết luận là sai hay đúng)* | Admin Dashboard | `S-16` |
-| O23 | Số chỗ còn lại và hạn đăng ký hiển thị trên B2 (`Slot available — Student: 49`, `Registered 1/1`) ⚠️ *(chưa xác minh form đăng ký B3 có nhắc lại hay bắt người dùng nhớ từ B2)* | B2 → B3 | `S-17` |
+| O22 | ✅ **Cả 4 thẻ KPI đều bằng 0** (`Total Events`, `Total Check-ins`, `Attendance Rate`, `Total Users`) trong khi badge `Support requests` ngay cạnh đó hiện **17** | Admin Dashboard | `S-16` |
+| O23 | Số chỗ còn lại và hạn đăng ký hiển thị trên B2 (`Slot available — Student: 49`, `Registered 1/1`) ⚠️ *(khối đăng ký nằm ngay trong B2 nên thông tin vẫn trong tầm mắt — cần kiểm lại khi cuộn trang trên màn hình nhỏ)* | B2 | `S-17` |
 
-> ⚠️ Năm quan sát ở đợt 2 mới ở mức **đủ để viết ra mục kiểm tra**, chưa đủ để kết luận Passed/Failed. Chúng được đưa vào checklist vì mục kiểm tra chỉ cần chỉ đúng chỗ cần nhìn — kết luận là việc của Task 1B.
+**Đợt khảo sát 3 — 06/08/2026 (đêm).** Chín quan sát trên được kiểm lại bằng thao tác thật, thêm 14 ảnh. Tám trong chín đã chuyển từ ⚠️ sang ✅ và trở thành finding chính thức trong [`../04-findings-log.md`](../04-findings-log.md). Đợt này cũng lật lại một giả định của chính tôi: `O7` ghi B2 không có nút quay lại, nhưng ở chế độ xem công khai chưa đăng nhập thì nút `Back to events` LẠI CÓ — chưa rõ là khác biệt theo trạng thái đăng nhập hay tôi quan sát sót ở đợt 1, cần kiểm lại khi chạy `N-02`.
 
 ## 4. Đối chiếu độ phủ heuristic
 

@@ -66,7 +66,7 @@ Phiếu gồm 7 phần, tổng ~50 phút:
 |---|---|---:|
 | 0 | Chuẩn bị: tài khoản user riêng, thư mục ảnh, quy ước đặt tên | 5' |
 | 1 | **Dựng 4 sự kiện dữ liệu thử** bằng quyền admin (còn chỗ / hết chỗ + waitlist / đã đóng đăng ký / đã ENDED) | 20' |
-| 2 | Khảo sát phía **user** — B1…B5, riêng B2/B3/B4 soi kỹ vì là màn chấm điểm | 25' |
+| 2 | Khảo sát phía **user** — B1…B5, riêng B1/B2/B4 soi kỹ vì là màn chấm điểm | 25' |
 | 3 | Khảo sát phía **admin** — chỉ lấy danh mục widget để checklist dùng được cho cả nhóm | 15' |
 | 4 | **8 phép thử xuyên suốt** — i18n EN/VI, ngôn ngữ có được nhớ, zoom 200%, bề rộng 375px, mạng chậm, mã trạng thái nội bộ… | 10' |
 | 5 | **Danh mục widget** — khối văn bản dán thẳng vào prompt ở Bước 2 | — |

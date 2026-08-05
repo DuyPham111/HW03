@@ -1,7 +1,7 @@
 # Usability Report — Task 2
 
 **Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Kịch bản:** B — User đăng ký tham dự sự kiện
-**Màn hình được test:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 Profile → My Activities ⚠️ *(tên + có QR hay không đang chờ xác minh, xem §1.1)*
+**Màn hình được test:** B1 Danh sách sự kiện · B2 Trang chi tiết sự kiện · B4 Profile → My Activities ⚠️ *(tên + có QR hay không đang chờ xác minh, xem §1.1)*
 **Thang đo dùng:** _(TODO: SUS hoặc UEQ-S)_
 **Thời gian chạy:** _(TODO)_ → _(TODO)_
 
@@ -26,7 +26,7 @@
 
 **Điều kiện coi là hoàn thành (success criteria):** người dùng **tự mở được modal `Check-in QR Code`** (My Profile → nút `QR Code`) **và** hoàn tất đăng ký đúng sự kiện được giao. Đăng ký xong nhưng **không tự tìm ra QR** ⇒ **Partial** *(đây là nhánh đáng quan tâm nhất)*. Không hoàn tất đăng ký ⇒ **Failed**.
 
-**Ba màn hình mà tác vụ này đi qua:** B2 Trang chi tiết sự kiện (đọc thông tin, ra quyết định) → B3 Form đăng ký (chọn vai trò, xác nhận) → B4 **My Profile** (nút QR Code + khối My Activities). Trang chủ B1 là đường vào, được quan sát nhưng không nằm trong phạm vi chấm.
+**Ba màn hình mà tác vụ này đi qua:** B1 Danh sách sự kiện (tìm được sự kiện) → B2 Trang chi tiết sự kiện (đọc thông tin, ra quyết định, và chọn vai trò rồi bấm đăng ký ngay tại đây) → B4 **My Profile** (nút QR Code + khối My Activities). Không có màn hình form riêng: EMS đặt khối đăng ký ngay trong trang chi tiết.
 
 > 🔎 **Điểm quan sát then chốt của mỗi phiên:** ghi lại **participant tìm QR ở những đâu trước khi ra được Profile** — trong trang sự kiện? trong My Activities? bấm vào thẻ đăng ký? Đường đi sai của họ chính là dữ liệu giá trị nhất của Task 2 này.
 

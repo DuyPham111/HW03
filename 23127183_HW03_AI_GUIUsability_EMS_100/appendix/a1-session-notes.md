@@ -37,7 +37,7 @@
 | Thời điểm | Hành động | Lời nói (NGUYÊN VĂN) | Phân loại | Màn hình |
 |---|---|---|---|---|
 | 00:00 | | | | |
-| | | | error / hesitation / frustration / success | B2 / B3 / B4 |
+| | | | error / hesitation / frustration / success | B1 / B2 / B4 |
 
 ### Trả lời câu hỏi mở
 

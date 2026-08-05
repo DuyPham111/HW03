@@ -2,7 +2,7 @@
 
 **Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Email nộp form / overlay ảnh:** `23127183@student.hcmus.edu.vn`
 **SUT:** https://prod-dev.ems-fitus.cloud · **Kịch bản:** **B — User đăng ký tham dự sự kiện**
-**Màn hình:** **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Profile — nút QR Code + My Activities
+**Màn hình:** **B1** Danh sách sự kiện · **B2** Trang chi tiết sự kiện · **B4** My Profile — nút QR Code + My Activities
 
 > File này trả lời đúng hai câu cho từng hạng mục: **"phải làm gì?"** và **"nộp cái gì?"**.
 > Kế hoạch theo thời gian nằm ở [`KE_HOACH_HW03.md`](KE_HOACH_HW03.md). Nguyên văn đề nằm ở [`DE_BAI_02_Spec_HW03_VI.md`](DE_BAI_02_Spec_HW03_VI.md).
@@ -108,7 +108,7 @@ Chạy **toàn bộ** checklist chung lên **từng màn hình** trong 3 màn c�
 
 | Cần | Dùng để lộ cái gì |
 |---|---|
-| Sự kiện `PUBLISHED` + `UPCOMING` còn chỗ | Luồng đăng ký chính trên B2 → B3 → B4 |
+| Sự kiện `PUBLISHED` + `UPCOMING` còn chỗ | Luồng đăng ký chính trên B1 → B2 → B4 |
 | Sự kiện **hết chỗ + bật Waitlist** | Trạng thái "vào danh sách chờ" trên B2 + badge waitlist trên B4 |
 | Sự kiện **đã đóng đăng ký** | Nút Đăng ký bị vô hiệu hoá trên B2 |
 | Sự kiện **đã `ENDED`** | Badge trạng thái trên B4 |
@@ -126,7 +126,7 @@ Chạy **toàn bộ** checklist chung lên **từng màn hình** trong 3 màn c�
 
 | File / thư mục | Nội dung |
 |---|---|
-| `01-checklist-execution.md` | Bảng hợp nhất: mỗi dòng 1 item, 3 cột kết quả cho B2/B3/B4, cột Notes, cột Bug-ID, cột Ảnh. Kèm block chi tiết cho từng item Failed |
+| `01-checklist-execution.md` | Bảng hợp nhất: mỗi dòng 1 item, 3 cột kết quả cho B1/B2/B4, cột Notes, cột Bug-ID, cột Ảnh. Kèm block chi tiết cho từng item Failed |
 | `00-main-report.md` chương 2 | Bảng tổng hợp theo màn hình + theo IA, phân tích cụm lỗi, bảng tóm tắt bug |
 | `evidence/task1b/` `evidence/task1b/` `evidence/task1b/` | Ảnh cho **item Failed** — không cần ảnh cho item Passed |
 
@@ -282,7 +282,7 @@ Ba cách overlay email `23127183@student.hcmus.edu.vn`, ưu tiên từ trên xu�
 | Hành vi | Nút bấm được · form nhập được · dropdown/modal mở đúng · toast hiện đúng chỗ |
 | Responsive | Ở tablet/phone: menu có thu gọn không · bảng có scroll trong khung riêng không |
 
-**Lưu ý riêng cho bộ màn hình B — đã kiểm chứng ngày 05/08/2026:** cả **B2, B3 và B4 đều CHẶN khi chưa đăng nhập** (B2 hiện "Please sign in to view this event."). Mỗi phiên BrowserStack là một trình duyệt sạch ⇒ **phải đăng nhập lại ở TỪNG ô** — 7 ô × 3 màn nghĩa là ~7 lần đăng nhập, không phải 0. Cộng thêm ~15–20 phút vào ước tính Task 3, và cân nhắc chạy cả 3 màn trong **cùng một phiên** trước khi đổi sang tổ hợp khác. **B4 chứa mã QR** — chỗ lỗi render dễ lộ nhất trên WebKit/mobile, soi kỹ.
+**Lưu ý riêng cho bộ màn hình B — kiểm chứng 05/08, sửa lại 06/08/2026:** B1 và B4 chặn khi chưa đăng nhập. **B2 thì tuỳ cấu hình sự kiện** — sự kiện bật `Public Event` xem được mà không cần đăng nhập, sự kiện không bật thì hiện "Please sign in to view this event." Kết luận cũ *"cả ba màn đều chặn"* là quá tay. Với Task 3 vẫn tính là phải đăng nhập, vì luồng đăng ký thật bắt buộc có tài khoản. Mỗi phiên BrowserStack là một trình duyệt sạch ⇒ **phải đăng nhập lại ở TỪNG ô** — 7 ô × 3 màn nghĩa là ~7 lần đăng nhập, không phải 0. Cộng thêm ~15–20 phút vào ước tính Task 3, và cân nhắc chạy cả 3 màn trong **cùng một phiên** trước khi đổi sang tổ hợp khác. **B4 chứa mã QR** — chỗ lỗi render dễ lộ nhất trên WebKit/mobile, soi kỹ.
 
 **Bước 4. Phân biệt lỗi tương thích với bug chung.** Lỗi xuất hiện ở **mọi** môi trường **không phải** lỗi tương thích — đó là bug ứng dụng. Chỉ ghi là lỗi tương thích khi nó **chỉ** xảy ra ở một số ô. Ghi rõ điều này vào cột "có tái hiện ở môi trường khác không".
 
@@ -473,7 +473,7 @@ Phải có **bảng self-assessment** (6 dòng theo §16 của đề) **và** te
 |---|---|---:|---|
 | 0 | Chuẩn bị: kiểm tra SUT, tài khoản user riêng, dữ liệu thử, **bắt đầu nhắn tuyển 5 người** | 0.5 | Tuyển người là nút thắt **thời gian**, phải khởi động sớm nhất |
 | 1 | **1A** — Checklist nhóm | 1.5 | Mọi thứ sau đều phụ thuộc checklist |
-| 2 | **1B** — Chạy checklist trên B2/B3/B4 | 2.0 | Làm trước Task 2 để **biết trước hệ thống hỏng chỗ nào**, quan sát phiên sắc hơn |
+| 2 | **1B** — Chạy checklist trên B1/B2/B4 | 2.0 | Làm trước Task 2 để **biết trước hệ thống hỏng chỗ nào**, quan sát phiên sắc hơn |
 | 3 | **2** — 5 phiên user testing | 2.5 | Nặng nhất; lịch phụ thuộc người khác |
 | 4 | **3** — Cross-platform | 2.0 | Độc lập, có thể chen vào lúc chờ lịch participant |
 | 5 | **4 + 5** — Findings log + skills + video | 1.0 | Gom lại cuối |

@@ -13,8 +13,8 @@
 
 | Màn hình | Tổng item | ✅ Passed | ❌ Failed | ➖ N/A | Tỉ lệ pass |
 |---|:--:|:--:|:--:|:--:|:--:|
-| S1 — B2 Trang chi tiết sự kiện | | | | | |
-| S2 — B3 Form đăng ký | | | | | |
+| S1 — B1 Danh sách sự kiện | | | | | |
+| S2 — B2 Trang chi tiết sự kiện | | | | | |
 | S3 — B4 My Profile — QR Code + My Activities | | | | | |
 | **Tổng** | | | | | |
 

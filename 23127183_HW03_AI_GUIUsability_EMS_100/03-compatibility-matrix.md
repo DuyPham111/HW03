@@ -1,7 +1,7 @@
 # Cross-Browser / Cross-Platform Report — Task 3
 
 **Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Kịch bản:** B — User đăng ký tham dự sự kiện
-**Màn hình được test:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Profile — QR Code + My Activities
+**Màn hình được test:** B1 Danh sách sự kiện · B2 Trang chi tiết sự kiện · B4 My Profile — QR Code + My Activities
 **Công cụ:** _(TODO: BrowserStack / LambdaTest / Sauce Labs / thiết bị thật)_ — tài khoản: _(TODO)_
 **Email overlay trên mọi ảnh:** 23127183@student.hcmus.edu.vn
 **Ngày chạy:** _(TODO)_
@@ -51,7 +51,7 @@
 
 ---
 
-## 2. Ma trận — Màn hình S1 = B2 Trang chi tiết sự kiện
+## 2. Ma trận — Màn hình S1 = B1 Danh sách sự kiện
 
 | Ô | OS | Browser | Device | Kết quả | Lỗi quan sát được | Ảnh |
 |---|---|---|---|:--:|---|---|
@@ -65,7 +65,7 @@
 
 **Độ phủ:** OS ✅/❌ · Browser ✅/❌ · Device class ✅/❌ · **Kết quả:** _ Pass / _ Fail
 
-## 3. Ma trận — Màn hình S2 = B3 Form đăng ký
+## 3. Ma trận — Màn hình S2 = B2 Trang chi tiết sự kiện
 _(bảng như trên)_
 
 ## 4. Ma trận — Màn hình S3 = B4 My Profile — QR Code + My Activities

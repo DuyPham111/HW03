@@ -16,13 +16,13 @@
 
 | # | Mã | Tên màn hình | Lý do chọn (bắt buộc giải trình) | IA chính được phủ |
 |---|---|---|---|---|
-| 1 | B2 | Trang chi tiết sự kiện — banner, lịch trình, nút Đăng ký, thông báo waitlist | Điểm ra quyết định của cả luồng. Chứa nhiều trạng thái nút khác nhau (còn chỗ / hết chỗ → waitlist / đã đóng đăng ký / chưa đăng nhập) nên là màn hình giàu IA-04 nhất trong bộ | IA-01 bố cục & typography · IA-04 trạng thái nút + thông báo waitlist · IA-03 deep link & quay lại |
-| 2 | B3 | Form đăng ký — chọn vai trò, vai trò phụ, xác nhận | Màn hình form **duy nhất** ở phía người dùng: bỏ nó thì gần như toàn bộ nhóm item IA-02 (nhãn, trường bắt buộc, validation, vị trí thông báo lỗi, xác nhận) thành N/A và mất điểm Task 1B | IA-02 (toàn bộ phần áp dụng được cho user side) · IA-04 xác nhận & toast |
-| 3 | B4 | Profile → My Activities — trạng thái đăng ký (+ mã check-in ⚠️ nếu có, đang xác minh) | Đầu ra quan sát được của cả luồng, dùng làm tiêu chí "hoàn thành" cho Task 2. Có badge trạng thái nhiều màu (Approved/Pending Review/Rejected/Waitlisted theo tài liệu chính thức), empty state | IA-04 badge trạng thái · IA-01 empty state · IA-03 điều hướng vào chi tiết |
+| 1 | B1 | Danh sách sự kiện — thẻ sự kiện, ô tìm kiếm, bộ lọc, phân trang | Cửa vào của cả luồng: người dùng phải **tìm được** sự kiện trước khi đăng ký. Là màn hình duy nhất trong bộ có bộ lọc + trạng thái rỗng + danh sách nhiều bản ghi, nên gánh phần lớn IA-03 | IA-03 tìm kiếm, lọc, phân trang, URL state · IA-01 thẻ, ảnh, empty state |
+| 2 | B2 | Trang chi tiết sự kiện — banner, lịch trình, **khối Registration roles**, nút Đăng ký / Cancel registration | Điểm ra quyết định **và** nơi thực hiện đăng ký. Chứa nhiều trạng thái khác nhau (còn chỗ / hết chỗ / đã đóng đăng ký / chưa đăng nhập / đã đăng ký) nên là màn hình giàu IA-02 và IA-04 nhất trong bộ | IA-02 chọn vai trò, validation, xác nhận · IA-04 badge trạng thái, hộp thoại huỷ · IA-01 bố cục |
+| 3 | B4 | My Profile — nút QR Code + khối My Activities | Đầu ra quan sát được của cả luồng, dùng làm tiêu chí "hoàn thành" cho Task 2. Có badge trạng thái nhiều màu, empty state, phân trang riêng | IA-04 badge trạng thái · IA-01 empty state · IA-03 phân trang, Filters, Export |
 
-⚠️ **06/08/2026:** tên/đường vào B4 đã sửa theo tài liệu hướng dẫn chính thức của EMS (Profile → My Activities, không phải "My Registrations"); tài liệu đó không nhắc tới mã QR. Xem `docs/KHAO_SAT_EMS.md` mục ⚠️5 để biết việc cần xác minh.
+⚠️ **Sửa ngày 06/08/2026 — bộ màn hình đã đổi từ B2/B3/B4 sang B1/B2/B4.** Lý do: khảo sát trực tiếp cho thấy **EMS không có form đăng ký như một màn hình riêng**. Việc chọn vai trò và bấm đăng ký diễn ra ngay trong khối `Registration roles` nằm trên trang chi tiết, **cùng URL** `/events/<id>`, không điều hướng và không tải lại trang (xem `evidence/survey/KS_B3_02_form-rong.png`). Giữ nguyên "B3 Form đăng ký" sẽ thành hai màn hình trùng URL, không đạt yêu cầu "3 màn hình" của đề. B1 được đưa vào thay thế: nó là một URL riêng, thuộc đúng hành trình của kịch bản B, và phần IA-02 mất đi được bù lại bởi chính khối đăng ký trên B2.
 
-**Giải trình chung:** ba màn hình tạo thành một mạch liền **xem sự kiện → đăng ký → xem xác nhận**, đúng bằng tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B (*"register for an upcoming workshop and show me your check-in QR"* — đề gốc ghi vậy, đang xác minh hệ thống thật có đúng thế không). Nhờ vậy bộ này: (1) gói được thành **một tác vụ hướng mục tiêu duy nhất** cho Task 2; (2) phủ đủ cả bốn khía cạnh IA-01…IA-04 dù phía user không có upload/rich-text/drag-drop; (3) chạy được bằng **tài khoản riêng của từng người** (vai trò Guest, không cần tài khoản HCMUS), không phụ thuộc tài khoản admin dùng chung của lớp — điều kiện then chốt để chạy 5 phiên user testing với người ngoài lớp mà không đụng dữ liệu nhau.
+**Giải trình chung:** ba màn hình tạo thành một mạch liền **tìm sự kiện → đăng ký → lấy mã check-in**, đúng bằng tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B (*"register for an upcoming workshop and show me your check-in QR"*). Nhờ vậy bộ này: (1) gói được thành **một tác vụ hướng mục tiêu duy nhất** cho Task 2; (2) phủ đủ cả bốn khía cạnh IA-01…IA-04 dù phía user không có upload/rich-text/drag-drop; (3) chạy được bằng **tài khoản guest**, không cần tài khoản HCMUS và không phụ thuộc tài khoản admin dùng chung của lớp — điều kiện then chốt để chạy 5 phiên user testing với người ngoài lớp.
 
 **Nhóm item sẽ đánh N/A và lý do:** upload ảnh, trình soạn rich-text, kéo-thả reorder, bảng cấu hình quyền — các widget này chỉ tồn tại ở phía admin, không có trong Pool B. Mọi ô N/A đều ghi lý do trong `01-checklist-execution.md` theo yêu cầu của đề.
 
@@ -34,7 +34,7 @@ Nhóm có **5 người** trong khi đề chỉ có 4 kịch bản ⇒ theo §5 c
 
 | Thành viên | MSSV | Kịch bản | Bộ màn hình |
 |---|---|---|---|
-| Phạm Vũ Ngọc Duy | 23127183 | **B** (nửa *registration core*) | B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Profile — QR Code + My Activities |
+| Phạm Vũ Ngọc Duy | 23127183 | **B** (nửa *registration core*) | B1 Danh sách sự kiện · B2 Trang chi tiết sự kiện · B4 My Profile — QR Code + My Activities |
 | _(TODO)_ | | _(xem 2 phương án dưới)_ | _(TODO)_ |
 | _(TODO)_ | | A | _(chọn 3 trong A1–A5)_ |
 | _(TODO)_ | | C | _(chọn 3 trong C1–C4)_ |
@@ -42,7 +42,9 @@ Nhóm có **5 người** trong khi đề chỉ có 4 kịch bản ⇒ theo §5 c
 
 **Phương án 1 (mặc định) — đôi ở A.** Hai người chia Pool A: nửa *authoring* (A1 Events list · A2 Add/Edit Event · A3 Registration & Roles config) và nửa *operation* (A4 Participants approval · A5 Check-in · Dashboard KPI). Tôi giữ B một mình.
 
-**Phương án 2 — đôi ở B.** Người còn lại lấy nửa *discovery & feedback* của Pool B: **B1 Trang chủ + carousel** · **trang duyệt danh mục / kết quả tìm kiếm** · **B5 Đánh giá sao sau sự kiện**. Bộ này rời hoàn toàn với B2/B3/B4 của tôi. (Đề tách "public home with the featured-event carousel" và "category browsing and search" thành hai mục riêng trong mô tả Pool B nên tính là hai màn hình được. Lưu ý: B5 cần một sự kiện đã `ENDED` mà người đó từng tham dự — cần chuẩn bị trước.)
+**Phương án 2 — đôi ở B.** ⚠️ **Đã hẹp lại sau khi tôi đổi bộ màn hình sang B1/B2/B4.** Trước đây tôi để người còn lại lấy `B1 Trang chủ + carousel`, nhưng giờ B1 nằm trong bộ của tôi nên phải bỏ khỏi phần của họ. Bộ còn rời được với tôi: **Trang chủ công khai + carousel SPOTLIGHT** *(khác với B1 danh sách sự kiện)* · **Calendar** · **Saved Events** · **B5 Đánh giá sao sau sự kiện** — chọn 3 trong 4. Lưu ý: B5 cần một sự kiện đã `ENDED` mà người đó từng tham dự và **đã check-in** (theo tài liệu chính thức §9, nút đánh giá chỉ hiện khi trạng thái là Checked-in) — cần chuẩn bị trước, không tự dựng được trong ngày.
+
+> Nếu nhóm chọn **Phương án 2**, hai người phải ngồi đối chiếu URL với nhau chứ không chỉ đối chiếu tên màn hình — bài học rút ra từ chính việc B3 hoá ra trùng URL với B2.
 
 Xác nhận: dù chọn phương án nào, **không có hai thành viên nào trùng cả kịch bản lẫn bộ màn hình**. ⬜
 
@@ -110,8 +112,8 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Màn hình | Items chạy | Passed | Failed | Bug tạo ra |
 |---|:--:|:--:|:--:|:--:|
+| B1 Danh sách sự kiện | | | | |
 | B2 Trang chi tiết sự kiện | | | | |
-| B3 Form đăng ký | | | | |
 | B4 My Profile — QR Code + My Activities | | | | |
 | **Tổng** | | | | |
 
@@ -133,8 +135,8 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Màn hình | Số ô đã phủ | Pass | Fail | Đủ 3 OS? | Đủ 5 browser? | Đủ 3 device class? |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
+| B1 Danh sách sự kiện | | | | ⬜ | ⬜ | ⬜ |
 | B2 Trang chi tiết sự kiện | | | | ⬜ | ⬜ | ⬜ |
-| B3 Form đăng ký | | | | ⬜ | ⬜ | ⬜ |
 | B4 My Profile — QR Code + My Activities | | | | ⬜ | ⬜ | ⬜ |
 | **Tổng** | | | | | | |
 
@@ -182,7 +184,7 @@ Phân bố severity của 27 finding khảo sát: **sev 3 — 9 · sev 2 — 11 
 |---|---|---|
 | 0 | Khảo sát EMS + dựng dữ liệu thử | ⬜ |
 | 1a | Checklist chung > 40 item | ⬜ |
-| 1b | Chạy checklist trên B2/B3/B4 | ⬜ |
+| 1b | Chạy checklist trên B1/B2/B4 | ⬜ |
 | 2 | 5 phiên user testing + SUS | ⬜ |
 | 3 | Ma trận cross-platform | ⬜ |
 | 4 | Findings log khớp Google Form | ⬜ |

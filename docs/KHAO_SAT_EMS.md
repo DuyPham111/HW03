@@ -4,7 +4,7 @@
 **SUT:** https://prod-dev.ems-fitus.cloud
 **Tài khoản EMS đã dùng:** `23127183@student.hcmus.edu.vn` (đăng nhập qua nút **STUDENT**) · avatar hiển thị `DPVN`
 
-> **Tình trạng:** đã có **10 ảnh** trong `docs/khao-sat/`. Những ô có ✅ là **đã xác nhận từ ảnh**. Những ô có ⬜ là **chưa kiểm — bạn phải tự vào EMS xem tiếp**.
+> **Tình trạng:** đã có **38 ảnh** trong `docs/khao-sat/` qua 3 đợt khảo sát (05/08 và 06/08). 22 ảnh dùng làm bằng chứng finding đã được chép sang `evidence/survey/`. Những ô có ✅ là **đã xác nhận từ ảnh**. Những ô có ⬜ là **chưa kiểm — bạn phải tự vào EMS xem tiếp**.
 > Đừng bỏ qua các ô ⬜: phần lớn nhóm item `F-` (form) và `S-` (feedback/state) phụ thuộc vào chúng.
 
 ---
@@ -13,7 +13,7 @@
 
 > Mục 4 và 5 thêm vào ngày 06/08/2026 sau khi đọc **tài liệu hướng dẫn chính thức của hệ thống** (`Hướng dẫn sinh viên | HCMUS EMS`, lấy từ `/manual/student` trên chính SUT). Đây là nguồn đáng tin hơn hẳn suy đoán từ ảnh chụp — sửa theo nguồn này.
 
-### 1. B2 bị chặn khi chưa đăng nhập — nhưng **do CẤU HÌNH, không phải do hệ thống**
+### 1. ✅ ĐÃ GIẢI QUYẾT — B2 bị chặn là do CẤU HÌNH, không phải do hệ thống
 
 Ảnh `KS_B2_chua-dang-nhap.png` cho thấy mở deep link tới sự kiện khi chưa đăng nhập thì chỉ hiện:
 
@@ -26,15 +26,15 @@
 | Cấu hình | Người chưa đăng nhập thấy gì | Dùng để kiểm |
 |---|---|---|
 | `Public Event` **TẮT** *(3 workshop hiện tại)* | Chặn cả trang, nút `login` | Hành vi chặn có rõ ràng không, sau khi đăng nhập có quay lại đúng trang không |
-| `Public Event` **BẬT** ⬜ *(chưa thử)* | Xem được nội dung sự kiện | Nội dung công khai có đầy đủ không, nút đăng ký hiện gì với người chưa đăng nhập |
+| `Public Event` **BẬT** ✅ *(đã thử 06/08)* | **Xem được toàn bộ nội dung**, header hiện nút `Sign In`, có cả nút `Back to events` | Nội dung công khai có đầy đủ không, nút đăng ký hiện gì với người chưa đăng nhập |
 
-- [ ] **Dựng thêm 1 sự kiện có bật `Public Event`** → mở deep link ở cửa sổ ẩn danh → chụp `KS_B2_public-event-chua-dang-nhap.png`. Đây là input cho ít nhất 2 item checklist và là một finding tiềm năng nếu hai nhánh không nhất quán.
+- [x] ✅ **Đã dựng `[23127183] Public Event Test` và kiểm ở cửa sổ ẩn danh** → `KS_B2_public-an-danh.png`. Phát hiện kèm theo: ở nhánh công khai **CÓ nút `Back to events`**, trong khi đợt 1 tôi ghi B2 không có đường quay lại (`SV-B2-03`). Cần kiểm lại xem nút đó có ở nhánh đã đăng nhập không.
 
 **Hệ quả cho kế hoạch (giữ nguyên, vì 3 workshop thử đều đang tắt Public Event):**
 
 | Nơi bị ảnh hưởng | Thực tế |
 |---|---|
-| Task 3 cross-platform | Cả B2/B3/B4 đều cần đăng nhập ⇒ **phải đăng nhập lại ở TỪNG ô** BrowserStack (~7 ô × 3 màn) |
+| Task 3 cross-platform | Cả B1/B2/B4 đều cần đăng nhập ⇒ **phải đăng nhập lại ở TỪNG ô** BrowserStack (~7 ô × 3 màn) |
 | Task 2 user testing | Participant phải đăng nhập trước, rồi mới bắt đầu bấm giờ |
 
 ### 2. ✅ ĐÃ CHỐT — email chính thức của bài
@@ -48,7 +48,7 @@ Khớp đúng mẫu `MSSV@....edu.vn` mà đề §7 và §12 yêu cầu. Đã đ
 
 > 🔒 **Mật khẩu tài khoản demo KHÔNG được ghi vào repo.** Repo `github.com/DuyPham111/HW03` là **public** — mật khẩu commit vào đó sẽ nằm vĩnh viễn trong lịch sử git kể cả sau khi xoá, và bất kỳ ai cũng đọc được. Giữ mật khẩu ở chỗ riêng (ghi chú cá nhân / trình quản lý mật khẩu), lúc chạy phiên thì tự gõ. Sau khi nộp bài xong nên **đổi mật khẩu** tài khoản demo này.
 
-### 3. Dữ liệu thử mới dựng được 3/4
+### 3. ✅ Dữ liệu thử — đã đủ 6 sự kiện
 
 | # | Sự kiện | Trạng thái | Ảnh |
 |---|---|---|---|
@@ -56,7 +56,8 @@ Khớp đúng mẫu `MSSV@....edu.vn` mà đề §7 và §12 yêu cầu. Đã đ
 | 2 | `[23127183] Workshop B — het cho` | ✅ đã dựng · Slot **0** · "Role is full" · Registered **1/1** | `KS_B2_workshop-b-het-cho.png` |
 | 3 | `[23127183] Workshop C — dong dang ky` | ✅ đã dựng · "Event registration period has ended" | `KS_B2_workshop-c-dong-dang-ky.png` |
 | 4 | `[23127183] Workshop D — da ket thuc` | ✅ đã dựng · "Event has ended" · Registered **0/50** · có khối **Rating summary** (0.0, thanh 5→1 sao đều 0%) · Campus *Linh Trung Campus* | `KS_B2_workshop-d-da-ket-thuc.png` |
-| 5 | ⬜ **CẦN THÊM:** một sự kiện có bật **`Public Event`** | Để kiểm nhánh xem-được-khi-chưa-đăng-nhập (xem mục 1) | — |
+| 5 | `[23127183] Public Event Test` | ✅ đã dựng · bật `Public Event` · xem được khi chưa đăng nhập | `KS_B2_public-an-danh.png` |
+| 6 | `[23127183] TEST validation` | ✅ đã dựng để thử validation thời gian · Campus *UEH CAMPUS* | `KS_ADM_val-01.png` … `val-04` |
 
 ### 4. 🔴 Participant bên ngoài KHÔNG đăng nhập được như bạn đã làm — phải đổi hướng dẫn
 
@@ -80,14 +81,21 @@ Tài liệu chính thức, mục 1.3: *"Trong lần đầu đăng nhập, nhấn
 > | **Tác vụ có thể tự hoàn thành sẵn** | Nếu P1 đã đăng ký Workshop A, thì với P2 nút đăng ký đã đổi trạng thái ⇒ **P2 không thực hiện được đúng tác vụ** |
 > | **Không tách được dữ liệu từng người** | Cả 5 phiên ghi vào cùng một tài khoản ⇒ không biết ai đăng ký cái gì |
 >
-> **Ba cách xử lý, chọn một:**
-> 1. **Huỷ đăng ký sau mỗi phiên** *(rẻ nhất — đã xác nhận nút `Cancel Registration` hoạt động, xem mục 7)*. Sau mỗi participant: vào B2 bấm Cancel Registration để trả về trạng thái sạch cho người tiếp theo. Nhớ **chụp màn hình My Activities của từng người TRƯỚC khi huỷ** làm bằng chứng phiên.
-> 2. **Dựng 5 sự kiện riêng** `[23127183] Workshop P1`…`P5`, mỗi participant làm trên sự kiện của mình → không đụng nhau, không cần huỷ. Tốn ~10 phút dựng nhưng an toàn nhất.
-> 3. **Tạo 5 tài khoản demo riêng** qua `Create guest account` → sạch nhất về mặt dữ liệu nhưng tốn công nhất.
+> **✅ Đã kiểm ngày 06/08 — và kết quả loại bỏ hai trong ba phương án:**
 >
-> **Khuyến nghị: cách 2** — dựng sẵn 5 sự kiện. Vừa giữ trạng thái sạch cho từng người, vừa không phải thao tác gì giữa các phiên (lúc đó bạn đang bận quan sát), vừa tách bạch dữ liệu để đối chiếu về sau.
+> | Cách | Kết quả kiểm thật | Kết luận |
+> |---|---|---|
+> | 1. **Huỷ đăng ký sau mỗi phiên** | Trên B2 thì huỷ xong sạch trơn — nhưng **My Activities ở B4 vẫn giữ thẻ sự kiện kèm badge `Cancelled`** (`KS_B4_sau-huy.png`). P2 mở Profile ra vẫn thấy dấu vết của P1 | ❌ **Không trả về trạng thái sạch** |
+> | 2. **Dựng 5 sự kiện riêng** | Sự kiện thì tách được, nhưng cả 5 người vẫn chung một tài khoản ⇒ **My Activities của P2 vẫn hiện đăng ký của P1** | ❌ Không giải quyết được gốc |
+> | 3. **Tạo 5 tài khoản guest riêng** | Mỗi người một tài khoản, My Activities rỗng thật, QR riêng, dữ liệu tách bạch | ✅ **Cách duy nhất đúng** |
 >
-> - [ ] Chọn cách xử lý: `________`
+> **Khuyến nghị đã đổi: cách 3.** Trước đây tôi khuyên cách 2 khi chưa biết nút Cancel để lại dấu vết gì — giờ biết rồi thì cách 2 không đủ.
+>
+> **Cách 3 rẻ hơn vẻ ngoài của nó:** tài khoản demo `pvnduy23@clc.fitus.edu.vn` hiện có `Student ID` là **`G69FC9C62`** — tiền tố `G` cho thấy **nó vốn đã là một tài khoản Guest**, tức bạn đã biết đường tạo rồi. Tạo thêm 4 cái nữa qua `Create guest account` là việc lặp lại, khoảng 10–15 phút.
+>
+> - [ ] Tạo 4 tài khoản guest còn lại, đặt tên dễ nhận: `P2`…`P5`
+> - [ ] Ghi lại 5 cặp email/mật khẩu vào **ghi chú cá nhân, KHÔNG ghi vào repo**
+> - [ ] Với mỗi tài khoản: chụp `KS_B4_empty_P<n>.png` **trước** khi giao cho participant — ảnh này không chụp lại được sau khi họ đăng ký
 
 **Còn cần kiểm:**
 - [ ] Đăng nhập thử tài khoản demo một lần, xác nhận vào được và **thấy đúng vai trò gì** (Student? Guest?) → chụp `KS_LOGIN_tk-demo.png`
@@ -206,9 +214,13 @@ Tài liệu chính thức, mục 1.3: *"Trong lần đầu đăng nhập, nhấn
 | **Tệp đính kèm** + **Organizing Unit** ⚠️ *mới, theo tài liệu bảng "Xem chi tiết sự kiện"* | ⬜ **CHƯA KIỂM** — tài liệu liệt kê B2 còn có nhóm "Địa điểm: Location **và Organizing Unit**" (tôi mới chỉ ghi Location) và nhóm "Tệp đính kèm: tài liệu liên quan hoặc album link" — kiểm xem 2 sự kiện thử của mình có hiện các khối này không |
 | Nút **Save/Saved** ⚠️ *mới, theo tài liệu mục 2.1* | ⬜ **CHƯA KIỂM** — B2 còn có tính năng lưu sự kiện (khác nút đăng ký), đổi trạng thái Save↔Saved. Đã thấy trên ảnh nhưng chưa test hành vi (click, toast, có đồng bộ với B1 không) |
 
-### 2.3 · B3 — Form đăng ký ⭐ MÀN CHẤM ĐIỂM
+### 2.3 · Khối đăng ký — **nằm trong B2, không phải màn hình riêng** ⭐ MÀN CHẤM ĐIỂM
 
-> ⚠️ **Đây là màn hình yếu nhất về dữ liệu khảo sát.** Chưa có ảnh nào chụp lúc form ở trạng thái điền/lỗi. Mà B3 gánh gần hết nhóm item `F-` (≥ 12 item) — thiếu phần này thì checklist sẽ hỏng nặng nhất ở đúng chỗ đề chấm kỹ.
+> ✅ **Đã giải quyết ngày 06/08/2026 — và kết quả làm đổi cả bộ màn hình.** Mục này trước đây tên là *"B3 — Form đăng ký"*, viết dựa trên giả định rằng nút Đăng ký sẽ mở ra một form riêng. **Không có form riêng nào cả.** Việc chọn vai trò và bấm đăng ký diễn ra ngay trong khối `Registration roles` trên trang chi tiết sự kiện, **cùng URL** `/events/<id>`, không điều hướng, không tải lại trang.
+>
+> Hệ quả: bộ 3 màn hình đổi từ **B2/B3/B4** sang **B1/B2/B4**. Lý do đầy đủ ở [`KE_HOACH_HW03.md`](KE_HOACH_HW03.md) mục D2. Nhóm item `F-` không mất đi — nó vẫn nằm nguyên trong B2.
+>
+> Ảnh: `KS_B3_01_b2-truoc.png` · `KS_B3_02_form-rong.png` · `KS_B3_03_nut-disabled.png` · `KS_B3_05_sau-submit.png` *(tên file giữ tiền tố `KS_B3_` vì đã đặt trước khi phát hiện; nội dung là khối đăng ký trong B2)*.
 
 > ✅ **Xác nhận từ tài liệu chính thức §4.2.2:** *"Student chỉ chọn đúng một role khi tham gia waitlist; giới hạn nhiều role chỉ áp dụng cho đăng ký thông thường nếu event cấu hình cho phép."* — khớp với ảnh (`Selected 0/1 student roles`). Cũng xác nhận 4 trạng thái đăng ký chính thức: **Approved · Pending Review · Rejected · Waitlisted** (đây là **thuật ngữ phía người đăng ký nhìn thấy**, khác với 4 ô đếm số `Registered/Pending/Confirmed/Waitlisted` tôi thấy trên trang chi tiết — hai bộ từ khác nhau cho hai chỗ khác nhau, kiểm xem có nhất quán không, khả năng là một item `S-04` finding thật).
 
@@ -222,14 +234,22 @@ Những gì **đã suy ra được** từ khối *Registration roles* trong ản
 | Ô số liệu theo vai trò | ✅ Workshop B có **4 ô**: `Registered 1/1` · `Pending 1` (nền vàng) · `Confirmed 0` · `Waitlisted 0` (nền tím)<br>⚠️ Workshop C chỉ có **3 ô**, thiếu `Waitlisted` → số ô đổi theo cấu hình, xem `SV-B2-04` |
 | Chặn khi hết chỗ | ✅ Chữ đỏ **"Role is full"** dưới nhóm ô |
 
-**Còn phải làm** — mỗi dòng dưới đây là input cho ≥ 1 item `F-`:
+**✅ Đã trả lời xong (06/08/2026)** — mỗi dòng là input cho ≥ 1 item `F-`:
 
-- [ ] Tick vai trò rồi bấm nút gửi → chụp `KS_B3_form-da-chon.png`
-- [ ] **Bấm gửi khi CHƯA tick vai trò nào** → lỗi hiện ở đâu? câu chữ gì? → chụp `KS_B3_loi-bo-trong.png`
-- [ ] Có bước **xác nhận** trước khi gửi không? → chụp `KS_B3_xac-nhan.png`
-- [ ] Sau khi gửi: có **toast** không? nội dung? nằm góc nào? tự tắt sau bao lâu?
-- [ ] Workshop A đã bật **Allow Additional Role** — bật lên thì form hiện thêm gì?
-- [ ] Nhấn **Tab** liên tục: thứ tự focus hợp lý? có thấy viền focus không?
+| Câu hỏi | Kết quả thật |
+|---|---|
+| Bấm gửi khi **chưa tick vai trò** nào | **Không bấm được.** Nút `Register (Student)` bị **disabled xám** ngay từ đầu, kèm câu `Please tick a role before submitting registration.` in **màu chữ lỗi ngay khi vừa mở trang**, trước khi người dùng làm gì sai → `SV-B2-10` |
+| Có bước **xác nhận** trước khi gửi không | **Không.** Tick vai trò → bấm là gửi thẳng |
+| Sau khi gửi có **toast** không | **Không có toast, không có thông báo, không có chỉ dẫn gì.** Trang đứng yên tại chỗ, chỉ mọc thêm badge `Pending review` cạnh tiêu đề khối và nút `Cancel registration` ở cuối → `SV-B2-09` |
+| Có nhắc tới **mã QR** hay bước tiếp theo không | **Không một chữ nào.** Đây là căn cứ trực tiếp cho tác vụ Task 2 |
+| Trang có **reload** không, URL có đổi không | Không reload, không đổi URL — vẫn `/events/157`, giữ nguyên vị trí cuộn |
+| Sau khi admin **approve** | Badge đổi sang `Approved` (xanh lá), có thông báo ở chuông — nhưng thông báo viết **tiếng Việt** trong giao diện tiếng Anh → `SV-NOTIF-01` |
+
+**Còn lại chưa kiểm:**
+
+- [ ] Workshop A đã bật **Allow Additional Role** — bật lên thì khối đăng ký hiện thêm gì?
+- [ ] Nhấn **Tab** liên tục: thứ tự focus hợp lý? có thấy viền focus không? *(cho `F-13`, `F-14`)*
+- [ ] Sau khi huỷ, **tick lại vai trò và bấm Register** thì chuyện gì xảy ra? *(đây là phần chưa rõ của `SV-B2-08` — giao diện mời đăng ký lại nhưng theo quan sát thì không được)*
 - [ ] Nhấn **Esc**: có đóng modal/khối đang mở không?
 - [ ] Validate fail xong, lựa chọn đã tick **có còn giữ** không?
 
@@ -310,7 +330,7 @@ Avatar (góc phải header) → View profile
 
 ## PHẦN 5 · DANH MỤC WIDGET — dán vào prompt AI ⭐
 
-> Phần đã điền dựa trên ảnh. **Chỗ còn `___` phải bổ sung sau khi làm xong B3, B4 và Phần 3** rồi mới dán vào AI.
+> Phần đã điền dựa trên ảnh. **Chỗ còn `___` phải bổ sung sau khi làm xong Phần 3** rồi mới dán vào AI.
 
 ```
 Các widget THẬT tôi đã quan sát trên EMS ngày 05/08/2026:
@@ -355,7 +375,7 @@ B2 — CHI TIẾT SỰ KIỆN
 - SỐ Ô SỐ LIỆU THAY ĐỔI theo cấu hình sự kiện: có Waitlist thì 4 ô, không có thì 3 ô
 - Banner cam "Event registration period has ended" khi hết hạn đăng ký
 
-B3 — FORM ĐĂNG KÝ
+KHỐI ĐĂNG KÝ (trong B2)
 - ___ (chưa khảo sát: vị trí thông báo lỗi, bước xác nhận, toast sau khi gửi,
   vai trò phụ, thứ tự Tab, hành vi Esc)
 
@@ -376,9 +396,11 @@ HÀNH VI ĐẶC THÙ ĐÁNG CHÚ Ý
 
 ---
 
-## PHẦN 6 · Quan sát nghi vấn — kiểm chứng lại ở Task 1B
+## PHẦN 6 · Quan sát nghi vấn → đã thành finding chính thức
 
-> Chưa kết luận đúng/sai. Ảnh gốc đang ở `docs/khao-sat/`; khi nào xác nhận thành finding thật thì **chụp lại trong lúc chạy checklist** và lưu vào `evidence/task1b/`.
+> ✅ **Cập nhật 06/08/2026:** 27 quan sát dưới đây **đã được chuyển hết** sang [`../23127183_HW03_AI_GUIUsability_EMS_100/04-findings-log.md`](../23127183_HW03_AI_GUIUsability_EMS_100/04-findings-log.md) với đủ 9 cột, kèm severity đề xuất và ảnh trong `evidence/survey/`.
+>
+> 🔴 **File findings log là nguồn duy nhất — bảng dưới đây chỉ giữ lại để tra nhanh.** Nếu sửa nội dung finding thì sửa ở findings log, không sửa ở đây, tránh hai bản lệch nhau.
 
 | ID | Màn | Quan sát | Nghi ngờ vi phạm | Ảnh hiện có |
 |---|---|---|---|---|
@@ -399,21 +421,21 @@ HÀNH VI ĐẶC THÙ ĐÁNG CHÚ Ý
 | `SV-ADM-01` | Admin | Ô Attachments ghi **"Supported any file format."** nhưng **không nêu giới hạn dung lượng hay số lượng file** trước khi người dùng chọn | N5, P3 | `admin-2.png` `admin-3.png` |
 | `SV-ADM-02` | Admin | 4 KPI trên Admin Dashboard đều hiện **0** (Total Events 0, Total Check-ins 0, Attendance Rate 0%, Total Users 0) trong khi hệ thống rõ ràng đang có sự kiện và người dùng | N1 — chỉ số sai làm mất niềm tin vào toàn bộ trang thống kê | `admin-1.png` |
 
-⚠️ **Quan trọng:** 10 dòng trên **chưa phải finding chính thức**. Trước khi đưa vào `04-findings-log.md` phải: (1) tái hiện lại được, (2) chụp ảnh mới trong lúc chạy checklist, (3) đối chiếu xem có phải là item checklist nào bị Failed không.
+⚠️ **Việc còn lại với các finding này:** khi chạy Task 1B, mỗi item checklist bị Failed mà trùng nội dung với một finding `SV-` thì ghi ở cột Notes là *"= SV-xxx"* và **không tạo ID `CL-` mới, không submit Google Form lần hai** — nếu không thì số dòng trong findings log sẽ vượt số lần submit và TA thấy lệch.
 
 ---
 
 ## Việc còn lại của buổi khảo sát
 
-Ước tính **~45 phút** nữa là xong (thêm ~10' so với trước do mục 4, 5 mới).
+Ước tính **~35 phút** nữa là xong. Ba đợt khảo sát đã giải quyết phần lớn danh sách này.
 
-- [ ] 🔴 **Mục 5 — tìm mã QR có tồn tại không** (Profile → My Activities) — ưu tiên cao nhất, làm trước tiên — 10'
-- [ ] 🔴 **Mục 4 — tự thử `Create guest account`** một lần — 5'
-- [ ] Dựng **Workshop D** (`ENDED`) — 5'
-- [ ] **B3**: chạy 8 thao tác ở mục 2.3, chụp 3 ảnh — 12'
-- [ ] **B4**: đã có đường vào rõ (Profile → My Activities) — chụp 6 ảnh theo checklist mục 2.4 — 10'
+- [x] ✅ **Mục 5 — mã QR**: có thật, nằm ở nút riêng đầu trang Profile, cố định theo tài khoản — xong 06/08
+- [ ] 🔴 **Mục 4 — tạo thêm 4 tài khoản guest** cho P2…P5 qua `Create guest account` — 15' · **đây là việc chặn Task 2**
+- [x] ✅ Dựng **Workshop D** (`ENDED`) — xong
+- [x] **Khối đăng ký trong B2**: đã chạy, 4 ảnh — xong 06/08
+- [x] ✅ **B4**: đã chụp đủ (empty state, QR, sau huỷ, Filters, Export) — xong 06/08
 - [ ] **Phần 3 admin**: 6 nơi, chụp 6 ảnh — 15'
 - [ ] **Phần 4**: chạy 8 phép thử — 10'
 - [ ] Điền nốt các chỗ `___` ở Phần 5
-- [ ] Chốt việc chọn email (mục ⚠️ số 2 đầu file)
+- [x] ✅ Chốt email: `23127183@student.hcmus.edu.vn`
 - **Commit:** `docs(task1a): add EMS survey notes, widget inventory and test fixtures`

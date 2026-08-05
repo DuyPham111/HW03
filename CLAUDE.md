@@ -12,7 +12,7 @@
 | Họ tên | `Phạm Vũ Ngọc Duy` |
 | Email MSSV | `23127183@student.hcmus.edu.vn` |
 | Kịch bản | **B — User đăng ký tham dự sự kiện** |
-| 3 màn hình | **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Profile — nút QR Code + My Activities |
+| 3 màn hình | **B1** Danh sách sự kiện · **B2** Trang chi tiết sự kiện · **B4** My Profile — nút QR Code + My Activities |
 | Tài khoản demo cho 5 phiên Task 2 | `pvnduy23@clc.fitus.edu.vn` — **mật khẩu KHÔNG ghi vào repo** (repo public) |
 | SUT | https://prod-dev.ems-fitus.cloud *(link ngrok trong đề đã chết)* |
 | Tài khoản admin | `admin@gmail.com` / `Admin@123` — dùng chung cả lớp |
@@ -39,7 +39,7 @@ Xong một bước có ý nghĩa (một màn hình chạy xong, một phiên use
 ```
 - `type` ∈ `docs` · `feat` · `fix` · `chore` · `refactor`
 - `scope` ∈ `task1a` · `task1b` · `task2` · `task3` · `findings` · `skills` · `appendix` · `repo`
-- Ví dụ: `docs(task1b): run GUI checklist on B3 registration form`
+- Ví dụ: `docs(task1b): run GUI checklist on B2 event detail`
 
 **Trailer `Co-Authored-By`:** commit do AI hỗ trợ có kèm trailer, nhất quán với việc đề bắt buộc khai báo dùng AI (§10). Nếu sinh viên muốn git log chỉ đứng tên mình thì nói rõ để bỏ trailer — khi đó việc dùng AI vẫn được khai đầy đủ ở `appendix/a3-ai-audit-report.md`.
 

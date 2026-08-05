@@ -4,7 +4,7 @@
 **Ngày thực hiện:** _(TODO)_ → _(TODO)_
 **SUT:** EMS — Event Management System, Khoa CNTT — https://prod-dev.ems-fitus.cloud
 **Tài khoản admin:** `admin@gmail.com` (dùng chung toàn lớp) · **Tài khoản user riêng:** _(TODO)_
-**Kịch bản đã chọn:** **B — User đăng ký tham dự sự kiện** · **Màn hình:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Profile — QR Code + My Activities
+**Kịch bản đã chọn:** **B — User đăng ký tham dự sự kiện** · **Màn hình:** B1 Danh sách sự kiện · B2 Trang chi tiết sự kiện · B4 My Profile — QR Code + My Activities
 
 > **Lưu ý về môi trường:** SUT là môi trường dev (`prod-dev.ems-fitus.cloud`, thay cho link ngrok cũ đã ngừng hoạt động), dữ liệu có thể bị reset định kỳ. Mọi bằng chứng trong báo cáo này được chụp **ngay tại thời điểm quan sát**; trạng thái mô tả có thể không còn tái hiện được ở phiên sau. Thời điểm chụp được ghi kèm mỗi ảnh.
 
@@ -12,19 +12,21 @@
 
 ## 0. Chuẩn bị — Khảo sát EMS trước khi thiết kế checklist
 
-> Trước khi soạn checklist, tôi khảo sát trực tiếp EMS để lập **danh mục widget thật** của hệ thống. Lý do: checklist GUI sinh từ mô tả chung chung sẽ cho ra item chung chung — chất lượng checklist tỉ lệ thuận với mức chi tiết của khảo sát này. Trong cùng lượt khảo sát, tôi dùng quyền admin **dựng sẵn dữ liệu thử** để ba màn hình B2/B3/B4 bộc lộ đủ trạng thái khi chạy Task 1B, 2 và 3.
+> Trước khi soạn checklist, tôi khảo sát trực tiếp EMS để lập **danh mục widget thật** của hệ thống. Lý do: checklist GUI sinh từ mô tả chung chung sẽ cho ra item chung chung — chất lượng checklist tỉ lệ thuận với mức chi tiết của khảo sát này. Trong cùng lượt khảo sát, tôi dùng quyền admin **dựng sẵn dữ liệu thử** để ba màn hình B1/B2/B4 bộc lộ đủ trạng thái khi chạy Task 1B, 2 và 3.
 
 | Chỉ số | Giá trị |
 |---|---|
-| Ngày khảo sát | 05/08/2026 *(đợt 1)* · _(TODO: đợt 2)_ |
+| Ngày khảo sát | 05/08/2026 (đợt 1) · 06/08/2026 (đợt 2 và đợt 3) |
 | Tài khoản user dùng khảo sát | `23127183@student.hcmus.edu.vn` (đăng nhập qua nút **STUDENT**) |
-| Số màn hình đã đi qua (user / admin) | 3 / _(TODO)_ — *đăng nhập · B1 danh sách · B2 chi tiết (4 trạng thái)* |
-| Số ảnh khảo sát | 10 *(đợt 1)* |
-| Số quan sát nghi vấn ghi lại (prefix `SV-`) | 10 — **chưa kiểm chứng**, sẽ xác nhận lại khi chạy Task 1B |
-| Sự kiện dữ liệu thử đã dựng | 3 / 4 — *thiếu Workshop D (`ENDED`)* |
-| Bằng chứng | phiếu khảo sát đã điền: `docs/KHAO_SAT_EMS.md` · ảnh: `docs/khao-sat/` |
+| Số màn hình đã đi qua (user / admin) | 6 / 3 — *đăng nhập · B1 danh sách · B2 chi tiết (5 trạng thái) · B4 My Profile · User guide · thông báo* / *Dashboard · Create Event · Events Management* |
+| Số ảnh khảo sát | **38** — 10 (đợt 1) + 9 (đợt 2) + 19 (đợt 3), kèm 1 file Excel xuất từ nút Export |
+| Số finding ghi lại (prefix `SV-`) | **27** — 10 Bug / 17 Usability · severity 3: 9, sev 2: 11, sev 1: 7 · chi tiết ở `04-findings-log.md` |
+| Sự kiện dữ liệu thử đã dựng | 6 — Workshop A (còn chỗ) · B (hết chỗ) · C (đóng đăng ký) · D (đã kết thúc) · TEST validation · Public Event Test |
+| Bằng chứng | phiếu khảo sát đã điền: `docs/KHAO_SAT_EMS.md` · ảnh gốc: `docs/khao-sat/` · ảnh dùng cho finding: `evidence/survey/` |
 
-**⚠️ Phát hiện làm đổi kế hoạch:** trang chi tiết sự kiện (B2) **không truy cập được khi chưa đăng nhập** — hệ thống chặn cả trang bằng thông báo *"Please sign in to view this event."* Điều này khiến cả ba màn hình B2/B3/B4 đều yêu cầu đăng nhập, nên mỗi phiên trình duyệt sạch ở Task 3 đều phải đăng nhập lại, và ở Task 2 người tham gia phải tạo tài khoản trước khi bắt đầu tính giờ.
+**⚠️ Phát hiện làm đổi kế hoạch — và một lần tự sửa kết luận.** Đợt 1 tôi thấy trang chi tiết sự kiện bị chặn bằng *"Please sign in to view this event."* và kết luận B2 không phải màn hình công khai. **Kết luận đó sai.** Đợt 2 phát hiện form Create Event có công tắc `Public Event — Event is publicly visible` **mặc định TẮT**; ba sự kiện thử của tôi bị chặn là vì cấu hình, không phải vì EMS không hỗ trợ trang công khai. Đợt 3 dựng một sự kiện bật công tắc này rồi mở ở cửa sổ ẩn danh: **xem được toàn bộ nội dung**, header hiện nút `Sign In` (`evidence/survey/KS_B2_public-an-danh.png`).
+
+Hệ quả: B2 có **hai nhánh phải kiểm riêng** — công khai và không công khai — chứ không phải một. Với Task 2 và Task 3, tôi vẫn dùng nhánh cần đăng nhập vì đó là luồng thật của người đăng ký, nên mỗi phiên trình duyệt sạch ở Task 3 vẫn phải đăng nhập lại.
 
 **Những quan sát thu được từ khảo sát đã dẫn tới item checklist nào** — đây là bằng chứng cho phần *human review* của Task 1A: các item này được thêm vì **đã thấy thật trên hệ thống**, không phải vì AI gợi ý.
 
@@ -49,15 +51,15 @@
 
 | # | Mã | Màn hình | Đường dẫn / cách vào | Lý do chọn | IA chính được phủ |
 |---|---|---|---|---|---|
-| 1 | **B2** | Trang chi tiết sự kiện — banner, lịch trình, nút Đăng ký, thông báo waitlist | Trang chủ → chọn một sự kiện (có deep link riêng) | Điểm ra quyết định của cả luồng; chứa nhiều trạng thái nút khác nhau (còn chỗ / hết chỗ → waitlist / đã đóng đăng ký / chưa đăng nhập) nên là màn hình giàu IA-04 nhất trong bộ | IA-01 · IA-04 · IA-03 |
-| 2 | **B3** | Form đăng ký — chọn vai trò, vai trò phụ, xác nhận | B2 → nút **Đăng ký** | Màn hình form **duy nhất** ở phía người dùng; bỏ nó thì gần như toàn bộ nhóm item IA-02 (nhãn, trường bắt buộc, validation, vị trí thông báo lỗi, xác nhận) thành N/A | IA-02 · IA-04 |
-| 3 | **B4** | Profile → My Activities — trạng thái đăng ký (+ mã check-in ⚠️ nếu có, đang xác minh) | Avatar (header) → **Profile** → tab **My Activities** | Đầu ra quan sát được của cả luồng, dùng làm tiêu chí "hoàn thành" cho Task 2; có badge trạng thái nhiều màu, empty state | IA-04 · IA-01 · IA-03 |
+| 1 | **B1** | Danh sách sự kiện — thẻ sự kiện, ô tìm kiếm, bộ lọc, phân trang | Header → **Events** (`/events`) | Cửa vào của cả luồng — không tìm được sự kiện thì không có gì để đăng ký. Là màn hình duy nhất trong bộ có bộ lọc, trạng thái rỗng và danh sách nhiều bản ghi | IA-03 · IA-01 |
+| 2 | **B2** | Trang chi tiết sự kiện — banner, lịch trình, **khối Registration roles**, nút Đăng ký / Cancel registration | B1 → chọn một sự kiện (`/events/<id>`, có deep link riêng) | Vừa là điểm ra quyết định vừa là nơi thực hiện đăng ký. Nhiều trạng thái nhất trong bộ: còn chỗ / hết chỗ / đã đóng đăng ký / chưa đăng nhập / đã đăng ký / vừa huỷ | IA-02 · IA-04 · IA-01 |
+| 3 | **B4** | My Profile — nút **QR Code** + khối **My Activities** | Avatar (header) → **View profile** (`/profile`) | Đầu ra quan sát được của cả luồng, dùng làm tiêu chí "hoàn thành" cho Task 2; có badge trạng thái nhiều màu, empty state, phân trang riêng | IA-04 · IA-01 · IA-03 |
 
-⚠️ **Cập nhật 06/08/2026:** tài liệu hướng dẫn chính thức của EMS (`/manual/student`) gọi tên và đường vào màn này là **Profile → My Activities**, không phải "My Registrations" như tôi đoán ban đầu; tài liệu cũng không hề nhắc tới mã QR/barcode. Chi tiết: `docs/KHAO_SAT_EMS.md` mục ⚠️5. Bảng trên đã sửa theo tên chính thức; các mục dưới còn giữ tên cũ "My Registrations + vé QR" ở một vài chỗ lặp lại, sẽ đồng bộ hết sau khi xác minh xong QR có tồn tại hay không.
+⚠️ **Sửa ngày 06/08/2026 — bộ màn hình đổi từ B2/B3/B4 sang B1/B2/B4.** Kế hoạch ban đầu coi "B3 Form đăng ký" là một màn hình riêng, dựa trên suy đoán rằng nút Đăng ký sẽ mở ra một form. Khảo sát trực tiếp cho thấy **không phải như vậy**: việc chọn vai trò và bấm đăng ký diễn ra ngay trong khối `Registration roles` trên trang chi tiết, **cùng URL** `/events/<id>`, không điều hướng, không tải lại trang (`evidence/survey/KS_B3_02_form-rong.png`). Nếu giữ nguyên B3 thì bài nộp sẽ có hai "màn hình" trỏ về cùng một URL — không đạt yêu cầu 3 màn hình của đề. B1 thay vào chỗ đó: URL riêng, thuộc đúng hành trình kịch bản B, và phần IA-02 tưởng như mất đi thì thực ra vẫn còn nguyên vì khối đăng ký nằm trong B2.
 
-**Giải trình chung:** ba màn hình tạo thành một mạch liền **xem sự kiện → đăng ký → xem xác nhận**, trùng đúng với tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B (*"register for an upcoming workshop and show me your check-in QR"* — đề gốc ghi vậy, thực tế hệ thống có đúng như thế không đang chờ xác minh). Bộ này được chọn thay vì B1+B2+B3 vì B4 cung cấp **tiêu chí hoàn thành quan sát được từ bên ngoài** cho Task 2 và là màn hình duy nhất trong Pool B có badge trạng thái nhiều màu — thứ cần thiết để các item IA-04 của checklist không bị rỗng. B1 (trang chủ + carousel + tìm kiếm) vẫn là đường vào của tác vụ và được quan sát trong lúc chạy phiên, nhưng không nằm trong phạm vi chấm để tránh chồng lấn với thành viên khác trong nhóm.
+**Giải trình chung:** ba màn hình tạo thành một mạch liền **tìm sự kiện → đăng ký → lấy mã check-in**, trùng đúng với tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B (*"register for an upcoming workshop and show me your check-in QR"*). B4 cung cấp **tiêu chí hoàn thành quan sát được từ bên ngoài** cho Task 2 và là màn hình duy nhất trong Pool B có badge trạng thái nhiều màu — thứ cần thiết để các item IA-04 của checklist không bị rỗng.
 
-**Điều kiện dữ liệu cần chuẩn bị trước:** để ba màn hình này bộc lộ đủ trạng thái, cần có sẵn trên hệ thống ít nhất: một sự kiện `PUBLISHED` + `UPCOMING` còn chỗ, một sự kiện đã **hết chỗ và bật Waitlist**, và một sự kiện đã **đóng đăng ký**. Các sự kiện này được tạo bằng quyền admin trong lượt chạy E2E ở mục 0 và đặt tiền tố `[23127183]`.
+**Điều kiện dữ liệu cần chuẩn bị trước:** để ba màn hình này bộc lộ đủ trạng thái, cần có sẵn trên hệ thống ít nhất: một sự kiện `PUBLISHED` + `UPCOMING` còn chỗ, một sự kiện đã **hết chỗ và bật Waitlist**, một sự kiện đã **đóng đăng ký**, và một sự kiện bật **`Public Event`** để kiểm nhánh xem không cần đăng nhập. Các sự kiện này được tạo bằng quyền admin trong đợt khảo sát ở mục 0 và đặt tiền tố `[23127183]`.
 
 ### 1.3 Xác nhận luật không trùng lặp
 
@@ -65,28 +67,28 @@ Nhóm 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản �
 
 | Thành viên | Kịch bản | Màn hình | Trùng với tôi? |
 |---|---|---|:--:|
-| Phạm Vũ Ngọc Duy (23127183) | B (registration core) | B2 · B3 · B4 | — |
+| Phạm Vũ Ngọc Duy (23127183) | B (registration core) | B1 · B2 · B4 | — |
 | _(TODO)_ | _(A hoặc B — xem hai phương án dưới)_ | _(TODO)_ | ❌ |
 | _(TODO)_ | A | _(TODO)_ | ❌ |
 | _(TODO)_ | C | _(TODO)_ | ❌ |
 | _(TODO)_ | D | _(TODO)_ | ❌ |
 
 **Phương án 1 (mặc định) — đôi ở A:** nửa *authoring* (A1 · A2 · A3) và nửa *operation* (A4 · A5 · Dashboard KPI). Tôi giữ B một mình.
-**Phương án 2 — đôi ở B:** người còn lại lấy nửa *discovery & feedback* (B1 Trang chủ + carousel · trang duyệt danh mục/tìm kiếm · B5 Đánh giá sao), rời hoàn toàn với B2/B3/B4.
+**Phương án 2 — đôi ở B:** ⚠️ đã hẹp lại sau khi tôi lấy B1 vào bộ của mình. Người còn lại chọn 3 trong 4: **Trang chủ công khai + carousel SPOTLIGHT** *(khác B1 danh sách sự kiện)* · **Calendar** · **Saved Events** · **B5 Đánh giá sao**. Hai bên phải đối chiếu **URL**, không chỉ đối chiếu tên màn hình.
 
 ---
 
 ## 2. Task 1B — Thực thi checklist GUI
 
-> Checklist chung của nhóm: `team/gui-checklist.md` (_(TODO)_ item, IA-01…IA-04).
+> Checklist chung của nhóm: `team/gui-checklist.md` (**61** item, IA-01…IA-04).
 > Bảng kết quả chi tiết từng item × từng màn hình: `01-checklist-execution.md`.
 
 ### 2.1 Tổng hợp kết quả
 
 | Màn hình | Số item chạy | Passed | Failed | Tỉ lệ pass | Bug tạo ra |
 |---|:--:|:--:|:--:|:--:|:--:|
+| B1 Danh sách sự kiện | | | | | |
 | B2 Trang chi tiết sự kiện | | | | | |
-| B3 Form đăng ký | | | | | |
 | B4 My Profile — QR Code + My Activities | | | | | |
 | **Tổng** | | | | | |
 
@@ -99,7 +101,7 @@ Nhóm 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản �
 | IA-03 Navigation | | | | |
 | IA-04 Feedback / state | | | | |
 
-### 2.3 Màn hình B2 — Trang chi tiết sự kiện
+### 2.3 Màn hình B1 — Danh sách sự kiện
 
 **Ảnh tổng quan màn hình:** _(TODO)_
 
@@ -109,10 +111,10 @@ Nhóm 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản �
 
 **Phân tích:** _(TODO — các item fail có liên quan nhau không? có phải cùng một nguyên nhân gốc?)_
 
-### 2.4 Màn hình B3 — Form đăng ký
+### 2.4 Màn hình B2 — Trang chi tiết sự kiện (gồm khối đăng ký)
 _(cấu trúc như trên)_
 
-### 2.5 Màn hình B4 — Profile → My Activities
+### 2.5 Màn hình B4 — My Profile (QR Code + My Activities)
 _(cấu trúc như trên)_
 
 ### 2.6 Bug phát hiện từ Task 1B
@@ -151,8 +153,8 @@ _(cấu trúc như trên)_
 
 | Màn hình | Ô đã phủ | Pass | Fail | 3 OS ✓ | 5 browser ✓ | 3 device class ✓ |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
+| B1 Danh sách sự kiện | | | | | | |
 | B2 Trang chi tiết sự kiện | | | | | | |
-| B3 Form đăng ký | | | | | | |
 | B4 My Profile — QR Code + My Activities | | | | | | |
 
 **Lỗi tương thích nghiêm trọng nhất:** _(TODO)_

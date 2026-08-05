@@ -32,7 +32,7 @@ git push
 
 - [ ] `docs(task1b): prepare execution table from shared checklist`
 - [ ] `docs(task1b): run GUI checklist on B2 event detail screen`
-- [ ] `docs(task1b): run GUI checklist on B3 registration form`
+- [ ] `docs(task1b): run GUI checklist on B2 event detail`
 - [ ] `docs(task1b): run GUI checklist on B4 my-registrations and QR ticket`
 - [ ] `docs(task1b): add failure evidence screenshots`
 - [ ] `docs(findings): log checklist bugs as CL findings`
