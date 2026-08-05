@@ -100,8 +100,8 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 | Số item checklist nhóm thiết kế | **61** *(> 40 ✅)* |
 | — IA-01 General UI standards (`G-`) | 16 |
 | — IA-02 Forms (`F-`) | 16 |
-| — IA-03 Navigation (`N-`) | 11 |
-| — IA-04 Feedback / state (`S-`) | 16 |
+| — IA-03 Navigation (`N-`) | 12 |
+| — IA-04 Feedback / state (`S-`) | 17 |
 | Số item do AI sinh | 38 |
 | Số item do người bổ sung (có giải thích vì sao AI sót) | **23** |
 | Số item đã chạy (= 61 × 3 màn) | _(TODO)_ / 183 |
@@ -145,8 +145,10 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 | Checklist execution | `CL-` | | | | |
 | User testing | `US-` | | | | |
 | Cross-platform | `CP-` | | | | |
-| Khảo sát EMS | `SV-` | | | | |
-| **Tổng** | | | | | |
+| Khảo sát EMS | `SV-` | **10** | **17** | **27** | _(TODO)_ |
+| **Tổng** | | **10** | **17** | **27** | |
+
+Phân bố severity của 27 finding khảo sát: **sev 3 — 9 · sev 2 — 11 · sev 1 — 7** · không có sev 4 hay sev 0.
 
 > Số dòng trong `04-findings-log.md` **phải bằng** số lần submit Google Form — TA đối chiếu chéo.
 
