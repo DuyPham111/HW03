@@ -1,8 +1,8 @@
 # HƯỚNG DẪN CHI TIẾT — Làm gì & Nộp gì cho từng phần HW03
 
-**Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Email nộp form / overlay ảnh:** `pvnduy23@clc.fitus.edu.vn`
+**Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Email nộp form / overlay ảnh:** `23127183@student.hcmus.edu.vn`
 **SUT:** https://prod-dev.ems-fitus.cloud · **Kịch bản:** **B — User đăng ký tham dự sự kiện**
-**Màn hình:** **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** Profile → My Activities ⚠️QR *(tên + QR chờ xác minh — `docs/KHAO_SAT_EMS.md` ⚠️5)*
+**Màn hình:** **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Profile — nút QR Code + My Activities
 
 > File này trả lời đúng hai câu cho từng hạng mục: **"phải làm gì?"** và **"nộp cái gì?"**.
 > Kế hoạch theo thời gian nằm ở [`KE_HOACH_HW03.md`](KE_HOACH_HW03.md). Nguyên văn đề nằm ở [`DE_BAI_02_Spec_HW03_VI.md`](DE_BAI_02_Spec_HW03_VI.md).
@@ -162,7 +162,7 @@ Chạy **toàn bộ** checklist chung lên **từng màn hình** trong 3 màn c�
 > Bản nháp cho kịch bản B: *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia và cho mình xem mã QR check-in của bạn."*
 
 **Định nghĩa tiêu chí hoàn thành** (phải quan sát được từ bên ngoài):
-- **Completed** — tự tìm thấy đúng xác nhận đăng ký của mình (mã QR nếu có, xem ⚠️ ở trên) trong Profile → My Activities, đúng sự kiện
+- **Completed** — đăng ký xong đúng sự kiện **và** tự mở được modal `Check-in QR Code` (My Profile → nút `QR Code`)
 - **Partial** — đăng ký được nhưng không tìm ra vé
 - **Failed** — không hoàn tất đăng ký
 
@@ -269,7 +269,7 @@ Với **TỪNG màn hình trong 3 màn**, xây ma trận tương thích phủ **
 
 **Bước 2. Chuẩn bị công cụ + overlay.** Trial **BrowserStack** hoặc **LambdaTest** (tự lo tài khoản). Ghi lại số phút trial còn để không hết giữa chừng.
 
-Ba cách overlay email `pvnduy23@clc.fitus.edu.vn`, ưu tiên từ trên xuống:
+Ba cách overlay email `23127183@student.hcmus.edu.vn`, ưu tiên từ trên xuống:
 1. Mở cửa sổ phụ hiển thị email, đặt cạnh cửa sổ EMS trước khi chụp — **mạnh nhất về mặt bằng chứng**
 2. Dán email vào ô tìm kiếm/URL bar trong khung hình
 3. Chèn text lên ảnh sau khi chụp — yếu nhất, dùng cuối cùng
@@ -298,7 +298,7 @@ Ba cách overlay email `pvnduy23@clc.fitus.edu.vn`, ưu tiên từ trên xuống
 
 - [ ] Với **từng màn hình**: tự đếm lại đủ 3 OS, đủ 5 browser, đủ 3 device class
 - [ ] Có ảnh cho **mọi ô**, không chỉ ô Fail
-- [ ] **Mọi ảnh** thấy rõ: email `pvnduy23@clc.fitus.edu.vn` + URL EMS + tên browser/OS/device
+- [ ] **Mọi ảnh** thấy rõ: email `23127183@student.hcmus.edu.vn` + URL EMS + tên browser/OS/device
 - [ ] Mỗi ô Fail có ghi chú **loại lỗi cụ thể** (overflow / overlap / vỡ layout / chữ không đọc được / control không phản hồi)
 - [ ] Đã ghi rõ ô nào chạy **emulator** và ô nào **thiết bị thật**
 - [ ] Có mục giới hạn (số phút trial, phiên bản không chọn được, iOS dùng chung WebKit…)
@@ -320,7 +320,7 @@ Ba cách overlay email `pvnduy23@clc.fitus.edu.vn`, ưu tiên từ trên xuống
 ## Đề yêu cầu gì
 
 **Mọi** defect và **mọi** đề xuất cải tiến usability phát hiện xuyên suốt hạng mục 1–3 phải báo cáo **HAI LẦN**:
-1. Submit **từng cái một** lên Google Form https://forms.gle/CJQFQCAXcsDbXDMM9 bằng email `pvnduy23@clc.fitus.edu.vn`
+1. Submit **từng cái một** lên Google Form https://forms.gle/CJQFQCAXcsDbXDMM9 bằng email `23127183@student.hcmus.edu.vn`
 2. Hợp nhất tất cả vào **một file**
 
 **Hai bên phải nhất quán — TA đối chiếu số lượng.**

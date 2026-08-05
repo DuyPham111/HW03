@@ -4,7 +4,7 @@
 **Ngày thực hiện:** _(TODO)_ → _(TODO)_
 **SUT:** EMS — Event Management System, Khoa CNTT — https://prod-dev.ems-fitus.cloud
 **Tài khoản admin:** `admin@gmail.com` (dùng chung toàn lớp) · **Tài khoản user riêng:** _(TODO)_
-**Kịch bản đã chọn:** **B — User đăng ký tham dự sự kiện** · **Màn hình:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 Profile → My Activities ⚠️QR
+**Kịch bản đã chọn:** **B — User đăng ký tham dự sự kiện** · **Màn hình:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Profile — QR Code + My Activities
 
 > **Lưu ý về môi trường:** SUT là môi trường dev (`prod-dev.ems-fitus.cloud`, thay cho link ngrok cũ đã ngừng hoạt động), dữ liệu có thể bị reset định kỳ. Mọi bằng chứng trong báo cáo này được chụp **ngay tại thời điểm quan sát**; trạng thái mô tả có thể không còn tái hiện được ở phiên sau. Thời điểm chụp được ghi kèm mỗi ảnh.
 
@@ -87,7 +87,7 @@ Nhóm 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản �
 |---|:--:|:--:|:--:|:--:|:--:|
 | B2 Trang chi tiết sự kiện | | | | | |
 | B3 Form đăng ký | | | | | |
-| B4 Profile → My Activities ⚠️QR | | | | | |
+| B4 My Profile — QR Code + My Activities | | | | | |
 | **Tổng** | | | | | |
 
 ### 2.2 Kết quả theo khía cạnh giao diện
@@ -153,7 +153,7 @@ _(cấu trúc như trên)_
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
 | B2 Trang chi tiết sự kiện | | | | | | |
 | B3 Form đăng ký | | | | | | |
-| B4 Profile → My Activities ⚠️QR | | | | | | |
+| B4 My Profile — QR Code + My Activities | | | | | | |
 
 **Lỗi tương thích nghiêm trọng nhất:** _(TODO)_
 
@@ -169,7 +169,7 @@ _(cấu trúc như trên)_
 | Khảo sát EMS | `SV-` | | | |
 | **Tổng** | | | | |
 
-Toàn bộ đã được submit lên Google Form (https://forms.gle/CJQFQCAXcsDbXDMM9) bằng email `pvnduy23@clc.fitus.edu.vn` và hợp nhất tại `04-findings-log.md`.
+Toàn bộ đã được submit lên Google Form (https://forms.gle/CJQFQCAXcsDbXDMM9) bằng email `23127183@student.hcmus.edu.vn` và hợp nhất tại `04-findings-log.md`.
 
 ---
 

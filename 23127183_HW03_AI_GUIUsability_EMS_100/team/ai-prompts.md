@@ -19,7 +19,7 @@ Quy trình nhóm áp dụng — **khảo sát trước, AI sau**:
 |---|---|---|
 | 1 | **Người** | Khảo sát trực tiếp EMS, lập danh mục widget thật + chụp 10 ảnh · `docs/KHAO_SAT_EMS.md` |
 | 2 | AI | Nạp khung heuristic + **dán danh mục widget thật vào**, chưa sinh mục nào |
-| 3 | AI | Sinh mục theo **từng khía cạnh IA riêng** (4 lượt), không xin 52 mục một lượt |
+| 3 | AI | Sinh mục theo **từng khía cạnh IA riêng** (4 lượt), không xin gần 60 mục một lượt |
 | 4 | **Người** | Review từng lượt: loại mục trùng nghĩa, sửa mục không kiểm chứng được, sửa mã heuristic bị gán bừa |
 | 5 | AI | Tự soi lỗ hổng checklist của chính nó |
 | 6 | **Người** | Bổ sung mục AI vẫn không nêu ra + ghi lý do (§3) và **loại bỏ có lý do** những vùng không áp dụng (§4) |
@@ -145,7 +145,22 @@ Sinh 16 mục cho IA-01.
 | **S-09** | Ngày giờ thống nhất định dạng và nêu rõ múi giờ ở chỗ có hạn chót | (a) | Prompt không nhắc rằng EMS có ba mốc thời gian chồng nhau (Event date / Registration period / Check-in period). Sau khi thấy cả ba đều hiển thị `dd/MM/yyyy HH:mm` **không kèm múi giờ**, mới thấy đây là rủi ro thật với người đăng ký sát hạn |
 | **S-13** | Nhãn nút và tiêu đề dùng cùng quy ước viết hoa | (b) | Loại lỗi quá nhỏ để AI ưu tiên đưa vào danh sách 16 mục đầu. Chỉ nảy ra khi nhìn thấy nút ghi **`login`** chữ thường ở màn chặn đăng nhập, trong khi mọi nút khác đều Title Case (`Save event`, `Login`) |
 
-**Tổng kết:** 14 mục `RV` / 52 mục — **27%** checklist đến từ quan sát trực tiếp trên EMS, không có mục nào trong số đó sinh ra được nếu chỉ mô tả hệ thống bằng lời cho AI.
+
+### Bảy mục bổ sung sau đợt khảo sát 2 (06/08/2026)
+
+Đợt này khảo sát **form Create Event phía admin**, **trang My Profile** và **Admin Dashboard** — ba nơi lượt 1 chưa chạm tới.
+
+| ID | Mục (rút gọn) | Loại | Vì sao AI bỏ sót |
+|---|---|:--:|---|
+| **F-15** | Ô upload phải nêu giới hạn dung lượng và số lượng file | (c) | AI có sinh `F-08` về "kiểm tra định dạng và dung lượng", nhưng biểu hiện thật trên EMS ngược lại: ô Attachments ghi đúng một câu **"Supported any file format."** và **không nêu giới hạn nào cả**. Tiêu chí đúng phải là "có nêu giới hạn hay không", chứ không phải "kiểm tra có đúng không" — chỉ nhận ra khi nhìn thấy dòng chữ thật đó |
+| **F-16** | Chặn cấu hình vô lý ở các cặp trường thời gian phụ thuộc nhau | (c) | AI có `F-06` về "ngày kết thúc không trước ngày bắt đầu" — một cặp. Thực tế EMS có **ba cặp chồng nhau**: Start–End, Check-in Open–Close, Registration Open–Close, cộng thêm quan hệ chéo giữa Registration Close và End. AI không thể biết form có tới 6 trường thời gian bắt buộc nếu không nhìn thấy mục Date & Time và Registration |
+| **N-10** | Chức năng cần ngay sau một thao tác phải nằm trong tầm với của ngữ cảnh đó | (c) | Đây là mục quan trọng nhất của đợt này, sinh ra từ `SV-B4-01`: **mã QR check-in nằm ở nút riêng trên trang Profile, tách hoàn toàn khỏi chỗ đăng ký**. AI không thể biết kiến trúc thông tin của EMS đặt QR ở đâu, nên không có cách nào nghĩ ra tiêu chí "chức năng kế tiếp có nằm đúng chỗ người dùng sẽ tìm không" |
+| **N-11** | Danh sách dài có phân trang thống nhất, hiển thị rõ trang mấy trên tổng bao nhiêu | (a) | Prompt ban đầu không hề nhắc EMS có danh sách phân trang. Chỉ khi thấy khối My Activities có `Rows per page: 10` · `1-2 of 2 results` · `Go to page __ / 1` mới thấy đây là một widget riêng cần kiểm tính nhất quán giữa các màn |
+| **S-14** | Sau khi hoàn tất thao tác, hệ thống phải chỉ đường tới bước tiếp theo | (c) | Cùng gốc với `N-10` nhưng ở góc phản hồi: đăng ký xong, **không có gì dẫn người dùng tới vé của họ**. AI sinh được mục "có phản hồi sau hành động" nhưng dừng ở mức "có toast hay không", không nghĩ tới "phản hồi đó có chỉ đường đi tiếp không" |
+| **S-15** | Một khái niệm trạng thái chỉ dùng một bộ từ vựng duy nhất | (b) | Lỗi này **chỉ lộ ra khi đối chiếu ba nguồn cạnh nhau**: tài liệu chính thức dùng `Approved/Pending Review/Rejected/Waitlisted`, trang B2 dùng `Registered/Pending/Confirmed/Waitlisted`, thẻ My Activities dùng `Pending review/Student participation/Upcoming`. AI xử lý từng màn hình độc lập nên không có khái niệm "đối chiếu từ vựng chéo giữa giao diện và tài liệu" |
+| **S-16** | Chỉ số dashboard phải khớp dữ liệu thật | (c) | Quan sát trực tiếp: Admin Dashboard hiện **Total Events 0, Total Check-ins 0, Attendance Rate 0%, Total Users 0** trong khi hệ thống rõ ràng đang có sự kiện và người dùng. AI không có cách nào biết chỉ số của một hệ thống cụ thể đang sai — đây thuần tuý là kết quả của việc mở trang lên và nhìn |
+
+**Tổng kết:** 21 mục `RV` / 59 mục — **36%** checklist đến từ quan sát trực tiếp trên EMS, không có mục nào trong số đó sinh ra được nếu chỉ mô tả hệ thống bằng lời cho AI.
 
 ---
 
@@ -169,6 +184,6 @@ Sinh 16 mục cho IA-01.
 | Số lượt prompt đã dùng | _(TODO — đếm lại sau khi điền §2)_ |
 | Số mục AI sinh ra ban đầu | _(TODO)_ |
 | Số mục bị loại sau human review (trùng nghĩa / mơ hồ / không kiểm chứng được) | _(TODO)_ |
-| Số mục người bổ sung | **14** |
+| Số mục người bổ sung | **21** |
 | Số vùng chủ động loại bỏ có lý do | **4** |
-| **Tổng mục cuối cùng** | **52** |
+| **Tổng mục cuối cùng** | **59** |

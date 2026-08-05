@@ -19,9 +19,9 @@
 | # | Quyết định | Trạng thái | Nội dung |
 |---|---|---|---|
 | D1 | Chọn kịch bản A / B / C / D | ✅ CHỐT | **Kịch bản B — User đăng ký tham dự sự kiện** |
-| D2 | Chọn ≥ 3 màn hình | ✅ CHỐT | **B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 Profile → My Activities ⚠️QR** (nửa *registration core* của Pool B) |
+| D2 | Chọn ≥ 3 màn hình | ✅ CHỐT | **B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Profile — QR Code + My Activities** (nửa *registration core* của Pool B) |
 | D3 | Nhóm 5 người + phân chia | ⬜ CHỜ NHÓM XÁC NHẬN | Nhóm 5 người ⇒ **một kịch bản bị đôi**, hai người đó phải chọn **bộ màn hình rời nhau** — xem D3 bên dưới |
-| D4 | Email MSSV overlay ảnh | ⚠️ **MỞ LẠI** | Đang ghi `pvnduy23@clc.fitus.edu.vn`, nhưng email đăng nhập EMS là `23127183@student.hcmus.edu.vn`. Đề đòi mẫu `MSSV@....edu.vn` — chỉ cái thứ hai khớp. **Hỏi TA rồi chốt**, xem `KHAO_SAT_EMS.md` mục ⚠️ 2 |
+| D4 | Email MSSV overlay ảnh | ⚠️ **MỞ LẠI** | Đang ghi `23127183@student.hcmus.edu.vn`, nhưng email đăng nhập EMS là `23127183@student.hcmus.edu.vn`. Đề đòi mẫu `MSSV@....edu.vn` — chỉ cái thứ hai khớp. **Hỏi TA rồi chốt**, xem `KHAO_SAT_EMS.md` mục ⚠️ 2 |
 
 **SUT đã đổi link:** link ngrok cũ đã chết, link hiện hành là **https://prod-dev.ems-fitus.cloud** (đã cập nhật trong toàn bộ file). Đây là môi trường dev từ xa nên **dữ liệu vẫn có thể bị reset** — nguyên tắc "chụp ảnh liền tay" giữ nguyên.
 
@@ -54,7 +54,7 @@ Cách đọc bảng: hạng mục nặng điểm nhất **và** rủi ro nhất 
 |---|---|---|
 | **B2** Trang chi tiết sự kiện — banner, lịch trình, nút Đăng ký, thông báo waitlist | Điểm ra quyết định; nhiều trạng thái nút (còn chỗ / hết chỗ → waitlist / đã đóng / chưa đăng nhập) | IA-01 · IA-04 · IA-03 deep link |
 | **B3** Form đăng ký — chọn vai trò, vai trò phụ, xác nhận | **Màn hình form DUY NHẤT phía user** — bỏ nó là mất gần hết IA-02 | IA-02 · IA-04 |
-| **B4** Profile → My Activities — badge trạng thái, empty state ⚠️QR | Đầu ra quan sát được, dùng làm tiêu chí "hoàn thành" cho Task 2 | IA-04 · IA-01 · IA-03 |
+| **B4** My Profile — nút **QR Code** + **My Activities** (badge trạng thái, empty state, Export, phân trang) | Đầu ra quan sát được, dùng làm tiêu chí "hoàn thành" cho Task 2 | IA-04 · IA-01 · IA-03 |
 
 ⚠️ **06/08:** tên/đường vào B4 sửa theo tài liệu chính thức EMS (Profile → My Activities, không phải "My Registrations"); QR chưa xác nhận có thật — xem `KHAO_SAT_EMS.md` ⚠️5.
 
@@ -80,7 +80,7 @@ Nghĩa là: **một kịch bản sẽ có 2 người cùng làm, và hai ngườ
 
 | SV | Kịch bản | Bộ màn hình |
 |---|---|---|
-| **Duy (23127183)** | **B** | **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** Profile → My Activities ⚠️QR *(có thể thêm B1 làm màn thứ 4)* |
+| **Duy (23127183)** | **B** | **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Profile — QR Code + My Activities *(có thể thêm B1 làm màn thứ 4)* |
 | SV2 | A — nửa *authoring* | A1 Events list · A2 Add/Edit Event · A3 Registration & Roles config |
 | SV3 | A — nửa *operation* | A4 Participants approval · A5 Check-in · Dashboard KPI |
 | SV4 | C | chọn 3 trong C1–C4 |

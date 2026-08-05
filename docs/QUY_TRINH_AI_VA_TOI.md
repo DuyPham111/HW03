@@ -1,7 +1,7 @@
 # QUY TRÌNH LÀM VIỆC — AI làm gì · Tôi làm gì
 
-**Kịch bản B** · **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** Profile → My Activities ⚠️QR *(chờ xác minh — xem `KHAO_SAT_EMS.md` ⚠️5)*
-**SUT:** https://prod-dev.ems-fitus.cloud · **Email:** `pvnduy23@clc.fitus.edu.vn`
+**Kịch bản B** · **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Profile — nút QR Code + My Activities
+**SUT:** https://prod-dev.ems-fitus.cloud · **Email:** `23127183@student.hcmus.edu.vn`
 
 > Mỗi phần dưới đây có 3 khối: **bảng chia việc** → **prompt copy-paste được ngay** → **việc tôi phải tự làm + recheck**.
 > Prompt nào có `[...]` là chỗ bạn phải dán dữ liệu thật vào. **Không dán dữ liệu thật thì AI sẽ bịa** — đó là nguyên nhân mất điểm số 1 của bài này.
@@ -70,7 +70,7 @@ Chuyển thành một bảng chạy duy nhất cho file 01-checklist-execution.m
 
 ```
 Tôi sắp chạy checklist GUI trên 3 màn hình phía user của EMS:
-B2 trang chi tiết sự kiện, B3 form đăng ký, B4 Profile → My Activities ⚠️QR.
+B2 trang chi tiết sự kiện, B3 form đăng ký, B4 My Profile — QR Code + My Activities.
 
 Liệt kê CÁC TRẠNG THÁI DỮ LIỆU tôi cần dựng sẵn (bằng quyền admin) để 3 màn hình này
 bộc lộ hết giao diện — mỗi trạng thái nói rõ nó làm lộ ra widget/thông báo nào.
@@ -176,7 +176,7 @@ Bạn muốn dùng đúng công cụ mình từng trải nghiệm với tư các
 
 ```
 Tôi làm usability testing cho kịch bản B của EMS (user đăng ký tham dự sự kiện),
-trên đúng 3 màn hình: B2 trang chi tiết sự kiện, B3 form đăng ký, B4 Profile → My Activities ⚠️QR.
+trên đúng 3 màn hình: B2 trang chi tiết sự kiện, B3 form đăng ký, B4 My Profile — QR Code + My Activities.
 
 Viết 3 phương án task scenario, mỗi phương án:
 - Nêu MỤC TIÊU người dùng cần đạt, TUYỆT ĐỐI không liệt kê bước thao tác
@@ -282,7 +282,7 @@ hãy ghi rõ "không đủ dữ liệu" thay vì suy đoán.
 
 ```
 Tôi cần ma trận tương thích cho 3 màn hình web (B2 trang chi tiết sự kiện,
-B3 form đăng ký, B4 Profile → My Activities ⚠️QR) của EMS. Ràng buộc:
+B3 form đăng ký, B4 My Profile — QR Code + My Activities) của EMS. Ràng buộc:
 - 3 OS: Windows, macOS, và Android HOẶC iOS
 - 5 browser: Chrome, Firefox, Safari, Edge, Opera (hoặc Samsung Internet trên mobile)
 - 3 device class: desktop, tablet, phone
@@ -332,7 +332,7 @@ hãy ghi rõ "không đủ dữ liệu" thay vì suy đoán.
 
 - [ ] Đăng ký trial BrowserStack / LambdaTest bằng tài khoản của mình
 - [ ] Chạy từng ô, **chụp ảnh MỌI ô** (không chỉ ô Fail)
-- [ ] Đảm bảo mỗi ảnh thấy rõ **3 thứ**: email `pvnduy23@clc.fitus.edu.vn` + URL EMS + tên browser/OS/device
+- [ ] Đảm bảo mỗi ảnh thấy rõ **3 thứ**: email `23127183@student.hcmus.edu.vn` + URL EMS + tên browser/OS/device
 - [ ] Đặt tên ảnh `B2_chrome_windows_desktop.png`, lưu `evidence/task3/`
 - [ ] Ghi rõ ô nào emulator, ô nào thiết bị thật
 - [ ] B3/B4 cần đăng nhập → mỗi phiên BrowserStack là trình duyệt sạch, phải đăng nhập lại từng ô

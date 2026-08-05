@@ -10,9 +10,10 @@
 |---|---|
 | MSSV | `23127183` |
 | Họ tên | `Phạm Vũ Ngọc Duy` |
-| Email MSSV | `pvnduy23@clc.fitus.edu.vn` |
+| Email MSSV | `23127183@student.hcmus.edu.vn` |
 | Kịch bản | **B — User đăng ký tham dự sự kiện** |
-| 3 màn hình | **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** Profile → My Activities ⚠️QR *(tên + QR chờ xác minh — `docs/KHAO_SAT_EMS.md` ⚠️5)* |
+| 3 màn hình | **B2** Trang chi tiết sự kiện · **B3** Form đăng ký · **B4** My Profile — nút QR Code + My Activities |
+| Tài khoản demo cho 5 phiên Task 2 | `pvnduy23@clc.fitus.edu.vn` — **mật khẩu KHÔNG ghi vào repo** (repo public) |
 | SUT | https://prod-dev.ems-fitus.cloud *(link ngrok trong đề đã chết)* |
 | Tài khoản admin | `admin@gmail.com` / `Admin@123` — dùng chung cả lớp |
 | Google Form findings | https://forms.gle/CJQFQCAXcsDbXDMM9 |

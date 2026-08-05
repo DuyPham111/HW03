@@ -42,7 +42,7 @@
 
 ## 3. Nguồn quan sát từ chính EMS
 
-Đây là nguồn **quan trọng nhất cho phần human review** — 14 mục `RV` trong checklist đều bắt nguồn từ đây, không đến từ sách vở. Lý do AI bỏ sót từng mục ghi ở [`ai-prompts.md`](ai-prompts.md) §3.
+Đây là nguồn **quan trọng nhất cho phần human review** — 21 mục `RV` trong checklist đều bắt nguồn từ đây, không đến từ sách vở. Lý do AI bỏ sót từng mục ghi ở [`ai-prompts.md`](ai-prompts.md) §3.
 
 **Đợt khảo sát 1 — 05/08/2026**, tài khoản `23127183@student.hcmus.edu.vn`, 10 ảnh lưu tại `docs/khao-sat/`. Phiếu khảo sát đầy đủ: `docs/KHAO_SAT_EMS.md`.
 

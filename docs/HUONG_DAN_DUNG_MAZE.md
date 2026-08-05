@@ -41,19 +41,15 @@ Bạn đang ở đúng màn hình này. Bên trái là danh sách block (Welcome
 
 > Placeholder: *"Give testers details to complete the mission"* — đây mới là chỗ chứa mục tiêu đầy đủ.
 
-> 🔴 **DỪNG LẠI — kiểm tra `docs/KHAO_SAT_EMS.md` mục ⚠️5 trước khi dán ô này.** Tài liệu hướng dẫn chính thức của EMS (`/manual/student`) không hề nhắc tới mã QR ở phía sinh viên. Câu dưới đây đã đổi sang bản an toàn "xem xác nhận đăng ký" thay vì "xem mã QR" cho tới khi tự vào EMS xác nhận được QR có thật hay không. **Nếu bạn đã xác nhận CÓ QR rồi thì đổi lại câu gốc**, còn chưa xác nhận thì dùng đúng câu này:
+✅ **Đã xác minh QR có thật (06/08/2026)** — nút `QR Code` trên trang My Profile. Dùng câu gốc.
 
-**Dán nguyên văn** (bản an toàn, chờ xác minh QR):
-```
-Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem xác nhận đăng ký của bạn.
-```
-
-**Câu gốc, chỉ dùng SAU KHI đã xác nhận hệ thống thật có hiển thị mã QR:**
+**Dán nguyên văn:**
 ```
 Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem mã QR check-in của bạn.
 ```
 
 ⚠️ **Đừng thêm câu nào kiểu "bước 1 vào Events, bước 2 chọn sự kiện..."** — đề cấm tường minh việc chỉ đường từng bước, chỉ được nêu mục tiêu.
+🔴 **Tuyệt đối không viết QR nằm ở trang Profile.** Việc participant tìm QR ở đâu chính là dữ liệu quan trọng nhất của phiên (`SV-B4-01`) — lộ ra là mất luôn phép đo.
 
 ### Ô 3 — `Task link*` (bắt buộc, đang trống, đang báo lỗi đỏ)
 
@@ -96,7 +92,7 @@ Ba điều trước khi bắt đầu:
 2. Xin bạn nói to những gì đang nghĩ trong lúc làm — mình đang nghe qua cuộc gọi đang mở song song với bạn.
 3. Mình sẽ không trả lời câu hỏi trong lúc bạn làm, để xem hệ thống tự giải thích được đến đâu.
 
-Bạn cần một tài khoản EMS. Ở trang đăng nhập, bấm link "Create guest account" (KHÔNG bấm nút Student — nút đó cần tài khoản Microsoft/Office 365 của HCMUS mà bạn không có). Việc này không tính giờ.
+Mình đã chuẩn bị sẵn tài khoản demo và sẽ đăng nhập giúp bạn trước khi bắt đầu — bạn không cần tạo tài khoản gì.
 ```
 
 - [ ] Đã sửa Welcome — ⚠️ đối chiếu lại tên ô thật, báo tôi nếu khác
@@ -118,7 +114,7 @@ Bạn đã hoàn thành nhiệm vụ đến đâu?
 
 | Lựa chọn | Mô tả kèm theo |
 |---|---|
-| Hoàn thành | Tôi tự tìm thấy đúng xác nhận đăng ký của mình (mã QR nếu có, hoặc trạng thái đăng ký đúng sự kiện) |
+| Hoàn thành | Tôi đăng ký được và tự mở được mã QR check-in của mình |
 | Một phần | Tôi đăng ký được nhưng không tìm ra xác nhận/vé |
 | Không hoàn thành | Tôi không đăng ký xong được |
 

@@ -2,7 +2,7 @@
 
 **SUT:** EMS — https://prod-dev.ems-fitus.cloud
 **Phạm vi phủ:** IA-01 chuẩn UI chung · IA-02 forms · IA-03 navigation · IA-04 feedback/state
-**Tổng số mục:** **52** *(yêu cầu tối thiểu: > 40)*
+**Tổng số mục:** **59** *(yêu cầu tối thiểu: > 40)*
 **Phiên bản:** v1.0 · **Ngày chốt:** _(TODO)_
 
 **Đóng góp:** _(TODO — điền trước khi nộp. Nếu tự dựng một mình: "Bản v1 do Phạm Vũ Ngọc Duy (23127183) dựng ngày __, dựa trên khảo sát trực tiếp EMS ngày 05/08/2026. Đã gửi cả nhóm rà soát ngày __; [kết quả]")_
@@ -18,10 +18,12 @@
 | IA | Prefix | Nội dung | Số mục | Do AI sinh | Người bổ sung |
 |---|:--:|---|:--:|:--:|:--:|
 | IA-01 | `G-` | Chuẩn UI chung — bố cục, typography, màu, ảnh, empty/loading, i18n EN/VI, accessibility | **16** | 11 | 5 |
-| IA-02 | `F-` | Forms — nhãn, trường bắt buộc, validation, vị trí lỗi, upload, rich-text, bàn phím | **14** | 13 | 1 |
-| IA-03 | `N-` | Navigation — menu, breadcrumb, back, deep link, URL state, tab, sidebar, kéo-thả | **9** | 7 | 2 |
-| IA-04 | `S-` | Feedback / State — toast, badge, dialog xác nhận, progress, màu trạng thái, thời gian | **13** | 7 | 6 |
-| | | **Tổng** | **52** | **38** | **14** |
+| IA-02 | `F-` | Forms — nhãn, trường bắt buộc, validation, vị trí lỗi, upload, rich-text, bàn phím | **16** | 13 | 3 |
+| IA-03 | `N-` | Navigation — menu, breadcrumb, back, deep link, URL state, tab, sidebar, kéo-thả, phân trang | **11** | 7 | 4 |
+| IA-04 | `S-` | Feedback / State — toast, badge, dialog xác nhận, progress, màu trạng thái, thời gian | **16** | 7 | 9 |
+| | | **Tổng** | **59** | **38** | **21** |
+
+> **Cập nhật 06/08/2026 (v1.1):** thêm 7 mục `RV` sau đợt khảo sát 2 — tất cả đều truy được về quan sát cụ thể trên EMS thật (form Create Event, trang My Profile, Admin Dashboard). Xem lý do từng mục ở [`ai-prompts.md`](ai-prompts.md) §3.
 
 ## Cách dùng khi chạy (Task 1B)
 
@@ -70,7 +72,7 @@
 | G-15 | Nội dung vẫn đọc được và bố cục không vỡ khi zoom trình duyệt lên **200%** | W SC 1.4.4 | AI |
 | G-16 | Text tiếng Việt (dài hơn tiếng Anh) không làm vỡ nút, cắt chữ bằng dấu `…`, hay xuống dòng gãy giữa từ | S2, N4 | AI |
 
-## 2. IA-02 — Forms (`F-`, 14 mục)
+## 2. IA-02 — Forms (`F-`, 16 mục)
 
 | ID | Mục kiểm tra | Nguồn | Nguồn gốc |
 |---|---|---|:--:|
@@ -88,8 +90,10 @@
 | F-12 | Khi một lựa chọn bị khoá (hết chỗ, hết hạn), hệ thống **nêu rõ lý do khoá và lựa chọn thay thế nếu có** — không chỉ làm mờ nó đi một cách im lặng | N1, N9 | **RV** |
 | F-13 | Ô nhập có **trạng thái focus nhìn thấy được**; phím `Tab` đi qua các trường theo thứ tự khớp với thứ tự nhìn thấy trên màn hình | W SC 2.4.7, N7 | AI |
 | F-14 | Form hoặc modal đóng được bằng phím `Esc` và bằng nút thoát rõ ràng; nếu còn dữ liệu chưa lưu thì có cảnh báo trước khi đóng | N3, S6 | AI |
+| F-15 | Ô upload/đính kèm nêu rõ **giới hạn dung lượng và số lượng file** ngay trên giao diện, không chỉ nói chung chung "hỗ trợ mọi định dạng" | P3, N5 | **RV** |
+| F-16 | Với các cặp trường thời gian phụ thuộc nhau (bắt đầu–kết thúc, mở–đóng đăng ký, mở–đóng check-in), hệ thống **chặn cấu hình vô lý** và nêu rõ cặp nào đang mâu thuẫn | N5, P3 | **RV** |
 
-## 3. IA-03 — Navigation (`N-`, 9 mục)
+## 3. IA-03 — Navigation (`N-`, 11 mục)
 
 | ID | Mục kiểm tra | Nguồn | Nguồn gốc |
 |---|---|---|:--:|
@@ -102,8 +106,10 @@
 | N-07 | Sidebar thu gọn / mở rộng được, và ở trạng thái mở không che khuất nội dung chính | N7, S7 | AI |
 | N-08 | Kéo-thả sắp xếp có **tay cầm rõ ràng**, dòng đang kéo có phản hồi thị giác, các thao tác khác tạm khoá để tránh xung đột, và thứ tự mới được lưu đúng | P2, P6 | AI |
 | N-09 | Không có liên kết hỏng; mọi liên kết và nút điều hướng dẫn tới đích tồn tại, không rơi vào trang 404 | N9 | AI |
+| N-10 | Chức năng người dùng cần **ngay sau** một thao tác phải nằm trong tầm với của ngữ cảnh đó — không đặt ở một khu vực rời hẳn buộc người dùng phải nhớ đường mà tự đi | N6, N7 | **RV** |
+| N-11 | Danh sách dài có **phân trang hoặc tải thêm**, hiển thị rõ đang ở trang mấy trên tổng bao nhiêu, và điều khiển phân trang dùng chung một kiểu trên mọi màn hình | N1, S1 | **RV** |
 
-## 4. IA-04 — Feedback / State (`S-`, 13 mục)
+## 4. IA-04 — Feedback / State (`S-`, 16 mục)
 
 | ID | Mục kiểm tra | Nguồn | Nguồn gốc |
 |---|---|---|:--:|
@@ -120,8 +126,9 @@
 | S-11 | Khi mất kết nối mạng, hệ thống báo rõ và **cho biết thao tác vừa rồi có được lưu hay không** | N1, N9 | AI |
 | S-12 | Mã QR / barcode hiển thị **đủ lớn và sắc nét** để quét được bằng camera điện thoại thông thường, không bị co méo trên màn hình nhỏ | N1, SL | AI |
 | S-13 | Nhãn nút, tiêu đề và tên mục dùng **cùng một quy ước viết hoa** trên toàn hệ thống | N4, S1 | **RV** |
-
-> ⚠️ **06/08/2026 — `S-12` có nguy cơ N/A cho kịch bản B:** tài liệu hướng dẫn chính thức của EMS không nhắc tới mã QR/barcode phía sinh viên. Nếu Task 1B xác nhận màn B4 (Profile → My Activities) không có QR, đánh `S-12` là **N/A** trên cả 3 màn với lý do "không tìm thấy tính năng QR trong phạm vi kịch bản B" — **giữ nguyên item**, không xoá, vì item vẫn hợp lệ cho kịch bản/thành viên khác (vd A5 Check-in). Xem `docs/KHAO_SAT_EMS.md` mục ⚠️5.
+| S-14 | Sau khi hoàn tất một thao tác, hệ thống **chỉ đường tới bước tiếp theo** hoặc tới kết quả vừa tạo ra — không bắt người dùng tự đoán phải đi đâu tiếp | N1, S4 | **RV** |
+| S-15 | Cùng một khái niệm trạng thái được gọi bằng **một bộ từ vựng duy nhất** trên mọi màn hình và trong tài liệu hướng dẫn | N4, S1 | **RV** |
+| S-16 | Chỉ số tổng hợp trên dashboard (số lượng, tỉ lệ) **khớp với dữ liệu thật** của hệ thống, không hiển thị 0 khi thực tế có dữ liệu | N1 | **RV** |
 
 ---
 
@@ -144,11 +151,11 @@ for p in G F N S; do echo -n "$p: "; grep -c "^| $p-" team/gui-checklist.md; don
 echo -n "RV: "; grep -c '| \*\*RV\*\* |' team/gui-checklist.md
 ```
 
-Kết quả mong đợi: `G: 16 · F: 14 · N: 9 · S: 13` → tổng **52** · `RV: 14`
+Kết quả mong đợi: `G: 16 · F: 16 · N: 11 · S: 16` → tổng **59** · `RV: 21`
 
-- [ ] Tổng > 40 ✅ (52)
+- [ ] Tổng > 40 ✅ (59)
 - [ ] Mỗi IA đều có mục, không IA nào rỗng ✅
 - [ ] Mọi mục có mã nguồn heuristic ✅
 - [ ] Mọi mục có `AI` hoặc `RV` ✅
 - [ ] Số mục `RV` (14) khớp số dòng giải trình ở [`ai-prompts.md`](ai-prompts.md) §3
-- [ ] **Bạn đã tự đọc lại 52 mục** và sửa/thêm/bớt theo ý mình trước khi chốt v1.0
+- [ ] **Bạn đã tự đọc lại 59 mục** và sửa/thêm/bớt theo ý mình trước khi chốt v1.0

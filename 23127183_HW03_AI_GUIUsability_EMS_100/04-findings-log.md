@@ -1,7 +1,7 @@
 # Bug & Usability Findings Log — HW03
 
 **Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Kịch bản:** B — User đăng ký tham dự sự kiện
-**Email dùng nộp form:** pvnduy23@clc.fitus.edu.vn
+**Email dùng nộp form:** 23127183@student.hcmus.edu.vn
 **Google Form:** https://forms.gle/CJQFQCAXcsDbXDMM9
 
 > **Luật của đề (§7):** mọi defect và mọi đề xuất cải tiến usability phải được báo cáo **HAI LẦN** — (1) submit từng cái lên Google Form, (2) hợp nhất vào file này.
@@ -86,7 +86,7 @@ _(Ghi 1 câu chỉ ra chỗ cần nhìn trong ảnh.)_
 |---|:--:|:--:|
 | B2 Trang chi tiết sự kiện | | |
 | B3 Form đăng ký | | |
-| B4 Profile → My Activities ⚠️QR | | |
+| B4 My Profile — QR Code + My Activities | | |
 | Khác (B1…) | | |
 
 ---

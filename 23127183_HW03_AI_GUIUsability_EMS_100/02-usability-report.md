@@ -14,25 +14,33 @@
 
 ### 1.1 Task scenario
 
-> 🔴 **CẢNH BÁO — chưa chốt được 100%, chờ xác minh:** tài liệu hướng dẫn chính thức của EMS (`/manual/student`, đọc 06/08/2026) **không hề nhắc tới mã QR/barcode** ở phía sinh viên trong toàn bộ 9 mục của nó. Cái gần nhất với "B4 My Registrations" là **Profile → tab My Activities** (hiển thị trạng thái đăng ký, không nói có QR). Đề bài gốc thì có ghi Pool B có "barcode/QR ticket" — nên chưa thể kết luận chắc là sai, chỉ là **chưa xác minh được trên hệ thống thật**. Chi tiết + việc cần làm: `docs/KHAO_SAT_EMS.md` mục ⚠️5.
-> **Cho tới khi xác minh xong**, toàn bộ tài liệu Task 2 (`test-request.md`, `HUONG_DAN_DUNG_MAZE.md`) đang tạm dùng câu an toàn "xem xác nhận đăng ký" thay vì "xem mã QR". Xác minh xong thì quay lại đây đổi câu bên dưới và đồng bộ ngược ra các file kia.
+> ✅ **Đã xác minh trên hệ thống thật (06/08/2026):** mã QR check-in **có tồn tại**, nhưng **không phải vé theo từng sự kiện**. Nó là **một mã cố định cho cả tài khoản**, mã hoá **Student ID**, mở bằng nút **`QR Code`** ở góc phải trên trang **My Profile** — tách hoàn toàn khỏi danh sách đăng ký (ảnh `docs/khao-sat/check-in-profile.png`).
+> **Chính điều này làm tác vụ trở nên đáng đo:** người vừa đăng ký xong sẽ tìm vé ở đâu? Ở chỗ đăng ký và trong My Activities **đều không có đường dẫn nào tới QR**. Nếu ≥ 3/5 participant kẹt ở bước này ⇒ finding hệ thống hạng nặng (`SV-B4-01`).
 
 **Mục tiêu giao cho người dùng (viết dưới dạng MỤC TIÊU, tuyệt đối không liệt kê từng bước bấm):**
 
-> **Bản nháp cho kịch bản B — rà lại sau pilot rồi chốt:**
-> *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia và cho mình xem mã QR check-in của bạn."* ⚠️ *(đang dùng bản an toàn "...xem xác nhận đăng ký của bạn" ở các file gửi participant, xem cảnh báo ở trên)*
+> **Bản chốt cho kịch bản B:**
+> *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia và cho mình xem mã QR check-in của bạn."*
 
-**Bối cảnh kể cho người dùng:** bạn nghe người quen nhắc tới một workshop của Khoa CNTT mà bạn muốn tham dự (bạn không phải sinh viên trường này — đăng ký qua vai trò **Guest**, không cần tài khoản HCMUS). Đây là lần đầu bạn dùng hệ thống EMS.
+**Bối cảnh kể cho người dùng:** bạn nghe người quen nhắc tới một workshop của Khoa CNTT mà bạn muốn tham dự. Đây là lần đầu bạn dùng hệ thống EMS.
 
-**Điều kiện coi là hoàn thành (success criteria):** người dùng **tự tìm thấy đúng xác nhận đăng ký của mình** (mã QR/barcode nếu hệ thống thật có, hoặc trạng thái đăng ký đúng nếu không có QR) trong **Profile → My Activities**, ứng với đúng sự kiện. Đăng ký được nhưng không tìm ra xác nhận ⇒ **Partial**. Không hoàn tất đăng ký ⇒ **Failed**.
+**Điều kiện coi là hoàn thành (success criteria):** người dùng **tự mở được modal `Check-in QR Code`** (My Profile → nút `QR Code`) **và** hoàn tất đăng ký đúng sự kiện được giao. Đăng ký xong nhưng **không tự tìm ra QR** ⇒ **Partial** *(đây là nhánh đáng quan tâm nhất)*. Không hoàn tất đăng ký ⇒ **Failed**.
 
-**Ba màn hình mà tác vụ này đi qua:** B2 Trang chi tiết sự kiện (đọc thông tin, ra quyết định) → B3 Form đăng ký (chọn vai trò, xác nhận) → B4 Profile → My Activities *(tên và có QR hay không đang chờ xác minh, xem cảnh báo đầu mục)* (tìm lại đăng ký và mở xác nhận/mã check-in). Trang chủ B1 là đường vào, được quan sát nhưng không nằm trong phạm vi chấm.
+**Ba màn hình mà tác vụ này đi qua:** B2 Trang chi tiết sự kiện (đọc thông tin, ra quyết định) → B3 Form đăng ký (chọn vai trò, xác nhận) → B4 **My Profile** (nút QR Code + khối My Activities). Trang chủ B1 là đường vào, được quan sát nhưng không nằm trong phạm vi chấm.
+
+> 🔎 **Điểm quan sát then chốt của mỗi phiên:** ghi lại **participant tìm QR ở những đâu trước khi ra được Profile** — trong trang sự kiện? trong My Activities? bấm vào thẻ đăng ký? Đường đi sai của họ chính là dữ liệu giá trị nhất của Task 2 này.
 
 **Biến thể để lộ thêm trạng thái (dùng cho 2/5 participant):** giao sự kiện **đã hết chỗ và có bật Waitlist** thay vì sự kiện còn chỗ — để xem người dùng có hiểu mình đang vào **danh sách chờ** chứ không phải đã được nhận hay không. Đây thường là chỗ hiểu nhầm nặng nhất của luồng đăng ký, và nó chỉ lộ ra khi có người thật thao tác.
 
 **Điểm dừng (khi nào moderator can thiệp):** _(TODO — đề xuất: chỉ can thiệp khi participant bí hoàn toàn quá 2 phút ở cùng một chỗ; ghi lại mọi lần can thiệp)_
 
-**Lưu ý vận hành (thuận lợi của kịch bản B):** mỗi participant **tự đăng ký tài khoản EMS riêng** ngay đầu phiên — bấm **`Create guest account`** ở trang login, KHÔNG bấm nút Student (cần tài khoản Microsoft/Office 365 của HCMUS mà participant ngoài trường không có; xem `docs/KHAO_SAT_EMS.md` mục ⚠️4). Nhờ vậy năm phiên **không đụng dữ liệu của nhau** và có thể chạy linh hoạt về thời gian. Cần chuẩn bị trước bằng quyền admin: ít nhất một sự kiện `PUBLISHED` + `UPCOMING` còn chỗ, một sự kiện hết chỗ + bật Waitlist, đặt tiền tố `[23127183]` để không lẫn với dữ liệu lớp.
+**Lưu ý vận hành — tài khoản và dữ liệu:** participant **không có tài khoản Microsoft/Office 365 của HCMUS** nên không đăng nhập được bằng nút `STUDENT` (xem `docs/KHAO_SAT_EMS.md` mục ⚠️4). Dùng **tài khoản demo dùng chung** đã tạo sẵn cho cả 5 phiên.
+
+> ⚠️ **Vì 5 người dùng chung một tài khoản, phải tách dữ liệu từng phiên** — nếu không, P1 đăng ký xong thì P2 mở lên đã thấy sự kiện đó nằm sẵn trong My Activities và **không thực hiện được đúng tác vụ**.
+> **Cách xử lý đã chọn:** dựng sẵn **5 sự kiện riêng** `[23127183] Workshop P1`…`P5`, mỗi participant làm trên sự kiện của mình. Vừa giữ trạng thái sạch, vừa không phải thao tác gì giữa các phiên (lúc đó đang bận quan sát), vừa tách bạch dữ liệu về sau.
+> *(Phương án thay thế: huỷ đăng ký bằng nút `Cancel Registration` sau mỗi phiên — đã xác nhận hoạt động — nhưng nhớ chụp My Activities của từng người TRƯỚC khi huỷ.)*
+
+Ngoài 5 sự kiện trên, cần chuẩn bị thêm bằng quyền admin: một sự kiện **hết chỗ + bật Waitlist** (dùng cho biến thể ở 2/5 phiên), đặt tiền tố `[23127183]` để không lẫn với dữ liệu lớp.
 
 > **Việc đăng ký tài khoản có tính vào tác vụ không?** Không — cho participant đăng ký/đăng nhập xong rồi mới bắt đầu bấm giờ, để `time on task` chỉ đo đúng luồng đăng ký sự kiện. Nhưng **vẫn ghi chú lại** mọi khó khăn họ gặp ở bước tạo tài khoản, coi như finding phụ.
 

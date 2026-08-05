@@ -13,31 +13,40 @@
 
 > Mục 4 và 5 thêm vào ngày 06/08/2026 sau khi đọc **tài liệu hướng dẫn chính thức của hệ thống** (`Hướng dẫn sinh viên | HCMUS EMS`, lấy từ `/manual/student` trên chính SUT). Đây là nguồn đáng tin hơn hẳn suy đoán từ ảnh chụp — sửa theo nguồn này.
 
-### 1. B2 KHÔNG phải màn hình công khai — kế hoạch Task 2 & 3 phải đổi
+### 1. B2 bị chặn khi chưa đăng nhập — nhưng **do CẤU HÌNH, không phải do hệ thống**
 
 Ảnh `KS_B2_chua-dang-nhap.png` cho thấy mở deep link tới sự kiện khi chưa đăng nhập thì chỉ hiện:
 
 > 🔒 **Please sign in to view this event.** — nút `login`
 
-Hệ quả:
+> ⚠️ **Sửa lại kết luận của chính tôi (06/08/2026).** Lượt trước tôi kết luận *"B2 không phải màn hình công khai"* — **nói vậy là quá tay**. Ảnh `admin-4.png` cho thấy form tạo sự kiện có công tắc **`Public Event` — "Event is publicly visible"**, và nó **mặc định TẮT**. Nghĩa là: EMS **có** hỗ trợ trang sự kiện công khai; ba workshop thử của bạn bị chặn chỉ vì lúc tạo không bật công tắc đó.
 
-| Nơi bị ảnh hưởng | Trước đây tôi ghi | Thực tế |
+**Đây lại là cơ hội tốt cho bài**, vì bạn kiểm được **cả hai nhánh**:
+
+| Cấu hình | Người chưa đăng nhập thấy gì | Dùng để kiểm |
 |---|---|---|
-| Task 3 cross-platform | "B2 công khai, không cần đăng nhập ⇒ chạy nhanh" | **Sai.** Cả B2, B3, B4 đều cần đăng nhập ⇒ **phải đăng nhập lại ở TỪNG ô** BrowserStack (~7 ô × 3 màn). Tính thêm thời gian |
-| Task 2 user testing | Participant vào thẳng link sự kiện | **Phải tạo tài khoản + đăng nhập trước**, rồi mới bắt đầu bấm giờ |
+| `Public Event` **TẮT** *(3 workshop hiện tại)* | Chặn cả trang, nút `login` | Hành vi chặn có rõ ràng không, sau khi đăng nhập có quay lại đúng trang không |
+| `Public Event` **BẬT** ⬜ *(chưa thử)* | Xem được nội dung sự kiện | Nội dung công khai có đầy đủ không, nút đăng ký hiện gì với người chưa đăng nhập |
 
-→ Tôi đã sửa lại các file kế hoạch cho khớp.
+- [ ] **Dựng thêm 1 sự kiện có bật `Public Event`** → mở deep link ở cửa sổ ẩn danh → chụp `KS_B2_public-event-chua-dang-nhap.png`. Đây là input cho ít nhất 2 item checklist và là một finding tiềm năng nếu hai nhánh không nhất quán.
 
-### 2. Bạn đang có HAI email — cần chốt dùng cái nào cho bài
+**Hệ quả cho kế hoạch (giữ nguyên, vì 3 workshop thử đều đang tắt Public Event):**
 
-| Email | Dùng ở đâu | Khớp mẫu đề `MSSV@....edu.vn`? |
-|---|---|:--:|
-| `23127183@student.hcmus.edu.vn` | Đăng nhập EMS (ảnh `KS_LOGIN_trang-dang-nhap.png`) | ✅ có chứa MSSV |
-| `pvnduy23@clc.fitus.edu.vn` | Đang ghi trong bài làm để nộp form + overlay ảnh | ❌ **không chứa MSSV** |
+| Nơi bị ảnh hưởng | Thực tế |
+|---|---|
+| Task 3 cross-platform | Cả B2/B3/B4 đều cần đăng nhập ⇒ **phải đăng nhập lại ở TỪNG ô** BrowserStack (~7 ô × 3 màn) |
+| Task 2 user testing | Participant phải đăng nhập trước, rồi mới bắt đầu bấm giờ |
 
-Đề §7 và §12 yêu cầu **`MSSV@....edu.vn`**. Cái thứ nhất khớp mẫu, cái thứ hai không. **Hỏi TA hoặc nhóm Zalo** xem chấp nhận email `@clc.fitus.edu.vn` không — nếu không thì phải đổi toàn bộ sang `23127183@student.hcmus.edu.vn` (form + overlay ảnh Task 3). Tôi chưa tự đổi vì bạn đã chốt email kia.
+### 2. ✅ ĐÃ CHỐT — email chính thức của bài
 
-- [ ] Đã hỏi và chốt: dùng email `________________`
+| Email | Vai trò | Ghi vào đâu |
+|---|---|---|
+| **`23127183@student.hcmus.edu.vn`** | ✅ **Tài khoản chính** — đăng nhập EMS, nộp Google Form, overlay lên mọi ảnh Task 3 | Toàn bộ bài làm |
+| `pvnduy23@clc.fitus.edu.vn` | Tài khoản demo tạo riêng cho 5 phiên user testing | Chỉ dùng lúc chạy phiên, **không** dùng nộp form |
+
+Khớp đúng mẫu `MSSV@....edu.vn` mà đề §7 và §12 yêu cầu. Đã đổi trong toàn bộ file (06/08/2026).
+
+> 🔒 **Mật khẩu tài khoản demo KHÔNG được ghi vào repo.** Repo `github.com/DuyPham111/HW03` là **public** — mật khẩu commit vào đó sẽ nằm vĩnh viễn trong lịch sử git kể cả sau khi xoá, và bất kỳ ai cũng đọc được. Giữ mật khẩu ở chỗ riêng (ghi chú cá nhân / trình quản lý mật khẩu), lúc chạy phiên thì tự gõ. Sau khi nộp bài xong nên **đổi mật khẩu** tài khoản demo này.
 
 ### 3. Dữ liệu thử mới dựng được 3/4
 
@@ -46,7 +55,8 @@ Hệ quả:
 | 1 | `[23127183] Workshop A — con cho` | ✅ đã dựng · Slot Student **49** · "Event starts in 1 day(s)" | `KS_B2_workshop-a-con-cho.png` |
 | 2 | `[23127183] Workshop B — het cho` | ✅ đã dựng · Slot **0** · "Role is full" · Registered **1/1** | `KS_B2_workshop-b-het-cho.png` |
 | 3 | `[23127183] Workshop C — dong dang ky` | ✅ đã dựng · "Event registration period has ended" | `KS_B2_workshop-c-dong-dang-ky.png` |
-| 4 | `[23127183] Workshop D — da ket thuc` | ⬜ **CHƯA DỰNG** — cần cho badge trạng thái ở B4 và màn đánh giá B5 | — |
+| 4 | `[23127183] Workshop D — da ket thuc` | ✅ đã dựng · "Event has ended" · Registered **0/50** · có khối **Rating summary** (0.0, thanh 5→1 sao đều 0%) · Campus *Linh Trung Campus* | `KS_B2_workshop-d-da-ket-thuc.png` |
+| 5 | ⬜ **CẦN THÊM:** một sự kiện có bật **`Public Event`** | Để kiểm nhánh xem-được-khi-chưa-đăng-nhập (xem mục 1) | — |
 
 ### 4. 🔴 Participant bên ngoài KHÔNG đăng nhập được như bạn đã làm — phải đổi hướng dẫn
 
@@ -58,39 +68,90 @@ Tài liệu chính thức, mục 1.3: *"Trong lần đầu đăng nhập, nhấn
 | `Create guest account` | Link phụ dưới nút đăng nhập | **Đăng ký tài khoản Guest** — không cần tài khoản HCMUS |
 | Nút Lecturer/Student trong khung "Read user guides" | Trên cùng | **CHỈ mở trang manual public**, không đăng nhập, không gọi OAuth |
 
-**Hệ quả:** tài khoản `23127183@student.hcmus.edu.vn` tôi dùng để khảo sát là **tài khoản HCMUS thật của tôi** — hợp lệ cho việc khảo sát cá nhân. Nhưng **5 người tham gia Task 2 là bạn bè ngoài lớp, gần như chắc chắn không có tài khoản Microsoft/Office 365 của HCMUS** ⇒ **họ không đăng nhập được bằng nút STUDENT**. Họ phải đi qua **`Create guest account`**.
+**Hệ quả:** 5 người tham gia Task 2 là bạn bè ngoài lớp, **không có tài khoản Microsoft/Office 365 của HCMUS** ⇒ họ không đăng nhập được bằng nút STUDENT.
 
-**Việc cần làm:**
-- [ ] Tự bấm thử `Create guest account` một lần, xem form yêu cầu gì → chụp `KS_LOGIN_guest-signup.png`
-- [ ] Đăng ký thử 1 tài khoản Guest → thử toàn bộ luồng B2→B3→B4 bằng tài khoản Guest này, xem có khác gì với luồng Student không (đề cũng liệt kê Guest là 1 trong 3 vai trò đăng ký hợp lệ — `allowGuestRegistration` — nên khả năng cao luồng giống nhau)
-- [ ] Sửa lại `evidence/task2/test-request.md`, `docs/QUY_TRINH_AI_VA_TOI.md`, `docs/HUONG_DAN_DUNG_MAZE.md`: đổi mọi chỗ ghi chung chung "tự đăng ký tài khoản EMS" thành **"bấm Create guest account"**, không phải nút Student
+**✅ Giải pháp đã chốt (06/08):** dùng **tài khoản demo `pvnduy23@clc.fitus.edu.vn`** đã tạo sẵn. Participant đăng nhập bằng tài khoản này, không phải tự đăng ký gì.
 
-### 5. 🔴 "Vé QR" — tài liệu chính thức KHÔNG hề nhắc tới, cần tự vào kiểm tra ngay
+> 🔴 **NHƯNG có một vấn đề phải xử lý trước khi chạy phiên đầu tiên — 5 người dùng CHUNG 1 tài khoản sẽ hỏng dữ liệu:**
+>
+> | Vấn đề | Vì sao |
+> |---|---|
+> | **P2 trở đi không còn trạng thái sạch** | P1 đăng ký xong, sự kiện đó đã nằm trong My Activities. P2 mở lên thấy sẵn → không còn là "lần đầu dùng hệ thống" |
+> | **Tác vụ có thể tự hoàn thành sẵn** | Nếu P1 đã đăng ký Workshop A, thì với P2 nút đăng ký đã đổi trạng thái ⇒ **P2 không thực hiện được đúng tác vụ** |
+> | **Không tách được dữ liệu từng người** | Cả 5 phiên ghi vào cùng một tài khoản ⇒ không biết ai đăng ký cái gì |
+>
+> **Ba cách xử lý, chọn một:**
+> 1. **Huỷ đăng ký sau mỗi phiên** *(rẻ nhất — đã xác nhận nút `Cancel Registration` hoạt động, xem mục 7)*. Sau mỗi participant: vào B2 bấm Cancel Registration để trả về trạng thái sạch cho người tiếp theo. Nhớ **chụp màn hình My Activities của từng người TRƯỚC khi huỷ** làm bằng chứng phiên.
+> 2. **Dựng 5 sự kiện riêng** `[23127183] Workshop P1`…`P5`, mỗi participant làm trên sự kiện của mình → không đụng nhau, không cần huỷ. Tốn ~10 phút dựng nhưng an toàn nhất.
+> 3. **Tạo 5 tài khoản demo riêng** qua `Create guest account` → sạch nhất về mặt dữ liệu nhưng tốn công nhất.
+>
+> **Khuyến nghị: cách 2** — dựng sẵn 5 sự kiện. Vừa giữ trạng thái sạch cho từng người, vừa không phải thao tác gì giữa các phiên (lúc đó bạn đang bận quan sát), vừa tách bạch dữ liệu để đối chiếu về sau.
+>
+> - [ ] Chọn cách xử lý: `________`
 
-Đọc hết 12 trang tài liệu chính thức: có mục Đăng nhập, Dashboard & tìm kiếm, Saved Events, Xem chi tiết sự kiện, Đăng ký & Waitlist, Lịch sự kiện, Thông báo, **Hồ sơ cá nhân**, Support requests, Đánh giá sự kiện. **Không một chữ nào nhắc tới "QR", "barcode", "vé", hay "check-in" từ phía sinh viên.** Mục 4.3 chỉ nói: khi được duyệt từ waitlist thì có **Waitlist Invitation** qua thông báo, và muốn huỷ thì vào trang chi tiết bấm **Cancel Registration**.
+**Còn cần kiểm:**
+- [ ] Đăng nhập thử tài khoản demo một lần, xác nhận vào được và **thấy đúng vai trò gì** (Student? Guest?) → chụp `KS_LOGIN_tk-demo.png`
+- [ ] Ảnh `admin-4.png` cho thấy công tắc **`Allow Guest Registration` — "Guests can register without an account"**. Nếu bật công tắc này thì **participant có thể đăng ký mà KHÔNG cần đăng nhập gì cả** — kiểm thử xem có đúng vậy không. Nếu đúng, đây là phương án sạch nhất cho Task 2 và làm luôn cả vấn đề dùng chung tài khoản biến mất.
 
-Cái gần nhất với "B4 My Registrations" trong tài liệu là mục 7 — **Hồ sơ cá nhân → tab My Activities**: *"hiển thị lịch sử sự kiện, vai trò và trạng thái đăng ký, đánh giá sự kiện đã tham gia"*. Không nói gì về mã QR.
+### 5. ✅ ĐÃ XÁC MINH — QR CÓ THẬT, nhưng **không phải vé theo sự kiện**
 
-**Điều này không có nghĩa là tính năng QR chắc chắn không tồn tại** — đề bài gốc (`docs/DE_BAI_02_Spec_HW03_VI.md`) mô tả Pool B có "*My Registrations and the barcode/QR ticket*", và tài liệu 12 trang này là bản tóm tắt, có thể bỏ sót chi tiết hình ảnh. Nhưng **không thể tiếp tục giả định** — đây là rủi ro cao nhất hiện tại của cả Task 2 lẫn lựa chọn màn hình B4.
+Ảnh `check-in-profile.png` xác nhận: bấm nút **`QR Code`** ở góc phải trên trang **My Profile** → mở modal:
 
-**Việc cần làm NGAY, ưu tiên cao nhất buổi khảo sát tiếp theo:**
-- [ ] Đăng nhập bằng tài khoản `23127183@student.hcmus.edu.vn`, vào **Profile → My Activities**
-- [ ] Đăng ký thật một sự kiện (`Workshop A — con cho`), xem trạng thái chuyển thành gì
-- [ ] Tìm khắp trang chi tiết sự kiện (B2) và trang My Activities: có mã QR/barcode hiển thị ở đâu không? Hay chỉ có trạng thái chữ (Approved/Pending Review/Rejected/Waitlisted)?
-- [ ] Nếu **CÓ** QR: chụp lại đúng vị trí, cập nhật `KHAO_SAT_EMS.md` §2.4 và xoá cảnh báo này
-- [ ] Nếu **KHÔNG CÓ** QR: báo lại ngay — cần đổi tiêu chí "hoàn thành" của Task 2 (hiện đang là *"tự mở được mã QR"*) sang tiêu chí khác quan sát được thật, ví dụ trạng thái đăng ký hiển thị đúng trong My Activities, và cần sửa lại phần "B4" trong `00-main-report.md` §1.2
+> **Check-in QR Code** · *(ảnh mã QR)* · `Student ID: 23127183` · nút **Download** (xanh) · nút `×` đóng
+
+**Đây là phát hiện quan trọng nhất của cả buổi khảo sát**, vì nó khác hẳn hình dung ban đầu:
+
+| Tôi/đề bài giả định | Thực tế trên EMS |
+|---|---|
+| Mỗi đăng ký sinh **một vé QR riêng** cho sự kiện đó | Chỉ có **một mã QR duy nhất cho cả tài khoản**, mã hoá **Student ID**, không gắn với sự kiện nào |
+| Vé nằm trong "My Registrations", cạnh từng đăng ký | QR nằm ở **nút riêng trên đầu trang Profile**, tách rời hoàn toàn khỏi danh sách My Activities |
+| "Xem vé của workshop X" | Không có khái niệm đó — cùng một mã dùng cho mọi sự kiện |
+
+**Ba hệ quả — đều tốt cho bài:**
+
+1. **Task 2 giữ nguyên được câu gốc** *"cho mình xem mã QR check-in của bạn"* — hợp lệ, vì QR có thật. Đã khôi phục câu này ở các file.
+2. **Đây là một câu hỏi usability rất hay để quan sát:** participant vừa đăng ký xong sẽ **đi tìm vé ở đâu**? Nhiều khả năng họ tìm trong sự kiện hoặc trong danh sách đăng ký — chỗ đó **không có gì**. Phải mò lên Profile → nút QR Code. **Nếu ≥ 3/5 người bị kẹt ở đây thì đó là finding hệ thống hạng nặng**, đúng loại dữ liệu đề Task 2 muốn.
+3. **Sinh ra một ứng viên finding mới** — xem `SV-B4-01` ở Phần 6.
+
+**Còn cần kiểm:**
+- [ ] Mã QR có **đổi theo thời gian / theo sự kiện** không, hay cố định vĩnh viễn? *(quét thử 2 lần cách nhau, hoặc so ảnh QR trước/sau khi đăng ký thêm sự kiện)* — nếu cố định vĩnh viễn thì còn là vấn đề **bảo mật**: ai chụp được màn hình QR là check-in hộ được
+- [ ] Nút **Download** tải về file gì (PNG? PDF?), tên file có ý nghĩa không
+- [ ] Ở bề rộng 375px, modal QR có hiển thị đủ và quét được không
 
 ---
 
 ## PHẦN 1 · Ghi nhận khi dựng sự kiện (admin)
 
+Ảnh: `admin-1.png` (dashboard) · `admin-2.png` `admin-3.png` `admin-4.png` `admin-5.png` (form Create Event, cuộn từ trên xuống)
+
 | Câu hỏi | Trả lời |
 |---|---|
-| Form tạo sự kiện có những trường bắt buộc nào? | ⬜ chưa ghi |
-| Bật/tắt công tắc nào thì form hiện thêm trường? | ⬜ chưa ghi |
-| Hệ thống có chặn khi thời gian không hợp lệ không? Báo lỗi ra sao? | ⬜ chưa ghi |
-| Có bao nhiêu trạng thái sự kiện? Màu gì? | ✅ Quan sát được ở phía user: **Upcoming** (tím) · **Ongoing** · **Ended** (xám). Phía admin ⬜ chưa ghi (DRAFT/PUBLISHED) |
-| Location để trống thì hiển thị gì? | ✅ Hiện dấu **`-`** (cả 3 workshop A/B/C đều vậy vì không nhập location) |
+| **Trường bắt buộc (có dấu `*`)** | ✅ Đúng **8 trường**: `Event Title` · `Start Date & Time` · `End Date & Time` · `Check-in Open` · `Check-in Close` · `Registration Open` · `Registration Close` · `Campus` |
+| **Trường KHÔNG bắt buộc** *(đáng chú ý)* | ✅ `Location` (chú thích *"Physical location or virtual link"*) · `Organizing Unit` · `Event Types` · `Academic Context` (ghi rõ *"optional"*) · `Sub-description` · `Description` · `Album Link` · `Reminder before hours` · Thumbnail · Banner · Attachments |
+| Cấu trúc form (trên → dưới) | ✅ (1) **Thumbnail** + **Event Banner** · (2) **Attachments** + **Basic Information** · (3) **Date & Time** · (4) **Categories** · (5) **Registration** · (6) **Location & Organization** · (7) **Additional Options** · (8) 3 nút cuối |
+| Upload ảnh | ✅ 2 khung riêng, đều có ô kéo-thả + nút camera tròn góc dưới phải · placeholder *"No thumbnail image"* / *"No banner image"* · chú thích **"Recommended ratio: 4:3"** và **"Recommended ratio: 24:9"** — khớp đúng tài liệu E2E |
+| Attachments | ✅ *"Drag and drop files here or click to select"* · chú thích **"Supported any file format."** ⚠️ *(không nêu giới hạn dung lượng/số lượng — ứng viên finding, xem `SV-ADM-01`)* |
+| Rich-text editor (`Description`) | ✅ 2 hàng thanh công cụ: hàng 1 — dropdown `P`, **B** *I* U S̶, màu chữ, highlight, x₂ x², căn lề, bullet list, numbered list, quote, đường kẻ ngang, xoá định dạng, link, ảnh, bảng · hàng 2 — dropdown cỡ chữ `16px`, Undo, Redo · có **tooltip** (ảnh bắt được tooltip "Subscript") |
+| **Bật/tắt công tắc nào thì hiện thêm trường?** | ⬜ **CHƯA KIỂM** — 5 công tắc ở mục Registration đều đang TẮT trong ảnh. Cần bật từng cái xem hiện thêm gì (đặc biệt `Allow Waitlist` và `Allow Additional Role`) |
+| Hệ thống có chặn khi thời gian không hợp lệ không? | ⬜ **CHƯA KIỂM** — cần cố tình nhập End < Start, Check-in Close < Check-in Open, Registration Close > End |
+| Có bao nhiêu trạng thái sự kiện? Màu gì? | ✅ Phía user: **Upcoming** (tím) · **Ongoing** (xanh lá) · **Ended** (xám). Phía admin: có **`Save as Draft`** và **`Publish`** ⇒ tồn tại trạng thái DRAFT/PUBLISHED |
+| Location để trống thì hiển thị gì? | ✅ Hiện dấu **`-`** (cả 4 workshop đều vậy) |
+
+**5 công tắc mục Registration** ✅ *(đều mặc định TẮT)*
+
+| Công tắc | Chú thích dưới nhãn |
+|---|---|
+| `Allow Student Registration` | *Students can register to attend* |
+| `Allow Lecturer Registration` | *Lecturers can register to attend* |
+| **`Allow Guest Registration`** | ***Guests can register without an account*** ← quan trọng cho Task 2, xem mục 4 |
+| `Allow Waitlist` | *Allow students to join waitlist when full* |
+| **`Public Event`** | ***Event is publicly visible*** ← giải thích vì sao B2 bị chặn, xem mục 1 |
+
+**3 nút cuối form** ✅ `Save as Draft` (viền xám) · **`Publish`** (xanh đậm, nút chính) · `Preview Event` (viền xanh, full width, có icon con mắt)
+
+**Dashboard admin** ✅ `admin-1.png` — sidebar 9 mục: Users Management · Categories · Academic Years · Campuses · Events Management · **Support requests** *(badge đỏ `17`)* · User Guide · Analytics *(có mũi tên xổ)* · Settings *(có mũi tên xổ)* · nút **Collapse** dưới cùng. 4 thẻ KPI: **Total Events** (xanh dương) · **Total Check-ins** (xanh lá) · **Attendance Rate** (tím, hiện `0%`) · **Total Users** (cam). Header: cờ ngôn ngữ · icon lưới · chuông · avatar `TLA`.
+
+⚠️ **Cả 4 KPI đều bằng 0** trong khi hệ thống rõ ràng có sự kiện và người dùng → ứng viên finding `SV-ADM-02`.
 
 ---
 
@@ -139,9 +200,9 @@ Cái gần nhất với "B4 My Registrations" trong tài liệu là mục 7 — 
 | Đếm ngược | ✅ "Event starts in 1 day(s)" / "Event starts in 20 day(s)" / "Event is happening now" |
 | Breadcrumb / nút quay lại danh sách | ⚠️ **KHÔNG thấy** trên cả 5 ảnh → xem `SV-B2-03` |
 | Deep link khi chưa đăng nhập | ⚠️ Bị **chặn hoàn toàn**, không vào được nội dung |
-| Sau khi đăng nhập có quay lại đúng sự kiện không? | ⬜ **CHƯA KIỂM** — bấm nút `login` ở màn chặn rồi xem có về đúng trang sự kiện không. Đây là item `N-` quan trọng |
-| Bấm Back của trình duyệt | ⬜ **CHƯA KIỂM** |
-| Nút **Cancel Registration** ⚠️ *mới, theo tài liệu §4.3* | ⬜ **CHƯA KIỂM** — tài liệu chính thức nói trang chi tiết có nút này cho người **đã đăng ký**, có bước xác nhận trước khi huỷ, và **chỉ huỷ được trước thời gian check-in**. Đăng ký Workshop A xong quay lại B2 xem nút này ở đâu, dialog xác nhận nói gì → chụp `KS_B2_cancel-registration.png` |
+| Sau khi đăng nhập có quay lại đúng sự kiện không? | ✅ **CÓ — về đúng sự kiện.** Dự đoán item `N-04` sẽ **Passed** *(vẫn phải tự chạy lại và chụp lúc làm Task 1B, không dùng dòng này thay bằng chứng)* |
+| Bấm Back của trình duyệt | ✅ **Trở lại đúng cửa sổ/trang trước.** Dự đoán `N-03` Passed — ⬜ còn phải kiểm phần **giữ nguyên bộ lọc + vị trí cuộn** khi quay lại từ trang chi tiết |
+| Nút **Cancel Registration** | ✅ **Hoạt động — huỷ xong không còn đăng ký nữa.** ⬜ Còn cần ghi: nút nằm ở đâu trên B2, **có dialog xác nhận không và nội dung dialog là gì** (đây mới là phần cho item `S-03`), sau khi huỷ My Activities cập nhật ngay hay phải tải lại → chụp `KS_B2_cancel-registration.png` |
 | **Tệp đính kèm** + **Organizing Unit** ⚠️ *mới, theo tài liệu bảng "Xem chi tiết sự kiện"* | ⬜ **CHƯA KIỂM** — tài liệu liệt kê B2 còn có nhóm "Địa điểm: Location **và Organizing Unit**" (tôi mới chỉ ghi Location) và nhóm "Tệp đính kèm: tài liệu liên quan hoặc album link" — kiểm xem 2 sự kiện thử của mình có hiện các khối này không |
 | Nút **Save/Saved** ⚠️ *mới, theo tài liệu mục 2.1* | ⬜ **CHƯA KIỂM** — B2 còn có tính năng lưu sự kiện (khác nút đăng ký), đổi trạng thái Save↔Saved. Đã thấy trên ảnh nhưng chưa test hành vi (click, toast, có đồng bộ với B1 không) |
 
@@ -172,31 +233,48 @@ Những gì **đã suy ra được** từ khối *Registration roles* trong ản
 - [ ] Nhấn **Esc**: có đóng modal/khối đang mở không?
 - [ ] Validate fail xong, lựa chọn đã tick **có còn giữ** không?
 
-### 2.4 · B4 — Trạng thái đăng ký + (nếu có) vé QR ⭐ MÀN CHẤM ĐIỂM
+### 2.4 · B4 — My Profile (QR Code + My Activities) ⭐ MÀN CHẤM ĐIỂM
 
-> 🔴 **Đọc mục 5 ở đầu file trước khi làm phần này.** Tài liệu chính thức không hề nhắc "QR"/"barcode"/"vé". Cái gần nhất là **Profile → tab My Activities**. Đây là ưu tiên số 1 của buổi khảo sát tiếp theo — cả `00-main-report.md` lẫn `02-usability-report.md` đang giả định có QR, cần xác nhận thật trước khi đi tiếp.
+Ảnh: `profile-1.png` (menu avatar) · `profile-2.png` (toàn trang) · `check-in-profile.png` (modal QR)
 
-**Đường vào đã sửa theo tài liệu (không còn phải "tìm"):**
+**Đường vào đã xác minh:**
 ```
-Avatar (góc phải header) → Profile → tab My Activities
+Avatar (góc phải header) → View profile
 ```
-Tài liệu §7 mô tả: *"Tab My Activities hiển thị lịch sử sự kiện, vai trò và trạng thái đăng ký, đánh giá sự kiện đã tham gia. Nhấn Export để tải danh sách nếu cần."* — vậy màn này còn có sẵn tính năng **Export**, chưa có trong danh sách khảo sát trước đây.
+✅ Menu avatar có đúng 4 mục: tên + email (`DUY PHẠM VŨ NGỌC` / `23127183@student.hcmus.edu...` — ⚠️ email bị **cắt cụt bằng `...`**, xem `SV-B4-02`) · **Support requests** · **View profile** · **Logout**.
 
-**Việc cần làm — làm ĐÚNG THỨ TỰ, dừng ở bước nào tìm ra câu trả lời cho mục 5 thì báo ngay:**
-- [ ] Đăng ký thật Workshop A bằng tài khoản của mình
-- [ ] Avatar → Profile → **My Activities** → chụp toàn màn hình `KS_B4_my-activities.png`
-- [ ] **Tìm mã QR/barcode ở khắp nơi:** trong My Activities, trong trang chi tiết B2 sau khi đăng ký, trong popup/modal nào đó khi bấm vào dòng đăng ký — có hay không, chụp lại đúng vị trí nếu có
-- [ ] Nếu tài khoản **chưa đăng ký gì** → My Activities hiện empty state gì → `KS_B4_empty.png`
-- [ ] Đăng ký thêm Workshop B (waitlist) → xem trạng thái hiển thị đúng 4 từ tài liệu nêu (Approved/Pending Review/Rejected/Waitlisted) hay từ khác → `KS_B4_danh-sach.png`
-- [ ] Bấm nút **Export** — tải về xem đúng định dạng/nội dung gì
-- [ ] Thu cửa sổ xuống ~375px → xem responsive → `KS_B4_mobile.png`
-- [ ] Quay lại B2, thử nút **Cancel Registration** (đã ghi ở mục 2.2) — dialog xác nhận nói gì, huỷ xong My Activities cập nhật thế nào
+**Cấu trúc trang My Profile — đã xác minh** ✅
 
-**Nếu xác nhận KHÔNG có QR:** báo lại ngay để sửa tiêu chí "hoàn thành" của Task 2 trong `02-usability-report.md` (hiện đang là *"tự mở được mã QR"*) sang tiêu chí quan sát được thật, ví dụ *"tự tìm thấy đúng trạng thái đăng ký của mình trong My Activities"*, và sửa mô tả B4 trong `00-main-report.md` §1.2 từ "My Registrations + vé QR" thành "Profile → My Activities — trạng thái đăng ký".
+| Khu vực | Nội dung |
+|---|---|
+| Tiêu đề + 3 nút góc phải | **My Profile** · nút **`QR Code`** · **`Edit Profile`** · **`Change Password`** |
+| Thẻ hồ sơ | Avatar chữ viết tắt `DPVN` + nút camera nhỏ · tên **DUY PHẠM VŨ NGỌC** + badge **`Student`** (xanh) |
+| 3 ô thông tin | **STUDENT ID** `23127183` · **EMAIL** `23127183@student.hcmus.edu.vn` · **PHONE** `Not updated` |
+| 3 thẻ thống kê | **Registered Activities** `2` (xanh dương) · **Participated Activities** `0` (xanh lá) · **Upcoming Activities** `1` (tím) |
+| Khối **My Activities** | Ô `Search activities...` · nút **`Filters`** · nút **`Export`** (xanh lá) |
+| Mỗi thẻ hoạt động | Ảnh **"NO IMAGE"** (xám) · tiêu đề · **3 badge**: `Pending review` (hồng) + `Student participation` (tím) + `Upcoming`/`Ongoing` · khoảng thời gian + location `-` · **`Registered at:`** ngày giờ · **`Checked in at: Not checked in`** · **`ROLES:`** `Người dự` |
+| Phân trang | `Rows per page: 10` · `1-2 of 2 results` · `Go to page __ / 1` · nút ‹ 1 › |
+
+**Modal QR** ✅ tiêu đề **Check-in QR Code** · ảnh QR · dòng `Student ID: 23127183` · nút **Download** · nút `×`.
+
+**4 quan sát nghi vấn thu được ngay từ ảnh này** *(đã đưa vào Phần 6)*:
+- Ảnh sự kiện lại là placeholder **"NO IMAGE"** → củng cố `SV-B1-04` là lỗi **hệ thống**, không phải cá biệt
+- `ROLES: Người dự` — tiếng Việt trong giao diện EN → củng cố `SV-B2-02`
+- Location lại hiện `-` → củng cố `G-09`
+- Bộ badge ở đây (`Pending review`, `Student participation`, `Upcoming`) **khác** bộ từ trong tài liệu chính thức (`Approved`/`Pending Review`/`Rejected`/`Waitlisted`) và **khác** 4 ô đếm trên B2 (`Registered`/`Pending`/`Confirmed`/`Waitlisted`) → **ba bộ từ vựng cho cùng một khái niệm trạng thái**, xem `SV-B4-03`
+
+**Còn phải làm:**
+- [ ] Tài khoản **chưa đăng ký gì** → My Activities hiện empty state gì → `KS_B4_empty.png` *(dùng tài khoản demo trước khi cho participant dùng)*
+- [ ] Bấm **Export** — tải về file gì, nội dung có đủ cột không
+- [ ] Bấm **Filters** — lọc được theo gì
+- [ ] Thu cửa sổ xuống ~375px → thẻ hoạt động và modal QR có vỡ không → `KS_B4_mobile.png`
+- [ ] Đăng ký Workshop B (hết chỗ + waitlist) → badge ở đây đổi thành gì
 
 ### 2.5 · B5 — Đánh giá sao
 
-- [ ] Cần Workshop D (`ENDED`) — **chưa dựng**. Dựng xong rồi mở xem có phần đánh giá không → `KS_B5_danh-gia.png`
+✅ Workshop D đã dựng (`KS_B2_workshop-d-da-ket-thuc.png`) — trang chi tiết sự kiện đã kết thúc **có khối `Rating summary`**: điểm `0.0` + số lượt `(0)`, kèm 5 thanh ngang từ `5 ★` xuống `1 ★`, mỗi thanh hiện `0 (0%)`.
+
+- [ ] ⬜ Đây mới là **phần xem tổng hợp đánh giá**. Chỗ **gửi** đánh giá thì theo tài liệu §9 nằm ở **Profile → My Activities → nút đánh giá bên phải dòng sự kiện**, và chỉ hiện khi trạng thái là **Checked-in**. Tài khoản hiện đang `Not checked in` ⇒ **chưa test được** — cần admin check-in cho mình trước, hoặc chấp nhận đánh dấu N/A có lý do (B5 nằm ngoài phạm vi chấm nên không bắt buộc)
 
 ---
 
@@ -314,6 +392,12 @@ HÀNH VI ĐẶC THÙ ĐÁNG CHÚ Ý
 | `SV-B2-04` | B2 | Số ô số liệu vai trò **đổi giữa các sự kiện** (4 ô có Waitlisted vs 3 ô không) | N4 — bố cục không ổn định giữa các trang cùng loại | `workshop-b` vs `workshop-c` |
 | `SV-B2-05` | B2 | Màn chặn chưa đăng nhập: nút ghi **`login`** chữ thường, lệch với các nút khác Title Case | N4 | `KS_B2_chua-dang-nhap.png` |
 | `SV-B2-06` | B2 | Workshop B **thiếu tag category và academic context**, chỉ còn tag campus | N1 | `KS_B2_workshop-b-het-cho.png` |
+| `SV-B4-01` | B4 | ⭐ **Mã QR check-in nằm ở nút riêng trên đầu trang Profile, tách hoàn toàn khỏi danh sách đăng ký.** Vừa đăng ký xong, ở ngay chỗ đăng ký lẫn trong My Activities đều **không có đường dẫn nào tới vé** | N1, N6, N3 — người dùng phải **nhớ** rằng QR nằm ở Profile chứ không được hệ thống chỉ đường. Đây là ứng viên finding **severity cao nhất** hiện có, và là thứ 5 phiên user testing sẽ đo được trực tiếp | `check-in-profile.png` · `profile-2.png` |
+| `SV-B4-02` | B4 | Email trong menu avatar bị **cắt cụt** thành `23127183@student.hcmus.edu...` dù còn chỗ trống | N1, S8 | `profile-1.png` |
+| `SV-B4-03` | B2 + B4 | **Ba bộ từ vựng khác nhau cho cùng khái niệm trạng thái đăng ký:** tài liệu chính thức dùng `Approved/Pending Review/Rejected/Waitlisted` · trang B2 dùng 4 ô đếm `Registered/Pending/Confirmed/Waitlisted` · thẻ trong My Activities dùng badge `Pending review/Student participation/Upcoming` | N4, S1 — người dùng không map được ba bộ từ này với nhau | `profile-2.png` vs `KS_B2_workshop-b-het-cho.png` |
+| `SV-B4-04` | B4 | Mã QR **cố định theo Student ID, không đổi theo sự kiện** ⇒ ai chụp được màn hình QR là **check-in hộ được** ở mọi sự kiện. ⬜ *cần xác nhận QR có xoay vòng theo thời gian không rồi mới kết luận* | N5 (error prevention) — nếu đúng là cố định vĩnh viễn thì đây là vấn đề **bảo mật**, không chỉ usability | `check-in-profile.png` |
+| `SV-ADM-01` | Admin | Ô Attachments ghi **"Supported any file format."** nhưng **không nêu giới hạn dung lượng hay số lượng file** trước khi người dùng chọn | N5, P3 | `admin-2.png` `admin-3.png` |
+| `SV-ADM-02` | Admin | 4 KPI trên Admin Dashboard đều hiện **0** (Total Events 0, Total Check-ins 0, Attendance Rate 0%, Total Users 0) trong khi hệ thống rõ ràng đang có sự kiện và người dùng | N1 — chỉ số sai làm mất niềm tin vào toàn bộ trang thống kê | `admin-1.png` |
 
 ⚠️ **Quan trọng:** 10 dòng trên **chưa phải finding chính thức**. Trước khi đưa vào `04-findings-log.md` phải: (1) tái hiện lại được, (2) chụp ảnh mới trong lúc chạy checklist, (3) đối chiếu xem có phải là item checklist nào bị Failed không.
 

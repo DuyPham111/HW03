@@ -1,9 +1,9 @@
 # Cross-Browser / Cross-Platform Report — Task 3
 
 **Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Kịch bản:** B — User đăng ký tham dự sự kiện
-**Màn hình được test:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 Profile → My Activities ⚠️QR
+**Màn hình được test:** B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Profile — QR Code + My Activities
 **Công cụ:** _(TODO: BrowserStack / LambdaTest / Sauce Labs / thiết bị thật)_ — tài khoản: _(TODO)_
-**Email overlay trên mọi ảnh:** pvnduy23@clc.fitus.edu.vn
+**Email overlay trên mọi ảnh:** 23127183@student.hcmus.edu.vn
 **Ngày chạy:** _(TODO)_
 
 > **Yêu cầu overlay của đề:** mỗi ảnh phải thấy rõ **email MSSV** + **URL của EMS** + **tên browser / OS / device**. Thiếu overlay = ảnh không được tính.
@@ -68,7 +68,7 @@
 ## 3. Ma trận — Màn hình S2 = B3 Form đăng ký
 _(bảng như trên)_
 
-## 4. Ma trận — Màn hình S3 = B4 Profile → My Activities ⚠️QR
+## 4. Ma trận — Màn hình S3 = B4 My Profile — QR Code + My Activities
 _(bảng như trên)_
 
 ---

@@ -6,7 +6,7 @@
 **Kịch bản đã chọn:** **B — User đăng ký tham dự sự kiện** (nửa "registration core" của Pool B)
 **Kỹ thuật:** GUI Checklist (Nielsen · Norman · Shneiderman) + Usability Testing 5 người thật + Cross-Browser/Cross-Platform Testing
 **Google Form nộp finding:** https://forms.gle/CJQFQCAXcsDbXDMM9
-**Email dùng khi nộp form & overlay ảnh:** pvnduy23@clc.fitus.edu.vn
+**Email dùng khi nộp form & overlay ảnh:** 23127183@student.hcmus.edu.vn
 
 ---
 
@@ -34,7 +34,7 @@ Nhóm có **5 người** trong khi đề chỉ có 4 kịch bản ⇒ theo §5 c
 
 | Thành viên | MSSV | Kịch bản | Bộ màn hình |
 |---|---|---|---|
-| Phạm Vũ Ngọc Duy | 23127183 | **B** (nửa *registration core*) | B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 Profile → My Activities ⚠️QR |
+| Phạm Vũ Ngọc Duy | 23127183 | **B** (nửa *registration core*) | B2 Trang chi tiết sự kiện · B3 Form đăng ký · B4 My Profile — QR Code + My Activities |
 | _(TODO)_ | | _(xem 2 phương án dưới)_ | _(TODO)_ |
 | _(TODO)_ | | A | _(chọn 3 trong A1–A5)_ |
 | _(TODO)_ | | C | _(chọn 3 trong C1–C4)_ |
@@ -61,7 +61,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 ├── team/ ............................ sản phẩm cấp nhóm (Task 1A)
 │   ├── gui-checklist.md ............. checklist > 40 item, phủ IA-01…IA-04
 │   ├── references.md ................ nguồn tham khảo + đối chiếu độ phủ heuristic
-│   └── ai-prompts.md ................ prompt AI + lý do AI bỏ sót 14 mục
+│   └── ai-prompts.md ................ prompt AI + lý do AI bỏ sót 21 mục
 │
 ├── skills/ .......................... Task 5 — 3 Agent Skill + link video demo
 │
@@ -97,14 +97,14 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Chỉ số | Số lượng |
 |---|:--:|
-| Số item checklist nhóm thiết kế | **52** *(> 40 ✅)* |
+| Số item checklist nhóm thiết kế | **59** *(> 40 ✅)* |
 | — IA-01 General UI standards (`G-`) | 16 |
-| — IA-02 Forms (`F-`) | 14 |
-| — IA-03 Navigation (`N-`) | 9 |
-| — IA-04 Feedback / state (`S-`) | 13 |
+| — IA-02 Forms (`F-`) | 16 |
+| — IA-03 Navigation (`N-`) | 11 |
+| — IA-04 Feedback / state (`S-`) | 16 |
 | Số item do AI sinh | 38 |
-| Số item do người bổ sung (có giải thích vì sao AI sót) | **14** |
-| Số item đã chạy (= 52 × 3 màn) | _(TODO)_ / 156 |
+| Số item do người bổ sung (có giải thích vì sao AI sót) | **21** |
+| Số item đã chạy (= 59 × 3 màn) | _(TODO)_ / 177 |
 | Passed | |
 | Failed | |
 
@@ -112,7 +112,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 |---|:--:|:--:|:--:|:--:|
 | B2 Trang chi tiết sự kiện | | | | |
 | B3 Form đăng ký | | | | |
-| B4 Profile → My Activities ⚠️QR | | | | |
+| B4 My Profile — QR Code + My Activities | | | | |
 | **Tổng** | | | | |
 
 ### 4.2 Usability Testing (Task 2)
@@ -135,7 +135,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
 | B2 Trang chi tiết sự kiện | | | | ⬜ | ⬜ | ⬜ |
 | B3 Form đăng ký | | | | ⬜ | ⬜ | ⬜ |
-| B4 Profile → My Activities ⚠️QR | | | | ⬜ | ⬜ | ⬜ |
+| B4 My Profile — QR Code + My Activities | | | | ⬜ | ⬜ | ⬜ |
 | **Tổng** | | | | | | |
 
 ### 4.4 Findings (Task 4)

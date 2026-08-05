@@ -27,19 +27,17 @@ Bạn đồng ý ghi hình? ⬜ Có ⬜ Không *(không đồng ý cũng không 
 
 ## Bối cảnh
 
-Một người quen báo bạn có một buổi workshop học thuật ở Khoa CNTT mà bạn muốn tham dự (bạn không phải sinh viên trường này). Khoa dùng hệ thống EMS để nhận đăng ký, cho phép khách ngoài trường tham gia với vai trò **Guest**. **Đây là lần đầu bạn dùng hệ thống này.**
+Một người quen báo bạn có một buổi workshop học thuật ở Khoa CNTT mà bạn muốn tham dự. Khoa dùng hệ thống EMS để nhận đăng ký. **Đây là lần đầu bạn dùng hệ thống này.**
 
 ## Nhiệm vụ
 
-> **Khoa sắp tổ chức một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem xác nhận đăng ký của bạn.**
-
-⚠️ *(Nguyên văn đang ghi "cho mình xem mã QR check-in" trong file gốc — đang xác minh lại xem hệ thống thật có hiển thị mã QR cho sinh viên không, xem `docs/KHAO_SAT_EMS.md` mục ⚠️5. Câu ở trên đã đổi sang bản an toàn "xem xác nhận đăng ký" cho tới khi xác nhận xong. Nếu xác nhận CÓ QR thì đổi lại nguyên câu cũ.)*
+> **Khoa sắp tổ chức một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem mã QR check-in của bạn.**
 
 Xong việc thì bạn báo mình một tiếng. Cứ thao tác tự nhiên như bạn vẫn dùng web hằng ngày.
 
-> ⚠️ **Lưu ý cho người dẫn phiên (không đưa cho participant đọc):** đề bài phải nêu **mục tiêu**, tuyệt đối **không** liệt kê các bước bấm. Nếu phiếu này ghi kiểu *"bước 1 đăng nhập, bước 2 tìm kiếm, bước 3 chọn vai trò…"* thì participant chỉ làm theo chỉ dẫn, và buổi test **không còn đo được usability** — mất phần lớn điểm Task 2.
+> ⚠️ **Lưu ý cho người dẫn phiên (không đưa cho participant đọc):** đề bài phải nêu **mục tiêu**, tuyệt đối **không** liệt kê các bước bấm. Đặc biệt **không được gợi ý QR nằm ở trang Profile** — chính việc participant tìm nó ở đâu mới là dữ liệu cần thu (xem `SV-B4-01`). Nếu họ kẹt quá 2 phút thì mới gợi ý mức tối thiểu, và **ghi lại là đã can thiệp**.
 
-**Điều kiện hệ thống — QUAN TRỌNG:** bạn cần một tài khoản EMS. Ở trang đăng nhập, **bấm link `Create guest account`** (KHÔNG bấm nút `STUDENT` — nút đó yêu cầu tài khoản Microsoft/Office 365 do HCMUS cấp mà bạn không có). Việc tạo tài khoản **không tính giờ**, nhưng nếu bạn thấy vướng gì ở bước này thì cứ nói, mình vẫn ghi lại — xem lý do ở `docs/KHAO_SAT_EMS.md` mục ⚠️4.
+**Điều kiện hệ thống:** mình đã chuẩn bị sẵn tài khoản demo, sẽ đăng nhập giúp bạn trước khi bắt đầu — bạn không cần tạo tài khoản gì. Nếu có lúc nào hệ thống hỏi đăng nhập lại thì cứ nói, mình xử lý.
 
 ---
 
