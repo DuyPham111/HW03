@@ -61,7 +61,7 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 ├── team/ ............................ sản phẩm cấp nhóm (Task 1A)
 │   ├── gui-checklist.md ............. checklist > 40 item, phủ IA-01…IA-04
 │   ├── references.md ................ nguồn tham khảo + đối chiếu độ phủ heuristic
-│   └── ai-prompts.md ................ prompt AI + lý do AI bỏ sót 21 mục
+│   └── ai-prompts.md ................ prompt AI + lý do AI bỏ sót 23 mục
 │
 ├── skills/ .......................... Task 5 — 3 Agent Skill + link video demo
 │
@@ -97,14 +97,14 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Chỉ số | Số lượng |
 |---|:--:|
-| Số item checklist nhóm thiết kế | **59** *(> 40 ✅)* |
+| Số item checklist nhóm thiết kế | **61** *(> 40 ✅)* |
 | — IA-01 General UI standards (`G-`) | 16 |
 | — IA-02 Forms (`F-`) | 16 |
 | — IA-03 Navigation (`N-`) | 11 |
 | — IA-04 Feedback / state (`S-`) | 16 |
 | Số item do AI sinh | 38 |
-| Số item do người bổ sung (có giải thích vì sao AI sót) | **21** |
-| Số item đã chạy (= 59 × 3 màn) | _(TODO)_ / 177 |
+| Số item do người bổ sung (có giải thích vì sao AI sót) | **23** |
+| Số item đã chạy (= 61 × 3 màn) | _(TODO)_ / 183 |
 | Passed | |
 | Failed | |
 

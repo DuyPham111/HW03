@@ -2,7 +2,7 @@
 
 **SUT:** EMS — https://prod-dev.ems-fitus.cloud
 **Phạm vi phủ:** IA-01 chuẩn UI chung · IA-02 forms · IA-03 navigation · IA-04 feedback/state
-**Tổng số mục:** **59** *(yêu cầu tối thiểu: > 40)*
+**Tổng số mục:** **61** *(yêu cầu tối thiểu: > 40)*
 **Phiên bản:** v1.0 · **Ngày chốt:** _(TODO)_
 
 **Đóng góp:** _(TODO — điền trước khi nộp. Nếu tự dựng một mình: "Bản v1 do Phạm Vũ Ngọc Duy (23127183) dựng ngày __, dựa trên khảo sát trực tiếp EMS ngày 05/08/2026. Đã gửi cả nhóm rà soát ngày __; [kết quả]")_
@@ -19,11 +19,12 @@
 |---|:--:|---|:--:|:--:|:--:|
 | IA-01 | `G-` | Chuẩn UI chung — bố cục, typography, màu, ảnh, empty/loading, i18n EN/VI, accessibility | **16** | 11 | 5 |
 | IA-02 | `F-` | Forms — nhãn, trường bắt buộc, validation, vị trí lỗi, upload, rich-text, bàn phím | **16** | 13 | 3 |
-| IA-03 | `N-` | Navigation — menu, breadcrumb, back, deep link, URL state, tab, sidebar, kéo-thả, phân trang | **11** | 7 | 4 |
-| IA-04 | `S-` | Feedback / State — toast, badge, dialog xác nhận, progress, màu trạng thái, thời gian | **16** | 7 | 9 |
-| | | **Tổng** | **59** | **38** | **21** |
+| IA-03 | `N-` | Navigation — menu, breadcrumb, back, deep link, URL state, tab, sidebar, kéo-thả, phân trang, tài liệu hướng dẫn | **12** | 7 | 5 |
+| IA-04 | `S-` | Feedback / State — toast, badge, dialog xác nhận, progress, màu trạng thái, thời gian | **17** | 7 | 10 |
+| | | **Tổng** | **61** | **38** | **23** |
 
-> **Cập nhật 06/08/2026 (v1.1):** thêm 7 mục `RV` sau đợt khảo sát 2 — tất cả đều truy được về quan sát cụ thể trên EMS thật (form Create Event, trang My Profile, Admin Dashboard). Xem lý do từng mục ở [`ai-prompts.md`](ai-prompts.md) §3.
+> **Cập nhật 06/08/2026 (v1.1):** thêm 9 mục `RV` sau đợt khảo sát 2 — tất cả đều truy được về quan sát cụ thể trên EMS thật (form Create Event, trang My Profile, Admin Dashboard, header student). Xem lý do từng mục ở [`ai-prompts.md`](ai-prompts.md) §3.
+> Hai mục cuối (`N-12`, `S-17`) được thêm để **đóng hai heuristic đang bằng 0** trong bảng phủ ở [`references.md`](references.md) §4 — N10 *help & documentation* và S8 *reduce memory load*.
 
 ## Cách dùng khi chạy (Task 1B)
 
@@ -93,7 +94,7 @@
 | F-15 | Ô upload/đính kèm nêu rõ **giới hạn dung lượng và số lượng file** ngay trên giao diện, không chỉ nói chung chung "hỗ trợ mọi định dạng" | P3, N5 | **RV** |
 | F-16 | Với các cặp trường thời gian phụ thuộc nhau (bắt đầu–kết thúc, mở–đóng đăng ký, mở–đóng check-in), hệ thống **chặn cấu hình vô lý** và nêu rõ cặp nào đang mâu thuẫn | N5, P3 | **RV** |
 
-## 3. IA-03 — Navigation (`N-`, 11 mục)
+## 3. IA-03 — Navigation (`N-`, 12 mục)
 
 | ID | Mục kiểm tra | Nguồn | Nguồn gốc |
 |---|---|---|:--:|
@@ -108,8 +109,9 @@
 | N-09 | Không có liên kết hỏng; mọi liên kết và nút điều hướng dẫn tới đích tồn tại, không rơi vào trang 404 | N9 | AI |
 | N-10 | Chức năng người dùng cần **ngay sau** một thao tác phải nằm trong tầm với của ngữ cảnh đó — không đặt ở một khu vực rời hẳn buộc người dùng phải nhớ đường mà tự đi | N6, N7 | **RV** |
 | N-11 | Danh sách dài có **phân trang hoặc tải thêm**, hiển thị rõ đang ở trang mấy trên tổng bao nhiêu, và điều khiển phân trang dùng chung một kiểu trên mọi màn hình | N1, S1 | **RV** |
+| N-12 | Có **đường vào tài liệu hướng dẫn từ mọi màn hình**, và nội dung tài liệu khớp với giao diện đang chạy (không mô tả nút/nhãn đã đổi tên hoặc không còn tồn tại) | N10 | **RV** |
 
-## 4. IA-04 — Feedback / State (`S-`, 16 mục)
+## 4. IA-04 — Feedback / State (`S-`, 17 mục)
 
 | ID | Mục kiểm tra | Nguồn | Nguồn gốc |
 |---|---|---|:--:|
@@ -129,6 +131,7 @@
 | S-14 | Sau khi hoàn tất một thao tác, hệ thống **chỉ đường tới bước tiếp theo** hoặc tới kết quả vừa tạo ra — không bắt người dùng tự đoán phải đi đâu tiếp | N1, S4 | **RV** |
 | S-15 | Cùng một khái niệm trạng thái được gọi bằng **một bộ từ vựng duy nhất** trên mọi màn hình và trong tài liệu hướng dẫn | N4, S1 | **RV** |
 | S-16 | Chỉ số tổng hợp trên dashboard (số lượng, tỉ lệ) **khớp với dữ liệu thật** của hệ thống, không hiển thị 0 khi thực tế có dữ liệu | N1 | **RV** |
+| S-17 | Thông tin cần để ra quyết định (số chỗ còn lại, hạn đăng ký, địa điểm, thời gian) hiển thị **ngay tại chỗ ra quyết định** — không bắt người dùng nhớ từ trang trước hay mở tab khác để tra | S8, N6 | **RV** |
 
 ---
 
@@ -151,11 +154,11 @@ for p in G F N S; do echo -n "$p: "; grep -c "^| $p-" team/gui-checklist.md; don
 echo -n "RV: "; grep -c '| \*\*RV\*\* |' team/gui-checklist.md
 ```
 
-Kết quả mong đợi: `G: 16 · F: 16 · N: 11 · S: 16` → tổng **59** · `RV: 21`
+Kết quả mong đợi: `G: 16 · F: 16 · N: 12 · S: 17` → tổng **61** · `RV: 23`
 
-- [ ] Tổng > 40 ✅ (59)
+- [ ] Tổng > 40 ✅ (61)
 - [ ] Mỗi IA đều có mục, không IA nào rỗng ✅
 - [ ] Mọi mục có mã nguồn heuristic ✅
 - [ ] Mọi mục có `AI` hoặc `RV` ✅
 - [ ] Số mục `RV` (14) khớp số dòng giải trình ở [`ai-prompts.md`](ai-prompts.md) §3
-- [ ] **Bạn đã tự đọc lại 59 mục** và sửa/thêm/bớt theo ý mình trước khi chốt v1.0
+- [ ] **Bạn đã tự đọc lại 61 mục** và sửa/thêm/bớt theo ý mình trước khi chốt v1.0

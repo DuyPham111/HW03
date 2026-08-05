@@ -122,7 +122,7 @@ Sinh 16 mục cho IA-01.
 
 ---
 
-## 3. Mười bốn mục do NGƯỜI bổ sung — vì sao AI bỏ sót
+## 3. Hai mươi ba mục do NGƯỜI bổ sung — vì sao AI bỏ sót
 
 > **Đây là phần được chấm kỹ nhất của Task 1A.** Mỗi dòng phải truy được về một quan sát cụ thể trong `docs/KHAO_SAT_EMS.md` — không viết chung chung kiểu "AI không đủ thông minh".
 > Ba loại lý do theo đề: **(a)** prompt của mình thiếu ngữ cảnh · **(b)** giới hạn của model · **(c)** đặc thù riêng của EMS.
@@ -146,7 +146,7 @@ Sinh 16 mục cho IA-01.
 | **S-13** | Nhãn nút và tiêu đề dùng cùng quy ước viết hoa | (b) | Loại lỗi quá nhỏ để AI ưu tiên đưa vào danh sách 16 mục đầu. Chỉ nảy ra khi nhìn thấy nút ghi **`login`** chữ thường ở màn chặn đăng nhập, trong khi mọi nút khác đều Title Case (`Save event`, `Login`) |
 
 
-### Bảy mục bổ sung sau đợt khảo sát 2 (06/08/2026)
+### Chín mục bổ sung sau đợt khảo sát 2 (06/08/2026)
 
 Đợt này khảo sát **form Create Event phía admin**, **trang My Profile** và **Admin Dashboard** — ba nơi lượt 1 chưa chạm tới.
 
@@ -158,9 +158,13 @@ Sinh 16 mục cho IA-01.
 | **N-11** | Danh sách dài có phân trang thống nhất, hiển thị rõ trang mấy trên tổng bao nhiêu | (a) | Prompt ban đầu không hề nhắc EMS có danh sách phân trang. Chỉ khi thấy khối My Activities có `Rows per page: 10` · `1-2 of 2 results` · `Go to page __ / 1` mới thấy đây là một widget riêng cần kiểm tính nhất quán giữa các màn |
 | **S-14** | Sau khi hoàn tất thao tác, hệ thống phải chỉ đường tới bước tiếp theo | (c) | Cùng gốc với `N-10` nhưng ở góc phản hồi: đăng ký xong, **không có gì dẫn người dùng tới vé của họ**. AI sinh được mục "có phản hồi sau hành động" nhưng dừng ở mức "có toast hay không", không nghĩ tới "phản hồi đó có chỉ đường đi tiếp không" |
 | **S-15** | Một khái niệm trạng thái chỉ dùng một bộ từ vựng duy nhất | (b) | Lỗi này **chỉ lộ ra khi đối chiếu ba nguồn cạnh nhau**: tài liệu chính thức dùng `Approved/Pending Review/Rejected/Waitlisted`, trang B2 dùng `Registered/Pending/Confirmed/Waitlisted`, thẻ My Activities dùng `Pending review/Student participation/Upcoming`. AI xử lý từng màn hình độc lập nên không có khái niệm "đối chiếu từ vựng chéo giữa giao diện và tài liệu" |
-| **S-16** | Chỉ số dashboard phải khớp dữ liệu thật | (c) | Quan sát trực tiếp: Admin Dashboard hiện **Total Events 0, Total Check-ins 0, Attendance Rate 0%, Total Users 0** trong khi hệ thống rõ ràng đang có sự kiện và người dùng. AI không có cách nào biết chỉ số của một hệ thống cụ thể đang sai — đây thuần tuý là kết quả của việc mở trang lên và nhìn |
+| **S-16** | Chỉ số dashboard phải khớp dữ liệu thật | (c) | Quan sát trực tiếp: thẻ KPI **`Attendance Rate` hiển thị `0%`** trong khi hệ thống rõ ràng đang có sự kiện và người dùng. AI không có cách nào biết chỉ số của một hệ thống cụ thể đang sai — đây thuần tuý là kết quả của việc mở trang lên và nhìn. ⚠️ *Chưa đối chiếu với số check-in thật, nên đây mới là mục cần kiểm chứ chưa phải kết luận* |
+| **N-12** | Có đường vào tài liệu hướng dẫn từ mọi màn hình, nội dung khớp giao diện | (a) | Prompt ban đầu mô tả EMS là "hệ thống đăng ký sự kiện" mà không nói nó **có tài liệu hướng dẫn tích hợp sẵn**. AI vì thế không sinh mục nào thuộc N10 — heuristic này đứng ở 0 suốt v1.0. Chỉ khi thấy `User guide` nằm ngay trên header student lẫn sidebar admin mới rõ đây là chức năng thật của SUT, và mới có tiêu chí đáng giá hơn "có link không": **nội dung tài liệu có khớp giao diện đang chạy không** |
+| **S-17** | Thông tin ra quyết định phải nằm ngay tại chỗ ra quyết định | (b) | Đây là giới hạn tư duy theo màn hình của AI: nó sinh được "B2 hiển thị số chỗ còn lại" như một mục về **nội dung của một trang**, nhưng không đặt được câu hỏi bắc cầu **giữa hai trang** — người dùng ở B3 điền form có còn nhìn thấy số chỗ và hạn đăng ký từ B2 không, hay phải nhớ. S8 *reduce memory load* nói đúng về khoảng trống giữa các màn hình, và đó chính là chỗ AI hụt |
 
-**Tổng kết:** 21 mục `RV` / 59 mục — **36%** checklist đến từ quan sát trực tiếp trên EMS, không có mục nào trong số đó sinh ra được nếu chỉ mô tả hệ thống bằng lời cho AI.
+**Tổng kết:** 23 mục `RV` / 61 mục — **38%** checklist đến từ quan sát trực tiếp trên EMS, không có mục nào trong số đó sinh ra được nếu chỉ mô tả hệ thống bằng lời cho AI.
+
+Hai mục cuối (`N-12`, `S-17`) đáng chú ý vì chúng không sinh ra từ một lỗi nhìn thấy được, mà từ việc **đối chiếu checklist với bảng phủ heuristic** ở [`references.md`](references.md) §4: N10 và S8 đang bằng 0. Nói cách khác, một phần của human review là kiểm tra chính **hình dạng** của checklist, không chỉ nội dung từng mục.
 
 ---
 
@@ -184,6 +188,6 @@ Sinh 16 mục cho IA-01.
 | Số lượt prompt đã dùng | _(TODO — đếm lại sau khi điền §2)_ |
 | Số mục AI sinh ra ban đầu | _(TODO)_ |
 | Số mục bị loại sau human review (trùng nghĩa / mơ hồ / không kiểm chứng được) | _(TODO)_ |
-| Số mục người bổ sung | **21** |
+| Số mục người bổ sung | **23** |
 | Số vùng chủ động loại bỏ có lý do | **4** |
-| **Tổng mục cuối cùng** | **59** |
+| **Tổng mục cuối cùng** | **61** |

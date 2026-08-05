@@ -42,7 +42,7 @@
 
 ## 3. Nguồn quan sát từ chính EMS
 
-Đây là nguồn **quan trọng nhất cho phần human review** — 21 mục `RV` trong checklist đều bắt nguồn từ đây, không đến từ sách vở. Lý do AI bỏ sót từng mục ghi ở [`ai-prompts.md`](ai-prompts.md) §3.
+Đây là nguồn **quan trọng nhất cho phần human review** — 23 mục `RV` trong checklist đều bắt nguồn từ đây, không đến từ sách vở. Lý do AI bỏ sót từng mục ghi ở [`ai-prompts.md`](ai-prompts.md) §3.
 
 **Đợt khảo sát 1 — 05/08/2026**, tài khoản `23127183@student.hcmus.edu.vn`, 10 ảnh lưu tại `docs/khao-sat/`. Phiếu khảo sát đầy đủ: `docs/KHAO_SAT_EMS.md`.
 
@@ -63,26 +63,45 @@
 | O13 | Ngày giờ toàn hệ thống dùng `dd/MM/yyyy HH:mm`, không hiển thị múi giờ ở bất kỳ đâu | B1, B2 | `S-09` |
 | O14 | Màn chặn đăng nhập dùng nút ghi `login` chữ thường, lệch với các nút Title Case khác | B2 | `S-13` |
 
+**Đợt khảo sát 2 — 06/08/2026**, thêm 9 ảnh (`admin-1..5`, `profile-1/2`, `check-in-profile`, `KS_B2_workshop-d`) và đối chiếu với *Hướng dẫn sinh viên — HCMUS EMS* (R6). Đợt này chạm được vào **form Create Event phía admin**, **trang My Profile** và **Admin Dashboard** — ba vùng mà đợt 1 chưa mở tới.
+
+| # | Quan sát trên EMS | Màn hình | Dẫn tới mục |
+|---|---|---|---|
+| O15 | Menu `User guide` có mặt cả trên header student lẫn sidebar admin, nhưng **chưa mở để đối chiếu nội dung với giao diện đang chạy** ⚠️ | Header B1–B4, sidebar admin | `N-12` |
+| O16 | Upload ảnh sự kiện có **hai tỉ lệ bắt buộc 4:3 và 24:9**, giao diện **không ghi giới hạn dung lượng, định dạng hay số lượng file** ở bất kỳ đâu | Admin — Create Event | `F-15` |
+| O17 | Form có **6 trường thời gian phụ thuộc lẫn nhau** (`Start`/`End`, `Check-in Open`/`Close`, `Registration Open`/`Close`) — cấu hình vô lý về mặt logic là hoàn toàn nhập được ⚠️ *(chưa thử nhập End < Start để xem hệ thống có chặn không)* | Admin — Create Event | `F-16` |
+| O18 | Mã QR check-in nằm ở **nút riêng trên đầu trang Profile**, tách hoàn toàn khỏi chỗ đăng ký lẫn danh sách My Activities — không có đường dẫn nào nối hai chỗ | B2, B4 | `N-10` |
+| O19 | Phân trang My Activities gồm 4 điều khiển: `Rows per page: 10` · `1-2 of 2 results` · `Go to page __ / 1` · nút `‹ 1 ›` | B4 | `N-11` |
+| O20 | Sau khi đăng ký xong, không thấy chỉ dẫn nào về việc cần làm tiếp (lấy vé ở đâu, check-in thế nào) ⚠️ *(cần chụp lại toàn bộ luồng B3 → sau submit để xác nhận)* | B3 → B4 | `S-14` |
+| O21 | **Ba bộ từ vựng khác nhau cho cùng khái niệm trạng thái**: tài liệu chính thức dùng `Approved`/`Pending Review`/`Rejected`/`Waitlisted`; ô đếm trên B2 dùng `Registered`/`Pending`/`Confirmed`/`Waitlisted`; badge trên B4 dùng `Pending review`/`Student participation`/`Upcoming` | Tài liệu, B2, B4 | `S-15` |
+| O22 | Thẻ KPI **`Attendance Rate` hiển thị `0%`** trên dashboard admin ⚠️ *(chưa đối chiếu với số check-in thật để kết luận là sai hay đúng)* | Admin Dashboard | `S-16` |
+| O23 | Số chỗ còn lại và hạn đăng ký hiển thị trên B2 (`Slot available — Student: 49`, `Registered 1/1`) ⚠️ *(chưa xác minh form đăng ký B3 có nhắc lại hay bắt người dùng nhớ từ B2)* | B2 → B3 | `S-17` |
+
+> ⚠️ Năm quan sát ở đợt 2 mới ở mức **đủ để viết ra mục kiểm tra**, chưa đủ để kết luận Passed/Failed. Chúng được đưa vào checklist vì mục kiểm tra chỉ cần chỉ đúng chỗ cần nhìn — kết luận là việc của Task 1B.
+
 ## 4. Đối chiếu độ phủ heuristic
 
-Kiểm tra checklist không dồn hết vào vài heuristic dễ.
+Kiểm tra checklist không dồn hết vào vài heuristic dễ. Số liệu dưới đây **đếm lại bằng lệnh** trên cột `Nguồn` của [`gui-checklist.md`](gui-checklist.md) ngày 06/08/2026 — một mục trích nhiều nguồn thì được tính cho từng nguồn, nên tổng cột lớn hơn 61.
 
-| Heuristic | Số mục | Heuristic | Số mục |
-|---|:--:|---|:--:|
-| N1 Visibility of system status | 9 | S1 Consistency | 4 |
-| N2 Match real world | 4 | S2 Universal usability | 3 |
-| N3 User control and freedom | 5 | S3 Informative feedback | 2 |
-| N4 Consistency and standards | 10 | S4 Dialogs yield closure | 1 |
-| N5 Error prevention | 5 | S5 Prevent errors | 0 ⚠️ |
-| N6 Recognition not recall | 3 | S6 Easy reversal | 3 |
-| N7 Flexibility and efficiency | 4 | S7 Internal locus of control | 4 |
-| N8 Aesthetic and minimalist | 3 | S8 Reduce memory load | 0 ⚠️ |
-| N9 Recover from errors | 5 | Norman P1–P6 | 5 |
-| N10 Help and documentation | 0 ⚠️ | WCAG | 6 |
+| Nielsen | Số mục | Shneiderman | Số mục | Khác | Số mục |
+|---|:--:|---|:--:|---|:--:|
+| N1 Visibility of system status | 18 | S1 Consistency | 6 | P1 Visibility | 0 ◇ |
+| N2 Match real world | 4 | S2 Universal usability | 3 | P2 Feedback | 2 |
+| N3 User control and freedom | 6 | S3 Informative feedback | 2 | P3 Constraints | 5 |
+| N4 Consistency and standards | 12 | S4 Dialogs yield closure | 2 | P4 Mapping | 0 ◇ |
+| N5 Error prevention | 7 | S5 Prevent errors | 0 ◇ | P5 Consistency | 1 |
+| N6 Recognition not recall | 5 | S6 Easy reversal | 3 | P6 Affordance | 1 |
+| N7 Flexibility and efficiency | 4 | S7 Internal locus of control | 5 | WCAG 2.2 | 6 |
+| N8 Aesthetic and minimalist | 2 | S8 Reduce memory load | 1 | Slide môn học | 6 |
+| N9 Recover from errors | 5 | | | | |
+| N10 Help and documentation | 1 | | | | |
 
-⚠️ **Ba heuristic đang bằng 0** — cần quyết định trước khi chốt v1.0:
-- **N10 Help & documentation** — EMS có mục `User guide` trên header. Cân nhắc thêm 1 mục: *"Có đường vào tài liệu hướng dẫn từ mọi màn hình, và nội dung hướng dẫn khớp với giao diện hiện tại."*
-- **S5 Prevent errors** — trùng ý với N5, có thể chấp nhận để trống và ghi chú là cố ý.
-- **S8 Reduce memory load** — cân nhắc thêm 1 mục: *"Thông tin cần để ra quyết định (số chỗ còn lại, hạn đăng ký) hiển thị ngay tại chỗ ra quyết định, không bắt người dùng nhớ từ trang trước."*
+**Đọc bảng này thế nào**
 
-> Nếu thêm 2 mục trên thì tổng thành **54** — vẫn nằm trong khoảng đã chốt. **Cần bạn quyết định.**
+- **Không heuristic nào của Nielsen bị bỏ trống.** N10 từng bằng 0; đã đóng bằng `N-12` sau khi khảo sát thấy `User guide` nằm trên header cả phía student lẫn sidebar admin (`admin-1.png`, quan sát O15).
+- **S8 cũng từng bằng 0**, đã đóng bằng `S-17` — thông tin ra quyết định (số chỗ còn lại, hạn đăng ký) phải nằm ngay tại chỗ ra quyết định.
+- **Ba ô còn 0 là cố ý**, ký hiệu ◇ chứ không phải ⚠️. `P1 visibility` và `P4 mapping` của Norman, cùng `S5 prevent errors` của Shneiderman, **trùng nghĩa** với `N1` (18 mục), `N2`/`N6` (9 mục) và `N5` (7 mục). Thêm mục chỉ để lấp ô sẽ tạo mục trùng nội dung — làm loãng checklist chứ không tăng độ phủ thật. Nhóm chọn ghi rõ lý do thay vì nhồi số.
+- **N1 chiếm 18/61 là có chủ ý, không phải lệch.** IA-04 *feedback / state* là một trong bốn khía cạnh bắt buộc, và bản chất của nó là "hệ thống có cho tôi biết chuyện gì đang xảy ra không" — tức chính N1.
+
+> ⚠️ **Cần verify:** đã thấy mục `User guide` trên header nhưng **chưa mở nội dung bên trong**. Trước khi chạy `N-12` ở Task 1B phải mở thật để đối chiếu tài liệu với giao diện đang chạy.
+> - [ ] Đã mở `User guide` và đối chiếu nội dung
