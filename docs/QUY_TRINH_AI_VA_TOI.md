@@ -150,6 +150,8 @@ Bạn muốn dùng đúng công cụ mình từng trải nghiệm với tư các
 
 ### Cách dựng study trong Maze — dùng đúng nội dung đã chốt
 
+> **Hướng dẫn chi tiết từng ô, từng nút (dựa trên ảnh giao diện thật): [`HUONG_DAN_DUNG_MAZE.md`](HUONG_DAN_DUNG_MAZE.md).** Tóm tắt 9 bước dưới đây, xem file đó để biết chính xác dán nội dung nào vào ô nào.
+
 1. Đăng nhập `app.maze.co` → **New study** → chọn kiểu **Live website testing** (không phải Prototype testing, vì SUT là site thật chứ không phải Figma).
 2. Nhập URL: `https://prod-dev.ems-fitus.cloud`
 3. Thêm **Mission/Task block**, dán nguyên văn: *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem mã QR check-in của bạn."* — giữ đúng dạng mục tiêu, không thêm bước bấm cụ thể.

@@ -91,6 +91,7 @@ Chạy checklist trên EMS · chụp ảnh · tuyển và chạy 5 phiên user t
 | AI làm gì / tôi làm gì + prompt sẵn | `docs/QUY_TRINH_AI_VA_TOI.md` |
 | Làm checklist nhóm một mình | `docs/TASK1A_LAM_MOT_MINH.md` |
 | Phiếu khảo sát EMS (điền vào chỗ trống) | `docs/KHAO_SAT_EMS.md` |
+| Dựng study Maze — từng ô, từng nút | `docs/HUONG_DAN_DUNG_MAZE.md` |
 | Danh sách commit các bước tiếp theo | `docs/COMMIT_PLAN.md` |
 | Đề chi tiết (bản chấm điểm) | `docs/DE_BAI_02_Spec_HW03_VI.md` |
 | Đề gốc tiếng Anh | `docs/de-goc/` |
