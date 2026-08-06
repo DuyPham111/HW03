@@ -146,13 +146,13 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Nguồn | Tiền tố ID | Bug | Usability | Tổng | Đã submit form |
 |---|---|:--:|:--:|:--:|:--:|
-| Checklist execution | `CL-` | | | | |
+| Checklist execution | `CL-` | **1** | **2** | **3** | _(TODO)_ |
 | User testing | `US-` | | | | |
 | Cross-platform | `CP-` | | | | |
 | Khảo sát EMS | `SV-` | **8** | **19** | **27** | _(TODO)_ |
-| **Tổng** | | **8** | **19** | **27** | |
+| **Tổng** | | **9** | **21** | **30** | |
 
-Phân bố severity của 27 finding khảo sát: **sev 3 — 8 · sev 2 — 10 · sev 1 — 8 · sev 0 — 1** · không có sev 4.
+Phân bố severity của 30 finding: **sev 3 — 9 · sev 2 — 9 · sev 1 — 10 · sev 0 — 2** · không có sev 4. Hai finding sev 0 (`SV-B2-08`, `SV-B1-02`) là hai lần tôi tự sửa lại kết luận sai của chính mình từ đợt khảo sát ban đầu, sau khi kiểm chứng trực tiếp trên EMS.
 
 > Số dòng trong `04-findings-log.md` **phải bằng** số lần submit Google Form — TA đối chiếu chéo.
 

@@ -40,8 +40,8 @@
 | G-03 | Màu đúng ngữ nghĩa; đỏ chỉ dành cho lỗi/phá huỷ | IA-01 | | | | | | |
 | G-04 | Không có thanh cuộn ngang ngoài ý muốn ≥1280px | IA-01 | | | | | | |
 | G-05 | Ảnh giữ đúng tỉ lệ khung, không méo/cắt mất nội dung | IA-01 | | | | | | |
-| G-06 | Ảnh lỗi có khối giữ chỗ có ý nghĩa, không ô xám trơn | IA-01 | Failed | Failed | | S1 = `SV-B1-04` (ô xám trơn, không chữ)<br>S2 = quan sát mới trên banner sự kiện `23127326_UT_510_15:36` — chỉ có icon ảnh chung chung, không nhãn chữ | S1: `SV-B1-04`<br>S2: `CL-B2-01` | S1: [KS_B1_the-su-kien.png](evidence/survey/KS_B1_the-su-kien.png)<br>S2: [G-06-S2.png](evidence/task1b/G-06-S2.png) |
-| G-07 | Empty state nêu lý do + gợi ý hành động tiếp theo | IA-01 | ⚠️ chờ xác nhận | N/A | ⚠️ chờ retest | S1: đã nêu lý do ("There are no events matching your filters"), có icon `Filters 3` kèm 1 icon nhỏ cạnh đó **chưa rõ có phải nút xoá bộ lọc không** — bạn bấm thử xem có xoá filter không rồi báo lại, khi đó tôi chốt Passed/Failed và sửa `SV-B1-02` nếu cần.<br>S2: không có tính năng filter trên trang chi tiết sự kiện — N/A hợp lý.<br>S3: **không kiểm chứng được lúc này** — bộ lọc `Start Date Range` không hoạt động (`CL-B4-01`) nên không bao giờ ra kết quả rỗng thật để đánh giá UI của empty state. Thử lại bằng ô `Search activities` với từ khoá vô nghĩa (thay vì lọc ngày) để ép ra được empty state thật, rồi báo tôi. | | S1: [G-07-S1.png](evidence/task1b/G-07-S1.png)<br>S3: [G-07-S3.png](evidence/task1b/G-07-S3.png) |
+| G-06 | Ảnh lỗi có khối giữ chỗ có ý nghĩa, không ô xám trơn | IA-01 | Failed | Failed | Passed | S1 = `SV-B1-04` (ô xám trơn, không chữ)<br>S2 = quan sát mới trên banner sự kiện `23127326_UT_510_15:36` — chỉ có icon ảnh chung chung, không nhãn chữ<br>S3 = thẻ My Activities hiện icon **kèm chữ "NO IMAGE"** — có nhãn, đạt tiêu chí | S1: `SV-B1-04`<br>S2: `CL-B2-01` | S1: [KS_B1_the-su-kien.png](evidence/survey/KS_B1_the-su-kien.png)<br>S2: [G-06-S2.png](evidence/task1b/G-06-S2.png) |
+| G-07 | Empty state nêu lý do + gợi ý hành động tiếp theo | IA-01 | Passed | N/A | Failed | S1 = **sửa lại `SV-B1-02`**: đã có câu lý do ("There are no events matching your filters") + icon xoá bộ lọc cạnh `Filters 3` — bấm thử xác nhận đúng là xoá hết bộ lọc. Kết luận cũ của tôi (khảo sát 05/08) đọc sót cả hai chi tiết này, đã sửa `SV-B1-02` thành severity 0.<br>S2 = không có tính năng filter trên trang chi tiết sự kiện — N/A hợp lý.<br>S3 = ép ra được trạng thái rỗng thật bằng Search từ khoá vô nghĩa (`G-07-S3-2.png`) — chỉ ghi "No activities found", **không nêu lý do** (không nói do search hay do filter ngày), yếu hơn hẳn bản của S1. Ghi nhận là `CL-B4-02` | S1: `= SV-B1-02` (đã sửa)<br>S3: `CL-B4-02` | S1: [G-07-S1.png](evidence/task1b/G-07-S1.png)<br>S3: [G-07-S3-2.png](evidence/task1b/G-07-S3-2.png) |
 | G-08 | Loading có skeleton/spinner, bố cục không nhảy khi data về | IA-01 | | | | | | |
 | G-09 | Giá trị rỗng dùng cùng 1 ký hiệu thống nhất | IA-01 | | | | 🔎 quan sát O3 (Location "-" trên B2), chưa có SV-ID riêng | | |
 | G-10 | Nhãn dùng ngôn ngữ người dùng, không phơi mã định danh nội bộ | IA-01 | | | | 🔎 khớp `SV-B1-03` (B1+B2) | | |
@@ -141,7 +141,23 @@ Mỗi item Failed → 1 block. Đây là nguồn trực tiếp để tạo bug e
 
 > Hệ quả phụ: vì bộ lọc không bao giờ trả về 0 kết quả, không thể quan sát được trạng thái rỗng thật ở S3 để chấm `G-07`. Xem ghi chú ở dòng `G-07` trong bảng — cần thử lại bằng ô Search với từ khoá vô nghĩa để ép ra empty state thật.
 
-### [F-03] `G-XX / F-XX / N-XX / S-XX` — _(tên item)_ — Màn hình: _(TODO)_
+### [F-03] `G-07` — Trạng thái rỗng ở B4 không nêu lý do — Màn hình: S3 (B4)
+
+- **Kết quả:** ❌ Failed
+- **Kỳ vọng (theo item checklist):** Trạng thái rỗng nêu lý do vì sao rỗng và gợi ý hành động tiếp theo.
+- **Thực tế quan sát:** Search với từ khoá vô nghĩa (`áddsa`) ra 0 kết quả. Trạng thái rỗng chỉ ghi **"No activities found"** — không nói rõ do từ khoá tìm kiếm hay do bộ lọc `Start Date Range` đang áp dụng. So sánh với cùng tình huống ở B1 (`G-07-S1.png`): B1 ghi rõ "There are no events matching your filters." — có lý do, B4 thì không.
+- **Các bước tái hiện:**
+  1. My Profile → My Activities
+  2. Gõ `áddsa` vào ô Search activities
+  3. Đọc toàn bộ nội dung khối kết quả rỗng
+- **Heuristic bị vi phạm:** N1 (visibility of system status) · S1 (consistency — khác B1 dù cùng một khái niệm)
+- **Severity:** 1 — chỉ ảnh hưởng rõ ràng thông tin, không chặn tác vụ, có nút `Clear all` ở nơi khác trên cùng trang
+- **Bug-ID trong log:** `CL-B4-02`
+- **Ảnh:** `evidence/task1b/G-07-S3-2.png`
+
+![CL-B4-02](evidence/task1b/G-07-S3-2.png)
+
+### [F-04] `G-XX / F-XX / N-XX / S-XX` — _(tên item)_ — Màn hình: _(TODO)_
 
 - **Kết quả:** ❌ Failed
 - **Kỳ vọng (theo item checklist):** _(TODO)_

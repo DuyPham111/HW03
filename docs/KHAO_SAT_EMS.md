@@ -189,7 +189,7 @@ Tài liệu chính thức, mục 1.3: *"Trong lần đầu đăng nhập, nhấn
 | Carousel có tự xoay không? Mấy giây/lần? | ⬜ **CHƯA ĐO** — cần đứng yên 30 giây đếm |
 | Bộ lọc/tìm kiếm có bao nhiêu control | ✅ Ô `Search events by title...` · 3 tab **Upcoming / Ongoing / Ended** · nút **Filters** · nút icon lọc phụ. Mở Filters ra có: **Event Date** (From/To, `dd/mm/yyyy`, có date-picker) · **Campus** (dropdown "All campuses") · **Registration available** (nút "All") |
 | Sidebar có gì | ✅ **Categories**: Movement & Campaign…, Culture & Performing Arts, Physical Education & Sports, Volunteering & Community Service, Academic Competitions, Career Orientation… · **Academic Context**: Standard Program → 2025-2026 → Semester 1 / Semester 2 · nút **Collapse** |
-| Empty state khi không có kết quả | ✅ Icon lịch có dấu ✕ + **"No events found"** + "There are no events matching your filters." — **KHÔNG có nút xoá bộ lọc / gợi ý hành động** → xem `SV-B1-02` |
+| Empty state khi không có kết quả | ✅ Icon lịch có dấu ✕ + **"No events found"** + "There are no events matching your filters." + **nút icon xoá bộ lọc cạnh badge `Filters`** (đã bấm thử 06/08 — xác nhận xoá hết bộ lọc). ⚠️ Dòng 190 ở trên đã ghi "nút icon lọc phụ" từ đầu — `SV-B1-02` (kết luận cũ "không có nút xoá bộ lọc") **sai**, đã sửa lại thành severity 0 trong `04-findings-log.md` |
 | Thẻ sự kiện hiển thị gì | ✅ Ảnh · badge đếm ngược cam (`Opens in 4d 13h`) · badge trạng thái tím (`Upcoming`) · tên · tên phụ · **Event time** · **Location** · các tag · 2 ô **Lecturer** / **Student `0 / 30`** · nút **Save** |
 | Widget nổi | ✅ Nút **share** tròn + nút **cuộn lên đầu trang** ở góc phải dưới |
 
@@ -405,7 +405,7 @@ HÀNH VI ĐẶC THÙ ĐÁNG CHÚ Ý
 | ID | Màn | Quan sát | Nghi ngờ vi phạm | Ảnh hiện có |
 |---|---|---|---|---|
 | `SV-B1-01` | B1 | Carousel **SPOTLIGHT EVENT** đang hiển thị sự kiện có badge **"Ended"** | N1 — sự kiện đã kết thúc thì không nên chiếm chỗ nổi bật nhất trang chủ. *(Tài liệu E2E ghi carousel chỉ nên hiện PUBLISHED + UPCOMING/ONGOING)* | `KS_B1_trang-chu-carousel.png` |
-| `SV-B1-02` | B1 | Empty state chỉ có chữ "No events found", **không có nút xoá bộ lọc** | N1, N3 — người dùng lọc nhầm phải tự mò cách quay lại | `KS_B1_empty-search.png` |
+| `SV-B1-02` | B1 | ✅ **Đã sửa 06/08 — kết luận cũ sai.** Empty state thật ra **có** nút xoá bộ lọc (icon cạnh `Filters`) và có nêu lý do — tôi đọc sót khi khảo sát 05/08. Xem `04-findings-log.md`, severity đã hạ về 0 | N1, N3 | `KS_B1_empty-search.png` |
 | `SV-B1-03` | B1/B2 | Tiêu đề sự kiện hiển thị **mã máy** `23127326_UT_510_15:36`, tên thật nằm ở dòng phụ | N2 — ngôn ngữ hệ thống lấn át ngôn ngữ người dùng | `KS_B2_su-kien-nguoi-khac.png` |
 | `SV-B1-04` | B1 | Nhiều thẻ sự kiện hiện **ô ảnh placeholder xám**, không có ảnh | N1, N8 | `KS_B1_the-su-kien.png` |
 | `SV-B2-01` | B2 | Hết chỗ: chỉ báo **"Role is full"**, **không có lời mời vào danh sách chờ** dù ô `Waitlisted` tồn tại | N1, N3 — người dùng không biết mình còn lựa chọn nào | `KS_B2_workshop-b-het-cho.png` |

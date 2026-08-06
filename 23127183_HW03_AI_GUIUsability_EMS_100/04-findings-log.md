@@ -42,7 +42,7 @@ Dạng `<NGUỒN>-<MÀN HÌNH>-<SỐ>` — nhìn ID là biết ngay lỗi tìm r
 | ID | Scenario / Screen | Type | Description | Steps / Heuristic | Severity | Suggested fix | Screenshot ref | Form-submission timestamp |
 |---|---|---|---|---|:--:|---|---|---|
 | `SV-B1-01` | Screen B1 — Trang chủ | Usability | Carousel **SPOTLIGHT EVENT** ở vị trí nổi bật nhất trang chủ đang hiển thị một sự kiện mang badge **`Ended`** | 1. Mở trang chủ khi đã đăng nhập<br>2. Xem carousel trên cùng<br>**Heuristic:** N1 · N2 | **2** | Lọc carousel chỉ lấy sự kiện `PUBLISHED` + `UPCOMING`/`ONGOING`, đúng như tài liệu E2E của đội phát triển mô tả | [KS_B1_trang-chu-carousel.png](evidence/survey/KS_B1_trang-chu-carousel.png) | |
-| `SV-B1-02` | Screen B1 — Danh sách sự kiện | Usability | Khi bộ lọc không ra kết quả, trạng thái rỗng chỉ có câu "No events found" — **không nêu lý do và không có nút xoá bộ lọc**, người lọc nhầm phải tự mò đường quay lại | 1. Vào danh sách sự kiện<br>2. Nhập từ khoá không khớp gì<br>3. Quan sát vùng kết quả<br>**Heuristic:** N1 · N3 user control | **2** | Thêm nút `Clear all filters` và một câu nêu rõ bộ lọc nào đang áp dụng | [KS_B1_empty-search.png](evidence/survey/KS_B1_empty-search.png) | |
+| `SV-B1-02` | Screen B1 — Danh sách sự kiện | Usability | ✅ **Đã sửa lại 06/08/2026, đây là lỗi quan sát của tôi, không phải lỗi EMS.** Kết luận cũ ghi "không nêu lý do và không có nút xoá bộ lọc" — sai. Nhìn lại đúng ảnh gốc `KS_B1_empty-search.png`: trạng thái rỗng **đã có** câu giải thích ("There are no events matching your filters.") **và** một icon xoá bộ lọc cạnh badge `Filters`, chỉ là tôi đọc sót cả hai khi ghi lượt khảo sát đầu. Task 1B (06/08) bấm thử icon đó — **xác nhận nó xoá hết bộ lọc** | 1. Vào danh sách sự kiện, lọc ra 0 kết quả<br>2. Đọc kỹ toàn bộ khối kết quả rỗng, không chỉ dòng chữ to<br>3. Bấm icon cạnh `Filters` — bộ lọc bị xoá hết<br>**Heuristic:** N1 · N3 | **0** | Không cần sửa — hành vi đã đúng, chỉ là quan sát ban đầu của tôi bỏ sót | [KS_B1_empty-search.png](evidence/survey/KS_B1_empty-search.png) · [G-07-S1.png](evidence/task1b/G-07-S1.png) | |
 | `SV-B1-03` | Screen B1 / B2 | Usability | Tiêu đề chính của sự kiện hiển thị **chuỗi mã máy** `23127326_UT_510_15:36`, tên thật của sự kiện bị đẩy xuống dòng phụ | 1. Mở danh sách sự kiện<br>2. Đọc tiêu đề các thẻ<br>**Heuristic:** N2 match real world | **2** | Lấy tên do người tạo đặt làm tiêu đề hiển thị; mã nội bộ chỉ dùng ở phía hệ thống | [KS_B2_su-kien-nguoi-khac.png](evidence/survey/KS_B2_su-kien-nguoi-khac.png) | |
 | `SV-B1-04` | Screen B1 | Usability | Nhiều thẻ sự kiện hiện **ô ảnh placeholder xám trơn**, không có chữ giải thích vì sao không có ảnh | 1. Mở danh sách sự kiện<br>2. Đếm số thẻ không có ảnh<br>**Heuristic:** N1 · N8 | **1** | Thay ô xám bằng khối giữ chỗ có tên viết tắt hoặc icon kèm nhãn | [KS_B1_the-su-kien.png](evidence/survey/KS_B1_the-su-kien.png) | |
 | `SV-B2-01` | Screen B2 | Usability | Vai trò hết chỗ chỉ báo **"Role is full"** và dừng ở đó — **không mời người dùng vào danh sách chờ**, dù ô đếm `Waitlisted` tồn tại ngay bên cạnh | 1. Mở sự kiện đã hết chỗ<br>2. Đọc khối Registration roles<br>**Heuristic:** N1 · N3 | **3** | Nếu có cơ chế waitlist thì phải hiện nút `Join waitlist` ngay tại chỗ báo hết chỗ | [KS_B2_workshop-b-het-cho.png](evidence/survey/KS_B2_workshop-b-het-cho.png) | |
@@ -70,6 +70,7 @@ Dạng `<NGUỒN>-<MÀN HÌNH>-<SỐ>` — nhìn ID là biết ngay lỗi tìm r
 | `SV-UG-01` | User guide *(mọi màn hình)* | Usability | Tài liệu hướng dẫn **chỉ có tiếng Việt** dù giao diện đang ở tiếng Anh và cờ ngôn ngữ đang là cờ Mỹ. Ngoài ra tài liệu **không có chỗ nào nói mã QR check-in nằm ở đâu** | 1. Để giao diện EN<br>2. Header → `User guide`<br>3. Đọc Table of contents và tìm từ khoá QR<br>**Heuristic:** N10 help & documentation · S2 | **2** | Dịch tài liệu theo ngôn ngữ đang chọn; bổ sung một mục nói rõ vị trí mã QR check-in | [KS_UG_01.png](evidence/survey/KS_UG_01.png) | |
 | `CL-B2-01` | Screen B2 — Trang chi tiết sự kiện (banner) | Usability | Banner ảnh của sự kiện `23127326_UT_510_15:36` (do sinh viên khác tạo) không tải được, chỉ hiện **icon ảnh chung chung** ở giữa khung, không kèm chữ giải thích — cùng lớp lỗi với `SV-B1-04` (G-06) nhưng đây là **quan sát mới trên B2**, biểu hiện khác (icon thay vì ô xám trơn). Sự kiện này cũng tái xác nhận `SV-B1-03`: tiêu đề chính vẫn là chuỗi mã máy, tên thật `Workshop Kỹ năng nghiên cứu 2026` bị đẩy xuống dòng phụ | 1. Mở B1, tìm sự kiện chưa có banner (`23127326_UT_510_15:36`)<br>2. Bấm vào để mở B2<br>3. Quan sát banner đầu trang<br>**Heuristic:** N1 · N8 | **1** | Cùng hướng sửa với `SV-B1-04`: thay icon chung chung bằng khối giữ chỗ có nhãn chữ (tên viết tắt sự kiện hoặc "No banner uploaded"), áp dụng đồng bộ cho mọi nơi hiển thị ảnh sự kiện | [G-06-S2.png](evidence/task1b/G-06-S2.png) | |
 | `CL-B4-01` | Screen B4 — My Activities, khối Filters | Bug | Lọc theo **`Start Date Range` không thực sự lọc dữ liệu**. Đặt khoảng `25/07/2026 – 29/07/2026` — không trùng ngày sự kiện thật của bất kỳ hoạt động nào — nhưng danh sách vẫn hiện đủ 2 thẻ hoạt động có ngày sự kiện nằm hoàn toàn ngoài khoảng đó (`Workshop A`: 06/08/2026, `Workshop B`: 05/08/2026) | 1. Vào My Profile → My Activities<br>2. Bấm `Filters`, nhập `Start Date Range` = 25/07/2026 → 29/07/2026<br>3. Quan sát danh sách kết quả vẫn hiện đủ 2 thẻ, không thu hẹp<br>**Heuristic:** N1 visibility of system status · N4 consistency | **3** | Sửa logic áp dụng điều kiện `Start Date Range` vào truy vấn danh sách hoạt động; thêm test tự động cho trường hợp bộ lọc phải trả về 0 kết quả | [G-07-S3.png](evidence/task1b/G-07-S3.png) | |
+| `CL-B4-02` | Screen B4 — My Activities, trạng thái rỗng | Usability | Khi Search ra 0 kết quả (từ khoá `áddsa`), trạng thái rỗng chỉ ghi **"No activities found"** — không nêu lý do (không nói do từ khoá tìm kiếm hay do bộ lọc ngày đang áp dụng), khác với B1 cùng tình huống lại có câu "There are no events matching your filters." Có nút `Clear all` nhưng nằm ở khối Filters phía trên, không gắn liền với thông báo rỗng | 1. Vào My Activities<br>2. Gõ từ khoá vô nghĩa vào ô Search activities<br>3. Đọc toàn bộ nội dung trạng thái rỗng, so với `SV-B1-02` (B1 có nêu lý do, B4 thì không)<br>**Heuristic:** N1 · S1 consistency | **1** | Thêm câu nêu lý do tương tự B1 ("No activities match your search/filters"), và cân nhắc đặt nút xoá bộ lọc/tìm kiếm ngay trong khối thông báo rỗng | [G-07-S3-2.png](evidence/task1b/G-07-S3-2.png) | |
 | `US-B2-01` | Screen B2 | | _(dòng mẫu — điền sau 5 phiên user testing)_ | | | | | |
 | `CP-B4-01` | Screen B4 | | _(dòng mẫu — điền sau đợt cross-platform)_ | | | | | |
 
@@ -98,19 +99,19 @@ _(Ghi 1 câu chỉ ra chỗ cần nhìn trong ảnh.)_
 
 | Nguồn | Bug | Usability | Tổng | Đã submit form |
 |---|:--:|:--:|:--:|:--:|
-| `CL-` Checklist (Task 1B) | **1** | **1** | **2** | _(TODO)_ |
+| `CL-` Checklist (Task 1B) | **1** | **2** | **3** | _(TODO)_ |
 | `US-` User testing (Task 2) | | | | |
 | `CP-` Cross-platform (Task 3) | | | | |
 | `SV-` Khảo sát EMS | **8** | **19** | **27** | _(TODO)_ |
-| **Tổng** | **9** | **20** | **29** | |
+| **Tổng** | **9** | **21** | **30** | |
 
 ### Theo severity
 
 | Severity | 4 | 3 | 2 | 1 | 0 | Tổng |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
-| Số finding | 0 | **9** | **10** | **9** | **1** | **29** |
+| Số finding | 0 | **9** | **9** | **10** | **2** | **30** |
 
-Không có finding severity 4. Chín finding severity 3 tập trung vào bốn nhóm — **không tìm được vé sau khi đăng ký** (`SV-B4-01`, `SV-B2-09`), **thao tác không hoàn tác được nhưng cảnh báo mơ hồ** (`SV-B2-07`), **hệ thống nói sai về chính nó** (`SV-ADM-02`, `SV-ADM-03`, `SV-ADM-04`), và **bộ lọc không thực sự lọc** (`CL-B4-01`, phát hiện khi chạy Task 1B — mục `G-07`). Một finding severity 0 (`SV-B2-08`) ghi lại một điều **đã kiểm và xác nhận là đúng**, giữ lại để lưu vết đã kiểm chứ không phải báo lỗi.
+Không có finding severity 4. Chín finding severity 3 tập trung vào bốn nhóm — **không tìm được vé sau khi đăng ký** (`SV-B4-01`, `SV-B2-09`), **thao tác không hoàn tác được nhưng cảnh báo mơ hồ** (`SV-B2-07`), **hệ thống nói sai về chính nó** (`SV-ADM-02`, `SV-ADM-03`, `SV-ADM-04`), và **bộ lọc không thực sự lọc** (`CL-B4-01`, phát hiện khi chạy Task 1B — mục `G-07`). Hai finding severity 0 (`SV-B2-08`, `SV-B1-02`) ghi lại những điều **đã kiểm và xác nhận là đúng** — cả hai đều là chỗ tôi từng kết luận sai từ ảnh khảo sát ban đầu, giữ lại để lưu vết đã kiểm chứ không phải báo lỗi.
 
 ### Theo màn hình
 
@@ -118,7 +119,7 @@ Không có finding severity 4. Chín finding severity 3 tập trung vào bốn n
 |---|:--:|:--:|
 | B1 Trang chủ / Danh sách sự kiện | **4** | 2 |
 | B2 Trang chi tiết sự kiện *(gồm cả khối đăng ký)* | **11** | 3 |
-| B4 My Profile — QR Code + My Activities | **7** | 3 |
+| B4 My Profile — QR Code + My Activities | **8** | 3 |
 | Admin — Create Event / Dashboard | **5** | 3 |
 | Thông báo & User guide *(xuyên màn hình)* | **2** | 2 |
 
