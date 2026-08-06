@@ -135,17 +135,29 @@ _(cấu trúc như trên)_
 
 | Chỉ số | Giá trị |
 |---|---|
-| Task scenario | _(TODO — 1 câu, hướng mục tiêu)_ |
-| Số participant | 5 (ngoài lớp) |
-| Task success rate | |
-| Thời gian trung bình | |
-| Điểm SUS / UEQ-S trung bình | |
-| Số usability issue theo severity | 0:_ · 1:_ · 2:_ · 3:_ · 4:_ |
+| Task scenario | *"Bạn là người quen của khoa muốn tham dự một workshop sắp diễn ra. Hãy tìm và đăng ký tham gia, rồi cho mình xem lại đăng ký đó."* |
+| Số participant | 5 (ngoài lớp, chạy qua study Maze thật) |
+| Task success rate | **100% Completed (5/5)** |
+| Thời gian trung bình | **3 phút 32 giây** |
+| Điểm SUS trung bình | **53.0/100** — dưới mốc 68, nhưng tách 2 nhóm rõ rệt (xem `appendix/a2-sus-scoring.md`) |
+| Số usability issue theo severity | 0:0 · 1:0 · 2:1 · 3:1 · 4:0 |
 
 **Ba khuyến nghị ưu tiên cao nhất:**
-1. _(TODO)_
-2. _(TODO)_
-3. _(TODO)_
+1. Thêm toast xác nhận sau mọi hành động thay đổi dữ liệu, và giải thích lý do khi nút bị khoá — xác nhận độc lập bởi cả checklist (`SV-B2-09`) lẫn 2/5 người dùng thật (`US-B2-01`)
+2. Tăng độ nổi bật nút quay lại danh sách trên màn hình mobile (`US-B2-02`)
+3. Thống nhất một bộ từ vựng trạng thái duy nhất trên toàn hệ thống — câu SUS về tính nhất quán bị chấm thấp thứ nhì trong 10 câu (`S-15`)
+
+**Link video 5 phiên** *(theo yêu cầu của giảng viên — dẫn thẳng ở đây, không chỉ trong `evidence/task2/`)*:
+
+| Phiên | Người tham gia | Link video |
+|---|---|---|
+| P1 | Phạm Vũ Ngọc Duyên | https://youtu.be/W0gLMibEf_o |
+| P2 | Nguyễn Tấn Phước | https://youtu.be/QWDMooa5skY |
+| P3 | Quan Anh | https://youtu.be/w-VrYQdr4fM |
+| P4 | Lê Đức Ngọc Bảo | https://youtu.be/xzQHMVQjX_E |
+| P5 | Hoàng Vũ Gia Huy | https://youtu.be/k7Gr5r9RCI4 |
+
+> Danh sách đầy đủ kèm thời lượng, transcript có mốc thời gian: [`evidence/task2/recordings.md`](evidence/task2/recordings.md). ⬜ Bạn tự kiểm lại cả 5 link có mở được **khi chưa đăng nhập YouTube** không (chế độ Unlisted).
 
 ---
 

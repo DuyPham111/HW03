@@ -79,7 +79,8 @@ Dạng `<NGUỒN>-<MÀN HÌNH>-<SỐ>` — nhìn ID là biết ngay lỗi tìm r
 | `CL-B2-01` | Screen B2 — Trang chi tiết sự kiện (banner) | Usability | Banner ảnh của sự kiện `23127326_UT_510_15:36` (do sinh viên khác tạo) không tải được, chỉ hiện **icon ảnh chung chung** ở giữa khung, không kèm chữ giải thích — cùng lớp lỗi với `SV-B1-04` (G-06) nhưng đây là **quan sát mới trên B2**, biểu hiện khác (icon thay vì ô xám trơn). Sự kiện này cũng tái xác nhận `SV-B1-03`: trường Title vẫn là chuỗi mã máy, phần Description dễ đọc (`Workshop Kỹ năng nghiên cứu 2026`) bị đẩy xuống dòng phụ | 1. Mở B1, tìm sự kiện chưa có banner (`23127326_UT_510_15:36`)<br>2. Bấm vào để mở B2<br>3. Quan sát banner đầu trang<br>**Heuristic:** N1 · N8 | **1** | Cùng hướng sửa với `SV-B1-04`: thay icon chung chung bằng khối giữ chỗ có nhãn chữ (tên viết tắt sự kiện hoặc "No banner uploaded"), áp dụng đồng bộ cho mọi nơi hiển thị ảnh sự kiện | [G-06-S2.png](evidence/task1b/G-06-S2.png) | |
 | `CL-B4-01` | Screen B4 — My Activities, khối Filters | Bug | Lọc theo **`Start Date Range` không thực sự lọc dữ liệu**. Đặt khoảng `25/07/2026 – 29/07/2026` — không trùng ngày sự kiện thật của bất kỳ hoạt động nào — nhưng danh sách vẫn hiện đủ 2 thẻ hoạt động có ngày sự kiện nằm hoàn toàn ngoài khoảng đó (`Workshop A`: 06/08/2026, `Workshop B`: 05/08/2026) | 1. Vào My Profile → My Activities<br>2. Bấm `Filters`, nhập `Start Date Range` = 25/07/2026 → 29/07/2026<br>3. Quan sát danh sách kết quả vẫn hiện đủ 2 thẻ, không thu hẹp<br>**Heuristic:** N1 visibility of system status · N4 consistency | **3** | Sửa logic áp dụng điều kiện `Start Date Range` vào truy vấn danh sách hoạt động; thêm test tự động cho trường hợp bộ lọc phải trả về 0 kết quả | [G-07-S3.png](evidence/task1b/G-07-S3.png) | |
 | `CL-B4-02` | Screen B4 — My Activities, trạng thái rỗng | Usability | Khi Search ra 0 kết quả (từ khoá `áddsa`), trạng thái rỗng chỉ ghi **"No activities found"** — không nêu lý do (không nói do từ khoá tìm kiếm hay do bộ lọc ngày đang áp dụng), khác với B1 cùng tình huống lại có câu "There are no events matching your filters." Có nút `Clear all` nhưng nằm ở khối Filters phía trên, không gắn liền với thông báo rỗng | 1. Vào My Activities<br>2. Gõ từ khoá vô nghĩa vào ô Search activities<br>3. Đọc toàn bộ nội dung trạng thái rỗng, so với `SV-B1-02` (B1 có nêu lý do, B4 thì không)<br>**Heuristic:** N1 · S1 consistency | **1** | Thêm câu nêu lý do tương tự B1 ("No activities match your search/filters"), và cân nhắc đặt nút xoá bộ lọc/tìm kiếm ngay trong khối thông báo rỗng | [G-07-S3-2.png](evidence/task1b/G-07-S3-2.png) | |
-| `US-B2-01` | Screen B2 | | _(dòng mẫu — điền sau 5 phiên user testing)_ | | | | | |
+| `US-B2-01` | Screen B2 — khối đăng ký | Usability | **Người dùng nghi ngờ hành động đã thành công hay chưa**, vì đăng ký xong (hoặc thấy nút Register bị khoá) không có phản hồi/xác nhận nào giải thích. Xác nhận độc lập từ 2/5 người dùng thật, trùng khớp finding đã có sẵn từ Task 1B | 1. P2 trả lời câu Trust: "Tôi nghi ngờ sự kiện đã được đưa lên chưa"<br>2. P4 trả lời câu Trust: "Có. Nghi ngờ khi nút đăng kí bị disable"<br>**Heuristic:** N1 visibility of system status | **3** | Thêm toast xác nhận ngay sau khi đăng ký; thêm dòng giải thích cạnh nút khi đang bị khoá chờ điều kiện | [P2-transcript.txt](evidence/task2/P2-transcript.txt) · [P4-transcript.txt](evidence/task2/P4-transcript.txt) | |
+| `US-B2-02` | Screen B2 — nút quay lại (mobile) | Usability | Nút `Back to events` tồn tại thật (đã Passed ở `N-02`, Task 1B) nhưng participant dùng iPhone không tìm ra, phải tự cuộn lên đầu trang — khoảng cách giữa "nút có tồn tại" và "nút được nhận ra" trên màn hình nhỏ | 1. P3 (iPhone 14 Plus) trả lời câu Error recovery: "Không. Phải kiếm nút quay lại. Kéo lên đầu trang. Khó khăn"<br>**Heuristic:** N3 user control and freedom | **2** | Tăng độ nổi bật nút trên viewport hẹp (<480px), cân nhắc ghim cố định (sticky) khi cuộn | [P3-transcript.txt](evidence/task2/P3-transcript.txt) | |
 | `CP-B4-01` | Screen B4 | | _(dòng mẫu — điền sau đợt cross-platform)_ | | | | | |
 
 **Cột bắt buộc theo đề:** *ID · Scenario/Screen · Type (Bug \| Usability) · Description · Steps/Heuristic · Severity · Suggested fix · Screenshot ref · Form-submission timestamp.*
@@ -91,9 +92,17 @@ Dạng `<NGUỒN>-<MÀN HÌNH>-<SỐ>` — nhìn ID là biết ngay lỗi tìm r
 
 > Chỉ nhúng ảnh cho finding **severity ≥ 3** hoặc finding cần nhìn ảnh mới hiểu. Còn lại đã có link trong bảng, không nhúng để file không phình.
 
-### `CL-B?-0?` — _(tên ngắn)_
+### `CL-B4-01` — Bộ lọc `Start Date Range` không thực sự lọc
 
-![CL-B?-0?](evidence/task1b/CL-B2-01.png)
+![CL-B4-01](evidence/task1b/G-07-S3.png)
+
+_Đặt khoảng ngày không trùng sự kiện nào, danh sách vẫn hiện đủ — bộ lọc không áp dụng vào kết quả._
+
+### `SV-B2-09` — Đăng ký xong không có phản hồi nào
+
+![SV-B2-09](evidence/survey/KS_B3_05_sau-submit.png)
+
+_Toàn màn hình đứng yên sau khi bấm Register — không toast, không thông báo, chỉ có badge `Pending review` mọc thêm cạnh tiêu đề khối._
 
 _(Ghi 1 câu chỉ ra chỗ cần nhìn trong ảnh.)_
 
@@ -107,26 +116,28 @@ _(Ghi 1 câu chỉ ra chỗ cần nhìn trong ảnh.)_
 
 | Nguồn | Bug | Usability | Tổng | Đã submit form |
 |---|:--:|:--:|:--:|:--:|
-| `CL-` Checklist (Task 1B) | **7** | **4** | **11** | _(TODO)_ |
-| `US-` User testing (Task 2) | | | | |
+| `CL-` Checklist (Task 1B) | **6** | **5** | **11** | _(TODO)_ |
+| `US-` User testing (Task 2) | **0** | **2** | **2** | _(TODO)_ |
 | `CP-` Cross-platform (Task 3) | | | | |
 | `SV-` Khảo sát EMS | **8** | **19** | **27** | _(TODO)_ |
-| **Tổng** | **15** | **23** | **38** | |
+| **Tổng** | **14** | **26** | **40** | |
+
+> ⚠️ Đợt đồng bộ 06/08 phát hiện bảng này đã lệch so với thực tế (`CL-` từng ghi 7 Bug/4 Usability, đếm lại đúng là 6/5) — sửa lại bằng cách đếm lại toàn bộ bằng lệnh (mục *Đối chiếu cuối cùng*), không tin số liệu cũ.
 
 ### Theo severity
 
 | Severity | 4 | 3 | 2 | 1 | 0 | Tổng |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
-| Số finding | 0 | **9** | **13** | **13** | **3** | **38** |
+| Số finding | 0 | **10** | **14** | **13** | **3** | **40** |
 
-Không có finding severity 4. Chín finding severity 3 tập trung vào bốn nhóm — **không tìm được vé sau khi đăng ký** (`SV-B4-01`, `SV-B2-09`), **thao tác không hoàn tác được nhưng cảnh báo mơ hồ** (`SV-B2-07`), **hệ thống nói sai về chính nó** (`SV-ADM-02`, `SV-ADM-03`, `SV-ADM-04`), và **bộ lọc không thực sự lọc** (`CL-B4-01`, phát hiện khi chạy Task 1B — mục `G-07`). Ba finding severity 0 (`SV-B2-08`, `SV-B1-02`, `SV-B2-03`) ghi lại những điều **đã kiểm và xác nhận là đúng** — cả ba đều là chỗ tôi từng kết luận sai từ ảnh khảo sát ban đầu, giữ lại để lưu vết đã kiểm chứ không phải báo lỗi.
+Không có finding severity 4. Mười finding severity 3 tập trung vào bốn nhóm — **không tìm được vé sau khi đăng ký** (`SV-B4-01`, `SV-B2-09`), **thao tác không hoàn tác được nhưng cảnh báo mơ hồ** (`SV-B2-07`), **hệ thống nói sai về chính nó** (`SV-ADM-02`, `SV-ADM-03`, `SV-ADM-04`), **bộ lọc không thực sự lọc** (`CL-B4-01`), và **người dùng thật xác nhận độc lập cùng một lỗ hổng** (`US-B2-01` — trùng với `SV-B2-09`/`S-01`/`S-14`, hai nguồn khác nhau cùng chỉ về một chỗ hỏng). Ba finding severity 0 (`SV-B2-08`, `SV-B1-02`, `SV-B2-03`) ghi lại những điều **đã kiểm và xác nhận là đúng** — cả ba đều là chỗ tôi từng kết luận sai từ ảnh khảo sát ban đầu, giữ lại để lưu vết đã kiểm chứ không phải báo lỗi.
 
 ### Theo màn hình
 
 | Màn hình | Số finding | Severity cao nhất |
 |---|:--:|:--:|
 | B1 Trang chủ / Danh sách sự kiện | **8** | 2 |
-| B2 Trang chi tiết sự kiện *(gồm cả khối đăng ký)* | **13** | 3 |
+| B2 Trang chi tiết sự kiện *(gồm cả khối đăng ký)* | **15** | 3 |
 | B4 My Profile — QR Code + My Activities | **10** | 3 |
 | Admin — Create Event / Dashboard | **5** | 3 |
 | Thông báo & User guide *(xuyên màn hình)* | **2** | 2 |
@@ -137,13 +148,15 @@ Không có finding severity 4. Chín finding severity 3 tập trung vào bốn n
 
 ```bash
 cd 23127183_HW03_AI_GUIUsability_EMS_100
-# đếm finding thật (bỏ 3 dòng mẫu CL-/US-/CP-)
-grep -cE "^\| \`SV-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md
+# đếm finding thật (bỏ dòng mẫu CP- chưa điền)
+grep -cE "^\| \`(SV|CL|US)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md
 # phân bố severity
-grep -E "^\| \`SV-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md | awk -F'|' '{gsub(/[ *]/,"",$7); print $7}' | sort | uniq -c
+grep -E "^\| \`(SV|CL|US)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md | awk -F'|' '{gsub(/[ *]/,"",$7); print $7}' | sort | uniq -c
 # phân bố Bug / Usability
-grep -E "^\| \`SV-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md | awk -F'|' '{gsub(/ /,"",$4); print $4}' | sort | uniq -c
-# mọi link ảnh đều trỏ tới file có thật
+grep -E "^\| \`(SV|CL|US)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md | awk -F'|' '{gsub(/ /,"",$4); print $4}' | sort | uniq -c
+# phân bố theo màn hình
+grep -oE "^\| \`(SV|CL|US)-[A-Z0-9]+-" 04-findings-log.md | sed -E 's/.*`(SV|CL|US)-([A-Z0-9]+)-/\2/' | sort | uniq -c
+# mọi link ảnh/file đều trỏ tới file có thật
 grep -oE '\(evidence/[^)]+\)' 04-findings-log.md | tr -d '()' | sort -u | while read f; do [ -f "$f" ] || echo "THIẾU: $f"; done
 ```
 

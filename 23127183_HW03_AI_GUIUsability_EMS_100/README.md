@@ -123,15 +123,15 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Chỉ số | Giá trị |
 |---|---|
-| Số participant (bắt buộc 5, ngoài lớp) | |
-| Task success rate (completed / partial / failed) | |
-| Thời gian trung bình / tác vụ | |
-| Tổng số lỗi & lần do dự | |
-| Điểm SUS trung bình (hoặc UEQ-S) | |
+| Số participant (bắt buộc 5, ngoài lớp) | **5** (chạy qua Maze thật, ⬜ bạn tự xác nhận đều ngoài lớp) |
+| Task success rate (completed / partial / failed) | **100% Completed (5/5) / 0 / 0** |
+| Thời gian trung bình / tác vụ | **3 phút 32 giây** (nhanh nhất 0m59s, chậm nhất 8m15s) |
+| Tổng số lỗi & lần do dự | ⚠️ Số lỗi thao tác cần đếm từ video (chưa điền). Do dự qua lời nói: **≥4/5 người** có ít nhất 1 lần rõ ràng |
+| Điểm SUS trung bình | **53.0 / 100** — dưới mốc 68, nhưng tách 2 nhóm rõ rệt (2 người 80–85 "tốt", 3 người 27.5–42.5 "dưới trung bình"), xem `appendix/a2-sus-scoring.md` |
 
-| Severity | 0 (không phải vấn đề) | 1 (cosmetic) | 2 (minor) | 3 (major) | 4 (catastrophe) | Tổng |
+| Severity | 0 | 1 | 2 | 3 | 4 | Tổng |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
-| Số usability issue | | | | | | |
+| Số usability issue (US-) | 0 | 0 | 1 | 1 | 0 | **2** |
 
 ### 4.3 Cross-Platform (Task 3)
 
@@ -146,13 +146,13 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Nguồn | Tiền tố ID | Bug | Usability | Tổng | Đã submit form |
 |---|---|:--:|:--:|:--:|:--:|
-| Checklist execution | `CL-` | **7** | **4** | **11** | _(TODO)_ |
-| User testing | `US-` | | | | |
+| Checklist execution | `CL-` | **6** | **5** | **11** | _(TODO)_ |
+| User testing | `US-` | **0** | **2** | **2** | _(TODO)_ |
 | Cross-platform | `CP-` | | | | |
 | Khảo sát EMS | `SV-` | **8** | **19** | **27** | _(TODO)_ |
-| **Tổng** | | **15** | **23** | **38** | |
+| **Tổng** | | **14** | **26** | **40** | |
 
-Phân bố severity của 38 finding: **sev 3 — 9 · sev 2 — 13 · sev 1 — 13 · sev 0 — 3** · không có sev 4. Ba finding sev 0 (`SV-B2-08`, `SV-B1-02`, `SV-B2-03`) là ba lần tôi tự sửa lại kết luận sai của chính mình từ đợt khảo sát ban đầu, sau khi kiểm chứng trực tiếp trên EMS.
+Phân bố severity của 40 finding: **sev 3 — 10 · sev 2 — 14 · sev 1 — 13 · sev 0 — 3** · không có sev 4. Ba finding sev 0 (`SV-B2-08`, `SV-B1-02`, `SV-B2-03`) là ba lần tôi tự sửa lại kết luận sai của chính mình từ đợt khảo sát ban đầu, sau khi kiểm chứng trực tiếp trên EMS. Hai finding `US-` mới từ Task 2 (`US-B2-01` sev 3, `US-B2-02` sev 2) — `US-B2-01` trùng khớp độc lập với `SV-B2-09`/`S-01`/`S-14` đã có từ trước, là bằng chứng hai chiều cho cùng một chỗ hỏng.
 
 > Số dòng trong `04-findings-log.md` **phải bằng** số lần submit Google Form — TA đối chiếu chéo.
 

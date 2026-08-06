@@ -85,13 +85,15 @@ Phủ đủ 4 chủ đề đề yêu cầu: **clarity · error recovery · speed
 
 | # | Tên | Vai trò / chân dung | Liên hệ (đã che) | Ngày phiên | Thiết bị & trình duyệt |
 |---|---|---|---|---|---|
-| P1 | | | 09**\*\*\*\***12 | | |
-| P2 | | | | | |
-| P3 | | | | | |
-| P4 | | | | | |
-| P5 | | | | | |
+| P1 | Phạm Vũ Ngọc Duyên | Event-goer | 0943\*\*\*\*44 | 06/08/2026 | Mac OS · Chrome 148 |
+| P2 | Nguyễn Tấn Phước | Event-goer | phuo\*\*\*\*@gmail.com | 06/08/2026 | Linux · Chrome 149 |
+| P3 | Quan Anh | Event-goer | 0988\*\*\*\*54 | 06/08/2026 | iPhone 14 Plus (mobile) · app MazeParticipate |
+| P4 | Lê Đức Ngọc Bảo | Event-goer | ldnb\*\*\*\*@clc.fitus.edu.vn | 06/08/2026 | Windows · Chrome 150 |
+| P5 | Hoàng Vũ Gia Huy | Event-goer | giah\*\*\*\*@gmail.com | 06/08/2026 | Windows · Brave 151 |
 
-**Xác nhận:** ⬜ Cả 5 người đều **không** học lớp này · ⬜ Đều có liên hệ kiểm chứng được · ⬜ Đã xin phép ghi màn hình/âm thanh **và** ghi hình camera qua Maze
+**Xác nhận:** ⬜ Cả 5 người đều **không** học lớp này *(bạn tự xác nhận — AI không kiểm được danh sách lớp)* · ✅ Đều có liên hệ kiểm chứng được (số điện thoại/email thật) · ⬜ Đã xin phép ghi màn hình/âm thanh **và** ghi hình camera qua Maze *(bạn tự xác nhận đã bật đồng ý trước khi participant bắt đầu)*
+
+> ⚠️ Study Maze gốc có **7 người** tham gia — đã loại 2 người khỏi bảng trên: `Nguyễn Minh Khôi` và chính người làm bài (`Duy`, cũng chưa hoàn thành study). Chi tiết ở `evidence/task2/recordings.md`.
 
 ### 1.5 Pilot (người thứ 6, KHÔNG tính vào 5 người)
 
@@ -123,22 +125,26 @@ Dữ liệu thô của từng phiên (dòng thời gian, lời nói nguyên văn
 
 ### 3.1 Bảng chỉ số tổng hợp
 
-| Participant | Success | Time on task | Errors | Hesitations | SUS/UEQ-S |
+| Participant | Success | Time on task | Errors | Hesitations | SUS |
 |---|---|---:|---:|---:|---:|
-| P1 | | | | | |
-| P2 | | | | | |
-| P3 | | | | | |
-| P4 | | | | | |
-| P5 | | | | | |
-| **Trung bình / Tỉ lệ** | ___% completed | | | | |
+| P1 | Completed | 8m15s | ⚠️ _(TODO — xem video)_ | ≥2 *(lặp đọc "Campus", "Back to event")* | **85** |
+| P2 | Completed | 0m59s | ⚠️ _(TODO)_ | 0 rõ ràng — hoàn thành rất nhanh | **42.5** |
+| P3 | Completed | 2m06s | ⚠️ _(TODO)_ | ≥1 *(không tìm ra đường quay lại danh sách)* | **27.5** |
+| P4 | Completed | 1m38s | ⚠️ _(TODO)_ | ≥1 *(nghi ngờ khi nút Register bị khoá)* | **30** |
+| P5 | Completed | 4m40s | ⚠️ _(TODO)_ | ⚠️ transcript lỗi nhiều, cần nghe lại | **80** |
+| **Trung bình / Tỉ lệ** | **100% completed (5/5)** | 3m32s | | | **53.0** |
 
-**Diễn giải điểm SUS:** _(TODO — SUS < 68 là dưới trung bình; > 80.3 là tốt. Ghi rõ điểm của bạn nằm ở đâu và nghĩa là gì)_
+> ⚠️ Cột **Errors** để trống có chủ đích — đếm số lần bấm sai/thao tác sai cần xem lại video frame-by-frame, AI không tự đếm được từ transcript text. Bạn tự điền sau khi xem 5 video, dùng đúng định nghĩa: mỗi lần bấm vào nhầm phần tử không dẫn tới kết quả mong muốn = 1 error.
+
+**Diễn giải điểm SUS:** trung bình **53.0** — **dưới mốc 68 (dưới trung bình)**. Nhưng số trung bình này **gây hiểu lầm** nếu đọc một mình: dữ liệu tách thành hai nhóm rõ rệt (xem `appendix/a2-sus-scoring.md`) — P1/P5 đạt mức "tốt" (80, 85 — trên mốc 80.3 hoặc sát mốc), còn P2/P3/P4 đều dưới trung bình rõ rệt (27.5–42.5). Độ lệch chuẩn 24.67 lớn bất thường so với một hệ thống đồng nhất — đáng bàn kỹ ở phần khuyến nghị thay vì chỉ báo cáo một con số duy nhất.
 
 ### 3.2 Nhóm các điểm đau (pain points)
 
 | Nhóm vấn đề | Số participant gặp | Màn hình | Bằng chứng (trích lời) |
 |---|:--:|---|---|
-| _(TODO)_ | /5 | | |
+| Nghi ngờ hành động đã thành công hay chưa (không có phản hồi/xác nhận) | **2/5** (P2, P4) | B2 | P2: *"Tôi nghi ngờ sự kiện đã được đưa lên chưa"* · P4: *"Có. Nghi ngờ khi nút đăng kí bị disable"* |
+| Không tìm ra đường quay lại danh sách sự kiện | **1/5** (P3) | B2 | *"Không. Phải kiếm nút quay lại. Kéo lên đầu trang. Khó khăn"* |
+| Bố cục một khối chiếm quá nhiều không gian màn hình | **1/5** (P1) | B2 *(chưa xác định chính xác khối nào, cần xem video)* | *"ô hiển thị nằm ngang, ô hiển thị hiện tại quá to, 2 ô đã chiếm hết màn hình"* |
 
 ### 3.3 Tách bug đơn lẻ vs vấn đề thiết kế hệ thống
 
@@ -146,36 +152,44 @@ Dữ liệu thô của từng phiên (dòng thời gian, lời nói nguyên văn
 
 | Loại | Finding | Vì sao xếp vào loại này |
 |---|---|---|
-| Bug đơn lẻ | _(TODO)_ | chỉ 1 người gặp / do trạng thái dữ liệu đặc thù / lỗi kỹ thuật rõ ràng |
-| Vấn đề hệ thống | _(TODO)_ | ≥ 3/5 người gặp / lặp lại trên nhiều màn hình / bắt nguồn từ quyết định thiết kế |
+| Vấn đề hệ thống | **Thiếu phản hồi sau hành động** (US-B2-01) | Không phải quan sát đơn lẻ — **trùng khớp với 3 finding đã có sẵn từ Task 1B** (`SV-B2-09` không toast sau đăng ký, `S-01`/`S-14` Failed cùng lý do). Hai nguồn độc lập (kiểm tra khách quan + người dùng thật) cùng chỉ về một nguyên nhân gốc: hệ thống không bao giờ xác nhận hành động bằng toast/thông báo, thấy lặp lại ở nhiều mục |
+| Bug đơn lẻ *(cần thêm bằng chứng)* | **Nút quay lại khó tìm trên mobile** (US-B2-02) | Chỉ 1/5 người gặp (P3, dùng iPhone) — có thể do trạng thái màn hình mobile cụ thể (nút bị đẩy dưới fold) chứ không hẳn là lỗi trên mọi thiết bị. Task 1B đã Passed mục này trên desktop (`N-02`). Cần Task 3 (cross-platform) xác nhận có lặp lại trên các thiết bị mobile khác không mới nâng lên "vấn đề hệ thống" |
+| Bug đơn lẻ *(chưa đủ bằng chứng)* | **Bố cục 1 khối chiếm hết màn hình** (P1) | Chỉ 1/5 người nhắc tới, chưa rõ khối nào — cần xem lại video P1 trước khi quyết định có phải bug thật hay chỉ là ý kiến cá nhân về gu thẩm mỹ |
 
 ### 3.4 Findings xếp hạng theo Severity (0–4)
 
 **Thang severity (Nielsen):** 0 = không phải vấn đề usability · 1 = cosmetic, chỉ sửa nếu dư thời gian · 2 = minor, ưu tiên thấp · 3 = major, ưu tiên cao · 4 = catastrophe, bắt buộc sửa trước khi phát hành
 
-| # | Finding | Màn hình | Heuristic vi phạm | Số người gặp | Severity | Ảnh | Finding-ID |
-|---|---|---|---|:--:|:--:|---|---|
-| 1 | | | | /5 | | | US-B2-01 |
-| 2 | | | | /5 | | | US-B3-01 |
-| 3 | | | | /5 | | | US-B4-01 |
+| # | Finding | Màn hình | Heuristic vi phạm | Số người gặp | Severity | Finding-ID |
+|---|---|---|---|:--:|:--:|---|
+| 1 | Không có phản hồi/xác nhận sau khi đăng ký | B2 | N1 visibility of system status | **2/5** | **3** | `US-B2-01` |
+| 2 | Nút quay lại danh sách khó tìm trên mobile | B2 | N3 user control and freedom | **1/5** | **2** | `US-B2-02` |
 
 **Chi tiết từng finding:**
 
-#### US-B2-01 — _(tên)_ · Severity _(0–4)_
+#### US-B2-01 — Người dùng nghi ngờ hành động đã thành công hay chưa · Severity 3
 
-- **Mô tả:** _(TODO)_
-- **Bằng chứng từ phiên:** _(TODO — trích lời + participant nào)_
-- **Heuristic vi phạm:** _(TODO)_
-- **Ảnh:** ![US-B2-01](evidence/task2/US-B2-01.png)
-- **Khuyến nghị sửa:** _(TODO — cụ thể, làm được ngay, không viết chung chung)_
+- **Mô tả:** Sau khi đăng ký (hoặc khi thấy nút bị khoá chờ điều kiện), hệ thống không đưa ra bất kỳ phản hồi/xác nhận rõ ràng nào. Người dùng phải tự suy đoán liệu thao tác của họ có được ghi nhận không.
+- **Bằng chứng từ phiên:** P2 — *"Tôi nghi ngờ sự kiện đã được đưa lên chưa"* (câu trả lời Q4-Trust). P4 — *"Có. Nghi ngờ khi nút đăng kí bị disable"* (câu trả lời Q4-Trust).
+- **Heuristic vi phạm:** N1 (visibility of system status)
+- **Đối chiếu Task 1B:** trùng khớp hoàn toàn với `SV-B2-09`, `S-01`, `S-14` — đã Failed từ trước khi chạy Task 2. Đây là **bằng chứng hai chiều độc lập** cho cùng một finding, không phải phát hiện trùng lặp cần loại bỏ.
+- **Khuyến nghị sửa:** Thêm toast xác nhận ngay sau khi bấm Register ("Đăng ký thành công, đang chờ duyệt"), và với nút bị khoá (chưa tick vai trò) thêm dòng chữ giải thích ngay cạnh nút thay vì chỉ đổi màu xám.
+
+#### US-B2-02 — Nút quay lại danh sách không được tìm thấy trên mobile · Severity 2
+
+- **Mô tả:** Nút `Back to events` tồn tại thật trên B2 (đã xác nhận `Passed` ở Task 1B, mục `N-02`, ảnh `G-06-S2.png`), nhưng một người dùng thật trên iPhone không tìm ra, phải tự cuộn lên đầu trang.
+- **Bằng chứng từ phiên:** P3 — *"Không. Phải kiếm nút quay lại. Kéo lên đầu trang. Khó khăn"* (câu trả lời Q2-Error recovery).
+- **Heuristic vi phạm:** N3 (user control and freedom)
+- **Vì sao severity chỉ 2, không cao hơn:** đây là khoảng cách giữa "nút có tồn tại" (Task 1B khẳng định) và "nút có được nhận ra" (Task 2 khẳng định ngược lại) — khả năng cao là vấn đề **độ nổi bật trên màn hình nhỏ** (mobile), không phải nút hoàn toàn vắng mặt. Cần Task 3 xác nhận có lặp lại trên các thiết bị mobile khác không.
+- **Khuyến nghị sửa:** Tăng độ tương phản/kích thước nút `Back to events` trên viewport hẹp (< 480px), hoặc ghim cố định (sticky) ở đầu trang khi cuộn xuống thay vì chỉ nằm ở vị trí tĩnh trên cùng.
 
 ### 3.5 Danh sách khuyến nghị có ưu tiên
 
 | Ưu tiên | Khuyến nghị | Finding liên quan | Chi phí ước tính | Tác động ước tính |
 |:--:|---|---|---|---|
-| P0 | | | | |
-| P1 | | | | |
-| P2 | | | | |
+| P0 | Thêm toast xác nhận sau mọi hành động thay đổi dữ liệu (đăng ký, huỷ đăng ký), và giải thích lý do khi nút bị khoá | `US-B2-01`, `SV-B2-09`, `S-01`, `S-14` | Thấp — chỉ thêm UI phản hồi, không đổi luồng nghiệp vụ | Cao — xoá bỏ nguồn nghi ngờ lớn nhất được cả kiểm tra khách quan lẫn người dùng thật xác nhận |
+| P1 | Tăng độ nổi bật của nút quay lại trên màn hình hẹp/mobile | `US-B2-02`, `N-02` | Thấp — chỉnh CSS responsive | Trung bình — ảnh hưởng riêng nhóm dùng mobile |
+| P2 | Thống nhất một bộ từ vựng trạng thái duy nhất (Approved/Pending Review/Rejected/Waitlisted) trên toàn hệ thống, sửa lại 4 ô đếm ở B2 | `S-15`, `SV-B4-03` | Trung bình — cần đổi tên field ở nhiều nơi | Trung bình — câu SUS Q6 (thiếu nhất quán) bị chấm thấp nhất trong 10 câu, xác nhận đây là vấn đề người dùng cảm nhận rõ |
 
 ---
 

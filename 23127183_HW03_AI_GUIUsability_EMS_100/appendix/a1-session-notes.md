@@ -19,48 +19,188 @@
 
 ---
 
-## Phiên P1 — _(TODO tên, ngày giờ)_
+> ⚠️ **Nguồn dữ liệu 06/08/2026:** 5 phiên chạy qua study Maze thật (`app.maze.co/report/New-study-1/dj3mw7msh009jy`), không phải cuộc gọi trực tiếp có AI quan sát cùng — nên phần "Quan sát của moderator" ở mỗi phiên **do bạn tự viết sau khi xem lại video**, AI không có mặt lúc chạy. Dòng thời gian dưới đây dựng từ transcript tự động của Maze (đính kèm mốc thời gian) — transcript có lỗi rải rác ở vài chỗ (âm thanh nền bị nhận nhầm ngôn ngữ khác), đã lọc bỏ những đoạn rõ ràng là lỗi, giữ lại đoạn còn nghi ngờ và đánh dấu ⚠️.
+> **7 người từng vào study, chỉ tính 5 người sau làm chính thức** — đã loại `Nguyễn Minh Khôi` và `Duy` (chính người làm bài) theo đúng luật đề (§13: người thực hiện task không được tính là participant).
+
+## Phiên P1 — Phạm Vũ Ngọc Duyên
 
 | Mục | Giá trị |
 |---|---|
-| Thiết bị & trình duyệt | _(TODO)_ |
-| Sự kiện được giao | _(còn chỗ / hết chỗ + waitlist)_ |
-| Task success | Completed / Partial / Failed |
-| Time on task | _ph _giây |
-| Số error | |
-| Số hesitation | |
-| Số lần moderator can thiệp | |
-| Bản ghi màn hình | `../evidence/task2/P1-recording` |
+| Liên hệ (đã che) | 0943****44 |
+| Thiết bị & trình duyệt | Mac OS (Macintosh) · Chrome 148 |
+| Task success | **Completed** |
+| Time on task | 8 phút 15 giây (495.25s) |
+| Bản ghi màn hình | https://youtu.be/W0gLMibEf_o |
 
-### Dòng thời gian
+### Dòng thời gian *(từ transcript tự động Maze, mốc thời gian trong video)*
 
-| Thời điểm | Hành động | Lời nói (NGUYÊN VĂN) | Phân loại | Màn hình |
-|---|---|---|---|---|
-| 00:00 | | | | |
-| | | | error / hesitation / frustration / success | B1 / B2 / B4 |
+| Thời điểm | Lời nói (transcript tự động) | Phân loại | Ghi chú |
+|---|---|---|---|
+| 4:39 | "Ongoing. Back to event. Back to event ongoing." | hesitation | Đọc đi đọc lại nhãn trạng thái + nút quay lại — dấu hiệu đang định hướng lại |
+| 5:49 | "Campus." | hesitation | |
+| 6:39 | "Campus." | hesitation | Lặp lại từ này lần 2, cách lần đầu 50s — có thể đang so sánh giữa các sự kiện |
+| 7:07 | "Ah, ¿dónde location? Ok." | hesitation | ⚠️ Transcript lẫn tiếng Tây Ban Nha, khả năng cao là lỗi nhận diện giọng nói, không phải participant nói tiếng TBN thật |
+| 7:32 → 7:49 | "Open. Open for registration." (lặp lại) | success | Đọc to trạng thái đăng ký — có vẻ đã tìm đúng và tự tin bấm |
+
+⚠️ **Cần bạn xem lại video đối chiếu:** thời gian task 8 phút cho một tác vụ đơn giản là khá dài so với 4 người còn lại (chỉ 1–5 phút) — đáng để xem lại đoạn 4:39–7:49 xem họ có bị loanh quanh thật không hay chỉ đang đọc kỹ thông tin.
 
 ### Trả lời câu hỏi mở
 
 | # | Chủ đề | Câu trả lời (nguyên văn) |
 |---|---|---|
-| Q1 | Clarity | |
-| Q2 | Error recovery | |
-| Q3 | Speed | |
-| Q4 | Trust | |
-| Q5 | Tổng quát | |
+| Q1 | Clarity | không |
+| Q2 | Error recovery | dễ quay lại |
+| Q3 | Speed | như mong đợi |
+| Q4 | Trust | không |
+| Q5 | Tổng quát | ô hiển thị nằm ngang, ô hiển thị hiện tại quá to, 2 ô đã chiếm hết màn hình |
 
 ### Quan sát của moderator
 
-_(TODO — nhận xét sau phiên, tách bạch với dữ liệu quan sát ở trên)_
+_(TODO — bạn tự xem lại video, ghi nhận xét: câu trả lời Q5 nói về "2 ô chiếm hết màn hình" — cần xác định đang nói tới khối nào trên B2, ví dụ khối Event date/Registration period/Check-in period hay khối Slot available/Location)_
 
 ---
 
-## Phiên P2 — _(TODO)_
-_(cấu trúc như P1)_
+## Phiên P2 — Nguyễn Tấn Phước
 
-## Phiên P3 — _(TODO)_
-## Phiên P4 — _(TODO)_
-## Phiên P5 — _(TODO)_
+| Mục | Giá trị |
+|---|---|
+| Liên hệ (đã che) | phuo****@gmail.com |
+| Thiết bị & trình duyệt | Linux · Chrome 149 |
+| Task success | **Completed** |
+| Time on task | 59 giây (59.25s) — nhanh nhất trong 5 người |
+| Bản ghi màn hình | https://youtu.be/QWDMooa5skY |
+
+### Dòng thời gian
+
+| Thời điểm | Lời nói (transcript tự động) | Phân loại | Ghi chú |
+|---|---|---|---|
+| 2:16 | "Hello?" | — | Nằm giữa lúc điền SUS, có thể đang nói chuyện với người khác trong phòng, không liên quan task |
+| 2:32 | "Skip." | — | |
+| 2:45 | "Hi." | — | |
+
+⚠️ Cả 3 mốc trên rơi vào **lúc điền phiếu SUS** (sau khi đã xong task 59s), không phải trong lúc thao tác — gần như chắc chắn không liên quan tới usability, chỉ là hội thoại nền. Không tính là hesitation.
+
+### Trả lời câu hỏi mở
+
+| # | Chủ đề | Câu trả lời (nguyên văn) |
+|---|---|---|
+| Q1 | Clarity | Đăng kí sự kiện |
+| Q2 | Error recovery | Không dễ |
+| Q3 | Speed | Đúng như mong đợi |
+| Q4 | Trust | Tôi nghi ngờ sự kiện đã được đưa lên chưa |
+| Q5 | Tổng quát | Có checkin |
+
+### Quan sát của moderator
+
+_(TODO — bạn tự xem lại video. Đáng chú ý: Q4 "nghi ngờ sự kiện đã được đưa lên chưa" — khớp trực tiếp với `SV-B2-09`/`S-01` đã ghi nhận ở Task 1B: đăng ký xong không có toast/thông báo xác nhận nào)_
+
+---
+
+## Phiên P3 — Quan Anh
+
+| Mục | Giá trị |
+|---|---|
+| Liên hệ (đã che) | 0988****54 |
+| Thiết bị & trình duyệt | **Mobile** — iPhone 14 Plus, app MazeParticipate |
+| Task success | **Completed** |
+| Time on task | 2 phút 6 giây (126.29s) |
+| Bản ghi màn hình | https://youtu.be/w-VrYQdr4fM |
+
+### Dòng thời gian
+
+_(Transcript Maze ghi chú "Transcripts aren't created for clips shorter than 2 seconds" — không có đoạn nói nào đủ dài để tự động ghi lại. Không có nghĩa là phiên im lặng hoàn toàn, chỉ là không có clip nào ≥ 2 giây.)_
+
+### Trả lời câu hỏi mở
+
+| # | Chủ đề | Câu trả lời (nguyên văn) |
+|---|---|---|
+| Q1 | Clarity | Xem xác event đã đăng ký |
+| Q2 | Error recovery | **Không. Phải kiếm nút quay lại. Kéo lên đầu trang. Khó khăn** |
+| Q3 | Speed | Chậm hơn |
+| Q4 | Trust | Lúc nào cũng nghi ngờ |
+| Q5 | Tổng quát | Hiển thị UI dễ hiểu hơn. Bỏ bớt chi tiết ko cần thiết. Tập trung cái chính |
+
+### Quan sát của moderator
+
+> ⭐ **Finding quan trọng nhất của cả 5 phiên, cần ghi vào `04-findings-log.md`:** câu trả lời Q2 của P3 mô tả đúng việc **không tìm ra đường quay lại danh sách**, phải cuộn lên đầu trang. Điều này **mâu thuẫn trực tiếp** với kết quả Task 1B — checklist đã chấm `N-02` = **Passed** vì nút `Back to events` được xác nhận có tồn tại (`G-06-S2.png`). Đây là khoảng cách kinh điển giữa **kiểm tra bằng mắt (nút có tồn tại)** và **trải nghiệm thật (người dùng có tìm ra không)** — trên màn hình mobile (P3 dùng iPhone), nút có thể bị đẩy xuống dưới màn hình đầu tiên hoặc không đủ nổi bật để nhận ra ngay.
+
+_(TODO — bạn xem lại video P3, xác nhận trên mobile nút `Back to events` có nằm trong tầm nhìn đầu tiên không hay phải cuộn mới thấy)_
+
+---
+
+## Phiên P4 — Lê Đức Ngọc Bảo
+
+| Mục | Giá trị |
+|---|---|
+| Liên hệ (đã che) | ldnb****@clc.fitus.edu.vn |
+| Thiết bị & trình duyệt | Windows · Chrome 150 |
+| Task success | **Completed** |
+| Time on task | 1 phút 38 giây (98.26s) |
+| Bản ghi màn hình | https://youtu.be/xzQHMVQjX_E |
+
+### Dòng thời gian
+
+| Thời điểm | Lời nói (transcript tự động) | Phân loại | Ghi chú |
+|---|---|---|---|
+| 1:03 | "So" | — | Đoạn ngắn, giữa chừng câu nói bị cắt |
+| 2:15 – 2:24 | "Okay." / "Okay." / "Okay. Sound." | — | Các từ đệm rời rạc, không đủ ngữ cảnh để phân loại rõ |
+
+### Trả lời câu hỏi mở
+
+| # | Chủ đề | Câu trả lời (nguyên văn) |
+|---|---|---|
+| Q1 | Clarity | Không |
+| Q2 | Error recovery | Không |
+| Q3 | Speed | Nhanh hơn mong đợi |
+| Q4 | Trust | **Có. Nghi ngờ khi nút đăng kí bị disable** |
+| Q5 | Tổng quát | Cho thẳng nút đăng kí luôn rồi mới chọn vai trò thay vì bắt tick chọn |
+
+### Quan sát của moderator
+
+> ⭐ **Finding đáng chú ý thứ hai:** Q4 cho thấy nút `Register` ở trạng thái khoá (disabled, chưa tick vai trò) — hành vi này **đúng theo thiết kế và đã Passed ở `F-07`** trong Task 1B — nhưng vẫn khiến người dùng thật **nghi ngờ hệ thống bị lỗi**, không hiểu là do họ chưa thao tác đủ. Kỹ thuật đúng nhưng giao tiếp với người dùng chưa đủ rõ — nút bị khoá mà không có dòng chữ giải thích lý do ngay tại chỗ.
+>
+> Q5 còn đề xuất đảo ngược thứ tự thao tác (bấm Register trước, chọn vai trò sau) — đây là một ý kiến thiết kế, không phải bug, ghi lại làm tham khảo cho khuyến nghị.
+
+_(TODO — bạn tự bổ sung nhận xét khác nếu xem video thấy thêm gì)_
+
+---
+
+## Phiên P5 — Hoàng Vũ Gia Huy
+
+| Mục | Giá trị |
+|---|---|
+| Liên hệ (đã che) | giah****@gmail.com |
+| Thiết bị & trình duyệt | Windows · Brave 151 |
+| Task success | **Completed** |
+| Time on task | 4 phút 40 giây (280.37s) |
+| Bản ghi màn hình | https://youtu.be/k7Gr5r9RCI4 |
+
+### Dòng thời gian
+
+| Thời điểm | Lời nói (transcript tự động) | Phân loại | Ghi chú |
+|---|---|---|---|
+| 0:29 | "Hello?" | — | Trước khi bắt đầu task |
+| 0:33 | "Ủa, sao cái khẩu sắc khóa thông tin cá nhăn này" | hesitation | ⚠️ Transcript lỗi chính tả nặng (auto-caption), nhưng có vẻ đang thắc mắc về một icon khoá/riêng tư nào đó — đáng xem lại video để nghe rõ |
+| 1:43 | "ok ok" | — | |
+| 2:21, 2:37 | *(transcript ra tiếng Hindi, vô nghĩa)* | ⚠️ lỗi | Gần như chắc chắn là lỗi nhận diện giọng nói từ tạp âm, không phải participant nói tiếng Hindi — bỏ qua |
+| 6:25 | "This is fishing open some four days." | ⚠️ lỗi | Câu vô nghĩa về ngữ pháp, khả năng cao transcript lỗi — có thể họ đang đọc to "Registration open" và bị nhận sai |
+| 8:05 | "진짜..." *(tiếng Hàn: "thật á...")* | hesitation | ⚠️ Cũng nghi lỗi transcript, nhưng nếu đúng thì mang nghĩa ngạc nhiên/bối rối |
+
+⚠️ **Transcript của phiên này có chất lượng thấp** (nhiều đoạn ra ngôn ngữ khác vô nghĩa) — nên **ưu tiên tự nghe lại video** thay vì tin transcript cho phiên P5, chỉ dùng bảng trên làm gợi ý mốc thời gian để tua tới.
+
+### Trả lời câu hỏi mở
+
+| # | Chủ đề | Câu trả lời (nguyên văn) |
+|---|---|---|
+| Q1 | Clarity | Không |
+| Q2 | Error recovery | Dễ dàng, ít khó khăn |
+| Q3 | Speed | nhanh hơn |
+| Q4 | Trust | Không |
+| Q5 | Tổng quát | Mình thấy nó ổn |
+
+### Quan sát của moderator
+
+_(TODO — bạn tự xem lại đoạn 0:33 để nghe rõ câu thắc mắc về "khoá thông tin cá nhân" — nếu đúng vậy thì có thể liên quan tới một icon/thông báo bảo mật chưa từng được ghi nhận trong checklist, đáng thành finding mới)_
 
 ---
 

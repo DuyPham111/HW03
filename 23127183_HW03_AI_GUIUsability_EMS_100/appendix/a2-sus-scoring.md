@@ -44,44 +44,104 @@ Thang Likert **1 = Rất không đồng ý** → **5 = Rất đồng ý**. Đây
 
 ---
 
-## Dữ liệu thô — điểm Likert 1–5
+## ⚠️ Sai lệch kỹ thuật đã phát hiện — thang đo Maze là 1–10, không phải 1–5
+
+Khi build block `Opinion Scale` trong Maze, thang mặc định là **1–10** thay vì **1–5** chuẩn Brooke (1996). Phát hiện sau khi cả 5 phiên đã chạy xong, không sửa lại được.
+
+**Cách xử lý:** quy đổi `điểm_5 = ceil(điểm_10 / 2)` — tức 1–2→1, 3–4→2, 5–6→3, 7–8→4, 9–10→5. Giữ lại **cả điểm gốc 1–10 lẫn điểm quy đổi 1–5** trong bảng dưới để người chấm tự đối chiếu, không giấu số gốc.
+
+- [ ] Đã xác nhận với giảng viên/TA cách quy đổi này chấp nhận được, nếu môn có yêu cầu khác thì tính lại
+
+---
+
+## Dữ liệu thô — điểm gốc Maze (thang 1–10)
+
+**P1** = Phạm Vũ Ngọc Duyên · **P2** = Nguyễn Tấn Phước · **P3** = Quan Anh · **P4** = Lê Đức Ngọc Bảo · **P5** = Hoàng Vũ Gia Huy
 
 | Câu | P1 | P2 | P3 | P4 | P5 |
 |---|:--:|:--:|:--:|:--:|:--:|
-| Q1 (+) | | | | | |
-| Q2 (−) | | | | | |
-| Q3 (+) | | | | | |
-| Q4 (−) | | | | | |
-| Q5 (+) | | | | | |
-| Q6 (−) | | | | | |
-| Q7 (+) | | | | | |
-| Q8 (−) | | | | | |
-| Q9 (+) | | | | | |
-| Q10 (−) | | | | | |
+| Q1 (+) | 7 | 10 | 3 | 8 | 7 |
+| Q2 (−) | 4 | 10 | 7 | 8 | 2 |
+| Q3 (+) | 7 | 6 | 3 | 3 | 7 |
+| Q4 (−) | 2 | 10 | 8 | 9 | 7 |
+| Q5 (+) | 8 | 5 | 3 | 6 | 9 |
+| Q6 (−) | 4 | 5 | 7 | 9 | 7 |
+| Q7 (+) | 8 | 5 | 2 | 3 | 9 |
+| Q8 (−) | 2 | 6 | 7 | 9 | 2 |
+| Q9 (+) | 9 | 6 | 3 | 7 | 9 |
+| Q10 (−) | 2 | 7 | 3 | 8 | 2 |
 
-## Sau quy đổi (0–4 mỗi câu)
+## Quy đổi 1–5 (`ceil(điểm_10 / 2)`)
 
-| Câu | P1 | P2 | P3 | P4 | P5 | TB câu |
-|---|:--:|:--:|:--:|:--:|:--:|:--:|
-| Q1 | | | | | | |
-| … | | | | | | |
-| **Tổng (0–40)** | | | | | | |
-| **× 2.5 → SUS** | | | | | | |
+| Câu | P1 | P2 | P3 | P4 | P5 |
+|---|:--:|:--:|:--:|:--:|:--:|
+| Q1 (+) | 4 | 5 | 2 | 4 | 4 |
+| Q2 (−) | 2 | 5 | 4 | 4 | 1 |
+| Q3 (+) | 4 | 3 | 2 | 2 | 4 |
+| Q4 (−) | 1 | 5 | 4 | 5 | 4 |
+| Q5 (+) | 4 | 3 | 2 | 3 | 5 |
+| Q6 (−) | 2 | 3 | 4 | 5 | 4 |
+| Q7 (+) | 4 | 3 | 1 | 2 | 5 |
+| Q8 (−) | 1 | 3 | 4 | 5 | 1 |
+| Q9 (+) | 5 | 3 | 2 | 4 | 5 |
+| Q10 (−) | 1 | 4 | 2 | 4 | 1 |
+
+## Sau quy đổi thành điểm 0–4 mỗi câu (`+` = điểm−1 · `−` = 5−điểm)
+
+| Câu | P1 | P2 | P3 | P4 | P5 |
+|---|:--:|:--:|:--:|:--:|:--:|
+| Q1 | 3 | 4 | 1 | 3 | 3 |
+| Q2 | 3 | 0 | 1 | 1 | 4 |
+| Q3 | 3 | 2 | 1 | 1 | 3 |
+| Q4 | 4 | 0 | 1 | 0 | 1 |
+| Q5 | 3 | 2 | 1 | 2 | 4 |
+| Q6 | 3 | 2 | 1 | 0 | 1 |
+| Q7 | 3 | 2 | 0 | 1 | 4 |
+| Q8 | 4 | 2 | 1 | 0 | 4 |
+| Q9 | 4 | 2 | 1 | 3 | 4 |
+| Q10 | 4 | 1 | 3 | 1 | 4 |
+| **Tổng (0–40)** | **34** | **17** | **11** | **12** | **32** |
+| **× 2.5 → SUS** | **85** | **42.5** | **27.5** | **30** | **80** |
+
+> ✅ Đã tính lại bằng script (Perl), không tính tay — kết quả khớp 100% với bảng trên.
 
 ## Tổng hợp
 
 | Chỉ số | Giá trị |
 |---|---|
-| SUS trung bình | |
-| Trung vị | |
-| Độ lệch chuẩn | |
-| Thấp nhất / cao nhất | |
-| So với mốc 68 | |
+| SUS trung bình | **53.0** |
+| Trung vị | **42.5** |
+| Độ lệch chuẩn | **24.67** |
+| Thấp nhất / cao nhất | **27.5 (P3)** / **85 (P1)** |
+| So với mốc 68 | **Dưới trung bình** — 3/5 người (P2, P3, P4) dưới mốc 68 rõ rệt; chỉ P1 và P5 ở mức "tốt" (>80.3) |
 
-**Kiểm chứng bằng tay:** đã tự tính lại điểm của **P1** không dùng công cụ — kết quả: _(TODO)_ · khớp/không khớp với kết quả tính tự động: _(TODO)_
+> ⚠️ **Độ lệch chuẩn rất lớn (24.67)** — điểm không tập trung quanh giá trị trung bình mà tách thành **hai nhóm rõ rệt**: P1/P5 (80–85, "tốt") và P2/P3/P4 (27.5–42.5, "dưới trung bình rõ rệt"). Đây không phải nhiễu — khớp chặt với dữ liệu định tính: P1/P5 trả lời tích cực ở hầu hết câu hỏi mở ("dễ quay lại", "như mong đợi", "Mình thấy nó ổn"), còn P2/P3/P4 đều nêu cụ thể sự nghi ngờ/khó khăn (P3: khó tìm đường quay lại; P4: nghi ngờ vì nút Register bị khoá; P2: nghi ngờ sự kiện đã được đăng hay chưa). Nên bàn kỹ điểm này ở phần phân tích của `02-usability-report.md`, không chỉ báo cáo con số trung bình.
+
+**Kiểm chứng bằng tay:** đã tự tính lại điểm của **P3 (Quan Anh)** không dùng công cụ — kết quả: 27.5 · khớp với kết quả tính bằng script (lần tính tay đầu tiên của AI ra nhầm 30, phát hiện và sửa lại khi đối chiếu bằng script — xem đây là ví dụ cụ thể cho lý do R6 của CLAUDE.md yêu cầu đếm lại bằng lệnh thay vì tin trí nhớ).
 
 ## Phân tích theo từng câu
 
+Điểm trung bình mỗi câu (thang 0–4 sau quy đổi, cao = tốt) tính trên cả 5 người:
+
+| Câu | Điểm TB | Nội dung |
+|---|:--:|---|
+| Q1 | 2.8 | Muốn dùng thường xuyên |
+| Q2 | 1.8 | Phức tạp không cần thiết *(điểm cao = ít phức tạp)* |
+| Q3 | 2.0 | Dễ sử dụng |
+| Q4 | **1.2** | Cần hỗ trợ kỹ thuật *(điểm cao = ít cần hỗ trợ)* |
+| Q5 | 2.4 | Chức năng tích hợp ăn khớp |
+| Q6 | **1.4** | Thiếu nhất quán *(điểm cao = ít thiếu nhất quán)* |
+| Q7 | 2.0 | Dễ học nhanh |
+| Q8 | 2.2 | Rườm rà, khó thao tác *(điểm cao = ít rườm rà)* |
+| Q9 | 2.8 | Tự tin khi dùng |
+| Q10 | 2.6 | Cần học nhiều thứ trước *(điểm cao = ít cần học)* |
+
+**Ba câu bị chấm thấp nhất — đúng là ba câu mang nghĩa tiêu cực (Q2, Q4, Q6), tức người dùng đồng ý mạnh với các phát biểu xấu:**
+
 | Câu bị chấm thấp nhất | Điểm TB | Gợi ý vấn đề gì | Finding liên quan |
 |---|:--:|---|---|
-| _(TODO)_ | | | |
+| Q4 — cần hỗ trợ kỹ thuật mới dùng được | 1.2 | Người dùng cảm thấy phải mò mẫm, không tự tin thao tác một mình | `F-07` (nút Register khoá không rõ lý do), `N-10`/`S-14` (không chỉ dẫn bước tiếp theo), `SV-B2-09` |
+| Q6 — hệ thống thiếu nhất quán | 1.4 | Đúng như checklist đã bắt được ở nhiều chỗ khác nhau | `G-09` (Updating vs `-`), `S-15` (3 bộ từ vựng trạng thái), `G-03` (nút Save màu đỏ trùng nút phá huỷ), `CL-B1-03` (URL không phản ánh filter) |
+| Q2 — phức tạp không cần thiết | 1.8 | Khớp trực tiếp với lời P3: *"Phải kiếm nút quay lại. Kéo lên đầu trang. Khó khăn"* | `N-02`/`N-03` — xem ghi chú quan trọng ở `02-usability-report.md` §3: nút `Back to events` **có tồn tại** (checklist Passed) nhưng P3 vẫn không tìm ra — khoảng cách giữa "có nút" và "tìm được nút" |
+
+> **Phát hiện quan trọng nhất từ việc đối chiếu SUS với checklist:** cả 3 câu bị chấm thấp nhất đều **trỏ thẳng về những finding đã có sẵn từ Task 1B**, không phải vấn đề mới. Đây là bằng chứng hai chiều độc lập (kiểm tra khách quan của người làm bài + trải nghiệm chủ quan của người dùng thật) cùng chỉ về đúng những chỗ hỏng — làm tăng độ tin cậy cho toàn bộ báo cáo.
