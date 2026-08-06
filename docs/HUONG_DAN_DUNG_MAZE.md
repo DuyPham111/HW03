@@ -44,15 +44,20 @@ Bạn đang ở đúng màn hình này. Bên trái là danh sách block (Welcome
 
 > Placeholder: *"Give testers details to complete the mission"* — đây mới là chỗ chứa mục tiêu đầy đủ.
 
-⚠️ **Đổi ngày 06/08/2026 — bỏ QR khỏi kịch bản.** QR hoá ra là mã cố định theo tài khoản, không đổi theo có đăng ký hay không, nên dùng nó làm tiêu chí hoàn thành là phép đo yếu. Đổi tiêu chí sang **My Activities** — chỉ hiện đúng khi đăng ký thật sự thành công.
+⚠️ **Đổi ngày 06/08/2026 — hai việc cùng lúc.** (1) Bỏ QR khỏi kịch bản: QR hoá ra là mã cố định theo tài khoản, không đổi theo có đăng ký hay không, nên dùng nó làm tiêu chí hoàn thành là phép đo yếu. Đổi tiêu chí sang **My Activities** — chỉ hiện đúng khi đăng ký thật sự thành công. (2) Viết lại theo cấu trúc **vai trò → gạch đầu dòng yêu cầu → khối tài khoản**, tham khảo từ study Maze của một bạn cùng lớp (ảnh block "Cấu hình đăng ký và Vai trò sự kiện") — cấu trúc đó rõ ràng hơn bản văn xuôi cũ, và bản trước của tôi vô tình lộ luôn địa điểm cần tìm ("...trong hồ sơ của bạn"), nay đã bỏ.
 
 **Dán nguyên văn:**
 ```
-Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem lại đăng ký đó trong hồ sơ của bạn.
+Bạn là một người quen của khoa muốn tham dự một workshop sắp diễn ra. Đây là lần đầu bạn dùng hệ thống EMS. Hãy:
+
+• Tìm và đăng ký tham gia một workshop bạn muốn tham dự
+• Sau khi đăng ký xong, cho mình xem lại đăng ký đó
+
+Tài khoản: mình đã đăng nhập sẵn giúp bạn, không cần tạo hay nhập gì.
 ```
 
-⚠️ **Đừng thêm câu nào kiểu "bước 1 vào Events, bước 2 chọn sự kiện..."** — đề cấm tường minh việc chỉ đường từng bước, chỉ được nêu mục tiêu. Nhưng **được phép mô tả bối cảnh đầy đủ** (ai, muốn gì, vì sao) để participant không phải đoán — đây là điều học được từ luồng của bạn cùng lớp: nội dung càng chi tiết về *bối cảnh*, participant càng ít phải hỏi lại giữa chừng.
-🔴 **Không nhắc gì tới My Activities hay đường vào Profile.** Participant tự tìm đường xác nhận đăng ký ở đâu chính là dữ liệu quan trọng nhất của phiên (xem §1.1 trong `02-usability-report.md`) — lộ ra là mất luôn phép đo.
+⚠️ **Đừng thêm câu nào kiểu "bước 1 vào Events, bước 2 chọn sự kiện..."** — đề cấm tường minh việc chỉ đường từng bước, chỉ được nêu mục tiêu/yêu cầu. Bản của bạn cùng lớp làm đúng ranh giới này: liệt kê **yêu cầu cần đạt** (bật Waitlist, đặt Max Slots...) chứ không liệt kê **đường bấm** (không nói "vào menu X, bấm nút Y") — bản trên mô phỏng đúng ranh giới đó.
+🔴 **Không nhắc gì tới My Activities hay đường vào Profile.** Participant tự tìm đường xác nhận đăng ký ở đâu chính là dữ liệu quan trọng nhất của phiên (xem §1.1 trong `02-usability-report.md`) — lộ ra là mất luôn phép đo. Đây là lý do khối "Tài khoản" ở cuối bản trên **chỉ nói đã đăng nhập sẵn**, không nói gì về nơi xem kết quả — khác với bản của bạn cùng lớp, vì task của họ (admin) không có gì cần giấu, còn task của bạn thì có.
 
 ### Ô 3 — `Task link*` (bắt buộc, đang trống, đang báo lỗi đỏ)
 

@@ -11,7 +11,7 @@ description: >-
 
 ## Nguyên tắc
 
-- **Task scenario nêu MỤC TIÊU, không nêu các bước bấm.** Viết "đăng ký một workshop sắp diễn ra và cho tôi xem lại đăng ký đó trong hồ sơ của bạn" — không viết "bấm vào Events, chọn sự kiện, bấm Register". *(Đề dùng ví dụ "cho tôi xem mã QR check-in" — đã đổi sang tiêu chí My Activities vì QR trên EMS thật là mã cố định theo tài khoản, không xác nhận được đã đăng ký hay chưa; xem `02-usability-report.md` §1.1.)*
+- **Task scenario nêu MỤC TIÊU, không nêu các bước bấm.** Viết "đăng ký một workshop sắp diễn ra và cho tôi xem lại đăng ký đó" — không viết "bấm vào Events, chọn sự kiện, bấm Register", và **không nói địa điểm xem lại nằm ở đâu** (không nói "trong hồ sơ của bạn" — đó chính là thứ cần đo participant có tự tìm ra không). *(Đề dùng ví dụ "cho tôi xem mã QR check-in" — đã đổi sang tiêu chí My Activities vì QR trên EMS thật là mã cố định theo tài khoản, không xác nhận được đã đăng ký hay chưa; xem `02-usability-report.md` §1.1.)*
 - **Người tham gia phải là người THẬT, NGOÀI lớp.** TA có thể gọi ngẫu nhiên 2 người xác minh; giả mạo = 0 điểm Task 2.
 - **AI không thay được người dùng.** AI dùng để: soạn kịch bản, soạn phiếu, cấu trúc hoá ghi chú, tính điểm, gom nhóm pain point. AI **không** được dùng để bịa dữ liệu phiên.
 - **Quan sát trung lập.** Không gợi ý, không giải thích hộ, không bênh sản phẩm. Chỉ can thiệp khi người dùng bí hoàn toàn.

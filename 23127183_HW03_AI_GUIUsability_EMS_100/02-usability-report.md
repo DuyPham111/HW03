@@ -18,8 +18,14 @@
 
 **Mục tiêu giao cho người dùng (viết dưới dạng MỤC TIÊU, tuyệt đối không liệt kê từng bước bấm):**
 
-> **Bản chốt cho kịch bản B (06/08/2026):**
-> *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem lại đăng ký đó trong hồ sơ của bạn."*
+> **Bản chốt cho kịch bản B (06/08/2026)** — cấu trúc *vai trò → gạch đầu dòng yêu cầu → khối tài khoản*, tham khảo từ study Maze của một bạn cùng lớp:
+> *"Bạn là một người quen của khoa muốn tham dự một workshop sắp diễn ra. Đây là lần đầu bạn dùng hệ thống EMS. Hãy:*
+> - *Tìm và đăng ký tham gia một workshop bạn muốn tham dự*
+> - *Sau khi đăng ký xong, cho mình xem lại đăng ký đó*
+>
+> *Tài khoản: mình đã đăng nhập sẵn giúp bạn, không cần tạo hay nhập gì."*
+
+Nội dung y hệt được dán vào Maze — xem `docs/HUONG_DAN_DUNG_MAZE.md` Ô 1/Ô 2 và `evidence/task2/test-request.md` (bản dự phòng giấy).
 
 **Bối cảnh kể cho người dùng:** bạn nghe người quen nhắc tới một workshop của Khoa CNTT mà bạn muốn tham dự. Đây là lần đầu bạn dùng hệ thống EMS.
 

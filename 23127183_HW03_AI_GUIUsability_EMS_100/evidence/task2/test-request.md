@@ -31,9 +31,14 @@ Một người quen báo bạn có một buổi workshop học thuật ở Khoa 
 
 ## Nhiệm vụ
 
-> **Khoa sắp tổ chức một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem lại đăng ký đó trong hồ sơ của bạn.**
+> Bạn là một người quen của khoa muốn tham dự một workshop sắp diễn ra. Đây là lần đầu bạn dùng hệ thống EMS. Hãy:
+>
+> - Tìm và đăng ký tham gia một workshop bạn muốn tham dự
+> - Sau khi đăng ký xong, cho mình xem lại đăng ký đó
+>
+> Tài khoản: mình đã đăng nhập sẵn giúp bạn, không cần tạo hay nhập gì.
 
-Xong việc thì bạn báo mình một tiếng. Cứ thao tác tự nhiên như bạn vẫn dùng web hằng ngày.
+Xong việc thì bạn báo mình một tiếng. Cứ thao tác tự nhiên như bạn vẫn dùng web hằng ngày. *(Nội dung này giống hệt trong Maze — đọc miệng qua điện thoại nếu bạn không mở được link.)*
 
 > ⚠️ **Lưu ý cho người dẫn phiên (không đưa cho participant đọc):** đề bài phải nêu **mục tiêu**, tuyệt đối **không** liệt kê các bước bấm. Đặc biệt **không được gợi ý My Activities nằm ở đâu** — chính việc participant tự tìm đường xác nhận đăng ký ở đâu mới là dữ liệu cần thu (xem §1.1 trong `02-usability-report.md`). Nếu họ kẹt quá 2 phút thì mới gợi ý mức tối thiểu, và **ghi lại là đã can thiệp**.
 

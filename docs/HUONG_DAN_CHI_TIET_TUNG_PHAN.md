@@ -159,7 +159,7 @@ Chạy **toàn bộ** checklist chung lên **từng màn hình** trong 3 màn c�
 
 **Viết task scenario theo MỤC TIÊU, không phải từng bước bấm.**
 
-> ⚠️ **Sửa 06/08/2026:** *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem lại đăng ký đó trong hồ sơ của bạn."* — bản trước dùng QR, nhưng QR trên EMS thật là mã cố định theo tài khoản (không đổi theo có đăng ký hay không), nên không xác nhận được participant đã đăng ký đúng sự kiện. Chi tiết ở `02-usability-report.md` §1.1.
+> ⚠️ **Sửa 06/08/2026:** *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem lại đăng ký đó."* — bản trước dùng QR, nhưng QR trên EMS thật là mã cố định theo tài khoản (không đổi theo có đăng ký hay không), nên không xác nhận được participant đã đăng ký đúng sự kiện. Chi tiết ở `02-usability-report.md` §1.1.
 
 **Định nghĩa tiêu chí hoàn thành** (phải quan sát được từ bên ngoài):
 - **Completed** — đăng ký xong đúng sự kiện **và** tự tìm được đúng đăng ký đó trong **My Activities**
