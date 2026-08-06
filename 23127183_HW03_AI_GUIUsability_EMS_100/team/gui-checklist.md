@@ -160,5 +160,5 @@ Kết quả mong đợi: `G: 16 · F: 16 · N: 12 · S: 17` → tổng **61** ·
 - [ ] Mỗi IA đều có mục, không IA nào rỗng ✅
 - [ ] Mọi mục có mã nguồn heuristic ✅
 - [ ] Mọi mục có `AI` hoặc `RV` ✅
-- [ ] Số mục `RV` (14) khớp số dòng giải trình ở [`ai-prompts.md`](ai-prompts.md) §3
+- [ ] Số mục `RV` (23) khớp số dòng giải trình ở [`ai-prompts.md`](ai-prompts.md) §3
 - [ ] **Bạn đã tự đọc lại 61 mục** và sửa/thêm/bớt theo ý mình trước khi chốt v1.0
