@@ -22,10 +22,10 @@
 
 | Màn hình | Tổng item | Passed | Failed | N/A | Tỉ lệ pass |
 |---|:--:|:--:|:--:|:--:|:--:|
-| S1 — B1 Danh sách sự kiện | | | | | |
-| S2 — B2 Trang chi tiết sự kiện | | | | | |
-| S3 — B4 My Profile — QR Code + My Activities | | | | | |
-| **Tổng** | **61×3=183** | | | | |
+| S1 — B1 Danh sách sự kiện | 61 | 22 | 11 | 28 | 66.7% (22/33) |
+| S2 — B2 Trang chi tiết sự kiện | 61 | 22 | 16 | 23 | 57.9% (22/38) |
+| S3 — B4 My Profile — QR Code + My Activities | 61 | 25 | 11 | 25 | 69.4% (25/36) |
+| **Tổng** | **61×3=183** | **69** | **38** | **76** | **64.5% (69/107)** |
 
 > Tỉ lệ pass tính trên `Passed / (Passed + Failed)`, **không tính N/A vào mẫu số** — đúng quy ước ở `team/gui-checklist.md`.
 
@@ -80,7 +80,7 @@
 | N-11 | Danh sách dài có phân trang rõ ràng, dùng chung 1 kiểu | IA-03 | Passed | N/A | Passed | S1 = phân trang B1 cùng kiểu điều khiển với S3. S2 = N/A, trang chi tiết không có danh sách dài. S3 = đủ 4 điều khiển rõ ràng (`Rows per page` · `1-2 of 2 results` · `Go to page` · `‹ 1 ›`) | | [G-07-S3-2.png](evidence/task1b/G-07-S3-2.png) |
 | N-12 | Có đường vào tài liệu hướng dẫn, nội dung khớp giao diện đang chạy | IA-03 | Failed | Failed | Failed | `User guide` có trên header mọi trang nhưng chỉ có tiếng Việt dù UI đang EN, và không nói QR nằm ở đâu | S1/S2/S3: `= SV-UG-01` | [KS_UG_01.png](evidence/survey/KS_UG_01.png) |
 | S-01 | Hành động thay đổi dữ liệu có phản hồi tức thì, vị trí nhất quán | IA-04 | Passed | Failed | Passed | S1/S3 = các hành động khác (Save event, Cancel registration, Filters) có phản hồi tức thì bình thường. S2 = `SV-B2-09` — đăng ký xong không toast, không thông báo | S2: `= SV-B2-09` | [KS_B3_05_sau-submit.png](evidence/survey/KS_B3_05_sau-submit.png) |
-| S-02 | Toast phân biệt cả màu lẫn icon/chữ, đủ lâu để đọc | IA-04 | | | | | | |
+| S-02 | Toast phân biệt cả màu lẫn icon/chữ, đủ lâu để đọc | IA-04 | N/A | N/A | N/A | **Xác nhận: hệ thống không dùng toast ở bất kỳ đâu.** Rà lại toàn bộ 61 dòng đã chạy — không nơi nào có thông báo bật lên tạm thời rồi tự tắt; hệ thống chỉ dùng badge/banner thường trực (khớp với `SV-B2-09`: đăng ký xong không có toast). Không có toast nào tồn tại để chấm màu/icon/thời lượng | | |
 | S-03 | Hành động không hoàn tác có dialog nêu rõ hậu quả | IA-04 | N/A | Failed | N/A | S1/S3 = N/A, không có hành động không hoàn tác nào ở đây. S2 = `SV-B2-07` — dialog Cancel chỉ hỏi "are you sure", không nêu hậu quả | S2: `= SV-B2-07` | [KS_B2_cancel-02_dialog.png](evidence/survey/KS_B2_cancel-02_dialog.png) |
 | S-04 | Badge trạng thái có cả màu lẫn nhãn chữ, nhất quán mọi màn | IA-04 | Passed | Passed | Passed | Quan sát nhất quán qua nhiều ảnh: Upcoming/Ended/Pending (B1, B2) và Pending review/Ongoing (B4) đều có cả màu lẫn chữ, không màn nào chỉ dùng màu trơn | | [KS_B2_workshop-b-het-cho.png](evidence/survey/KS_B2_workshop-b-het-cho.png) |
 | S-05 | Khối đổi màu theo trạng thái phải kèm nhãn chữ giải thích | IA-04 | Passed | Passed | Passed | S1/S3 = các khối số liệu (Slot, Registered...) đều có nhãn chữ đi kèm. S2 = khối `Slot available` đổi màu (xanh→hồng) LUÔN kèm nhãn chữ "Slot available" + số cụ thể ("Student: 0"), không chỉ đổi màu trơn | | [G-09-S2.png](evidence/task1b/G-09-S2.png) |

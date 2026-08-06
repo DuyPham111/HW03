@@ -108,16 +108,16 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 | — IA-04 Feedback / state (`S-`) | 17 |
 | Số item do AI sinh | 38 |
 | Số item do người bổ sung (có giải thích vì sao AI sót) | **23** |
-| Số item đã chạy (= 61 × 3 màn) | _(TODO)_ / 183 |
-| Passed | |
-| Failed | |
+| Số item đã chạy (= 61 × 3 màn) | **183** / 183 ✅ |
+| Passed | **69** |
+| Failed | **38** |
 
-| Màn hình | Items chạy | Passed | Failed | Bug tạo ra |
-|---|:--:|:--:|:--:|:--:|
-| B1 Danh sách sự kiện | | | | |
-| B2 Trang chi tiết sự kiện | | | | |
-| B4 My Profile — QR Code + My Activities | | | | |
-| **Tổng** | | | | |
+| Màn hình | Items chạy | Passed | Failed | N/A | Bug tạo ra (CL-) |
+|---|:--:|:--:|:--:|:--:|:--:|
+| B1 Danh sách sự kiện | 61 | 22 | 11 | 28 | 4 |
+| B2 Trang chi tiết sự kiện | 61 | 22 | 16 | 23 | 3 |
+| B4 My Profile — QR Code + My Activities | 61 | 25 | 11 | 25 | 4 |
+| **Tổng** | **183** | **69** | **38** | **76** | **11** |
 
 ### 4.2 Usability Testing (Task 2)
 
