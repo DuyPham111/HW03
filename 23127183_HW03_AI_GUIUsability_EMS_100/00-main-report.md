@@ -90,15 +90,15 @@ Hệ quả: B2 có **hai nhánh phải kiểm riêng** — công khai và không
 
 **Nhóm 10.** 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản được đôi nhưng hai người phải chọn **bộ màn hình rời nhau**. Nhóm chốt đôi ở kịch bản **A**.
 
-| Thành viên | MSSV | Kịch bản | Màn hình | Trùng với tôi? |
-|---|---|---|---|:--:|
-| Phạm Vũ Ngọc Duy | 23127183 | B (registration core) | B1 · B2 · B4 | — |
-| Huỳnh Lê Khương Duy | 23127176 | D | _(TODO — 3 màn cụ thể trong D1–D4)_ | ❌ |
-| Phạm Lê Thái Bảo | 23127159 | A | A1 · A2 · A3 | ❌ |
-| Phạm Chí Bảo Ninh | 23127446 | C | _(TODO — 3 màn cụ thể trong C1–C4)_ | ❌ |
-| Chu Quốc Anh Minh | 23127531 | A | A3 · A4 · A5 | ❌ |
+| Thành viên | MSSV | Kịch bản |
+|---|---|---|
+| Phạm Vũ Ngọc Duy | 23127183 | B (registration core) |
+| Huỳnh Lê Khương Duy | 23127176 | D |
+| Phạm Lê Thái Bảo | 23127159 | A |
+| Phạm Chí Bảo Ninh | 23127446 | C |
+| Chu Quốc Anh Minh | 23127531 | A |
 
-> ⚠️ **Thái Bảo và Anh Minh đang trùng ở A3** — vi phạm luật "bộ màn hình rời nhau" của đề nếu đúng như số liệu này. Cần một trong hai đổi A3 sang màn khác (đề xuất Anh Minh đổi A3 → Dashboard KPI) trước khi nộp. Xem chi tiết ở `README.md` §2.
+> Kịch bản A được đôi (Thái Bảo, Anh Minh) — chi tiết bộ màn hình từng người và cảnh báo trùng A3 xem ở `README.md` §2.
 
 ---
 

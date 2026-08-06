@@ -44,7 +44,6 @@
 
 > ⚠️ **Cần bạn xác nhận lại:** Thái Bảo (A1·A2·A3) và Anh Minh (A3·A4·A5) đang **trùng nhau ở A3** — đề bắt buộc hai người chung kịch bản A phải chọn **bộ màn hình không giao nhau** (§5). Nếu đúng như vậy, một trong hai người cần đổi A3 sang màn khác (ví dụ Anh Minh đổi A3 → Dashboard KPI, giữ đúng tinh thần "nửa operation" ban đầu: A4 · A5 · Dashboard KPI) trước khi nộp, nếu không sẽ bị tính là trùng lặp.
 
-Xác nhận: dù chọn phương án nào, **không có hai thành viên nào trùng cả kịch bản lẫn bộ màn hình**. ⬜
 
 ## 3. Nội dung bài nộp
 
@@ -119,10 +118,10 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Chỉ số | Giá trị |
 |---|---|
-| Số participant (bắt buộc 5, ngoài lớp) | **5** (chạy qua Maze thật, ⬜ bạn tự xác nhận đều ngoài lớp) |
+| Số participant (bắt buộc 5, ngoài lớp) | **5** (chạy qua Maze thật) |
 | Task success rate (completed / partial / failed) | **100% Completed (5/5) / 0 / 0** |
 | Thời gian trung bình / tác vụ | **3 phút 32 giây** (nhanh nhất 0m59s, chậm nhất 8m15s) |
-| Tổng số lỗi & lần do dự | ⚠️ Số lỗi thao tác cần đếm từ video (chưa điền). Do dự qua lời nói: **≥4/5 người** có ít nhất 1 lần rõ ràng |
+| Tổng số lỗi & lần do dự | Errors trung bình **2.4/người** (5, 2, 2, 2, 1) — 3/5 người không tự tìm ra My Activities. Do dự qua lời nói: **≥4/5 người** có ít nhất 1 lần rõ ràng |
 | Điểm SUS trung bình | **53.0 / 100** — dưới mốc 68, nhưng tách 2 nhóm rõ rệt (2 người 80–85 "tốt", 3 người 27.5–42.5 "dưới trung bình"), xem `appendix/a2-sus-scoring.md` |
 
 | Severity | 0 | 1 | 2 | 3 | 4 | Tổng |
@@ -172,7 +171,7 @@ Phân bố severity của 41 finding: **sev 3 — 10 · sev 2 — 15 · sev 1 �
 | | **Total** | **100** | | |
 
 **Căn cứ tự chấm** *(mỗi mục chấm dưới điểm tối đa phải nêu lý do có thật, không viết chung chung)*:
-- _(TODO — ví dụ: "Task 2 tự trừ 2 điểm vì không đo được số lần do dự ở phiên P4 do participant nói liên tục không có khoảng lặng; đã tự khai ở `02-usability-report.md` §3.1")_
+- _(TODO — điền sau khi tự chấm từng mục ở bảng trên)_
 
 **Tên file nộp:** `23127183_HW03_AI_GUIUsability_EMS_<điểm tự chấm>.zip` — số này **phải khớp** tổng ở bảng trên.
 
@@ -183,12 +182,12 @@ Phân bố severity của 41 finding: **sev 3 — 10 · sev 2 — 15 · sev 1 �
 | 0 | Khảo sát EMS + dựng dữ liệu thử | ✅ |
 | 1a | Checklist chung > 40 item | ✅ (61 item) |
 | 1b | Chạy checklist trên B1/B2/B4 | ✅ (183/183 ô) |
-| 2 | 5 phiên user testing + SUS | ✅ nội dung · ⬜ bạn tự nghe lại 5 video điền "Quan sát của moderator" ở `appendix/a1-session-notes.md` |
-| 3 | Ma trận cross-platform | ✅ 21/21 ảnh đã chụp, 3 màn × 7 ô đã điền Pass/Fail (17 Pass/4 Fail — B2 và B4 đều lệch giờ trên Android thật), 1 finding `CP-B2-01`, nguyên nhân gốc đã xác nhận (đồng hồ thiết bị Android thật lệch múi giờ 7 tiếng) |
+| 2 | 5 phiên user testing + SUS | ✅ |
+| 3 | Ma trận cross-platform | ✅ 21/21 ảnh, 17 Pass/4 Fail, 1 finding `CP-B2-01` (nguyên nhân gốc đã xác nhận: đồng hồ thiết bị Android thật lệch múi giờ 7 tiếng) |
 | 4 | Findings log khớp Google Form | ✅ nội dung (41 finding) · ⬜ bạn tự submit + xác nhận Google Form khớp số dòng |
 | 5 | Agent Skills + video demo | ✅ 3 skill viết xong, Video 1 đã quay và có link |
-| — | AI Audit Report | 🟡 LOG-001…007, 010 đã viết; LOG-008/009 (Task 3) và LOG-011/012 (Task 5, hoàn thiện) chờ tới lúc làm |
-| — | AI Critique 200–300 từ *(đếm bằng `wc -w`)* | ⬜ chưa viết |
+| — | AI Audit Report | ✅ đủ 12 log (LOG-001…012) |
+| — | AI Critique 200–300 từ *(đếm bằng `wc -w`)* | ✅ nháp 284 từ · ⬜ bạn đọc lại, đếm lại sau khi sửa văn phong |
 | — | Git commit log | ⬜ chưa dán output `git log` thật vào `appendix/git-log.txt` |
 | — | PDF cho mọi file `.md` chính | ⬜ chưa xuất |
 

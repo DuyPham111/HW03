@@ -54,10 +54,6 @@
 | Q4 | Trust | không |
 | Q5 | Tổng quát | ô hiển thị nằm ngang, ô hiển thị hiện tại quá to, 2 ô đã chiếm hết màn hình |
 
-### Quan sát của moderator
-
-_(TODO — bạn tự xem lại video, ghi nhận xét: câu trả lời Q5 nói về "2 ô chiếm hết màn hình" — cần xác định đang nói tới khối nào trên B2, ví dụ khối Event date/Registration period/Check-in period hay khối Slot available/Location)_
-
 ---
 
 ## Phiên P2 — Nguyễn Tấn Phước
@@ -90,10 +86,6 @@ _(TODO — bạn tự xem lại video, ghi nhận xét: câu trả lời Q5 nói
 | Q4 | Trust | Tôi nghi ngờ sự kiện đã được đưa lên chưa |
 | Q5 | Tổng quát | Có checkin |
 
-### Quan sát của moderator
-
-_(TODO — bạn tự xem lại video. Đáng chú ý: Q4 "nghi ngờ sự kiện đã được đưa lên chưa" — khớp trực tiếp với `SV-B2-09`/`S-01` đã ghi nhận ở Task 1B: đăng ký xong không có toast/thông báo xác nhận nào)_
-
 ---
 
 ## Phiên P3 — Quan Anh
@@ -123,8 +115,6 @@ _(Transcript Maze ghi chú "Transcripts aren't created for clips shorter than 2 
 ### Quan sát của moderator
 
 > ⭐ **Finding quan trọng nhất của cả 5 phiên, cần ghi vào `04-findings-log.md`:** câu trả lời Q2 của P3 mô tả đúng việc **không tìm ra đường quay lại danh sách**, phải cuộn lên đầu trang. Điều này **mâu thuẫn trực tiếp** với kết quả Task 1B — checklist đã chấm `N-02` = **Passed** vì nút `Back to events` được xác nhận có tồn tại (`G-06-S2.png`). Đây là khoảng cách kinh điển giữa **kiểm tra bằng mắt (nút có tồn tại)** và **trải nghiệm thật (người dùng có tìm ra không)** — trên màn hình mobile (P3 dùng iPhone), nút có thể bị đẩy xuống dưới màn hình đầu tiên hoặc không đủ nổi bật để nhận ra ngay.
-
-_(TODO — bạn xem lại video P3, xác nhận trên mobile nút `Back to events` có nằm trong tầm nhìn đầu tiên không hay phải cuộn mới thấy)_
 
 ---
 
@@ -161,8 +151,6 @@ _(TODO — bạn xem lại video P3, xác nhận trên mobile nút `Back to even
 >
 > Q5 còn đề xuất đảo ngược thứ tự thao tác (bấm Register trước, chọn vai trò sau) — đây là một ý kiến thiết kế, không phải bug, ghi lại làm tham khảo cho khuyến nghị.
 
-_(TODO — bạn tự bổ sung nhận xét khác nếu xem video thấy thêm gì)_
-
 ---
 
 ## Phiên P5 — Hoàng Vũ Gia Huy
@@ -198,7 +186,4 @@ _(TODO — bạn tự bổ sung nhận xét khác nếu xem video thấy thêm g
 | Q4 | Trust | Không |
 | Q5 | Tổng quát | Mình thấy nó ổn |
 
-### Quan sát của moderator
-
-_(TODO — bạn tự xem lại đoạn 0:33 để nghe rõ câu thắc mắc về "khoá thông tin cá nhân" — nếu đúng vậy thì có thể liên quan tới một icon/thông báo bảo mật chưa từng được ghi nhận trong checklist, đáng thành finding mới)_
 

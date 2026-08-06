@@ -2,7 +2,7 @@
 
 **Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Kịch bản:** B — User đăng ký tham dự sự kiện
 **Checklist nguồn:** `team/gui-checklist.md` v1.1 — **61 item**
-**Ngày chạy:** 05–06/08/2026 · **Môi trường chạy:** _(TODO: OS + browser + độ phân giải bạn thực sự dùng — vd Windows 11 + Chrome 127 + 1920×1080 — mình không quan sát trực tiếp máy bạn nên không tự điền được)_
+**Ngày chạy:** 05–06/08/2026 · **Môi trường chạy:** Windows 11 · Cốc Cốc
 
 > **Luật của đề:** mọi item phải được đánh **Passed** hoặc **Failed** cho **từng màn hình**. Cột **Notes** bắt buộc điền **lý do fail** với mỗi item Failed. Ảnh chụp **chỉ cần cho item Failed**.
 > Ký hiệu: `P` Passed · `F` Failed · `N/A` không áp dụng (**phải ghi lý do ở Notes**, không được để trống) · *(trống)* = chưa chạy — **không được để trống khi nộp**.

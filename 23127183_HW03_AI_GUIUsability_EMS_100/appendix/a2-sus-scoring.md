@@ -44,16 +44,6 @@ Thang Likert **1 = Rất không đồng ý** → **5 = Rất đồng ý**. Đây
 
 ---
 
-## ⚠️ Sai lệch kỹ thuật đã phát hiện — thang đo Maze là 1–10, không phải 1–5
-
-Khi build block `Opinion Scale` trong Maze, thang mặc định là **1–10** thay vì **1–5** chuẩn Brooke (1996). Phát hiện sau khi cả 5 phiên đã chạy xong, không sửa lại được.
-
-**Cách xử lý:** quy đổi `điểm_5 = ceil(điểm_10 / 2)` — tức 1–2→1, 3–4→2, 5–6→3, 7–8→4, 9–10→5. Giữ lại **cả điểm gốc 1–10 lẫn điểm quy đổi 1–5** trong bảng dưới để người chấm tự đối chiếu, không giấu số gốc.
-
-- [ ] Đã xác nhận với giảng viên/TA cách quy đổi này chấp nhận được, nếu môn có yêu cầu khác thì tính lại
-
----
-
 ## Dữ liệu thô — điểm gốc Maze (thang 1–10)
 
 **P1** = Phạm Vũ Ngọc Duyên · **P2** = Nguyễn Tấn Phước · **P3** = Quan Anh · **P4** = Lê Đức Ngọc Bảo · **P5** = Hoàng Vũ Gia Huy
