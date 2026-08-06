@@ -40,8 +40,8 @@
 | G-03 | Màu đúng ngữ nghĩa; đỏ chỉ dành cho lỗi/phá huỷ | IA-01 | | | | | | |
 | G-04 | Không có thanh cuộn ngang ngoài ý muốn ≥1280px | IA-01 | | | | | | |
 | G-05 | Ảnh giữ đúng tỉ lệ khung, không méo/cắt mất nội dung | IA-01 | | | | | | |
-| G-06 | Ảnh lỗi có khối giữ chỗ có ý nghĩa, không ô xám trơn | IA-01 | | | | 🔎 khớp `SV-B1-04` (B1) | | |
-| G-07 | Empty state nêu lý do + gợi ý hành động tiếp theo | IA-01 | | | | 🔎 khớp `SV-B1-02` (B1) | | |
+| G-06 | Ảnh lỗi có khối giữ chỗ có ý nghĩa, không ô xám trơn | IA-01 | Failed | Failed | | S1 = `SV-B1-04` (ô xám trơn, không chữ)<br>S2 = quan sát mới trên banner sự kiện `23127326_UT_510_15:36` — chỉ có icon ảnh chung chung, không nhãn chữ | S1: `SV-B1-04`<br>S2: `CL-B2-01` | S1: [KS_B1_the-su-kien.png](evidence/survey/KS_B1_the-su-kien.png)<br>S2: [G-06-S2.png](evidence/task1b/G-06-S2.png) |
+| G-07 | Empty state nêu lý do + gợi ý hành động tiếp theo | IA-01 | ⚠️ chờ xác nhận | N/A | ⚠️ chờ retest | S1: đã nêu lý do ("There are no events matching your filters"), có icon `Filters 3` kèm 1 icon nhỏ cạnh đó **chưa rõ có phải nút xoá bộ lọc không** — bạn bấm thử xem có xoá filter không rồi báo lại, khi đó tôi chốt Passed/Failed và sửa `SV-B1-02` nếu cần.<br>S2: không có tính năng filter trên trang chi tiết sự kiện — N/A hợp lý.<br>S3: **không kiểm chứng được lúc này** — bộ lọc `Start Date Range` không hoạt động (`CL-B4-01`) nên không bao giờ ra kết quả rỗng thật để đánh giá UI của empty state. Thử lại bằng ô `Search activities` với từ khoá vô nghĩa (thay vì lọc ngày) để ép ra được empty state thật, rồi báo tôi. | | S1: [G-07-S1.png](evidence/task1b/G-07-S1.png)<br>S3: [G-07-S3.png](evidence/task1b/G-07-S3.png) |
 | G-08 | Loading có skeleton/spinner, bố cục không nhảy khi data về | IA-01 | | | | | | |
 | G-09 | Giá trị rỗng dùng cùng 1 ký hiệu thống nhất | IA-01 | | | | 🔎 quan sát O3 (Location "-" trên B2), chưa có SV-ID riêng | | |
 | G-10 | Nhãn dùng ngôn ngữ người dùng, không phơi mã định danh nội bộ | IA-01 | | | | 🔎 khớp `SV-B1-03` (B1+B2) | | |
@@ -72,7 +72,7 @@
 | N-03 | Back trình duyệt giữ nguyên bộ lọc/trang/vị trí cuộn | IA-03 | | | | | | |
 | N-04 | Sau đăng nhập quay lại đúng trang vừa yêu cầu, không về home | IA-03 | | | | | | |
 | N-05 | URL phản ánh trạng thái (tab/lọc/trang) để share/reload đúng | IA-03 | | | | | | |
-| N-06 | Đổi tab/lọc tải đúng dữ liệu, giữ trạng thái khi quay lại | IA-03 | | | | | | |
+| N-06 | Đổi tab/lọc tải đúng dữ liệu, giữ trạng thái khi quay lại | IA-03 | | | Failed | S3 = `CL-B4-01` — lọc `Start Date Range` không thu hẹp kết quả, hoạt động ngoài khoảng ngày vẫn hiện | `CL-B4-01` | [G-07-S3.png](evidence/task1b/G-07-S3.png) |
 | (?) N-07 | Sidebar thu/mở được, không che nội dung chính | IA-03 | | | | (?) dự đoán N/A cả 3 màn — phía student dùng header, không có sidebar (sidebar chỉ thấy ở admin-1.png) | | |
 | (?) N-08 | Kéo-thả có tay cầm rõ, phản hồi thị giác, lưu đúng thứ tự | IA-03 | | | | (?) dự đoán N/A cả 3 màn — kéo-thả chỉ có ở admin | | |
 | N-09 | Không có liên kết hỏng, không rơi 404 | IA-03 | | | | | | |
@@ -105,7 +105,43 @@
 
 Mỗi item Failed → 1 block. Đây là nguồn trực tiếp để tạo bug entry trong `04-findings-log.md`. Với item đã trùng một finding `SV-` có sẵn — **không tạo Bug-ID `CL-` mới**, ghi thẳng `= SV-xxx` ở Notes của bảng trên và **không submit Google Form lần hai** (xem cảnh báo chống đếm trùng ở `04-findings-log.md`).
 
-### [F-01] `G-XX / F-XX / N-XX / S-XX` — _(tên item)_ — Màn hình: _(TODO)_
+### [F-01] `G-06` — Ảnh lỗi không có khối giữ chỗ có ý nghĩa — Màn hình: S2 (B2)
+
+- **Kết quả:** ❌ Failed
+- **Kỳ vọng (theo item checklist):** Ảnh không tải được phải hiện khối giữ chỗ có ý nghĩa (tên viết tắt, icon kèm nhãn chữ), không để ô xám trơn/icon chung chung không giải thích.
+- **Thực tế quan sát:** Banner đầu trang chi tiết sự kiện `23127326_UT_510_15:36` (sự kiện của sinh viên khác, không có ảnh upload) chỉ hiện một icon hình ảnh generic ở giữa khung viền nét đứt, không có chữ giải thích nào đi kèm.
+- **Các bước tái hiện:**
+  1. Mở `https://prod-dev.ems-fitus.cloud/events/114`
+  2. Nhìn banner ngay dưới nút `Back to events`
+- **Heuristic bị vi phạm:** N1 (visibility of system status) · N8 (aesthetic and minimalist — nhưng thiếu thông tin cần thiết)
+- **Severity:** 1 — cùng mức với `SV-B1-04`, chỉ ảnh hưởng thẩm mỹ/rõ ràng, không chặn tác vụ
+- **Bug-ID trong log:** `CL-B2-01`
+- **Ảnh:** `evidence/task1b/G-06-S2.png`
+
+![CL-B2-01](evidence/task1b/G-06-S2.png)
+
+> Ghi chú thêm: ảnh này cũng tái xác nhận `SV-B1-03` — tiêu đề chính vẫn là chuỗi mã máy `23127326_UT_510_15:36`, tên thật `Workshop Kỹ năng nghiên cứu 2026` bị đẩy xuống dòng phụ. Không tạo entry riêng vì đã trùng `SV-B1-03`.
+
+### [F-02] `N-06` (đối chiếu chéo với `G-07`) — Bộ lọc `Start Date Range` không lọc dữ liệu thật — Màn hình: S3 (B4)
+
+- **Kết quả:** ❌ Failed
+- **Kỳ vọng (theo item checklist):** Đổi bộ lọc phải tải đúng dữ liệu tương ứng với điều kiện đã chọn.
+- **Thực tế quan sát:** Đặt `Start Date Range` = `25/07/2026` → `29/07/2026` trên khối Filters của My Activities. Danh sách vẫn hiện đủ 2 thẻ hoạt động (`Workshop A` ngày sự kiện `06/08/2026`, `Workshop B` ngày sự kiện `05/08/2026`) — cả hai đều nằm **hoàn toàn ngoài** khoảng đã lọc. Bộ lọc không thu hẹp kết quả chút nào.
+- **Các bước tái hiện:**
+  1. Đăng nhập, vào My Profile → tab My Activities
+  2. Bấm `Filters`
+  3. Nhập `Start Date Range` = `25/07/2026` đến `29/07/2026`
+  4. Quan sát danh sách bên dưới — vẫn hiện đủ các thẻ không khớp khoảng ngày
+- **Heuristic bị vi phạm:** N1 (visibility of system status — kết quả không phản ánh đúng điều kiện lọc) · N4 (consistency)
+- **Severity:** 3 (đề xuất) — người dùng không thể tin vào kết quả lọc, nhưng không chặn hẳn tác vụ chính (vẫn xem được toàn bộ My Activities). **Bạn tự duyệt lại severity này.**
+- **Bug-ID trong log:** `CL-B4-01`
+- **Ảnh:** `evidence/task1b/G-07-S3.png`
+
+![CL-B4-01](evidence/task1b/G-07-S3.png)
+
+> Hệ quả phụ: vì bộ lọc không bao giờ trả về 0 kết quả, không thể quan sát được trạng thái rỗng thật ở S3 để chấm `G-07`. Xem ghi chú ở dòng `G-07` trong bảng — cần thử lại bằng ô Search với từ khoá vô nghĩa để ép ra empty state thật.
+
+### [F-03] `G-XX / F-XX / N-XX / S-XX` — _(tên item)_ — Màn hình: _(TODO)_
 
 - **Kết quả:** ❌ Failed
 - **Kỳ vọng (theo item checklist):** _(TODO)_
@@ -115,12 +151,8 @@ Mỗi item Failed → 1 block. Đây là nguồn trực tiếp để tạo bug e
   2. _(TODO)_
 - **Heuristic bị vi phạm:** _(TODO — N?/P?/S?)_
 - **Severity:** _(TODO: 0–4)_
-- **Bug-ID trong log:** `CL-B2-01` *(chỉ tạo mới nếu KHÔNG trùng finding `SV-` nào có sẵn)*
-- **Ảnh:** `evidence/task1b/CL-B2-01.png` _(chụp lúc _(TODO giờ)_)_
-
-![CL-B2-01](evidence/task1b/CL-B2-01.png)
-
-### [F-02] …
+- **Bug-ID trong log:** `CL-B?-0?` *(chỉ tạo mới nếu KHÔNG trùng finding `SV-` nào có sẵn)*
+- **Ảnh:** `evidence/task1b/CL-B?-0?.png`
 
 ---
 
