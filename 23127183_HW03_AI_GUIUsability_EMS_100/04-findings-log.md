@@ -73,6 +73,7 @@ Dạng `<NGUỒN>-<MÀN HÌNH>-<SỐ>` — nhìn ID là biết ngay lỗi tìm r
 | `CL-B1-03` | Screen B1 + B4 — Bộ lọc | Bug | **URL không phản ánh bộ lọc/tìm kiếm đang áp dụng ở bất kỳ đâu.** Ở B1, áp 4 filter (ngày, campus, registration) — URL vẫn đứng yên `prod-dev.ems-fitus.cloud/dashboard`, không có query string nào. Ở B4 (My Activities), áp filter khoảng ngày — URL vẫn là `prod-dev.ems-fitus.cloud/profile`. Hệ quả: **không share/bookmark được kết quả đã lọc**, reload trang là mất hết bộ lọc | 1. B1: mở Filters, chọn nhiều điều kiện — nhìn thanh địa chỉ không đổi<br>2. B4: mở Filters, chọn khoảng ngày — nhìn thanh địa chỉ không đổi<br>**Heuristic:** N4 consistency · S7 internal locus of control | **2** | Đưa trạng thái filter vào query string (`?campus=...&from=...`) ở cả hai trang, để URL luôn phản ánh đúng kết quả đang xem | [N-05-S1.png](evidence/task1b/N-05-S1.png) · [N-05-S3.png](evidence/task1b/N-05-S3.png) | |
 | `CL-B2-02` | Toàn hệ thống — hiển thị ngày giờ | Usability | **Không có múi giờ hiển thị ở bất kỳ đâu trong hệ thống.** Mọi ngày giờ (Event date, Registration period, Check-in period, Registered at...) đều theo đúng một định dạng `dd/MM/yyyy HH:mm` (điểm cộng, nhất quán) nhưng không nơi nào ghi rõ đây là giờ theo múi nào (vd `GMT+7`) | 1. Rà qua các khối ngày giờ ở B1, B2, B4<br>2. Không thấy ký hiệu múi giờ ở đâu cả<br>**Heuristic:** N2 match real world | **1** | Ghi chú múi giờ ít nhất một lần ở gần các mốc hạn chót quan trọng (Registration deadline, Check-in period), hoặc ghi chú chung "Tất cả thời gian theo giờ Việt Nam (GMT+7)" ở footer | | |
 | `CL-B4-03` | Screen B4 — My Profile, menu chính | Usability | Khi đứng ở trang My Profile, **không có mục nào trên menu chính (Events/Calendar/Saved Events/User guide) được tô nổi** để chỉ vị trí hiện tại — vì bản thân Profile không có mục đại diện trên menu chính, chỉ vào được qua avatar | 1. Vào My Profile<br>2. Nhìn menu chính trên header — không mục nào có gạch chân/tô đậm<br>**Heuristic:** N1 visibility of system status | **1** | Thêm chỉ báo trạng thái hiện tại cho avatar/menu người dùng khi đang ở các trang thuộc nhóm tài khoản (Profile, Change Password...) | [N-01-S3.png](evidence/task1b/N-01-S3.png) | |
+| `CL-B2-03` | Screen B2 — Luồng đăng nhập bắt buộc | Bug | Mở deep link một sự kiện khi chưa đăng nhập bị chặn (đúng, xem `SV-B2-05`/màn login), nhưng **sau khi đăng nhập xong, hệ thống KHÔNG đưa người dùng quay lại đúng sự kiện họ vừa yêu cầu — bị đẩy về trang chủ**. Người dùng phải tự tìm lại đúng sự kiện đó lần nữa từ đầu | 1. Mở cửa sổ ẩn danh, dán link một sự kiện không công khai<br>2. Bị chặn, hiện màn đăng nhập<br>3. Đăng nhập xong<br>4. Kết quả: về trang chủ, không phải đúng sự kiện vừa mở<br>**Heuristic:** N3 (user control and freedom) — mất công sức người dùng vừa bỏ ra để tìm sự kiện đó | **2** | Lưu URL đích trước khi chuyển hướng sang màn đăng nhập (redirect param), điều hướng lại đúng URL đó ngay sau khi xác thực thành công | | |
 | `CL-B2-01` | Screen B2 — Trang chi tiết sự kiện (banner) | Usability | Banner ảnh của sự kiện `23127326_UT_510_15:36` (do sinh viên khác tạo) không tải được, chỉ hiện **icon ảnh chung chung** ở giữa khung, không kèm chữ giải thích — cùng lớp lỗi với `SV-B1-04` (G-06) nhưng đây là **quan sát mới trên B2**, biểu hiện khác (icon thay vì ô xám trơn). Sự kiện này cũng tái xác nhận `SV-B1-03`: trường Title vẫn là chuỗi mã máy, phần Description dễ đọc (`Workshop Kỹ năng nghiên cứu 2026`) bị đẩy xuống dòng phụ | 1. Mở B1, tìm sự kiện chưa có banner (`23127326_UT_510_15:36`)<br>2. Bấm vào để mở B2<br>3. Quan sát banner đầu trang<br>**Heuristic:** N1 · N8 | **1** | Cùng hướng sửa với `SV-B1-04`: thay icon chung chung bằng khối giữ chỗ có nhãn chữ (tên viết tắt sự kiện hoặc "No banner uploaded"), áp dụng đồng bộ cho mọi nơi hiển thị ảnh sự kiện | [G-06-S2.png](evidence/task1b/G-06-S2.png) | |
 | `CL-B4-01` | Screen B4 — My Activities, khối Filters | Bug | Lọc theo **`Start Date Range` không thực sự lọc dữ liệu**. Đặt khoảng `25/07/2026 – 29/07/2026` — không trùng ngày sự kiện thật của bất kỳ hoạt động nào — nhưng danh sách vẫn hiện đủ 2 thẻ hoạt động có ngày sự kiện nằm hoàn toàn ngoài khoảng đó (`Workshop A`: 06/08/2026, `Workshop B`: 05/08/2026) | 1. Vào My Profile → My Activities<br>2. Bấm `Filters`, nhập `Start Date Range` = 25/07/2026 → 29/07/2026<br>3. Quan sát danh sách kết quả vẫn hiện đủ 2 thẻ, không thu hẹp<br>**Heuristic:** N1 visibility of system status · N4 consistency | **3** | Sửa logic áp dụng điều kiện `Start Date Range` vào truy vấn danh sách hoạt động; thêm test tự động cho trường hợp bộ lọc phải trả về 0 kết quả | [G-07-S3.png](evidence/task1b/G-07-S3.png) | |
 | `CL-B4-02` | Screen B4 — My Activities, trạng thái rỗng | Usability | Khi Search ra 0 kết quả (từ khoá `áddsa`), trạng thái rỗng chỉ ghi **"No activities found"** — không nêu lý do (không nói do từ khoá tìm kiếm hay do bộ lọc ngày đang áp dụng), khác với B1 cùng tình huống lại có câu "There are no events matching your filters." Có nút `Clear all` nhưng nằm ở khối Filters phía trên, không gắn liền với thông báo rỗng | 1. Vào My Activities<br>2. Gõ từ khoá vô nghĩa vào ô Search activities<br>3. Đọc toàn bộ nội dung trạng thái rỗng, so với `SV-B1-02` (B1 có nêu lý do, B4 thì không)<br>**Heuristic:** N1 · S1 consistency | **1** | Thêm câu nêu lý do tương tự B1 ("No activities match your search/filters"), và cân nhắc đặt nút xoá bộ lọc/tìm kiếm ngay trong khối thông báo rỗng | [G-07-S3-2.png](evidence/task1b/G-07-S3-2.png) | |
@@ -104,17 +105,17 @@ _(Ghi 1 câu chỉ ra chỗ cần nhìn trong ảnh.)_
 
 | Nguồn | Bug | Usability | Tổng | Đã submit form |
 |---|:--:|:--:|:--:|:--:|
-| `CL-` Checklist (Task 1B) | **5** | **3** | **8** | _(TODO)_ |
+| `CL-` Checklist (Task 1B) | **6** | **3** | **9** | _(TODO)_ |
 | `US-` User testing (Task 2) | | | | |
 | `CP-` Cross-platform (Task 3) | | | | |
 | `SV-` Khảo sát EMS | **8** | **19** | **27** | _(TODO)_ |
-| **Tổng** | **13** | **22** | **35** | |
+| **Tổng** | **14** | **22** | **36** | |
 
 ### Theo severity
 
 | Severity | 4 | 3 | 2 | 1 | 0 | Tổng |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
-| Số finding | 0 | **9** | **11** | **12** | **3** | **35** |
+| Số finding | 0 | **9** | **12** | **12** | **3** | **36** |
 
 Không có finding severity 4. Chín finding severity 3 tập trung vào bốn nhóm — **không tìm được vé sau khi đăng ký** (`SV-B4-01`, `SV-B2-09`), **thao tác không hoàn tác được nhưng cảnh báo mơ hồ** (`SV-B2-07`), **hệ thống nói sai về chính nó** (`SV-ADM-02`, `SV-ADM-03`, `SV-ADM-04`), và **bộ lọc không thực sự lọc** (`CL-B4-01`, phát hiện khi chạy Task 1B — mục `G-07`). Ba finding severity 0 (`SV-B2-08`, `SV-B1-02`, `SV-B2-03`) ghi lại những điều **đã kiểm và xác nhận là đúng** — cả ba đều là chỗ tôi từng kết luận sai từ ảnh khảo sát ban đầu, giữ lại để lưu vết đã kiểm chứ không phải báo lỗi.
 
@@ -123,7 +124,7 @@ Không có finding severity 4. Chín finding severity 3 tập trung vào bốn n
 | Màn hình | Số finding | Severity cao nhất |
 |---|:--:|:--:|
 | B1 Trang chủ / Danh sách sự kiện | **7** | 2 |
-| B2 Trang chi tiết sự kiện *(gồm cả khối đăng ký)* | **12** | 3 |
+| B2 Trang chi tiết sự kiện *(gồm cả khối đăng ký)* | **13** | 3 |
 | B4 My Profile — QR Code + My Activities | **9** | 3 |
 | Admin — Create Event / Dashboard | **5** | 3 |
 | Thông báo & User guide *(xuyên màn hình)* | **2** | 2 |
