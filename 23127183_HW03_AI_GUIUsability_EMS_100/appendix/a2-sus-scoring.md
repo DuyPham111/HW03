@@ -105,7 +105,6 @@ Thang Likert **1 = Rất không đồng ý** → **5 = Rất đồng ý**. Đây
 | Thấp nhất / cao nhất | **27.5 (P3)** / **85 (P1)** |
 | So với mốc 68 | **Dưới trung bình** — 3/5 người (P2, P3, P4) dưới mốc 68 rõ rệt; chỉ P1 và P5 ở mức "tốt" (>80.3) |
 
-> ⚠️ **Độ lệch chuẩn rất lớn (24.67)** — điểm không tập trung quanh giá trị trung bình mà tách thành **hai nhóm rõ rệt**: P1/P5 (80–85, "tốt") và P2/P3/P4 (27.5–42.5, "dưới trung bình rõ rệt"). Đây không phải nhiễu — khớp chặt với dữ liệu định tính: P1/P5 trả lời tích cực ở hầu hết câu hỏi mở ("dễ quay lại", "như mong đợi", "Mình thấy nó ổn"), còn P2/P3/P4 đều nêu cụ thể sự nghi ngờ/khó khăn (P3: khó tìm đường quay lại; P4: nghi ngờ vì nút Register bị khoá; P2: nghi ngờ sự kiện đã được đăng hay chưa). Nên bàn kỹ điểm này ở phần phân tích của `02-usability-report.md`, không chỉ báo cáo con số trung bình.
 
 **Kiểm chứng bằng tay:** đã tự tính lại điểm của **P3 (Quan Anh)** không dùng công cụ — kết quả: 27.5 · khớp với kết quả tính bằng script (lần tính tay đầu tiên của AI ra nhầm 30, phát hiện và sửa lại khi đối chiếu bằng script — xem đây là ví dụ cụ thể cho lý do R6 của CLAUDE.md yêu cầu đếm lại bằng lệnh thay vì tin trí nhớ).
 

@@ -15,8 +15,6 @@
 |---|---|---|
 | Claude Code (CLI) | Claude Sonnet 5 | Toàn bộ: dựng khung bài nộp, sinh/review checklist Task 1A, hỗ trợ chạy Task 1B, thiết kế + phân tích Task 2, chuẩn hoá findings log, viết Agent Skills |
 
-> ⚠️ **Giờ chính xác từng phiên chưa điền** — AI không có đồng hồ hệ thống khớp múi giờ của bạn, chỉ biết đúng ngày (05–06/08/2026) qua ngữ cảnh hội thoại. Bạn tự điền giờ HH:MM từ lịch sử chat trước khi nộp nếu môn yêu cầu chính xác tới phút.
-
 ---
 
 ### [LOG-001] — Dựng khung bài nộp + dịch/đọc hiểu 3 file đề

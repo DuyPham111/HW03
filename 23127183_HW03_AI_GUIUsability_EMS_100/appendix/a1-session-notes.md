@@ -19,8 +19,7 @@
 
 ---
 
-> ⚠️ **Nguồn dữ liệu 06/08/2026:** 5 phiên chạy qua study Maze thật (`app.maze.co/report/New-study-1/dj3mw7msh009jy`), không phải cuộc gọi trực tiếp có AI quan sát cùng — nên phần "Quan sát của moderator" ở mỗi phiên **do bạn tự viết sau khi xem lại video**, AI không có mặt lúc chạy. Dòng thời gian dưới đây dựng từ transcript tự động của Maze (đính kèm mốc thời gian) — transcript có lỗi rải rác ở vài chỗ (âm thanh nền bị nhận nhầm ngôn ngữ khác), đã lọc bỏ những đoạn rõ ràng là lỗi, giữ lại đoạn còn nghi ngờ và đánh dấu ⚠️.
-> **7 người từng vào study, chỉ tính 5 người sau làm chính thức** — đã loại `Nguyễn Minh Khôi` và `Duy` (chính người làm bài) theo đúng luật đề (§13: người thực hiện task không được tính là participant).
+> **Nguồn dữ liệu 06/08/2026:** 5 phiên chạy qua study Maze thật (`app.maze.co/report/New-study-1/dj3mw7msh009jy`)
 
 ## Phiên P1 — Phạm Vũ Ngọc Duyên
 
@@ -32,17 +31,6 @@
 | Time on task | 8 phút 15 giây (495.25s) |
 | Bản ghi màn hình | https://youtu.be/W0gLMibEf_o |
 
-### Dòng thời gian *(từ transcript tự động Maze, mốc thời gian trong video)*
-
-| Thời điểm | Lời nói (transcript tự động) | Phân loại | Ghi chú |
-|---|---|---|---|
-| 4:39 | "Ongoing. Back to event. Back to event ongoing." | hesitation | Đọc đi đọc lại nhãn trạng thái + nút quay lại — dấu hiệu đang định hướng lại |
-| 5:49 | "Campus." | hesitation | |
-| 6:39 | "Campus." | hesitation | Lặp lại từ này lần 2, cách lần đầu 50s — có thể đang so sánh giữa các sự kiện |
-| 7:07 | "Ah, ¿dónde location? Ok." | hesitation | ⚠️ Transcript lẫn tiếng Tây Ban Nha, khả năng cao là lỗi nhận diện giọng nói, không phải participant nói tiếng TBN thật |
-| 7:32 → 7:49 | "Open. Open for registration." (lặp lại) | success | Đọc to trạng thái đăng ký — có vẻ đã tìm đúng và tự tin bấm |
-
-⚠️ **Cần bạn xem lại video đối chiếu:** thời gian task 8 phút cho một tác vụ đơn giản là khá dài so với 4 người còn lại (chỉ 1–5 phút) — đáng để xem lại đoạn 4:39–7:49 xem họ có bị loanh quanh thật không hay chỉ đang đọc kỹ thông tin.
 
 ### Trả lời câu hỏi mở
 
@@ -66,15 +54,6 @@
 | Time on task | 59 giây (59.25s) — nhanh nhất trong 5 người |
 | Bản ghi màn hình | https://youtu.be/QWDMooa5skY |
 
-### Dòng thời gian
-
-| Thời điểm | Lời nói (transcript tự động) | Phân loại | Ghi chú |
-|---|---|---|---|
-| 2:16 | "Hello?" | — | Nằm giữa lúc điền SUS, có thể đang nói chuyện với người khác trong phòng, không liên quan task |
-| 2:32 | "Skip." | — | |
-| 2:45 | "Hi." | — | |
-
-⚠️ Cả 3 mốc trên rơi vào **lúc điền phiếu SUS** (sau khi đã xong task 59s), không phải trong lúc thao tác — gần như chắc chắn không liên quan tới usability, chỉ là hội thoại nền. Không tính là hesitation.
 
 ### Trả lời câu hỏi mở
 
@@ -97,10 +76,6 @@
 | Task success | **Completed** |
 | Time on task | 2 phút 6 giây (126.29s) |
 | Bản ghi màn hình | https://youtu.be/w-VrYQdr4fM |
-
-### Dòng thời gian
-
-_(Transcript Maze ghi chú "Transcripts aren't created for clips shorter than 2 seconds" — không có đoạn nói nào đủ dài để tự động ghi lại. Không có nghĩa là phiên im lặng hoàn toàn, chỉ là không có clip nào ≥ 2 giây.)_
 
 ### Trả lời câu hỏi mở
 
@@ -128,12 +103,6 @@ _(Transcript Maze ghi chú "Transcripts aren't created for clips shorter than 2 
 | Time on task | 1 phút 38 giây (98.26s) |
 | Bản ghi màn hình | https://youtu.be/xzQHMVQjX_E |
 
-### Dòng thời gian
-
-| Thời điểm | Lời nói (transcript tự động) | Phân loại | Ghi chú |
-|---|---|---|---|
-| 1:03 | "So" | — | Đoạn ngắn, giữa chừng câu nói bị cắt |
-| 2:15 – 2:24 | "Okay." / "Okay." / "Okay. Sound." | — | Các từ đệm rời rạc, không đủ ngữ cảnh để phân loại rõ |
 
 ### Trả lời câu hỏi mở
 
@@ -162,19 +131,6 @@ _(Transcript Maze ghi chú "Transcripts aren't created for clips shorter than 2 
 | Task success | **Completed** |
 | Time on task | 4 phút 40 giây (280.37s) |
 | Bản ghi màn hình | https://youtu.be/k7Gr5r9RCI4 |
-
-### Dòng thời gian
-
-| Thời điểm | Lời nói (transcript tự động) | Phân loại | Ghi chú |
-|---|---|---|---|
-| 0:29 | "Hello?" | — | Trước khi bắt đầu task |
-| 0:33 | "Ủa, sao cái khẩu sắc khóa thông tin cá nhăn này" | hesitation | ⚠️ Transcript lỗi chính tả nặng (auto-caption), nhưng có vẻ đang thắc mắc về một icon khoá/riêng tư nào đó — đáng xem lại video để nghe rõ |
-| 1:43 | "ok ok" | — | |
-| 2:21, 2:37 | *(transcript ra tiếng Hindi, vô nghĩa)* | ⚠️ lỗi | Gần như chắc chắn là lỗi nhận diện giọng nói từ tạp âm, không phải participant nói tiếng Hindi — bỏ qua |
-| 6:25 | "This is fishing open some four days." | ⚠️ lỗi | Câu vô nghĩa về ngữ pháp, khả năng cao transcript lỗi — có thể họ đang đọc to "Registration open" và bị nhận sai |
-| 8:05 | "진짜..." *(tiếng Hàn: "thật á...")* | hesitation | ⚠️ Cũng nghi lỗi transcript, nhưng nếu đúng thì mang nghĩa ngạc nhiên/bối rối |
-
-⚠️ **Transcript của phiên này có chất lượng thấp** (nhiều đoạn ra ngôn ngữ khác vô nghĩa) — nên **ưu tiên tự nghe lại video** thay vì tin transcript cho phiên P5, chỉ dùng bảng trên làm gợi ý mốc thời gian để tua tới.
 
 ### Trả lời câu hỏi mở
 

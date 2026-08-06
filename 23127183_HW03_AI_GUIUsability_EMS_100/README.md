@@ -32,13 +32,13 @@
 
 **Nhóm 10.** Có **5 người** trong khi đề chỉ có 4 kịch bản ⇒ theo §5 của đề, **một kịch bản được phép đôi**, nhưng hai người dùng chung kịch bản đó **bắt buộc chọn hai bộ màn hình không giao nhau**. Nhóm chốt **Phương án 1 — đôi ở A**: chia Pool A thành nửa *authoring* (A1–A3) và nửa *operation* (A3–A5).
 
-| Thành viên | MSSV | Kịch bản | Bộ màn hình |
-|---|---|---|---|
-| Phạm Vũ Ngọc Duy | 23127183 | **B** (nửa *registration core*) | B1 Danh sách sự kiện · B2 Trang chi tiết sự kiện · B4 My Profile — QR Code + My Activities |
-| Huỳnh Lê Khương Duy | 23127176 | **D** |  |
-| Phạm Lê Thái Bảo | 23127159 | **A** ||
-| Phạm Chí Bảo Ninh | 23127446 | **C** | |
-| Chu Quốc Anh Minh | 23127531 | **A** | |
+| Thành viên | MSSV | Kịch bản |
+|---|---|---|
+| Phạm Vũ Ngọc Duy | 23127183 | **B**  | 
+| Huỳnh Lê Khương Duy | 23127176 | **D** |  
+| Phạm Lê Thái Bảo | 23127159 | **A** |
+| Phạm Chí Bảo Ninh | 23127446 | **C** | 
+| Chu Quốc Anh Minh | 23127531 | **A** | 
 
 
 
@@ -185,7 +185,7 @@ Phân bố severity của 41 finding: **sev 3 — 10 · sev 2 — 15 · sev 1 �
 | — | AI Audit Report | ✅ đủ 12 log (LOG-001…012) |
 | — | AI Critique 200–300 từ *(đếm bằng `wc -w`)* | ✅ 284 từ, đã đọc lại |
 | — | Git commit log | ✅ 34 commit đã dán vào `appendix/git-log.txt` — sẽ còn thêm commit mới cho tới lúc nộp, nhớ chạy lại lệnh lần cuối |
-| — | PDF cho mọi file `.md` chính | ⬜ chưa xuất |
+| — | PDF cho mọi file `.md` chính | ✅ đã xuất |
 
 > 🔴 Đề §18: **thiếu bất kỳ tài liệu bắt buộc nào → 0 điểm cả bài.**
 > ✅ ở trên nghĩa là **nội dung đã viết đầy đủ dựa trên dữ liệu thật đã thu thập** — không đồng nghĩa với "đã nộp"/"đã có PDF"/"TA đã xác minh". Các việc nộp-thật (submit form, xuất PDF, chụp ảnh còn thiếu) vẫn là việc của bạn theo mục 3 của `CLAUDE.md`.

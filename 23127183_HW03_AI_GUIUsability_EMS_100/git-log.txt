@@ -1,0 +1,44 @@
+HW03 — Git commit log
+Sinh viên: Pham Vu Ngoc Duy (23127183)
+
+Sinh bằng lệnh: git log --pretty=format:"%h %ad %an: %s" --date=format:"%Y-%m-%d %H:%M"
+
+=== LOG ===
+
+3398917 2026-08-06 23:38 Pham Duy: docs(final): add repo link, mark Google Form submission done
+3572f52 2026-08-06 23:34 Pham Duy: docs(final): embed real B1/B2/B4 overview screenshots, add git log
+87be735 2026-08-06 23:20 Pham Duy: docs(readme): clean up stale warnings, fill remaining known values
+f3eb165 2026-08-06 23:04 Pham Duy: docs(task3): confirm CP-B2-01 extends to B4, fill group info and video link
+1a9cc11 2026-08-06 21:40 Pham Duy: docs(task3): run cross-platform matrix on 7 environments, log CP-B2-01
+b22fedf 2026-08-06 20:04 Pham Duy: docs(task1b): complete Task 1A/1B/2 deliverables, fix video duration bug
+4d833d1 2026-08-06 19:40 Pham Duy: docs(task2): process all 5 real Maze sessions, score SUS, log 2 findings
+dde41cc 2026-08-06 17:52 Pham Duy: docs(task1b): finish the last row, tally final Passed/Failed/N-A
+ab0ff9f 2026-08-06 17:40 Pham Duy: docs(task1b): fill G-04/G-05/G-08, enrich N-03 with scroll-loss detail
+10d7dfc 2026-08-06 17:01 Pham Duy: docs(task1b): fill 7 more items, rewrite the run guide down to 19 rows
+e5c3e38 2026-08-06 16:52 Pham Duy: docs(task1b): log the offline-silence bug (S-11)
+78d4e44 2026-08-06 16:41 Pham Duy: docs(task1b): log a real redirect bug, fill 9 more items
+8871163 2026-08-06 16:27 Pham Duy: docs(task1b): fill G-04/G-05/G-08, enrich N-03 with scroll-loss detail
+b92d112 2026-08-06 16:23 Pham Duy: docs(task1b): fill 8 more items, correct S-15's root cause
+1e164fe 2026-08-06 16:07 Pham Duy: docs(task1b): fix third self-correction, log filter-persistence bug
+8db1c6f 2026-08-06 15:26 Pham Duy: docs(task1b): bulk-fill from existing evidence, add detailed run guide
+e64659f 2026-08-06 15:15 Pham Duy: docs(task1b): log G-09/G-12 results, one new bug, one corroborated
+1a93cb2 2026-08-06 15:04 Pham Duy: docs(task1b): correct SV-B1-02, add 2 more findings, fix G-06/G-07
+8198ebf 2026-08-06 14:45 Pham Duy: docs(task1b): log G-06/G-07 results and one new confirmed bug
+6c4ae56 2026-08-06 11:41 Pham Duy: docs(task1b): build the full 61-item running table for B1/B2/B4
+3032fdc 2026-08-06 11:06 Pham Duy: docs(task2): restore the 5 open-question Maze blocks
+5fb6d3e 2026-08-06 10:59 Pham Duy: docs(task2): restructure Website Test block and fix a location leak
+28bb3cb 2026-08-06 10:42 Pham Duy: docs(task2): drop QR as the completion signal, correct two findings
+7f2ec4d 2026-08-06 02:47 Pham Duy: docs(repo): replace screen B3 with B1 after finding it has no own URL
+158ea40 2026-08-06 02:33 Pham Duy: docs(findings): turn survey round 3 into 27 aggregated findings
+917c096 2026-08-06 01:11 Pham Duy: docs(task1a): close the two empty heuristics and recount coverage
+5a8efca 2026-08-06 00:57 Pham Duy: docs(task1a): fold second survey round into checklist and Task 2 plan
+c1c7071 2026-08-06 00:11 Pham Duy: docs(repo): correct assumptions against the official EMS student manual
+b1630c1 2026-08-05 23:51 Pham Duy: docs(task2): add field-by-field Maze build guide from real screenshot
+a055e1d 2026-08-05 23:21 Pham Duy: docs(task2): switch session tool from custom artifact to real Maze
+5be70de 2026-08-05 22:47 Pham Duy: docs(task2): finalise probe questions and add interactive session tool
+686316e 2026-08-05 19:05 Pham Duy: docs(task1a): write 52-item shared GUI checklist and split group artefacts
+e86288d 2026-08-05 18:46 Pham Duy: docs(task1a): fill EMS survey from first-pass screenshots
+961e7d2 2026-08-05 18:19 Pham Duy: docs(repo): adopt improvements from second reference submission
+c1f5a7e 2026-08-05 00:57 Pham Duy: docs(task1a): add fill-in EMS survey form and correct exploratory-pass claim
+f2a0666 2026-08-04 22:03 Pham Duy: docs(repo): add commit plan for remaining work
+fd0e4c2 2026-08-04 22:02 Pham Duy: chore(repo): scaffold HW03 submission structure for scenario B

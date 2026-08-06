@@ -142,29 +142,3 @@ Không có finding severity 4. Mười finding severity 3 tập trung vào bốn
 | Admin — Create Event / Dashboard | **5** | 3 |
 | Thông báo & User guide *(xuyên màn hình)* | **2** | 2 |
 
----
-
-## Đối chiếu cuối cùng trước khi nộp
-
-```bash
-cd 23127183_HW03_AI_GUIUsability_EMS_100
-# đếm finding thật
-grep -cE "^\| \`(SV|CL|US|CP)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md
-# phân bố severity
-grep -E "^\| \`(SV|CL|US|CP)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md | awk -F'|' '{gsub(/[ *]/,"",$7); print $7}' | sort | uniq -c
-# phân bố Bug / Usability
-grep -E "^\| \`(SV|CL|US)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md | awk -F'|' '{gsub(/ /,"",$4); print $4}' | sort | uniq -c
-# phân bố theo màn hình
-grep -oE "^\| \`(SV|CL|US)-[A-Z0-9]+-" 04-findings-log.md | sed -E 's/.*`(SV|CL|US)-([A-Z0-9]+)-/\2/' | sort | uniq -c
-# mọi link ảnh/file đều trỏ tới file có thật
-grep -oE '\(evidence/[^)]+\)' 04-findings-log.md | tr -d '()' | sort -u | while read f; do [ -f "$f" ] || echo "THIẾU: $f"; done
-```
-
-> ⚠️ **Tránh đếm trùng khi submit form.** 27 finding `SV-` đã tồn tại **trước** khi chạy Task 1B. Khi chạy checklist, một item Failed trùng nội dung với finding `SV-` nào thì ở cột Notes ghi *"= SV-xxx"* và **không tạo ID `CL-` mới, không submit form lần hai**. Nếu không, số dòng trong file này sẽ vượt số lần submit và TA sẽ thấy lệch.
-
-- [ ] Số dòng trong bảng hợp nhất = số lần submit Google Form
-- [ ] Mọi finding có `Screenshot ref` trỏ tới file **có thật**
-- [ ] Mọi finding có `Form-submission timestamp`
-- [ ] Đã dùng **đúng email MSSV** cho toàn bộ lần submit (không lẫn email cá nhân)
-- [ ] Không có ID trùng hoặc nhảy cóc trong cùng một nhóm prefix
-- [ ] Số liệu ở 3 bảng thống kê khớp với `README.md` mục 4.4 và `00-main-report.md` mục 5
