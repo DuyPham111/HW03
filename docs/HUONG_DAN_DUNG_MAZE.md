@@ -11,7 +11,8 @@
 
 ## Bản đồ toàn bộ study (Build cần có đúng các block này, theo thứ tự)
 
-> ⚠️ **Sửa ngày 06/08/2026, dựa trên ảnh luồng Maze của một bạn cùng lớp (project `FITUS-E... / Software Testing Usability E...`).** Ba điều học được từ đó và áp dụng luôn: (1) thu **Họ và tên + liên hệ** ngay trong Maze bằng 2 block `Simple Input`, không chỉ hỏi miệng — có bản ghi timestamped làm bằng chứng; (2) nội dung mỗi block viết đủ chi tiết để participant tự làm được không cần hỏi lại; (3) bật **Screen recording + Camera recording** trong cài đặt study trước khi Publish. Đồng thời **cắt khối 5 câu hỏi mở** khỏi bản trước — cuộc gọi Zalo/Meet song song đã lấy think-aloud trực tiếp, hỏi lại trong Maze là hỏi trùng và tốn thời gian mỗi phiên khi thời gian chuẩn bị không còn nhiều.
+> ⚠️ **Sửa ngày 06/08/2026, dựa trên ảnh luồng Maze của một bạn cùng lớp (project `FITUS-E... / Software Testing Usability E...`).** Ba điều học được từ đó và áp dụng luôn: (1) thu **Họ và tên + liên hệ** ngay trong Maze bằng 2 block `Simple Input`, không chỉ hỏi miệng — có bản ghi timestamped làm bằng chứng; (2) nội dung mỗi block viết đủ chi tiết để participant tự làm được không cần hỏi lại; (3) bật **Screen recording + Camera recording** trong cài đặt study trước khi Publish.
+> ⚠️ **Cắt rồi khôi phục cùng ngày:** khối 5 câu hỏi mở từng bị cắt vì sợ trùng cuộc gọi. Đã khôi phục theo yêu cầu — dùng cả `Opinion Scale` lẫn `Open Question` mà Maze có sẵn để thu đầy đủ dữ liệu văn bản có cấu trúc cho Task 2, xem PHẦN 5.
 
 ```
 1. Welcome                          ✅ đã có sẵn — sửa nội dung
@@ -19,11 +20,12 @@
 3. [MỚI] Thông tin liên lạc (Simple Input) ⚠️
 4. Website Test                     ✅ đã có sẵn — điền 3 ô còn thiếu
 5. [MỚI] Simple Question — outcome tự nhận  ⚠️
-6. [MỚI] SUS hoặc 10× Opinion Scale ⚠️
-7. Thank you                        ✅ đã có sẵn — sửa nội dung
+6. [MỚI] 10× Opinion Scale — SUS    ✅
+7. [MỚI] 5× Open Question           ✅
+8. Thank you                        ✅ đã có sẵn — sửa nội dung
 ```
 
-Trạng thái hiện tại của bạn: đã có (1), (4), (7) do Maze tự tạo khi bấm "New study". Việc phải làm: **thêm 2 block thu thông tin** ở (2)(3), **điền nốt 3 ô trống trong block (4)**, rồi **thêm 2 nhóm block mới** ở (5)(6), và **bật recording** trước khi Publish (PHẦN 7b).
+Trạng thái hiện tại của bạn: đã có (1), (4), (8) do Maze tự tạo khi bấm "New study", cộng 1 block `Opinion Scale` và 1 block `Open Question` đang trống (ảnh bạn gửi). Việc phải làm: **thêm 2 block thu thông tin** ở (2)(3), **điền nốt 3 ô trống trong block (4)**, rồi **thêm các nhóm block mới** ở (5)(6)(7), và **bật recording** trước khi Publish (PHẦN 7b).
 
 ---
 
@@ -181,7 +183,23 @@ Nếu block có ô "thang đo" (scale), đặt **1 đến 5**, nhãn đầu **"R
 
 ---
 
-> ⚠️ **Bỏ ngày 06/08/2026 — không còn "PHẦN 5 · 5 câu hỏi mở" trong Maze.** Bốn chủ đề bắt buộc của đề (clarity · error recovery · speed · trust) vẫn được hỏi đủ, nhưng chuyển hẳn sang hỏi miệng trong cuộc gọi Zalo/Meet song song — xem `02-usability-report.md` §1.3, ghi lại ở `appendix/a1-session-notes.md`. Lý do: cuộc gọi đã có think-aloud trực tiếp, hỏi lại 5 câu này trong Maze là hỏi trùng dữ liệu, tốn thêm ~5 phút mỗi phiên mà không thêm góc nhìn mới.
+## PHẦN 5 · Thêm 5 câu hỏi mở ✅ *(khôi phục 06/08/2026)*
+
+> ⚠️ **Đã cắt rồi lại khôi phục trong cùng ngày.** Lý do cắt trước đó: sợ hỏi trùng với cuộc gọi Zalo/Meet. Lý do khôi phục: bạn muốn Maze tự thu đủ dữ liệu văn bản có cấu trúc cho Task 2, không chỉ dựa vào ghi chú tay trong cuộc gọi — hai nguồn **bổ sung cho nhau** chứ không thừa: cuộc gọi bắt được giọng điệu/do dự lúc đang làm (thời điểm thật), Open Question trong Maze bắt được câu trả lời **đã suy nghĩ lại** sau khi xong việc. Cả hai đều hợp lệ làm dữ liệu cho `appendix/a1-session-notes.md`.
+
+Thêm **5 block riêng**, loại `Open Question` (ô nhập chữ tự do). Mỗi block một câu, đúng thứ tự:
+
+| # | Chủ đề | Dán vào ô câu hỏi |
+|---|---|---|
+| 1 | Clarity | Trong lúc làm nhiệm vụ, có bước nào bạn không chắc mình cần làm gì tiếp theo không? Đó là bước nào? |
+| 2 | Error recovery | Nếu có lúc bạn bấm nhầm hoặc đi sai hướng, bạn đã nhận ra bằng cách nào, và có dễ quay lại không? |
+| 3 | Speed | Nhiệm vụ này diễn ra nhanh hơn, chậm hơn, hay đúng như bạn mong đợi? |
+| 4 | Trust | Ở thời điểm nào bạn cảm thấy tự tin nhất là mình đang làm đúng? Có lúc nào bạn nghi ngờ không? |
+| 5 | Tổng quát | Nếu chỉ được đổi một điều duy nhất trên các màn hình vừa dùng, bạn sẽ đổi gì? |
+
+- [ ] Đã thêm đủ 5 câu hỏi mở
+
+---
 
 ## PHẦN 6 · Block "Thank you" ⚠️ *(chưa thấy giao diện thật)*
 
