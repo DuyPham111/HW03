@@ -44,8 +44,8 @@
 | G-07 | Empty state nêu lý do + gợi ý hành động tiếp theo | IA-01 | Passed | N/A | Failed | S1 = **sửa lại `SV-B1-02`**: đã có câu lý do ("There are no events matching your filters") + icon xoá bộ lọc cạnh `Filters 3` — bấm thử xác nhận đúng là xoá hết bộ lọc. Kết luận cũ của tôi (khảo sát 05/08) đọc sót cả hai chi tiết này, đã sửa `SV-B1-02` thành severity 0.<br>S2 = không có tính năng filter trên trang chi tiết sự kiện — N/A hợp lý.<br>S3 = ép ra được trạng thái rỗng thật bằng Search từ khoá vô nghĩa (`G-07-S3-2.png`) — chỉ ghi "No activities found", **không nêu lý do** (không nói do search hay do filter ngày), yếu hơn hẳn bản của S1. Ghi nhận là `CL-B4-02` | S1: `= SV-B1-02` (đã sửa)<br>S3: `CL-B4-02` | S1: [G-07-S1.png](evidence/task1b/G-07-S1.png)<br>S3: [G-07-S3-2.png](evidence/task1b/G-07-S3-2.png) |
 | G-08 | Loading có skeleton/spinner, bố cục không nhảy khi data về | IA-01 | | | | | | |
 | G-09 | Giá trị rỗng dùng cùng 1 ký hiệu thống nhất | IA-01 | Failed | Passed | Passed | Workshop B: S1 hiện `Location: Updating` + `Organizer: Updating`, nhưng S2 và S3 cùng sự kiện lại hiện `-`. S2/S3 tự thân Passed (đúng quy ước `-`), nhưng S1 lệch — coi cả nhóm là Failed vì đề bài đòi "cùng 1 ký hiệu trên MỌI màn" | S1: `CL-B1-01` | S1: [G-09-S1.png](evidence/task1b/G-09-S1.png)<br>S2: [G-09-S2.png](evidence/task1b/G-09-S2.png)<br>S3: [G-09-S3.png](evidence/task1b/G-09-S3.png) |
-| G-10 | Nhãn dùng ngôn ngữ người dùng, không phơi mã định danh nội bộ | IA-01 | | | | 🔎 khớp `SV-B1-03` (B1+B2) | | |
-| G-11 | EN/VI dịch toàn bộ text kể cả toast/tooltip/lỗi | IA-01 | | | | | | |
+| G-10 | Nhãn dùng ngôn ngữ người dùng, không phơi mã định danh nội bộ | IA-01 | Failed | Failed | ⚠️ chờ bạn kiểm | S1/S2 = `SV-B1-03` — trường Title chứa chuỗi mã `23127326_UT_510_15:36`, phần Description dễ đọc bị đẩy xuống dòng phụ. S3 chưa kiểm: mở My Activities xem tên sự kiện hiện đúng hay hiện mã (chỉ áp dụng nếu bạn có đăng ký sự kiện nào đang bị lỗi Title kiểu này) | S1/S2: `= SV-B1-03` | S1/S2: [KS_B2_su-kien-nguoi-khac.png](evidence/survey/KS_B2_su-kien-nguoi-khac.png) |
+| G-11 | EN/VI dịch toàn bộ text kể cả toast/tooltip/lỗi | IA-01 | Failed | Failed | Failed | Chuông thông báo (có mặt trên header mọi trang) hiện tiếng Việt "Đăng ký sự kiện được phê duyệt" dù giao diện đang EN | S1/S2/S3: `= SV-NOTIF-01` | [KS_NOTIF_approved.png](evidence/survey/KS_NOTIF_approved.png) |
 | G-12 | Dữ liệu hiển thị (tên vai trò...) theo đúng ngôn ngữ đang chọn | IA-01 | Passed | Failed | Failed | S1: không thấy dữ liệu tiếng Việt lẫn vào (tag, role label đều EN). S2/S3: role "Sinh viên" hiện tiếng Việt trong UI tiếng Anh — mở rộng `SV-B2-02` sang cả S3 (badge ROLES ở My Activities cũng lỗi này) | S2/S3: `= SV-B2-02` | S2: [G-12-S2.png](evidence/task1b/G-12-S2.png)<br>S3: [G-12-S3.png](evidence/task1b/G-12-S3.png) |
 | G-13 | Ngôn ngữ đã chọn được lưu, giữ nguyên sau reload | IA-01 | | | | | | |
 | G-14 | Tương phản chữ/nền ≥4.5:1 thường, ≥3:1 chữ lớn | IA-01 | | | | | | |
@@ -61,14 +61,14 @@
 | (?) F-08 | Upload kiểm định dạng/dung lượng, báo giới hạn trước | IA-02 | | | | (?) dự đoán N/A cả 3 màn — upload chỉ có ở admin Create Event | | |
 | (?) F-09 | Upload có preview đúng tỉ lệ trước khi lưu | IA-02 | | | | (?) dự đoán N/A cả 3 màn — cùng lý do F-08 | | |
 | (?) F-10 | Rich-text có đủ nút định dạng, dán không vỡ bố cục | IA-02 | | | | (?) dự đoán N/A cả 3 màn — rich-text chỉ có ở admin | | |
-| F-11 | Hành động không hoàn tác có bước xác nhận/tóm tắt trước khi gửi | IA-02 | | | | 🔎 đối chiếu với `S-03` (dialog Cancel registration) | | |
-| F-12 | Lựa chọn bị khoá nêu rõ lý do + lựa chọn thay thế | IA-02 | | | | 🔎 khớp `SV-B2-01` (B2, "Role is full" không mời waitlist) | | |
+| F-11 | Hành động không hoàn tác có bước xác nhận/tóm tắt trước khi gửi | IA-02 | | Passed | | Cancel registration CÓ hộp thoại xác nhận trước khi thực hiện (`KS_B2_cancel-02_dialog.png`) — thoả tiêu chí "có bước xác nhận". Nội dung dialog kém (không nêu hậu quả) là chuyện khác, đã tính riêng ở `S-03` | | [KS_B2_cancel-02_dialog.png](evidence/survey/KS_B2_cancel-02_dialog.png) |
+| F-12 | Lựa chọn bị khoá nêu rõ lý do + lựa chọn thay thế | IA-02 | | Failed | | S2 = `SV-B2-01` — "Role is full", không mời vào waitlist dù ô đếm Waitlisted tồn tại | S2: `= SV-B2-01` | [KS_B2_workshop-b-het-cho.png](evidence/survey/KS_B2_workshop-b-het-cho.png) |
 | F-13 | Ô nhập có focus nhìn thấy được; Tab đi đúng thứ tự | IA-02 | | | | | | |
 | F-14 | Form/modal đóng bằng Esc, cảnh báo nếu còn dữ liệu chưa lưu | IA-02 | | | | | | |
 | (?) F-15 | Upload nêu rõ giới hạn dung lượng/số lượng file | IA-02 | | | | (?) dự đoán N/A cả 3 màn — khớp `SV-ADM-01` nhưng đó là màn admin | | |
 | (?) F-16 | Cặp trường thời gian phụ thuộc nhau chặn cấu hình vô lý | IA-02 | | | | (?) dự đoán N/A cả 3 màn — khớp `SV-ADM-03/04/05` nhưng đó là màn admin | | |
 | N-01 | Menu chính nhất quán mọi trang, mục đang xem nổi bật | IA-03 | | | | | | |
-| N-02 | Trang chi tiết có đường quay lại danh sách (không chỉ dựa Back) | IA-03 | | | | 🔎 khớp `SV-B2-03` (B2) — ⚠️ nhánh Public Event lại CÓ nút `Back to events`, kiểm cả 2 nhánh | | |
+| N-02 | Trang chi tiết có đường quay lại danh sách (không chỉ dựa Back) | IA-03 | | Failed | | S2 (đã đăng nhập, luồng thật của kịch bản B) = `SV-B2-03` — không có breadcrumb/nút quay lại. ⚠️ Nhánh Public Event chưa đăng nhập lại CÓ nút `Back to events` — nếu muốn chấm cả nhánh đó thì cần dòng riêng, tạm chấm theo luồng chính (đã đăng nhập) | S2: `= SV-B2-03` | [KS_B2_public-an-danh.png](evidence/survey/KS_B2_public-an-danh.png) |
 | N-03 | Back trình duyệt giữ nguyên bộ lọc/trang/vị trí cuộn | IA-03 | | | | | | |
 | N-04 | Sau đăng nhập quay lại đúng trang vừa yêu cầu, không về home | IA-03 | | | | | | |
 | N-05 | URL phản ánh trạng thái (tab/lọc/trang) để share/reload đúng | IA-03 | | | | | | |
@@ -76,26 +76,26 @@
 | (?) N-07 | Sidebar thu/mở được, không che nội dung chính | IA-03 | | | | (?) dự đoán N/A cả 3 màn — phía student dùng header, không có sidebar (sidebar chỉ thấy ở admin-1.png) | | |
 | (?) N-08 | Kéo-thả có tay cầm rõ, phản hồi thị giác, lưu đúng thứ tự | IA-03 | | | | (?) dự đoán N/A cả 3 màn — kéo-thả chỉ có ở admin | | |
 | N-09 | Không có liên kết hỏng, không rơi 404 | IA-03 | | | | | | |
-| N-10 | Chức năng cần ngay sau thao tác nằm trong tầm với ngữ cảnh đó | IA-03 | | | | 🔎 khớp `SV-B4-01` (QR tách rời) + `SV-B2-09` (không chỉ dẫn sau đăng ký) | | |
-| N-11 | Danh sách dài có phân trang rõ ràng, dùng chung 1 kiểu | IA-03 | | | | 🔎 quan sát O19 (My Activities: `Rows per page` · `Go to page`) — mới mô tả cấu trúc, chưa kết luận | | |
-| N-12 | Có đường vào tài liệu hướng dẫn, nội dung khớp giao diện đang chạy | IA-03 | | | | 🔎 khớp `SV-UG-01` (chỉ có tiếng Việt dù UI đang EN, không nói QR ở đâu) | | |
-| S-01 | Hành động thay đổi dữ liệu có phản hồi tức thì, vị trí nhất quán | IA-04 | | | | ⚠️ đối chiếu `SV-B2-09` — đăng ký xong KHÔNG có toast, khả năng cao Failed | | |
+| N-10 | Chức năng cần ngay sau thao tác nằm trong tầm với ngữ cảnh đó | IA-03 | | Failed | | S2 = sau khi đăng ký xong, không có đường dẫn nào tới QR/xác nhận — `SV-B2-09` + `SV-B4-01` | S2: `= SV-B2-09` | [KS_B3_05_sau-submit.png](evidence/survey/KS_B3_05_sau-submit.png) |
+| N-11 | Danh sách dài có phân trang rõ ràng, dùng chung 1 kiểu | IA-03 | ⚠️ chờ bạn kiểm | | Passed | S3 = My Activities có đủ 4 điều khiển rõ ràng (`Rows per page` · `1-2 of 2 results` · `Go to page` · `‹ 1 ›`). S1 chưa kiểm — mở B1 xem phân trang có **cùng 4 điều khiển này** không, nếu khác kiểu thì Failed vì "không dùng chung 1 kiểu" | | [G-07-S3-2.png](evidence/task1b/G-07-S3-2.png) |
+| N-12 | Có đường vào tài liệu hướng dẫn, nội dung khớp giao diện đang chạy | IA-03 | Failed | Failed | Failed | `User guide` có trên header mọi trang nhưng chỉ có tiếng Việt dù UI đang EN, và không nói QR nằm ở đâu | S1/S2/S3: `= SV-UG-01` | [KS_UG_01.png](evidence/survey/KS_UG_01.png) |
+| S-01 | Hành động thay đổi dữ liệu có phản hồi tức thì, vị trí nhất quán | IA-04 | | Failed | | S2 = `SV-B2-09` — đăng ký xong không toast, không thông báo | S2: `= SV-B2-09` | [KS_B3_05_sau-submit.png](evidence/survey/KS_B3_05_sau-submit.png) |
 | S-02 | Toast phân biệt cả màu lẫn icon/chữ, đủ lâu để đọc | IA-04 | | | | | | |
-| S-03 | Hành động không hoàn tác có dialog nêu rõ hậu quả | IA-04 | | | | 🔎 khớp `SV-B2-07` (dialog Cancel chỉ hỏi "are you sure", không nêu hậu quả) | | |
-| S-04 | Badge trạng thái có cả màu lẫn nhãn chữ, nhất quán mọi màn | IA-04 | | | | 🔎 quan sát O9 — có vẻ **ĐÃ ĐẠT** (Upcoming tím/Ended xám/Pending vàng đều kèm chữ), xác nhận lại | | |
-| S-05 | Khối đổi màu theo trạng thái phải kèm nhãn chữ giải thích | IA-04 | | | | 🔎 quan sát O10 (Slot xanh→hồng khi hết chỗ) — chưa rõ có kèm chữ giải thích ý nghĩa màu không | | |
-| S-06 | Khối chức năng giữ nguyên số ô giữa các bản ghi cùng loại | IA-04 | | | | 🔎 khớp `SV-B2-04` (Workshop B 4 ô vs Workshop C 3 ô) | | |
-| S-07 | Nội dung nổi bật trang chủ chỉ hiện bản ghi còn hiệu lực | IA-04 | | | | 🔎 khớp `SV-B1-01` (carousel hiện sự kiện đã `Ended`) | | |
+| S-03 | Hành động không hoàn tác có dialog nêu rõ hậu quả | IA-04 | | Failed | | S2 = `SV-B2-07` — dialog Cancel chỉ hỏi "are you sure", không nêu hậu quả | S2: `= SV-B2-07` | [KS_B2_cancel-02_dialog.png](evidence/survey/KS_B2_cancel-02_dialog.png) |
+| S-04 | Badge trạng thái có cả màu lẫn nhãn chữ, nhất quán mọi màn | IA-04 | Passed | Passed | Passed | Quan sát nhất quán qua nhiều ảnh: Upcoming/Ended/Pending (B1, B2) và Pending review/Ongoing (B4) đều có cả màu lẫn chữ, không màn nào chỉ dùng màu trơn | | [KS_B2_workshop-b-het-cho.png](evidence/survey/KS_B2_workshop-b-het-cho.png) |
+| S-05 | Khối đổi màu theo trạng thái phải kèm nhãn chữ giải thích | IA-04 | | Passed | | S2 = khối `Slot available` đổi màu (xanh→hồng) LUÔN kèm nhãn chữ "Slot available" + số cụ thể ("Student: 0"), không chỉ đổi màu trơn | | [G-09-S2.png](evidence/task1b/G-09-S2.png) |
+| S-06 | Khối chức năng giữ nguyên số ô giữa các bản ghi cùng loại | IA-04 | | Failed | | S2 = `SV-B2-04` — Workshop B có 4 ô, Workshop C chỉ 3 ô (thiếu Waitlisted). Xác nhận thêm ở sự kiện CV Workshop (`G-12-S2.png`) cũng chỉ có 3 ô | S2: `= SV-B2-04` | [KS_B2_workshop-b-het-cho.png](evidence/survey/KS_B2_workshop-b-het-cho.png) |
+| S-07 | Nội dung nổi bật trang chủ chỉ hiện bản ghi còn hiệu lực | IA-04 | Failed | | | S1 = `SV-B1-01` — carousel SPOTLIGHT EVENT hiện sự kiện đã `Ended` | S1: `= SV-B1-01` | [KS_B1_trang-chu-carousel.png](evidence/survey/KS_B1_trang-chu-carousel.png) |
 | S-08 | Tác vụ chạy lâu có progress/spinner kèm chỉ báo bước/thời gian | IA-04 | | | | | | |
-| S-09 | Ngày giờ 1 định dạng thống nhất, nêu múi giờ ở hạn chót | IA-04 | | | | 🔎 quan sát O13 (dd/MM/yyyy HH:mm, không có múi giờ ở đâu cả) | | |
+| S-09 | Ngày giờ 1 định dạng thống nhất, nêu múi giờ ở hạn chót | IA-04 | ⚠️ chờ bạn kiểm | ⚠️ chờ bạn kiểm | ⚠️ chờ bạn kiểm | Quan sát ban đầu (chưa thành finding chính thức): mọi nơi dùng `dd/MM/yyyy HH:mm`, không thấy múi giờ ở đâu cả. Bạn tự xác nhận lại rồi báo — nếu đúng, đây là finding MỚI (chưa có Bug-ID), cần bạn quyết định severity trước khi tôi ghi vào log | | |
 | S-10 | Bộ đếm/nhãn trạng thái thời gian khớp dữ liệu ngày giờ cạnh nó | IA-04 | | | | | | |
 | S-11 | Mất mạng báo rõ, cho biết thao tác vừa rồi có lưu không | IA-04 | | | | | | |
 | S-12 | QR/barcode đủ lớn, sắc nét, không co méo màn hình nhỏ | IA-04 | | N/A | | S2 chắc chắn N/A — QR chỉ ở B4 (S3), không xuất hiện trên B2 | | |
 | S-13 | Nhãn nút/tiêu đề dùng cùng 1 quy ước viết hoa toàn hệ thống | IA-04 | | | | 🔎 khớp `SV-B2-05` (nút `login` chữ thường, lệch Title Case) | | |
-| S-14 | Sau khi hoàn tất thao tác, hệ thống chỉ đường bước tiếp theo | IA-04 | | | | 🔎 khớp `SV-B2-09` (đăng ký xong không toast, không chỉ dẫn tìm My Activities) | | |
-| S-15 | Một khái niệm trạng thái dùng 1 bộ từ vựng duy nhất | IA-04 | | | | 🔎 khớp `SV-B4-03` (3 bộ từ vựng: tài liệu / B2 / B4) | | |
+| S-14 | Sau khi hoàn tất thao tác, hệ thống chỉ đường bước tiếp theo | IA-04 | | Failed | | S2 = `SV-B2-09` — đăng ký xong không chỉ dẫn gì tiếp theo | S2: `= SV-B2-09` | [KS_B3_05_sau-submit.png](evidence/survey/KS_B3_05_sau-submit.png) |
+| S-15 | Một khái niệm trạng thái dùng 1 bộ từ vựng duy nhất | IA-04 | | Failed | Failed | S2+S3 = `SV-B4-03` — 3 bộ từ vựng khác nhau (tài liệu / ô đếm B2 / badge B4) cho cùng khái niệm trạng thái đăng ký | S2/S3: `= SV-B4-03` | [profile-2.png](evidence/survey/profile-2.png) |
 | (?) S-16 | Chỉ số dashboard khớp dữ liệu thật, không hiện 0 sai | IA-04 | | | | (?) dự đoán N/A cả 3 màn — khớp `SV-ADM-02` nhưng đó là màn admin | | |
-| S-17 | Thông tin ra quyết định (chỗ còn lại, hạn) hiện ngay tại chỗ quyết định | IA-04 | | | | 🔎 có vẻ **ĐÃ ĐẠT** trên B2 (`Slot available`, `Registration period` hiện ngay tại khối đăng ký), xác nhận lại | | |
+| S-17 | Thông tin ra quyết định (chỗ còn lại, hạn) hiện ngay tại chỗ quyết định | IA-04 | Passed | Passed | N/A | S1 = thẻ sự kiện hiện sẵn `Registration deadline` + số chỗ (`G-09-S1.png`). S2 = khối đăng ký hiện `Slot available` + `Registration period` ngay tại chỗ bấm Register (`G-09-S2.png`). S3 = N/A hợp lý — đã đăng ký rồi, không còn quyết định "có nên đăng ký" để ra nữa | | S1: [G-09-S1.png](evidence/task1b/G-09-S1.png)<br>S2: [G-09-S2.png](evidence/task1b/G-09-S2.png) |
 
 > **Đếm nhanh:** G 16 · F 16 · N 12 · S 17 = **61 dòng**, khớp `team/gui-checklist.md`. Đếm lại bằng `grep -cE "^\| (\(\?\) )?[GFNS]-" 01-checklist-execution.md` trước khi nộp.
 
