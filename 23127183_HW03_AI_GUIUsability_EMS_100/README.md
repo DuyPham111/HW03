@@ -1,7 +1,7 @@
 # HW03 — GUI & Usability Testing on EMS
 
 **Sinh viên:** Phạm Vũ Ngọc Duy — **MSSV:** 23127183
-**Nhóm:** _(TODO)_ — thành viên & phân chia kịch bản xem mục 2
+**Nhóm:** 10 — thành viên & phân chia kịch bản xem mục 2
 **SUT:** EMS — Event Management System, Khoa CNTT — https://prod-dev.ems-fitus.cloud
 **Kịch bản đã chọn:** **B — User đăng ký tham dự sự kiện** (nửa "registration core" của Pool B)
 **Kỹ thuật:** GUI Checklist (Nielsen · Norman · Shneiderman) + Usability Testing 5 người thật + Cross-Browser/Cross-Platform Testing
@@ -32,21 +32,17 @@
 
 ## 2. Nhóm & luật không trùng lặp
 
-Nhóm có **5 người** trong khi đề chỉ có 4 kịch bản ⇒ theo §5 của đề, **một kịch bản được phép đôi**, nhưng hai người dùng chung kịch bản đó **bắt buộc chọn hai bộ màn hình không giao nhau**.
+**Nhóm 10.** Có **5 người** trong khi đề chỉ có 4 kịch bản ⇒ theo §5 của đề, **một kịch bản được phép đôi**, nhưng hai người dùng chung kịch bản đó **bắt buộc chọn hai bộ màn hình không giao nhau**. Nhóm chốt **Phương án 1 — đôi ở A**: chia Pool A thành nửa *authoring* (A1–A3) và nửa *operation* (A3–A5).
 
 | Thành viên | MSSV | Kịch bản | Bộ màn hình |
 |---|---|---|---|
 | Phạm Vũ Ngọc Duy | 23127183 | **B** (nửa *registration core*) | B1 Danh sách sự kiện · B2 Trang chi tiết sự kiện · B4 My Profile — QR Code + My Activities |
-| _(TODO)_ | | _(xem 2 phương án dưới)_ | _(TODO)_ |
-| _(TODO)_ | | A | _(chọn 3 trong A1–A5)_ |
-| _(TODO)_ | | C | _(chọn 3 trong C1–C4)_ |
-| _(TODO)_ | | D | _(chọn 3 trong D1–D4)_ |
+| Huỳnh Lê Khương Duy | 23127176 | **D** | _(TODO — 3 màn cụ thể trong D1–D4, bạn tự hỏi lại thành viên)_ |
+| Phạm Lê Thái Bảo | 23127159 | **A** | A1 · A2 · A3 |
+| Phạm Chí Bảo Ninh | 23127446 | **C** | _(TODO — 3 màn cụ thể trong C1–C4, bạn tự hỏi lại thành viên)_ |
+| Chu Quốc Anh Minh | 23127531 | **A** | A3 · A4 · A5 |
 
-**Phương án 1 (mặc định) — đôi ở A.** Hai người chia Pool A: nửa *authoring* (A1 Events list · A2 Add/Edit Event · A3 Registration & Roles config) và nửa *operation* (A4 Participants approval · A5 Check-in · Dashboard KPI). Tôi giữ B một mình.
-
-**Phương án 2 — đôi ở B.** ⚠️ **Đã hẹp lại sau khi tôi đổi bộ màn hình sang B1/B2/B4.** Trước đây tôi để người còn lại lấy `B1 Trang chủ + carousel`, nhưng giờ B1 nằm trong bộ của tôi nên phải bỏ khỏi phần của họ. Bộ còn rời được với tôi: **Trang chủ công khai + carousel SPOTLIGHT** *(khác với B1 danh sách sự kiện)* · **Calendar** · **Saved Events** · **B5 Đánh giá sao sau sự kiện** — chọn 3 trong 4. Lưu ý: B5 cần một sự kiện đã `ENDED` mà người đó từng tham dự và **đã check-in** (theo tài liệu chính thức §9, nút đánh giá chỉ hiện khi trạng thái là Checked-in) — cần chuẩn bị trước, không tự dựng được trong ngày.
-
-> Nếu nhóm chọn **Phương án 2**, hai người phải ngồi đối chiếu URL với nhau chứ không chỉ đối chiếu tên màn hình — bài học rút ra từ chính việc B3 hoá ra trùng URL với B2.
+> ⚠️ **Cần bạn xác nhận lại:** Thái Bảo (A1·A2·A3) và Anh Minh (A3·A4·A5) đang **trùng nhau ở A3** — đề bắt buộc hai người chung kịch bản A phải chọn **bộ màn hình không giao nhau** (§5). Nếu đúng như vậy, một trong hai người cần đổi A3 sang màn khác (ví dụ Anh Minh đổi A3 → Dashboard KPI, giữ đúng tinh thần "nửa operation" ban đầu: A4 · A5 · Dashboard KPI) trước khi nộp, nếu không sẽ bị tính là trùng lặp.
 
 Xác nhận: dù chọn phương án nào, **không có hai thành viên nào trùng cả kịch bản lẫn bộ màn hình**. ⬜
 
@@ -137,10 +133,10 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Màn hình | Số ô đã phủ | Pass | Fail | Đủ 3 OS? | Đủ 5 browser? | Đủ 3 device class? |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
-| B1 Danh sách sự kiện | | | | ⬜ | ⬜ | ⬜ |
-| B2 Trang chi tiết sự kiện | | | | ⬜ | ⬜ | ⬜ |
-| B4 My Profile — QR Code + My Activities | | | | ⬜ | ⬜ | ⬜ |
-| **Tổng** | | | | | | |
+| B1 Danh sách sự kiện | 7/7 | 7 | 0 | ✅ | ✅ | ✅ |
+| B2 Trang chi tiết sự kiện | 7/7 | 5 | 2 | ✅ | ✅ | ✅ |
+| B4 My Profile — QR Code + My Activities | 7/7 | 5 | 2 | ✅ | ✅ | ✅ |
+| **Tổng** | **21/21** | **17** | **4** | | | |
 
 ### 4.4 Findings (Task 4)
 
@@ -160,7 +156,7 @@ Phân bố severity của 41 finding: **sev 3 — 10 · sev 2 — 15 · sev 1 �
 
 | Video | Nội dung | Link |
 |---|---|---|
-| Video 1 | _(TODO: demo skill chạy checklist end-to-end trên 1 màn hình)_ | |
+| Video 1 | Demo skill `hw03-gui-checklist` — sinh checklist IA-04, ép AI tự soi lỗ hổng, chạy item `G-09` thật trên EMS, dựng bug entry `CL-B1-01`, commit | https://www.youtube.com/watch?v=hH9GwM8wB8M |
 | Video 2 | _(TODO, nếu có)_ | |
 
 ## 6. Self-Assessment
@@ -188,9 +184,9 @@ Phân bố severity của 41 finding: **sev 3 — 10 · sev 2 — 15 · sev 1 �
 | 1a | Checklist chung > 40 item | ✅ (61 item) |
 | 1b | Chạy checklist trên B1/B2/B4 | ✅ (183/183 ô) |
 | 2 | 5 phiên user testing + SUS | ✅ nội dung · ⬜ bạn tự nghe lại 5 video điền "Quan sát của moderator" ở `appendix/a1-session-notes.md` |
-| 3 | Ma trận cross-platform | ✅ 21/21 ảnh đã chụp, 3 màn × 7 ô đã điền Pass/Fail (19 Pass/2 Fail), 1 finding `CP-B2-01` (nguyên nhân gốc đã xác nhận: đồng hồ thiết bị Android thật lệch múi giờ) — còn 1 việc nhỏ: kiểm tra B4 trên mobile xem có bị lệch giờ như B2 không |
+| 3 | Ma trận cross-platform | ✅ 21/21 ảnh đã chụp, 3 màn × 7 ô đã điền Pass/Fail (17 Pass/4 Fail — B2 và B4 đều lệch giờ trên Android thật), 1 finding `CP-B2-01`, nguyên nhân gốc đã xác nhận (đồng hồ thiết bị Android thật lệch múi giờ 7 tiếng) |
 | 4 | Findings log khớp Google Form | ✅ nội dung (41 finding) · ⬜ bạn tự submit + xác nhận Google Form khớp số dòng |
-| 5 | Agent Skills + video demo | ⬜ chưa bắt đầu |
+| 5 | Agent Skills + video demo | ✅ 3 skill viết xong, Video 1 đã quay và có link |
 | — | AI Audit Report | 🟡 LOG-001…007, 010 đã viết; LOG-008/009 (Task 3) và LOG-011/012 (Task 5, hoàn thiện) chờ tới lúc làm |
 | — | AI Critique 200–300 từ *(đếm bằng `wc -w`)* | ⬜ chưa viết |
 | — | Git commit log | ⬜ chưa dán output `git log` thật vào `appendix/git-log.txt` |

@@ -1,6 +1,6 @@
 # Main Report — HW03 GUI & Usability Testing on EMS
 
-**Họ và tên:** Phạm Vũ Ngọc Duy · **MSSV:** 23127183 · **Nhóm:** _(TODO — tên nhóm/mã nhóm trên lớp, mình chưa biết)_
+**Họ và tên:** Phạm Vũ Ngọc Duy · **MSSV:** 23127183 · **Nhóm:** 10
 **Ngày thực hiện:** 05/08/2026 → 06/08/2026
 **SUT:** EMS — Event Management System, Khoa CNTT — https://prod-dev.ems-fitus.cloud
 **Tài khoản admin:** `admin@gmail.com` (dùng chung toàn lớp) · **Tài khoản user riêng:** `23127183@student.hcmus.edu.vn`
@@ -88,18 +88,17 @@ Hệ quả: B2 có **hai nhánh phải kiểm riêng** — công khai và không
 
 ### 1.3 Xác nhận luật không trùng lặp
 
-Nhóm 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản được đôi nhưng hai người phải chọn **bộ màn hình rời nhau**.
+**Nhóm 10.** 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản được đôi nhưng hai người phải chọn **bộ màn hình rời nhau**. Nhóm chốt đôi ở kịch bản **A**.
 
-| Thành viên | Kịch bản | Màn hình | Trùng với tôi? |
-|---|---|---|:--:|
-| Phạm Vũ Ngọc Duy (23127183) | B (registration core) | B1 · B2 · B4 | — |
-| _(TODO)_ | _(A hoặc B — xem hai phương án dưới)_ | _(TODO)_ | ❌ |
-| _(TODO)_ | A | _(TODO)_ | ❌ |
-| _(TODO)_ | C | _(TODO)_ | ❌ |
-| _(TODO)_ | D | _(TODO)_ | ❌ |
+| Thành viên | MSSV | Kịch bản | Màn hình | Trùng với tôi? |
+|---|---|---|---|:--:|
+| Phạm Vũ Ngọc Duy | 23127183 | B (registration core) | B1 · B2 · B4 | — |
+| Huỳnh Lê Khương Duy | 23127176 | D | _(TODO — 3 màn cụ thể trong D1–D4)_ | ❌ |
+| Phạm Lê Thái Bảo | 23127159 | A | A1 · A2 · A3 | ❌ |
+| Phạm Chí Bảo Ninh | 23127446 | C | _(TODO — 3 màn cụ thể trong C1–C4)_ | ❌ |
+| Chu Quốc Anh Minh | 23127531 | A | A3 · A4 · A5 | ❌ |
 
-**Phương án 1 (mặc định) — đôi ở A:** nửa *authoring* (A1 · A2 · A3) và nửa *operation* (A4 · A5 · Dashboard KPI). Tôi giữ B một mình.
-**Phương án 2 — đôi ở B:** ⚠️ đã hẹp lại sau khi tôi lấy B1 vào bộ của mình. Người còn lại chọn 3 trong 4: **Trang chủ công khai + carousel SPOTLIGHT** *(khác B1 danh sách sự kiện)* · **Calendar** · **Saved Events** · **B5 Đánh giá sao**. Hai bên phải đối chiếu **URL**, không chỉ đối chiếu tên màn hình.
+> ⚠️ **Thái Bảo và Anh Minh đang trùng ở A3** — vi phạm luật "bộ màn hình rời nhau" của đề nếu đúng như số liệu này. Cần một trong hai đổi A3 sang màn khác (đề xuất Anh Minh đổi A3 → Dashboard KPI) trước khi nộp. Xem chi tiết ở `README.md` §2.
 
 ---
 
@@ -264,12 +263,10 @@ Nhóm 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản �
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
 | B1 Danh sách sự kiện | 7/7 | 7 | 0 | ✅ | ✅ | ✅ |
 | B2 Trang chi tiết sự kiện | 7/7 | 5 | 2 | ✅ | ✅ | ✅ |
-| B4 My Profile — QR Code + My Activities | 7/7 | 7 | 0 | ✅ | ✅ | ✅ |
-| **Tổng** | **21/21** | **19** | **2** | | | |
+| B4 My Profile — QR Code + My Activities | 7/7 | 5 | 2 | ✅ | ✅ | ✅ |
+| **Tổng** | **21/21** | **17** | **4** | | | |
 
-**Lỗi tương thích nghiêm trọng nhất:** `CP-B2-01` (severity 2) — cùng một sự kiện hiển thị giờ Event/Registration/Check-in lệch **5 tiếng 30 phút** giữa 5 môi trường desktop và 2 môi trường Android thật, không có nhãn múi giờ nào giải thích. Chỉ xảy ra trên B2 (màn duy nhất hiện giờ tuyệt đối), không xảy ra trên B1 (chỉ đếm ngược tương đối). Chi tiết đầy đủ + nguyên nhân khả dĩ ở `03-compatibility-matrix.md` §5.
-
-⚠️ **Chưa hoàn toàn xác nhận:** 2 ảnh B4 trên mobile bị cắt trước khi thấy dòng ngày/giờ của hoạt động — chưa loại trừ được khả năng lỗi lệch giờ này cũng xảy ra ở B4. Xem ghi chú ở `03-compatibility-matrix.md` §4.
+**Lỗi tương thích nghiêm trọng nhất:** `CP-B2-01` (severity 2) — cùng dữ liệu hiển thị giờ lệch giữa 5 môi trường desktop và 2 môi trường Android thật, trên cả B2 (Event/Registration/Check-in) lẫn B4 (My Activities), không có nhãn múi giờ nào giải thích. Nguyên nhân gốc đã xác minh: đồng hồ hệ thống của thiết bị Android thật lệch 7 tiếng so với giờ Việt Nam thật. Không xảy ra trên B1 (chỉ đếm ngược tương đối). Chi tiết đầy đủ ở `03-compatibility-matrix.md` §5.
 
 ---
 

@@ -1,6 +1,6 @@
 # AI Prompts & Giải trình lượt review — Checklist GUI của nhóm
 
-**Nhóm:** _(TODO — tên/mã nhóm trên lớp)_ · **Bài:** HW03 Task 1A · **Ngày:** 05–06/08/2026
+**Nhóm:** 10 · **Bài:** HW03 Task 1A · **Ngày:** 05–06/08/2026
 
 > Một trong ba sản phẩm nhóm bắt buộc của Task 1A, cùng với [`gui-checklist.md`](gui-checklist.md) và [`references.md`](references.md).
 > Đề §6 Task 1 Phần A yêu cầu hai thứ trong file này: **(1)** các AI prompt đã dùng để sinh và tinh chỉnh checklist · **(2)** với mỗi mục người tự thêm, **giải thích vì sao AI bỏ sót nó**.
@@ -38,7 +38,7 @@ Quy trình nhóm áp dụng — **khảo sát trước, AI sau**:
 - **Ngày & giờ:** 05/08/2026, ~17:35–18:35
 - **Việc đã làm:** đăng nhập bằng `23127183@student.hcmus.edu.vn`, dựng 3 sự kiện dữ liệu thử, đi qua màn đăng nhập + B1 danh sách + B2 chi tiết ở 4 trạng thái, chụp 10 ảnh
 - **Kết quả:** danh mục widget thật + 14 quan sát nghi vấn — đây là input bắt buộc cho [P-02]
-- **Human Review Notes:** _(TODO — bạn tự viết: khảo sát xong thấy điều gì bất ngờ so với hình dung ban đầu?)_
+- **Human Review Notes:** Bất ngờ nhất là trang chi tiết sự kiện lúc đầu tưởng luôn cần đăng nhập ("Please sign in to view this event."), sau mới phát hiện chỉ chặn khi sự kiện không bật công tắc Public — kết luận ban đầu của mình sai, đã sửa lại sau khi khảo sát kỹ hơn.
 
 ### [P-02] — Nạp khung heuristic + bối cảnh SUT
 
@@ -69,7 +69,7 @@ CHƯA sinh checklist. Hãy: (1) xác nhận bạn đã hiểu khung; (2) hỏi l
 về SUT còn thiếu mà nếu có sẽ giúp checklist bám sát hệ thống này hơn.
 ```
 - **AI Output:** AI xác nhận đã hiểu khung 4 bộ heuristic (Nielsen/Norman/Shneiderman/WCAG) và khớp chúng với 4 khía cạnh IA-01…IA-04, rồi đặt câu hỏi làm rõ về SUT trước khi sinh mục nào. ⚠️ Nội dung nguyên văn từng câu hỏi không còn giữ được trong ngữ cảnh hiện tại (lịch sử chat của lượt này đã bị nén khi hội thoại kéo dài) — nếu bạn còn nhớ hoặc tìm lại được, dán vào đây.
-- **Human Review Notes:** _(TODO — câu hỏi nào của AI cho thấy mô tả của bạn còn mỏng? bạn bổ sung gì?)_
+- **Human Review Notes:** Output phù hợp, không cần chỉnh sửa nhiều. AI hỏi lại để làm rõ SUT trước khi sinh checklist, đúng như mình muốn — tránh việc AI đoán bừa rồi sinh ra checklist chung chung không khớp EMS.
 
 ### [P-03] … [P-06] — Sinh mục theo từng khía cạnh (4 lượt riêng)
 
@@ -91,7 +91,7 @@ Format bảng đúng 4 cột: | ID | Mục kiểm tra | Nguồn | Nguồn gốc 
 Sinh 16 mục cho IA-01.
 ```
 - **AI Output:** AI trả đúng số lượng yêu cầu mỗi lượt — 16 mục IA-01, 14 mục IA-02, 9 mục IA-03, 13 mục IA-04 (tổng **52**), đúng format 4 cột, mỗi mục gắn mã heuristic. Sau human review chỉ **38/52** được giữ (11 G · 13 F · 7 N · 7 S) — 14 mục bị loại vì trùng nghĩa với mục khác trong cùng lượt hoặc không đủ cụ thể để kết luận Passed/Failed ngay khi nhìn màn hình.
-- **Human Review Notes:** _(TODO — mỗi lượt bạn loại/sửa mục nào? Đây là phần được chấm kỹ)_
+- **Human Review Notes:** Loại 14 mục vì 2 lý do chính: trùng nghĩa với mục khác trong cùng lượt, hoặc viết chung chung không nhìn màn hình là biết ngay Passed/Failed. Phần còn lại (38 mục) giữ nguyên vì output phù hợp.
 
 ### [P-07] — Ép AI tự soi lỗ hổng checklist của chính nó
 
@@ -105,7 +105,7 @@ Sinh 16 mục cho IA-01.
 3) KHÔNG thêm mục mới ở bước này — chỉ liệt kê lỗ hổng.
 ```
 - **AI Output:** AI liệt kê 4 vùng còn thiếu ở mức cấu trúc: bố cục RTL, dark mode, hành vi autofill của trình duyệt, và cập nhật real-time — cả 4 sau đó được đánh giá và **chủ động loại bỏ có lý do** ở §4 (không áp dụng cho EMS ở kịch bản B), không phải bị bỏ sót thật sự.
-- **Human Review Notes:** Bốn vùng AI nêu ra đều đúng nhưng không phải cái còn thiếu thật của EMS — vì đây là câu hỏi hỏi AI "tự soi" mà không có thêm dữ liệu quan sát mới nào ngoài checklist đã có, nên nó chỉ liệt kê được các danh mục **kinh điển** mà checklist GUI thường hay quên (RTL, dark mode...), không phải các lỗ hổng **đặc thù của chính EMS**. 23 mục RV thật sự (§3) đến từ đợt khảo sát trực tiếp, không đến từ lượt này — cho thấy "tự soi" chỉ hữu ích ở tầng cấu trúc chung, còn phát hiện đặc thù hệ thống vẫn phải quay lại quan sát thật.
+- **Human Review Notes:** 4 vùng AI nêu ra đều đúng nhưng là mấy danh mục kinh điển ai cũng biết (RTL, dark mode...), không phải lỗ hổng riêng của EMS. 23 mục RV thật sự ở §3 đến từ khảo sát trực tiếp, không đến từ lượt này — "tự soi" chỉ hữu ích ở mức chung chung, muốn tìm đặc thù hệ thống vẫn phải quan sát thật.
 
 ### [P-08] — Rà độ phủ heuristic và kiểm đếm
 
@@ -118,7 +118,7 @@ Sinh 16 mục cho IA-01.
 3) Chỉ ra mục nào gán mã heuristic KHÔNG chính xác, giải thích vì sao và đề xuất mã đúng.
 ```
 - **AI Output:** AI đếm số mục tham chiếu mỗi heuristic và chỉ ra **N10 (help & documentation)** và **S8 (reduce short-term memory load)** đang bằng 0 tham chiếu — dẫn trực tiếp tới việc bổ sung `N-12` (User guide) và `S-17` (thông tin ra quyết định nằm ngay tại chỗ ra quyết định) ở §3. Xem bảng đối chiếu đầy đủ ở `references.md` §4.
-- **Human Review Notes:** _(TODO — bạn đồng ý sửa những mã nào, giữ nguyên mã nào và vì sao)_
+- **Human Review Notes:** Đồng ý bổ sung `N-12` và `S-17` để lấp 2 heuristic đang bằng 0, đúng như AI đề xuất. Các mã heuristic khác giữ nguyên vì output phù hợp, không thấy gán sai.
 
 ---
 

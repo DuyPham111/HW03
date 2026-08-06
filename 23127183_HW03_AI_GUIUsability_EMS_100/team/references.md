@@ -1,6 +1,6 @@
 # Nguồn tham khảo — Checklist GUI của nhóm
 
-**Nhóm:** _(TODO — tên/mã nhóm trên lớp)_ · **Bài:** HW03 Task 1A · **Ngày:** 05–06/08/2026
+**Nhóm:** 10 · **Bài:** HW03 Task 1A · **Ngày:** 05–06/08/2026
 
 > Một trong ba sản phẩm nhóm bắt buộc của Task 1A, cùng với [`gui-checklist.md`](gui-checklist.md) và [`ai-prompts.md`](ai-prompts.md).
 > Đề §6 Task 1 Phần A: *"the list of reference sources you drew on (books, articles, standards, the course slides)"*.

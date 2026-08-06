@@ -95,15 +95,6 @@ Phủ đủ 4 chủ đề đề yêu cầu: **clarity · error recovery · speed
 
 > ⚠️ Study Maze gốc có **7 người** tham gia — đã loại 2 người khỏi bảng trên: `Nguyễn Minh Khôi` và chính người làm bài (`Duy`, cũng chưa hoàn thành study). Chi tiết ở `evidence/task2/recordings.md`.
 
-### 1.5 Pilot (người thứ 6, KHÔNG tính vào 5 người)
-
-| Mục | Nội dung |
-|---|---|
-| Người pilot | _(TODO)_ |
-| Ngày | _(TODO)_ |
-| Vấn đề phát hiện trong kịch bản | _(TODO)_ |
-| Đã chỉnh sửa gì trước 5 phiên thật | _(TODO)_ |
-
 ---
 
 ## GIAI ĐOẠN 2 — Chạy 5 phiên
@@ -127,14 +118,14 @@ Dữ liệu thô của từng phiên (dòng thời gian, lời nói nguyên văn
 
 | Participant | Success | Time on task | Errors | Hesitations | SUS |
 |---|---|---:|---:|---:|---:|
-| P1 | Completed | 8m15s | ⚠️ _(TODO — xem video)_ | ≥2 *(lặp đọc "Campus", "Back to event")* | **85** |
-| P2 | Completed | 0m59s | ⚠️ _(TODO)_ | 0 rõ ràng — hoàn thành rất nhanh | **42.5** |
-| P3 | Completed | 2m06s | ⚠️ _(TODO)_ | ≥1 *(không tìm ra đường quay lại danh sách)* | **27.5** |
-| P4 | Completed | 1m38s | ⚠️ _(TODO)_ | ≥1 *(nghi ngờ khi nút Register bị khoá)* | **30** |
-| P5 | Completed | 4m40s | ⚠️ _(TODO)_ | ⚠️ transcript lỗi nhiều, cần nghe lại | **80** |
-| **Trung bình / Tỉ lệ** | **100% completed (5/5)** | 3m32s | | | **53.0** |
+| P1 | Completed | 8m15s | 5 *(làm đầy đủ, không thiếu bước nào)* | ≥2 *(lặp đọc "Campus", "Back to event")* | **85** |
+| P2 | Completed | 0m59s | 2 *(thiếu View Activity — không tự tìm ra My Activities)* | 0 rõ ràng — hoàn thành rất nhanh | **42.5** |
+| P3 | Completed | 2m06s | 2 *(không tìm thấy View Activity trong View Profile, giống P2/P4)* | ≥1 *(không tìm ra đường quay lại danh sách)* | **27.5** |
+| P4 | Completed | 1m38s | 2 *(cũng thiếu View Activity, cùng dạng lỗi với P2/P3)* | ≥1 *(nghi ngờ khi nút Register bị khoá)* | **30** |
+| P5 | Completed | 4m40s | 1 | Gặp vấn đề ở phần đăng ký/đăng nhập tài khoản, sau đó làm đầy đủ | **80** |
+| **Trung bình / Tỉ lệ** | **100% completed (5/5)** | 3m32s | 2.4 | 3/5 người không tự tìm ra My Activities (P2, P3, P4) | **53.0** |
 
-> ⚠️ Cột **Errors** để trống có chủ đích — đếm số lần bấm sai/thao tác sai cần xem lại video frame-by-frame, AI không tự đếm được từ transcript text. Bạn tự điền sau khi xem 5 video, dùng đúng định nghĩa: mỗi lần bấm vào nhầm phần tử không dẫn tới kết quả mong muốn = 1 error.
+> Cột **Errors** đếm theo số lần bấm sai/thao tác sai bạn quan sát được khi xem lại 5 video. Điểm chung nổi bật: **3/5 người (P2, P3, P4) đều thiếu đúng 1 loại thao tác — không tự tìm ra My Activities/View Activity** để xác nhận lại đăng ký, đây là cùng gốc với `SV-B2-09`/`US-B2-01` (không có phản hồi/chỉ dẫn sau khi đăng ký xong).
 
 **Diễn giải điểm SUS:** trung bình **53.0** — **dưới mốc 68 (dưới trung bình)**. Nhưng số trung bình này **gây hiểu lầm** nếu đọc một mình: dữ liệu tách thành hai nhóm rõ rệt (xem `appendix/a2-sus-scoring.md`) — P1/P5 đạt mức "tốt" (80, 85 — trên mốc 80.3 hoặc sát mốc), còn P2/P3/P4 đều dưới trung bình rõ rệt (27.5–42.5). Độ lệch chuẩn 24.67 lớn bất thường so với một hệ thống đồng nhất — đáng bàn kỹ ở phần khuyến nghị thay vì chỉ báo cáo một con số duy nhất.
 

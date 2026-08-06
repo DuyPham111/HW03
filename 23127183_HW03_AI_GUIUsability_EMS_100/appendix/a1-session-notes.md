@@ -202,13 +202,3 @@ _(TODO — bạn tự bổ sung nhận xét khác nếu xem video thấy thêm g
 
 _(TODO — bạn tự xem lại đoạn 0:33 để nghe rõ câu thắc mắc về "khoá thông tin cá nhân" — nếu đúng vậy thì có thể liên quan tới một icon/thông báo bảo mật chưa từng được ghi nhận trong checklist, đáng thành finding mới)_
 
----
-
-## Pilot — người thứ 6 (KHÔNG tính vào 5 người)
-
-| Mục | Nội dung |
-|---|---|
-| Người pilot | _(TODO)_ |
-| Ngày | _(TODO)_ |
-| Vấn đề phát hiện ở kịch bản | _(TODO)_ |
-| Đã sửa gì trước 5 phiên thật | _(TODO)_ |

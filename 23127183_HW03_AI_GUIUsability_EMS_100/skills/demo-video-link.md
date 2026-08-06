@@ -6,7 +6,7 @@
 
 | Video | Skill demo | Nội dung | Link |
 |---|---|---|---|
-| Video 1 | `hw03-gui-checklist` | _(TODO)_ | _(TODO)_ |
+| Video 1 | `hw03-gui-checklist` | Demo Phần A (sinh item IA-04, ép AI tự soi lỗ hổng) + Phần B (chạy item `G-09` thật trên B1/B2, dựng bug entry `CL-B1-01`, commit) — theo kịch bản `../../video-demo-prep/01-kich-ban-quay-video.md` | https://www.youtube.com/watch?v=hH9GwM8wB8M |
 | Video 2 | `hw03-usability-5users` | _(TODO, nếu có)_ | |
 | Video 3 | `hw03-crossplatform-matrix` | _(TODO, nếu có)_ | |
 
