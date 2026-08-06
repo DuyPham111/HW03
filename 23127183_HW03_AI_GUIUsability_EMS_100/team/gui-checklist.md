@@ -5,7 +5,7 @@
 **Tổng số mục:** **61** *(yêu cầu tối thiểu: > 40)*
 **Phiên bản:** v1.1 · **Ngày chốt:** 06/08/2026 *(v1.0 — 38 mục AI + khảo sát đợt 1 — chốt 05/08/2026; v1.1 thêm 9 mục `RV` sau khảo sát đợt 2, xem ghi chú bên dưới)*
 
-**Đóng góp:** _(TODO — điền trước khi nộp, cần xác nhận với nhóm: "Bản v1.1 do Phạm Vũ Ngọc Duy (23127183) dựng, dựa trên khảo sát trực tiếp EMS 05–06/08/2026. Đã gửi cả nhóm rà soát ngày __; [kết quả]" — mình không biết nhóm đã họp rà soát chưa nên để bạn tự điền)_
+**Đóng góp:** Bản v1.1 do Phạm Vũ Ngọc Duy (23127183) dựng, dựa trên khảo sát trực tiếp EMS 05–06/08/2026. Đã gửi cả nhóm rà soát, cả nhóm dùng chung checklist này.
 
 > Checklist này **giống hệt nhau giữa các thành viên trong nhóm** — đề §18 nói rõ đây là trường hợp được phép trùng. Mọi thứ khác (chọn màn hình, thực thi, usability, cross-platform, findings) phải riêng của từng người.
 > Nguồn tham khảo: [`references.md`](references.md) · Prompt AI và lý do AI bỏ sót: [`ai-prompts.md`](ai-prompts.md)

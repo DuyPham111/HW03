@@ -7,6 +7,7 @@
 **Kỹ thuật:** GUI Checklist (Nielsen · Norman · Shneiderman) + Usability Testing 5 người thật + Cross-Browser/Cross-Platform Testing
 **Google Form nộp finding:** https://forms.gle/CJQFQCAXcsDbXDMM9
 **Email dùng khi nộp form & overlay ảnh:** 23127183@student.hcmus.edu.vn
+**Repo GitHub:** https://github.com/DuyPham111/HW03
 
 ---
 
@@ -137,10 +138,10 @@
 
 | Nguồn | Tiền tố ID | Bug | Usability | Tổng | Đã submit form |
 |---|---|:--:|:--:|:--:|:--:|
-| Checklist execution | `CL-` | **6** | **5** | **11** | ⬜ |
-| User testing | `US-` | **0** | **2** | **2** | ⬜ |
-| Cross-platform | `CP-` | **1** | **0** | **1** | ⬜ |
-| Khảo sát EMS | `SV-` | **8** | **19** | **27** | ⬜ |
+| Checklist execution | `CL-` | **6** | **5** | **11** | ✅ |
+| User testing | `US-` | **0** | **2** | **2** | ✅ |
+| Cross-platform | `CP-` | **1** | **0** | **1** | ✅ |
+| Khảo sát EMS | `SV-` | **8** | **19** | **27** | ✅ |
 | **Tổng** | | **15** | **26** | **41** | |
 
 Phân bố severity của 41 finding: **sev 3 — 10 · sev 2 — 15 · sev 1 — 13 · sev 0 — 3** · không có sev 4. Ba finding sev 0 (`SV-B2-08`, `SV-B1-02`, `SV-B2-03`) là ba lần tôi tự sửa lại kết luận sai của chính mình từ đợt khảo sát ban đầu, sau khi kiểm chứng trực tiếp trên EMS. Hai finding `US-` từ Task 2 (`US-B2-01` sev 3, `US-B2-02` sev 2) — `US-B2-01` trùng khớp độc lập với `SV-B2-09`/`S-01`/`S-14` đã có từ trước. Finding `CP-B2-01` (sev 2, Task 3) phát hiện cùng 1 sự kiện hiện giờ lệch 5 tiếng 30 phút giữa desktop và Android thật — mở rộng bằng chứng cho `S-09`/`CL-B2-02` (thiếu nhãn múi giờ) từ "thiếu tiện lợi" thành "gây sai lệch nội dung thật".
@@ -179,10 +180,10 @@ Phân bố severity của 41 finding: **sev 3 — 10 · sev 2 — 15 · sev 1 �
 | 1b | Chạy checklist trên B1/B2/B4 | ✅ (183/183 ô) |
 | 2 | 5 phiên user testing + SUS | ✅ |
 | 3 | Ma trận cross-platform | ✅ 21/21 ảnh, 17 Pass/4 Fail, 1 finding `CP-B2-01` (nguyên nhân gốc đã xác nhận: đồng hồ thiết bị Android thật lệch múi giờ 7 tiếng) |
-| 4 | Findings log khớp Google Form | ✅ nội dung (41 finding) · ⬜ bạn tự submit + xác nhận Google Form khớp số dòng |
+| 4 | Findings log khớp Google Form | ✅ nội dung (41 finding), đã submit form |
 | 5 | Agent Skills + video demo | ✅ 3 skill viết xong, Video 1 đã quay và có link |
 | — | AI Audit Report | ✅ đủ 12 log (LOG-001…012) |
-| — | AI Critique 200–300 từ *(đếm bằng `wc -w`)* | ✅ nháp 284 từ · ⬜ bạn đọc lại, đếm lại sau khi sửa văn phong |
+| — | AI Critique 200–300 từ *(đếm bằng `wc -w`)* | ✅ 284 từ, đã đọc lại |
 | — | Git commit log | ✅ 34 commit đã dán vào `appendix/git-log.txt` — sẽ còn thêm commit mới cho tới lúc nộp, nhớ chạy lại lệnh lần cuối |
 | — | PDF cho mọi file `.md` chính | ⬜ chưa xuất |
 

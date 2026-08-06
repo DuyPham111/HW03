@@ -5,6 +5,7 @@
 **SUT:** EMS — Event Management System, Khoa CNTT — https://prod-dev.ems-fitus.cloud
 **Tài khoản admin:** `admin@gmail.com` (dùng chung toàn lớp) · **Tài khoản user riêng:** `23127183@student.hcmus.edu.vn`
 **Kịch bản đã chọn:** **B — User đăng ký tham dự sự kiện** · **Màn hình:** B1 Danh sách sự kiện · B2 Trang chi tiết sự kiện · B4 My Profile — QR Code + My Activities
+**Repo GitHub:** https://github.com/DuyPham111/HW03
 
 > **Lưu ý về môi trường:** SUT là môi trường dev (`prod-dev.ems-fitus.cloud`, thay cho link ngrok cũ đã ngừng hoạt động), dữ liệu có thể bị reset định kỳ. Mọi bằng chứng trong báo cáo này được chụp **ngay tại thời điểm quan sát**; trạng thái mô tả có thể không còn tái hiện được ở phiên sau. Thời điểm chụp được ghi kèm mỗi ảnh.
 
@@ -98,7 +99,7 @@ Hệ quả: B2 có **hai nhánh phải kiểm riêng** — công khai và không
 | Phạm Chí Bảo Ninh | 23127446 | C |
 | Chu Quốc Anh Minh | 23127531 | A |
 
-> Kịch bản A được đôi (Thái Bảo, Anh Minh) — chi tiết bộ màn hình từng người và cảnh báo trùng A3 xem ở `README.md` §2.
+> Kịch bản A được đôi (Thái Bảo, Anh Minh) — chi tiết bộ màn hình từng người xem ở `README.md` §2.
 
 ---
 
