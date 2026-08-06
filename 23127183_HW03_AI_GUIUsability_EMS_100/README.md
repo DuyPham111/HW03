@@ -18,11 +18,13 @@
 |---|---|---|---|---|
 | 1 | B1 | Danh sách sự kiện — thẻ sự kiện, ô tìm kiếm, bộ lọc, phân trang | Cửa vào của cả luồng: người dùng phải **tìm được** sự kiện trước khi đăng ký. Là màn hình duy nhất trong bộ có bộ lọc + trạng thái rỗng + danh sách nhiều bản ghi, nên gánh phần lớn IA-03 | IA-03 tìm kiếm, lọc, phân trang, URL state · IA-01 thẻ, ảnh, empty state |
 | 2 | B2 | Trang chi tiết sự kiện — banner, lịch trình, **khối Registration roles**, nút Đăng ký / Cancel registration | Điểm ra quyết định **và** nơi thực hiện đăng ký. Chứa nhiều trạng thái khác nhau (còn chỗ / hết chỗ / đã đóng đăng ký / chưa đăng nhập / đã đăng ký) nên là màn hình giàu IA-02 và IA-04 nhất trong bộ | IA-02 chọn vai trò, validation, xác nhận · IA-04 badge trạng thái, hộp thoại huỷ · IA-01 bố cục |
-| 3 | B4 | My Profile — nút QR Code + khối My Activities | Đầu ra quan sát được của cả luồng, dùng làm tiêu chí "hoàn thành" cho Task 2. Có badge trạng thái nhiều màu, empty state, phân trang riêng | IA-04 badge trạng thái · IA-01 empty state · IA-03 phân trang, Filters, Export |
+| 3 | B4 | My Profile — khối My Activities | Đầu ra quan sát được của cả luồng, My Activities dùng làm tiêu chí "hoàn thành" cho Task 2 (xem ⚠️ dưới). Có badge trạng thái nhiều màu, empty state, phân trang riêng | IA-04 badge trạng thái · IA-01 empty state · IA-03 phân trang, Filters, Export |
 
 ⚠️ **Sửa ngày 06/08/2026 — bộ màn hình đã đổi từ B2/B3/B4 sang B1/B2/B4.** Lý do: khảo sát trực tiếp cho thấy **EMS không có form đăng ký như một màn hình riêng**. Việc chọn vai trò và bấm đăng ký diễn ra ngay trong khối `Registration roles` nằm trên trang chi tiết, **cùng URL** `/events/<id>`, không điều hướng và không tải lại trang (xem `evidence/survey/KS_B3_02_form-rong.png`). Giữ nguyên "B3 Form đăng ký" sẽ thành hai màn hình trùng URL, không đạt yêu cầu "3 màn hình" của đề. B1 được đưa vào thay thế: nó là một URL riêng, thuộc đúng hành trình của kịch bản B, và phần IA-02 mất đi được bù lại bởi chính khối đăng ký trên B2.
 
-**Giải trình chung:** ba màn hình tạo thành một mạch liền **tìm sự kiện → đăng ký → lấy mã check-in**, đúng bằng tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B (*"register for an upcoming workshop and show me your check-in QR"*). Nhờ vậy bộ này: (1) gói được thành **một tác vụ hướng mục tiêu duy nhất** cho Task 2; (2) phủ đủ cả bốn khía cạnh IA-01…IA-04 dù phía user không có upload/rich-text/drag-drop; (3) chạy được bằng **tài khoản guest**, không cần tài khoản HCMUS và không phụ thuộc tài khoản admin dùng chung của lớp — điều kiện then chốt để chạy 5 phiên user testing với người ngoài lớp.
+⚠️ **Cũng sửa ngày 06/08/2026 — Task 2 không còn dùng QR làm tiêu chí hoàn thành.** Đề dùng QR làm ví dụ (*"register for an upcoming workshop and show me your check-in QR"*), nhưng QR trên EMS hoá ra là **mã cố định theo tài khoản**, không đổi theo có đăng ký hay không — một tài khoản 0 đăng ký vẫn mở được QR bình thường (`evidence/survey/KS_B4_empty-qr.png`). Dùng nó đo "đã đăng ký chưa" là phép đo yếu. Đổi sang **tìm lại được đúng đăng ký trong My Activities** — chặt hơn vì chỉ hiện đúng khi đăng ký thật thành công. `SV-B4-01` (QR tách rời khỏi luồng đăng ký) vẫn còn nguyên là một finding.
+
+**Giải trình chung:** ba màn hình tạo thành một mạch liền **tìm sự kiện → đăng ký → xem lại đăng ký**, đúng tinh thần tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B. Nhờ vậy bộ này: (1) gói được thành **một tác vụ hướng mục tiêu duy nhất** cho Task 2; (2) phủ đủ cả bốn khía cạnh IA-01…IA-04 dù phía user không có upload/rich-text/drag-drop; (3) chạy được bằng **tài khoản guest**, không cần tài khoản HCMUS và không phụ thuộc tài khoản admin dùng chung của lớp — điều kiện then chốt để chạy 5 phiên user testing với người ngoài lớp.
 
 **Nhóm item sẽ đánh N/A và lý do:** upload ảnh, trình soạn rich-text, kéo-thả reorder, bảng cấu hình quyền — các widget này chỉ tồn tại ở phía admin, không có trong Pool B. Mọi ô N/A đều ghi lý do trong `01-checklist-execution.md` theo yêu cầu của đề.
 
@@ -147,10 +149,10 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 | Checklist execution | `CL-` | | | | |
 | User testing | `US-` | | | | |
 | Cross-platform | `CP-` | | | | |
-| Khảo sát EMS | `SV-` | **10** | **17** | **27** | _(TODO)_ |
-| **Tổng** | | **10** | **17** | **27** | |
+| Khảo sát EMS | `SV-` | **8** | **19** | **27** | _(TODO)_ |
+| **Tổng** | | **8** | **19** | **27** | |
 
-Phân bố severity của 27 finding khảo sát: **sev 3 — 9 · sev 2 — 11 · sev 1 — 7** · không có sev 4 hay sev 0.
+Phân bố severity của 27 finding khảo sát: **sev 3 — 8 · sev 2 — 10 · sev 1 — 8 · sev 0 — 1** · không có sev 4.
 
 > Số dòng trong `04-findings-log.md` **phải bằng** số lần submit Google Form — TA đối chiếu chéo.
 

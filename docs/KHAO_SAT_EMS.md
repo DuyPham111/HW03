@@ -115,11 +115,11 @@ Tài liệu chính thức, mục 1.3: *"Trong lần đầu đăng nhập, nhấn
 | Vé nằm trong "My Registrations", cạnh từng đăng ký | QR nằm ở **nút riêng trên đầu trang Profile**, tách rời hoàn toàn khỏi danh sách My Activities |
 | "Xem vé của workshop X" | Không có khái niệm đó — cùng một mã dùng cho mọi sự kiện |
 
-**Ba hệ quả — đều tốt cho bài:**
+**Ba hệ quả:**
 
-1. **Task 2 giữ nguyên được câu gốc** *"cho mình xem mã QR check-in của bạn"* — hợp lệ, vì QR có thật. Đã khôi phục câu này ở các file.
-2. **Đây là một câu hỏi usability rất hay để quan sát:** participant vừa đăng ký xong sẽ **đi tìm vé ở đâu**? Nhiều khả năng họ tìm trong sự kiện hoặc trong danh sách đăng ký — chỗ đó **không có gì**. Phải mò lên Profile → nút QR Code. **Nếu ≥ 3/5 người bị kẹt ở đây thì đó là finding hệ thống hạng nặng**, đúng loại dữ liệu đề Task 2 muốn.
-3. **Sinh ra một ứng viên finding mới** — xem `SV-B4-01` ở Phần 6.
+1. ⚠️ **Sửa ngày 06/08/2026 — Task 2 KHÔNG dùng câu QR nữa.** Chính vì QR là mã cố định theo tài khoản (không đổi theo có đăng ký hay không — tài khoản 0 đăng ký vẫn mở được QR, `KS_B4_empty-qr.png`) nên dùng nó làm tiêu chí hoàn thành là phép đo yếu: nó không xác nhận được participant đã đăng ký đúng sự kiện. Tiêu chí hoàn thành đổi sang **tìm lại được đúng đăng ký trong My Activities**. Chi tiết ở `02-usability-report.md` §1.1.
+2. **Quan sát usability vẫn còn giá trị, chỉ đổi khung đo:** thay vì "participant tìm vé ở đâu", giờ quan sát "participant tìm **xác nhận đăng ký** ở đâu sau khi bấm submit — hệ thống không có toast, không chỉ đường (`SV-B2-09`)". Nếu ≥ 3/5 người bị kẹt ở đây thì đó là finding hệ thống hạng nặng, đúng loại dữ liệu đề Task 2 muốn.
+3. **`SV-B4-01`** (QR tách rời khỏi luồng đăng ký) vẫn giữ nguyên trong `04-findings-log.md` như một finding độc lập — chỉ không còn là thứ kịch bản Task 2 đo trực tiếp nữa.
 
 **Còn cần kiểm:**
 - [ ] Mã QR có **đổi theo thời gian / theo sự kiện** không, hay cố định vĩnh viễn? *(quét thử 2 lần cách nhau, hoặc so ảnh QR trước/sau khi đăng ký thêm sự kiện)* — nếu cố định vĩnh viễn thì còn là vấn đề **bảo mật**: ai chụp được màn hình QR là check-in hộ được
@@ -414,7 +414,7 @@ HÀNH VI ĐẶC THÙ ĐÁNG CHÚ Ý
 | `SV-B2-04` | B2 | Số ô số liệu vai trò **đổi giữa các sự kiện** (4 ô có Waitlisted vs 3 ô không) | N4 — bố cục không ổn định giữa các trang cùng loại | `workshop-b` vs `workshop-c` |
 | `SV-B2-05` | B2 | Màn chặn chưa đăng nhập: nút ghi **`login`** chữ thường, lệch với các nút khác Title Case | N4 | `KS_B2_chua-dang-nhap.png` |
 | `SV-B2-06` | B2 | Workshop B **thiếu tag category và academic context**, chỉ còn tag campus | N1 | `KS_B2_workshop-b-het-cho.png` |
-| `SV-B4-01` | B4 | ⭐ **Mã QR check-in nằm ở nút riêng trên đầu trang Profile, tách hoàn toàn khỏi danh sách đăng ký.** Vừa đăng ký xong, ở ngay chỗ đăng ký lẫn trong My Activities đều **không có đường dẫn nào tới vé** | N1, N6, N3 — người dùng phải **nhớ** rằng QR nằm ở Profile chứ không được hệ thống chỉ đường. Đây là ứng viên finding **severity cao nhất** hiện có, và là thứ 5 phiên user testing sẽ đo được trực tiếp | `check-in-profile.png` · `profile-2.png` |
+| `SV-B4-01` | B4 | ⭐ **Mã QR check-in nằm ở nút riêng trên đầu trang Profile, tách hoàn toàn khỏi danh sách đăng ký.** Vừa đăng ký xong, ở ngay chỗ đăng ký lẫn trong My Activities đều **không có đường dẫn nào tới vé** | N1, N6, N3 — người dùng phải **nhớ** rằng QR nằm ở Profile chứ không được hệ thống chỉ đường. Đã đưa vào `04-findings-log.md` với severity 3. ⚠️ *Không còn là thứ Task 2 đo trực tiếp (06/08/2026, xem mục 5) — kịch bản test giờ đo việc tìm xác nhận đăng ký, không đo việc tìm QR* | `check-in-profile.png` · `profile-2.png` |
 | `SV-B4-02` | B4 | Email trong menu avatar bị **cắt cụt** thành `23127183@student.hcmus.edu...` dù còn chỗ trống | N1, S8 | `profile-1.png` |
 | `SV-B4-03` | B2 + B4 | **Ba bộ từ vựng khác nhau cho cùng khái niệm trạng thái đăng ký:** tài liệu chính thức dùng `Approved/Pending Review/Rejected/Waitlisted` · trang B2 dùng 4 ô đếm `Registered/Pending/Confirmed/Waitlisted` · thẻ trong My Activities dùng badge `Pending review/Student participation/Upcoming` | N4, S1 — người dùng không map được ba bộ từ này với nhau | `profile-2.png` vs `KS_B2_workshop-b-het-cho.png` |
 | `SV-B4-04` | B4 | Mã QR **cố định theo Student ID, không đổi theo sự kiện** ⇒ ai chụp được màn hình QR là **check-in hộ được** ở mọi sự kiện. ⬜ *cần xác nhận QR có xoay vòng theo thời gian không rồi mới kết luận* | N5 (error prevention) — nếu đúng là cố định vĩnh viễn thì đây là vấn đề **bảo mật**, không chỉ usability | `check-in-profile.png` |

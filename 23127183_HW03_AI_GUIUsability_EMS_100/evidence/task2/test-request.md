@@ -3,7 +3,7 @@
 > Đây là bản gửi cho participant trước/đầu phiên. Lưu ở đây làm **bằng chứng quy trình tuyển và dẫn phiên** (đề §12 yêu cầu dữ liệu phiên thô).
 > Kịch bản đầy đủ + tiêu chí chấm: [`../../02-usability-report.md`](../../02-usability-report.md) · Ghi chú phiên: [`../../appendix/a1-session-notes.md`](../../appendix/a1-session-notes.md)
 
-> **Công cụ chạy phiên:** study Maze (`app.maze.co`) — Live website testing trên `https://prod-dev.ems-fitus.cloud`, kèm block nhiệm vụ + trạng thái kết quả + SUS 10 câu + 5 câu hỏi mở. Cách dựng chi tiết: `docs/QUY_TRINH_AI_VA_TOI.md` Phần 2. **Dùng SONG SONG với cuộc gọi có chia sẻ màn hình** (Zalo/Meet) — Maze không thay được người quan sát trực tiếp think-aloud.
+> **Công cụ chạy phiên:** study Maze (`app.maze.co`) — Live website testing trên `https://prod-dev.ems-fitus.cloud`, kèm block họ tên + liên hệ, nhiệm vụ, trạng thái kết quả tự nhận, SUS 10 câu. Cách dựng chi tiết: `docs/HUONG_DAN_DUNG_MAZE.md`. **Dùng SONG SONG với cuộc gọi có chia sẻ màn hình** (Zalo/Meet) — Maze không thay được người quan sát trực tiếp think-aloud, kể cả khi có bật ghi màn hình/camera trong Maze.
 > _(TODO: dán link Maze study ở đây sau khi publish)_
 > Dự phòng nếu Maze trục trặc: [Vé tham gia kiểm thử EMS](https://claude.ai/code/artifact/aa535ccc-fb5d-4888-aa4b-c5ba924fe107) — trang tự dựng làm việc tương tự, không cần tài khoản.
 > Nội dung markdown bên dưới vẫn giữ lại làm **bản dự phòng giấy** (đọc miệng qua điện thoại) nếu participant không mở được link, và làm bằng chứng quy trình cho đề §12.
@@ -20,8 +20,8 @@ Cảm ơn bạn đã dành khoảng **20–25 phút** tham gia buổi thử nghi
 2. **Xin bạn nói to những gì đang nghĩ** *(think aloud)*: bạn đang tìm gì, bạn nghĩ nút này sẽ làm gì, chỗ nào làm bạn phân vân. Nếu bạn im lặng lâu mình sẽ nhắc nhẹ.
 3. **Mình sẽ không trả lời câu hỏi trong lúc bạn làm.** Không phải mình khó tính — mình cần xem hệ thống tự giải thích được đến đâu. Nếu bạn bí hẳn quá 2 phút thì mình sẽ gợi ý.
 
-**Ghi hình:** mình xin phép ghi lại **màn hình và giọng nói** trong lúc bạn thao tác. Bản ghi chỉ dùng cho bài tập, không đăng công khai, và mình sẽ xoá sau khi chấm xong.
-Bạn đồng ý ghi hình? ⬜ Có ⬜ Không *(không đồng ý cũng không sao — mình chỉ ghi chú tay)*
+**Ghi hình:** mình xin phép ghi lại **màn hình và giọng nói** trong lúc bạn thao tác qua cuộc gọi, và **study Maze cũng có thể tự ghi màn hình + camera** trong lúc bạn làm nhiệm vụ ⚠️ *(nếu tài khoản Maze bật được tính năng này — xem `docs/HUONG_DAN_DUNG_MAZE.md` PHẦN 7b)*. Mọi bản ghi chỉ dùng cho bài tập, không đăng công khai, và mình sẽ xoá sau khi chấm xong.
+Bạn đồng ý ghi hình (kể cả camera)? ⬜ Có ⬜ Không *(không đồng ý cũng không sao — mình chỉ ghi chú tay, và tắt camera trong Maze nếu bật được)*
 
 ---
 
@@ -31,11 +31,11 @@ Một người quen báo bạn có một buổi workshop học thuật ở Khoa 
 
 ## Nhiệm vụ
 
-> **Khoa sắp tổ chức một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem mã QR check-in của bạn.**
+> **Khoa sắp tổ chức một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem lại đăng ký đó trong hồ sơ của bạn.**
 
 Xong việc thì bạn báo mình một tiếng. Cứ thao tác tự nhiên như bạn vẫn dùng web hằng ngày.
 
-> ⚠️ **Lưu ý cho người dẫn phiên (không đưa cho participant đọc):** đề bài phải nêu **mục tiêu**, tuyệt đối **không** liệt kê các bước bấm. Đặc biệt **không được gợi ý QR nằm ở trang Profile** — chính việc participant tìm nó ở đâu mới là dữ liệu cần thu (xem `SV-B4-01`). Nếu họ kẹt quá 2 phút thì mới gợi ý mức tối thiểu, và **ghi lại là đã can thiệp**.
+> ⚠️ **Lưu ý cho người dẫn phiên (không đưa cho participant đọc):** đề bài phải nêu **mục tiêu**, tuyệt đối **không** liệt kê các bước bấm. Đặc biệt **không được gợi ý My Activities nằm ở đâu** — chính việc participant tự tìm đường xác nhận đăng ký ở đâu mới là dữ liệu cần thu (xem §1.1 trong `02-usability-report.md`). Nếu họ kẹt quá 2 phút thì mới gợi ý mức tối thiểu, và **ghi lại là đã can thiệp**.
 
 **Điều kiện hệ thống:** mình đã chuẩn bị sẵn tài khoản demo, sẽ đăng nhập giúp bạn trước khi bắt đầu — bạn không cần tạo tài khoản gì. Nếu có lúc nào hệ thống hỏi đăng nhập lại thì cứ nói, mình xử lý.
 

@@ -146,21 +146,26 @@ Bạn muốn dùng đúng công cụ mình từng trải nghiệm với tư các
 
 **Giới hạn 2 — gói Free chỉ có `1 study / month`.** Đã kiểm tra trang giá công khai của Maze (05/08/2026): gói Free có 5 seats, 1 study/tháng, kèm **Live website testing (bản Basic)** — đủ dùng cho việc này, nhưng vì chỉ có 1 slot, **dựng đúng 1 lần cho chuẩn**, đừng tạo nháp rồi xoá đi tạo lại. Nếu bạn đã có sẵn tài khoản dùng cho HW khác trong tháng này, **đăng ký tài khoản Maze mới bằng email khác** để có slot riêng — quota tính theo workspace, không phải theo người dùng chung.
 
+> ⚠️ **Cần kiểm lại (06/08/2026):** ảnh study của một bạn cùng lớp cho thấy project nằm trong workspace tên `FITUS-E...`, đã có **8 response kèm video clip screen+camera** — nhiều khả năng đó là gói trả phí hoặc workspace chung của khoa, không phải Free cá nhân. Nếu bạn đang ở **cùng workspace** đó thì giới hạn 1 study/tháng và việc không có recording ở trên **có thể không còn đúng với bạn** — kiểm tra trước khi giả định vẫn đang dùng Free tier.
+
 **Giới hạn 3 — Maze mặc định là unmoderated, không tự đủ điểm Task 2.** Đề yêu cầu tường minh: *"Run sessions — moderated, think-aloud, observe neutrally"*, *"take structured notes on friction points, errors, hesitations, and verbalised frustration"*. Maze tự nó chỉ đo click/giờ, không có ai nghe participant **nói ra** vì sao họ phân vân. **Bắt buộc chạy song song với cuộc gọi chia sẻ màn hình** (Zalo/Meet) — participant làm task qua link Maze, bạn ngồi trong cuộc gọi quan sát + ghi chú, giống hệt nguyên tắc ở phần trên, chỉ đổi công cụ thu số liệu.
 
 ### Cách dựng study trong Maze — dùng đúng nội dung đã chốt
 
-> **Hướng dẫn chi tiết từng ô, từng nút (dựa trên ảnh giao diện thật): [`HUONG_DAN_DUNG_MAZE.md`](HUONG_DAN_DUNG_MAZE.md).** Tóm tắt 9 bước dưới đây, xem file đó để biết chính xác dán nội dung nào vào ô nào.
+> **Hướng dẫn chi tiết từng ô, từng nút (dựa trên ảnh giao diện thật): [`HUONG_DAN_DUNG_MAZE.md`](HUONG_DAN_DUNG_MAZE.md).** Tóm tắt 12 bước dưới đây, xem file đó để biết chính xác dán nội dung nào vào ô nào.
 
 1. Đăng nhập `app.maze.co` → **New study** → chọn kiểu **Live website testing** (không phải Prototype testing, vì SUT là site thật chứ không phải Figma).
 2. Nhập URL: `https://prod-dev.ems-fitus.cloud`
-3. Thêm **Mission/Task block**, dán nguyên văn bản **an toàn** (chờ xác minh QR — xem `docs/KHAO_SAT_EMS.md` mục ⚠️5): *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem xác nhận đăng ký của bạn."* — giữ đúng dạng mục tiêu, không thêm bước bấm cụ thể. Đổi lại thành *"...cho mình xem mã QR check-in của bạn"* nếu đã xác nhận hệ thống thật có QR.
-4. Thêm block hỏi kết quả tự nhận (3 lựa chọn, khớp định nghĩa đã chốt ở `02-usability-report.md`): Completed / Partial / Failed.
-5. Thêm khảo sát SUS: tìm block tên **"System Usability Scale"** hoặc **"SUS"** trong danh sách question block. Nếu Maze không có sẵn block này, tự thêm 10 block **Opinion scale (1–5)**, copy nguyên văn 10 câu từ `appendix/a2-sus-scoring.md` — **giữ đúng thứ tự và đúng câu**, đừng để Maze tự sinh câu khác vì sẽ sai công thức tính điểm.
-6. Thêm 5 block **Open question**, dán 5 câu hỏi mở đã chốt ở `02-usability-report.md` §1.3.
-7. **Tự chạy thử một lượt bằng preview** (không tính vào 5 người, không tính vào pilot) để chắc link vào được `prod-dev.ems-fitus.cloud`, và **đăng ký thử bằng `Create guest account`** (không dùng nút Student — cần tài khoản Microsoft/Office 365 của HCMUS mà participant ngoài trường không có).
-8. Publish → lấy link → gửi cho từng người kèm khung giờ hẹn cuộc gọi.
-9. Cuối mỗi phiên: mở Maze → xem kết quả của người đó → copy vào `appendix/a1-session-notes.md` theo đúng định dạng bảng đã có sẵn ở đó.
+3. Thêm 2 block **Simple Input** đầu tiên (Họ và tên · Thông tin liên lạc) — thu bằng chứng người thật có mốc thời gian, thay vì chỉ hỏi miệng.
+4. Thêm **Mission/Task block**, dán nguyên văn: *"Khoa sắp có một workshop mà bạn muốn tham dự. Hãy đăng ký tham gia, rồi cho mình xem lại đăng ký đó trong hồ sơ của bạn."* — giữ đúng dạng mục tiêu, không thêm bước bấm cụ thể. ⚠️ **Đã chốt 06/08/2026: không dùng bản QR.** QR trên EMS là mã cố định theo tài khoản (không đổi theo có đăng ký hay không), nên làm tiêu chí hoàn thành yếu hơn hẳn "tìm lại được đăng ký trong My Activities" — xem `02-usability-report.md` §1.1.
+5. Thêm block hỏi kết quả tự nhận (3 lựa chọn, khớp định nghĩa đã chốt ở `02-usability-report.md`): Completed / Partial / Failed.
+6. Thêm khảo sát SUS: tìm block tên **"System Usability Scale"** hoặc **"SUS"** trong danh sách question block. Nếu Maze không có sẵn block này, tự thêm 10 block **Opinion scale (1–5)**, copy nguyên văn 10 câu từ `appendix/a2-sus-scoring.md` — **giữ đúng thứ tự và đúng câu**, đừng để Maze tự sinh câu khác vì sẽ sai công thức tính điểm.
+7. **Không** thêm block Open question trong Maze — 4 chủ đề bắt buộc (clarity/error recovery/speed/trust) hỏi miệng trong cuộc gọi song song, ghi vào `appendix/a1-session-notes.md`, để tránh hỏi trùng và tốn thời gian mỗi phiên.
+8. Tìm cài đặt study, bật **Screen recording + Camera recording** nếu tài khoản có quyền (xem `HUONG_DAN_DUNG_MAZE.md` PHẦN 7b) — không bắt buộc, cuộc gọi vẫn là nguồn ghi hình chính.
+9. **Tự chạy thử một lượt bằng preview** (không tính vào 5 người, không tính vào pilot) để chắc link vào được `prod-dev.ems-fitus.cloud`, và đăng nhập thử bằng tài khoản demo dùng chung.
+10. Publish → lấy link → gửi cho từng người kèm khung giờ hẹn cuộc gọi.
+11. Giữa mỗi phiên: vào EMS bấm **Cancel registration** để trả tài khoản demo về trạng thái sạch cho người tiếp theo (xem đánh đổi đã ghi ở `02-usability-report.md` §1.1).
+12. Cuối mỗi phiên: mở Maze → xem kết quả của người đó → copy vào `appendix/a1-session-notes.md` theo đúng định dạng bảng đã có sẵn ở đó.
 
 ### Việc chỉ bạn làm được (không giao lại được cho AI)
 
