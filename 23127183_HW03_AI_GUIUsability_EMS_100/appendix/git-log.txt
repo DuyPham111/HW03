@@ -5,6 +5,8 @@ Sinh bằng lệnh: git log --pretty=format:"%h %ad %an: %s" --date=format:"%Y-%
 
 === LOG ===
 
+3398917 2026-08-06 23:38 Pham Duy: docs(final): add repo link, mark Google Form submission done
+3572f52 2026-08-06 23:34 Pham Duy: docs(final): embed real B1/B2/B4 overview screenshots, add git log
 87be735 2026-08-06 23:20 Pham Duy: docs(readme): clean up stale warnings, fill remaining known values
 f3eb165 2026-08-06 23:04 Pham Duy: docs(task3): confirm CP-B2-01 extends to B4, fill group info and video link
 1a9cc11 2026-08-06 21:40 Pham Duy: docs(task3): run cross-platform matrix on 7 environments, log CP-B2-01
