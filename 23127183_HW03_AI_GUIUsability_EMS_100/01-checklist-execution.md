@@ -43,10 +43,10 @@
 | G-06 | Ảnh lỗi có khối giữ chỗ có ý nghĩa, không ô xám trơn | IA-01 | Failed | Failed | Passed | S1 = `SV-B1-04` (ô xám trơn, không chữ)<br>S2 = quan sát mới trên banner sự kiện `23127326_UT_510_15:36` — chỉ có icon ảnh chung chung, không nhãn chữ<br>S3 = thẻ My Activities hiện icon **kèm chữ "NO IMAGE"** — có nhãn, đạt tiêu chí | S1: `SV-B1-04`<br>S2: `CL-B2-01` | S1: [KS_B1_the-su-kien.png](evidence/survey/KS_B1_the-su-kien.png)<br>S2: [G-06-S2.png](evidence/task1b/G-06-S2.png) |
 | G-07 | Empty state nêu lý do + gợi ý hành động tiếp theo | IA-01 | Passed | N/A | Failed | S1 = **sửa lại `SV-B1-02`**: đã có câu lý do ("There are no events matching your filters") + icon xoá bộ lọc cạnh `Filters 3` — bấm thử xác nhận đúng là xoá hết bộ lọc. Kết luận cũ của tôi (khảo sát 05/08) đọc sót cả hai chi tiết này, đã sửa `SV-B1-02` thành severity 0.<br>S2 = không có tính năng filter trên trang chi tiết sự kiện — N/A hợp lý.<br>S3 = ép ra được trạng thái rỗng thật bằng Search từ khoá vô nghĩa (`G-07-S3-2.png`) — chỉ ghi "No activities found", **không nêu lý do** (không nói do search hay do filter ngày), yếu hơn hẳn bản của S1. Ghi nhận là `CL-B4-02` | S1: `= SV-B1-02` (đã sửa)<br>S3: `CL-B4-02` | S1: [G-07-S1.png](evidence/task1b/G-07-S1.png)<br>S3: [G-07-S3-2.png](evidence/task1b/G-07-S3-2.png) |
 | G-08 | Loading có skeleton/spinner, bố cục không nhảy khi data về | IA-01 | | | | | | |
-| G-09 | Giá trị rỗng dùng cùng 1 ký hiệu thống nhất | IA-01 | | | | 🔎 quan sát O3 (Location "-" trên B2), chưa có SV-ID riêng | | |
+| G-09 | Giá trị rỗng dùng cùng 1 ký hiệu thống nhất | IA-01 | Failed | Passed | Passed | Workshop B: S1 hiện `Location: Updating` + `Organizer: Updating`, nhưng S2 và S3 cùng sự kiện lại hiện `-`. S2/S3 tự thân Passed (đúng quy ước `-`), nhưng S1 lệch — coi cả nhóm là Failed vì đề bài đòi "cùng 1 ký hiệu trên MỌI màn" | S1: `CL-B1-01` | S1: [G-09-S1.png](evidence/task1b/G-09-S1.png)<br>S2: [G-09-S2.png](evidence/task1b/G-09-S2.png)<br>S3: [G-09-S3.png](evidence/task1b/G-09-S3.png) |
 | G-10 | Nhãn dùng ngôn ngữ người dùng, không phơi mã định danh nội bộ | IA-01 | | | | 🔎 khớp `SV-B1-03` (B1+B2) | | |
 | G-11 | EN/VI dịch toàn bộ text kể cả toast/tooltip/lỗi | IA-01 | | | | | | |
-| G-12 | Dữ liệu hiển thị (tên vai trò...) theo đúng ngôn ngữ đang chọn | IA-01 | | | | 🔎 khớp `SV-B2-02` (B2) | | |
+| G-12 | Dữ liệu hiển thị (tên vai trò...) theo đúng ngôn ngữ đang chọn | IA-01 | Passed | Failed | Failed | S1: không thấy dữ liệu tiếng Việt lẫn vào (tag, role label đều EN). S2/S3: role "Sinh viên" hiện tiếng Việt trong UI tiếng Anh — mở rộng `SV-B2-02` sang cả S3 (badge ROLES ở My Activities cũng lỗi này) | S2/S3: `= SV-B2-02` | S2: [G-12-S2.png](evidence/task1b/G-12-S2.png)<br>S3: [G-12-S3.png](evidence/task1b/G-12-S3.png) |
 | G-13 | Ngôn ngữ đã chọn được lưu, giữ nguyên sau reload | IA-01 | | | | | | |
 | G-14 | Tương phản chữ/nền ≥4.5:1 thường, ≥3:1 chữ lớn | IA-01 | | | | | | |
 | G-15 | Đọc được, không vỡ bố cục khi zoom 200% | IA-01 | | | | | | |
@@ -157,7 +157,24 @@ Mỗi item Failed → 1 block. Đây là nguồn trực tiếp để tạo bug e
 
 ![CL-B4-02](evidence/task1b/G-07-S3-2.png)
 
-### [F-04] `G-XX / F-XX / N-XX / S-XX` — _(tên item)_ — Màn hình: _(TODO)_
+### [F-04] `G-09` — Hai ký hiệu khác nhau cho cùng giá trị rỗng — Màn hình: S1 (B1)
+
+- **Kết quả:** ❌ Failed
+- **Kỳ vọng (theo item checklist):** Giá trị rỗng hiển thị bằng cùng một ký hiệu thống nhất trên mọi màn hình (ví dụ dấu `-`).
+- **Thực tế quan sát:** Thẻ sự kiện `Workshop B — het cho` trên B1 hiện `Location: Updating` và `Organizer: Updating`. Mở đúng sự kiện đó ở B2 và B4, cùng trường Location lại hiện dấu `-`. Hai ký hiệu khác nhau cho cùng một khái niệm "không có dữ liệu", và chữ "Updating" còn dễ hiểu lầm là dữ liệu đang được xử lý/sắp có.
+- **Các bước tái hiện:**
+  1. Mở B1, tìm thẻ `[23127183] Workshop B — het cho`
+  2. Đọc dòng Location và Organizer trên thẻ — thấy "Updating"
+  3. Bấm vào để mở B2 — Location hiện `-`
+  4. Vào My Profile → My Activities (B4), tìm cùng sự kiện — Location cũng hiện `-`
+- **Heuristic bị vi phạm:** N4 (consistency) · N2 (match real world — "Updating" sai nghĩa với thực tế "không có dữ liệu")
+- **Severity:** 2 — không chặn tác vụ nhưng gây hiểu lầm thật (nghĩ dữ liệu sắp có trong khi không hề có)
+- **Bug-ID trong log:** `CL-B1-01`
+- **Ảnh:** `evidence/task1b/G-09-S1.png` · `evidence/task1b/G-09-S2.png`
+
+![CL-B1-01](evidence/task1b/G-09-S1.png)
+
+### [F-05] `G-XX / F-XX / N-XX / S-XX` — _(tên item)_ — Màn hình: _(TODO)_
 
 - **Kết quả:** ❌ Failed
 - **Kỳ vọng (theo item checklist):** _(TODO)_
