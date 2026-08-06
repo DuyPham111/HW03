@@ -68,8 +68,19 @@
 - **AI Output:** Phát hiện thang đo Maze bị build nhầm 1–10 thay vì chuẩn 1–5, đề xuất công thức quy đổi `ceil(điểm/2)`; tính SUS cho 5 người bằng script Perl (không tính tay); phát hiện 2 finding mới (`US-B2-01` thiếu phản hồi sau đăng ký, `US-B2-02` nút quay lại khó tìm trên mobile) đều trùng khớp độc lập với finding đã có từ Task 1B.
 - **Human Review Notes:** Lần tính tay đầu tiên của AI cho điểm SUS của P3 ra 30 — sai. Phát hiện khi đối chiếu với kết quả tính bằng script mới thấy lệch (đúng là 27.5), đây là ví dụ thật cho nguyên tắc "đếm lại bằng lệnh, không tin trí nhớ" ở R6 CLAUDE.md. _(TODO — bạn tự nghe lại 5 video xác nhận số liệu do dự/lỗi thao tác, phần này AI không tự đếm được từ transcript text)_
 
-### [LOG-008] — Task 3 — _(TODO: điền sau khi bắt đầu, thiết kế ma trận đảm bảo phủ 3 chiều OS/browser/device)_
-### [LOG-009] — Task 3 — _(TODO: phân tích lỗi tương thích theo browser engine)_
+### [LOG-008] — Task 3: thiết kế bộ 7 tổ hợp BrowserStack + hướng dẫn từng bước
+
+- **Tool:** Claude Code (Claude Sonnet 5) · **Date:** 06/08/2026
+- **Prompt:** *"trình bày tiếng việt hướng dẫn tôi làm task 3 chi tiết hơn"*, sau đó *"fail là như thế nào làm thế nào biết fail"*, rồi yêu cầu liệt kê đủ tên 21 file ảnh để copy.
+- **AI Output:** Viết `docs/HUONG_DAN_TASK3.md` — bộ 7 tổ hợp tối thiểu phủ 3 OS/5 browser/3 device (Windows×Chrome/Edge/Firefox, macOS×Safari/Opera, Android tablet/phone), quy tắc nhận biết Fail (7 câu hỏi hiển thị/hành vi/luồng), danh sách 21 tên file chuẩn hoá.
+- **Human Review Notes:** Bạn tự đổi trình duyệt cho C6 (Chrome→Firefox rồi lại đổi C7 sang Chrome) 3 lần liên tiếp dựa trên máy thật xem được trong BrowserStack — AI phải cập nhật lại guide theo đúng lựa chọn thật mỗi lần, không tự ý giữ đề xuất ban đầu. _(TODO — bạn bổ sung nếu có điều chỉnh nào khác lúc chạy thật)_
+
+### [LOG-009] — Task 3: đọc 21 ảnh thật, phát hiện lỗi lệch giờ 5:30 giữa desktop và Android
+
+- **Tool:** Claude Code (Claude Sonnet 5) · **Date:** 06/08/2026
+- **Prompt:** *"tôi đã chụp xong tất cả các ảnh task 3 hãy xem và làm vào các file báo cáo cho tôi nếu cần tôi cung cấp thêm gì thì báo tôi"*
+- **AI Output:** Đọc trực tiếp 21 ảnh trong `evidence/task3/`, phát hiện B2 ban đầu dùng 2–3 sự kiện khác nhau giữa các ô (không so sánh công bằng được) và 6 ảnh mobile thiếu overlay tên trình duyệt — báo lại cho bạn thay vì tự điền liều. Sau khi bạn xác nhận C1 đã sửa đúng event và C6 cùng event với desktop, AI phát hiện giờ Event/Registration/Check-in trên Android thật lệch đúng 5:30 ở cả 6 mốc so với desktop — ghi thành `CP-B2-01`, điền đủ `03-compatibility-matrix.md` (7 ô × 3 màn = 21 dòng kết quả) và cập nhật `04-findings-log.md`/`README.md`/`00-main-report.md` theo số liệu mới (41 finding, sev 2 tăng lên 15).
+- **Human Review Notes:** Đã tự kiểm tra đồng hồ hệ thống của thiết bị Android thật lúc còn phiên: máy hiện 14:36 trong khi giờ Việt Nam thật là 21:36 — lệch 7 tiếng, xác nhận nguyên nhân gốc là thiết bị đặt sai múi giờ, không phải lỗi ngẫu nhiên. Quyết định không chụp lại 6 ảnh mobile thiếu overlay tên browser (đã đủ tin để dùng theo lựa chọn thực tế lúc chạy, chấp nhận rủi ro nếu bị chấm nghiêm phần overlay). _(TODO — bạn vẫn cần tự kiểm tra bổ sung B4 trên mobile xem có bị lệch giờ như B2 không)_
 ### [LOG-010] — Task 4 — Chuẩn hoá findings log, đồng bộ số liệu
 
 - **Tool:** Claude Code · **Date:** 06/08/2026 (xuyên suốt, nhiều lượt đồng bộ)

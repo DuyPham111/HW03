@@ -93,6 +93,7 @@ Chạy checklist trên EMS · chụp ảnh · tuyển và chạy 5 phiên user t
 | Làm checklist nhóm một mình | `docs/TASK1A_LAM_MOT_MINH.md` |
 | Phiếu khảo sát EMS (điền vào chỗ trống) | `docs/KHAO_SAT_EMS.md` |
 | Dựng study Maze — từng ô, từng nút | `docs/HUONG_DAN_DUNG_MAZE.md` |
+| Chạy Task 3 trên BrowserStack — từng bước, thứ tự, cách overlay | `docs/HUONG_DAN_TASK3.md` |
 | Danh sách commit các bước tiếp theo | `docs/COMMIT_PLAN.md` |
 | Đề chi tiết (bản chấm điểm) | `docs/DE_BAI_02_Spec_HW03_VI.md` |
 | Đề gốc tiếng Anh | `docs/de-goc/` |

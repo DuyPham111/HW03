@@ -81,7 +81,7 @@ Dạng `<NGUỒN>-<MÀN HÌNH>-<SỐ>` — nhìn ID là biết ngay lỗi tìm r
 | `CL-B4-02` | Screen B4 — My Activities, trạng thái rỗng | Usability | Khi Search ra 0 kết quả (từ khoá `áddsa`), trạng thái rỗng chỉ ghi **"No activities found"** — không nêu lý do (không nói do từ khoá tìm kiếm hay do bộ lọc ngày đang áp dụng), khác với B1 cùng tình huống lại có câu "There are no events matching your filters." Có nút `Clear all` nhưng nằm ở khối Filters phía trên, không gắn liền với thông báo rỗng | 1. Vào My Activities<br>2. Gõ từ khoá vô nghĩa vào ô Search activities<br>3. Đọc toàn bộ nội dung trạng thái rỗng, so với `SV-B1-02` (B1 có nêu lý do, B4 thì không)<br>**Heuristic:** N1 · S1 consistency | **1** | Thêm câu nêu lý do tương tự B1 ("No activities match your search/filters"), và cân nhắc đặt nút xoá bộ lọc/tìm kiếm ngay trong khối thông báo rỗng | [G-07-S3-2.png](evidence/task1b/G-07-S3-2.png) | |
 | `US-B2-01` | Screen B2 — khối đăng ký | Usability | **Người dùng nghi ngờ hành động đã thành công hay chưa**, vì đăng ký xong (hoặc thấy nút Register bị khoá) không có phản hồi/xác nhận nào giải thích. Xác nhận độc lập từ 2/5 người dùng thật, trùng khớp finding đã có sẵn từ Task 1B | 1. P2 trả lời câu Trust: "Tôi nghi ngờ sự kiện đã được đưa lên chưa"<br>2. P4 trả lời câu Trust: "Có. Nghi ngờ khi nút đăng kí bị disable"<br>**Heuristic:** N1 visibility of system status | **3** | Thêm toast xác nhận ngay sau khi đăng ký; thêm dòng giải thích cạnh nút khi đang bị khoá chờ điều kiện | [P2-transcript.txt](evidence/task2/P2-transcript.txt) · [P4-transcript.txt](evidence/task2/P4-transcript.txt) | |
 | `US-B2-02` | Screen B2 — nút quay lại (mobile) | Usability | Nút `Back to events` tồn tại thật (đã Passed ở `N-02`, Task 1B) nhưng participant dùng iPhone không tìm ra, phải tự cuộn lên đầu trang — khoảng cách giữa "nút có tồn tại" và "nút được nhận ra" trên màn hình nhỏ | 1. P3 (iPhone 14 Plus) trả lời câu Error recovery: "Không. Phải kiếm nút quay lại. Kéo lên đầu trang. Khó khăn"<br>**Heuristic:** N3 user control and freedom | **2** | Tăng độ nổi bật nút trên viewport hẹp (<480px), cân nhắc ghim cố định (sticky) khi cuộn | [P3-transcript.txt](evidence/task2/P3-transcript.txt) | |
-| `CP-B4-01` | Screen B4 | | _(dòng mẫu — điền sau đợt cross-platform)_ | | | | | |
+| `CP-B2-01` | Screen B2 — khối thời gian sự kiện | Bug | Cùng 1 sự kiện (`events/177`) hiện **giờ lệch 5 tiếng 30 phút** giữa 5 môi trường desktop (Windows/macOS, VM) và 2 môi trường Android thật (Galaxy Tab S9 + Firefox, Galaxy S23 + Chrome) — lệch đều ở cả 6 mốc (Event date, Registration period, Check-in period × From/To). Không có nhãn múi giờ nào trên trang để giải thích, khớp với `S-09`/`CL-B2-02` (không hiển thị múi giờ) nhưng đây là bằng chứng nó gây **sai lệch nội dung thật**, không chỉ thiếu nhãn | 1. Mở `/events/177` trên Windows/Chrome — ghi lại giờ Event/Registration/Check-in<br>2. Mở đúng URL đó trên Android thật (BrowserStack Real Device, Mumbai) — giờ lệch 5:30 ở cả 3 khối<br>3. Lặp lại trên 3 desktop khác (Edge/Firefox/Safari/Opera) — khớp Windows/Chrome, không lệch<br>**Heuristic:** N9 recover from errors (không có cách nào người dùng tự phát hiện đang xem giờ sai) · liên quan `S-09` | **2** | Cố định hiển thị theo 1 múi giờ server (UTC+7) cho mọi client, hoặc ghi rõ múi giờ đang hiển thị cạnh mỗi mốc thời gian | [B2_edge_windows_desktop.png](evidence/task3/B2_edge_windows_desktop.png) · [B2_firefox_android_tablet.png](evidence/task3/B2_firefox_android_tablet.png) · [B2_chrome_android_phone.png](evidence/task3/B2_chrome_android_phone.png) | |
 
 **Cột bắt buộc theo đề:** *ID · Scenario/Screen · Type (Bug \| Usability) · Description · Steps/Heuristic · Severity · Suggested fix · Screenshot ref · Form-submission timestamp.*
 **Timestamp:** thời điểm bấm Submit trên Google Form, định dạng `YYYY-MM-DD HH:MM` — để TA đối chiếu được với bản ghi của họ.
@@ -118,9 +118,9 @@ _(Ghi 1 câu chỉ ra chỗ cần nhìn trong ảnh.)_
 |---|:--:|:--:|:--:|:--:|
 | `CL-` Checklist (Task 1B) | **6** | **5** | **11** | ⬜ *(bạn tự submit 11 finding này lên Google Form rồi đánh dấu)* |
 | `US-` User testing (Task 2) | **0** | **2** | **2** | ⬜ *(bạn tự submit 2 finding này lên Google Form rồi đánh dấu)* |
-| `CP-` Cross-platform (Task 3) | | | | *(chưa chạy Task 3)* |
+| `CP-` Cross-platform (Task 3) | **1** | **0** | **1** | ⬜ *(bạn tự submit finding này lên Google Form rồi đánh dấu)* |
 | `SV-` Khảo sát EMS | **8** | **19** | **27** | ⬜ *(bạn tự submit 27 finding này lên Google Form rồi đánh dấu)* |
-| **Tổng** | **14** | **26** | **40** | |
+| **Tổng** | **15** | **26** | **41** | |
 
 > ⚠️ Đợt đồng bộ 06/08 phát hiện bảng này đã lệch so với thực tế (`CL-` từng ghi 7 Bug/4 Usability, đếm lại đúng là 6/5) — sửa lại bằng cách đếm lại toàn bộ bằng lệnh (mục *Đối chiếu cuối cùng*), không tin số liệu cũ.
 
@@ -128,16 +128,16 @@ _(Ghi 1 câu chỉ ra chỗ cần nhìn trong ảnh.)_
 
 | Severity | 4 | 3 | 2 | 1 | 0 | Tổng |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
-| Số finding | 0 | **10** | **14** | **13** | **3** | **40** |
+| Số finding | 0 | **10** | **15** | **13** | **3** | **41** |
 
-Không có finding severity 4. Mười finding severity 3 tập trung vào bốn nhóm — **không tìm được vé sau khi đăng ký** (`SV-B4-01`, `SV-B2-09`), **thao tác không hoàn tác được nhưng cảnh báo mơ hồ** (`SV-B2-07`), **hệ thống nói sai về chính nó** (`SV-ADM-02`, `SV-ADM-03`, `SV-ADM-04`), **bộ lọc không thực sự lọc** (`CL-B4-01`), và **người dùng thật xác nhận độc lập cùng một lỗ hổng** (`US-B2-01` — trùng với `SV-B2-09`/`S-01`/`S-14`, hai nguồn khác nhau cùng chỉ về một chỗ hỏng). Ba finding severity 0 (`SV-B2-08`, `SV-B1-02`, `SV-B2-03`) ghi lại những điều **đã kiểm và xác nhận là đúng** — cả ba đều là chỗ tôi từng kết luận sai từ ảnh khảo sát ban đầu, giữ lại để lưu vết đã kiểm chứ không phải báo lỗi.
+Không có finding severity 4. Mười finding severity 3 tập trung vào bốn nhóm — **không tìm được vé sau khi đăng ký** (`SV-B4-01`, `SV-B2-09`), **thao tác không hoàn tác được nhưng cảnh báo mơ hồ** (`SV-B2-07`), **hệ thống nói sai về chính nó** (`SV-ADM-02`, `SV-ADM-03`, `SV-ADM-04`), **bộ lọc không thực sự lọc** (`CL-B4-01`), và **người dùng thật xác nhận độc lập cùng một lỗ hổng** (`US-B2-01` — trùng với `SV-B2-09`/`S-01`/`S-14`, hai nguồn khác nhau cùng chỉ về một chỗ hỏng). Mười lăm finding severity 2 gồm cả `CP-B2-01` mới — cùng nhóm với `S-09`/`CL-B2-02` (không hiển thị múi giờ), giờ có bằng chứng cross-platform là chỗ thiếu nhãn múi giờ đó thật sự gây sai lệch nội dung, không chỉ thiếu tiện lợi. Ba finding severity 0 (`SV-B2-08`, `SV-B1-02`, `SV-B2-03`) ghi lại những điều **đã kiểm và xác nhận là đúng** — cả ba đều là chỗ tôi từng kết luận sai từ ảnh khảo sát ban đầu, giữ lại để lưu vết đã kiểm chứ không phải báo lỗi.
 
 ### Theo màn hình
 
 | Màn hình | Số finding | Severity cao nhất |
 |---|:--:|:--:|
 | B1 Trang chủ / Danh sách sự kiện | **8** | 2 |
-| B2 Trang chi tiết sự kiện *(gồm cả khối đăng ký)* | **15** | 3 |
+| B2 Trang chi tiết sự kiện *(gồm cả khối đăng ký)* | **16** | 3 |
 | B4 My Profile — QR Code + My Activities | **10** | 3 |
 | Admin — Create Event / Dashboard | **5** | 3 |
 | Thông báo & User guide *(xuyên màn hình)* | **2** | 2 |
@@ -148,10 +148,10 @@ Không có finding severity 4. Mười finding severity 3 tập trung vào bốn
 
 ```bash
 cd 23127183_HW03_AI_GUIUsability_EMS_100
-# đếm finding thật (bỏ dòng mẫu CP- chưa điền)
-grep -cE "^\| \`(SV|CL|US)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md
+# đếm finding thật
+grep -cE "^\| \`(SV|CL|US|CP)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md
 # phân bố severity
-grep -E "^\| \`(SV|CL|US)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md | awk -F'|' '{gsub(/[ *]/,"",$7); print $7}' | sort | uniq -c
+grep -E "^\| \`(SV|CL|US|CP)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md | awk -F'|' '{gsub(/[ *]/,"",$7); print $7}' | sort | uniq -c
 # phân bố Bug / Usability
 grep -E "^\| \`(SV|CL|US)-[A-Z0-9]+-[0-9]+\`" 04-findings-log.md | awk -F'|' '{gsub(/ /,"",$4); print $4}' | sort | uniq -c
 # phân bố theo màn hình

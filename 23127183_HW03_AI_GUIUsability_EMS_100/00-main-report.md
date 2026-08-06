@@ -262,11 +262,14 @@ Nhóm 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản �
 
 | Màn hình | Ô đã phủ | Pass | Fail | 3 OS ✓ | 5 browser ✓ | 3 device class ✓ |
 |---|:--:|:--:|:--:|:--:|:--:|:--:|
-| B1 Danh sách sự kiện | | | | | | |
-| B2 Trang chi tiết sự kiện | | | | | | |
-| B4 My Profile — QR Code + My Activities | | | | | | |
+| B1 Danh sách sự kiện | 7/7 | 7 | 0 | ✅ | ✅ | ✅ |
+| B2 Trang chi tiết sự kiện | 7/7 | 5 | 2 | ✅ | ✅ | ✅ |
+| B4 My Profile — QR Code + My Activities | 7/7 | 7 | 0 | ✅ | ✅ | ✅ |
+| **Tổng** | **21/21** | **19** | **2** | | | |
 
-**Lỗi tương thích nghiêm trọng nhất:** _(TODO — Task 3 chưa chạy, điền sau khi có ma trận thật)_
+**Lỗi tương thích nghiêm trọng nhất:** `CP-B2-01` (severity 2) — cùng một sự kiện hiển thị giờ Event/Registration/Check-in lệch **5 tiếng 30 phút** giữa 5 môi trường desktop và 2 môi trường Android thật, không có nhãn múi giờ nào giải thích. Chỉ xảy ra trên B2 (màn duy nhất hiện giờ tuyệt đối), không xảy ra trên B1 (chỉ đếm ngược tương đối). Chi tiết đầy đủ + nguyên nhân khả dĩ ở `03-compatibility-matrix.md` §5.
+
+⚠️ **Chưa hoàn toàn xác nhận:** 2 ảnh B4 trên mobile bị cắt trước khi thấy dòng ngày/giờ của hoạt động — chưa loại trừ được khả năng lỗi lệch giờ này cũng xảy ra ở B4. Xem ghi chú ở `03-compatibility-matrix.md` §4.
 
 ---
 
@@ -276,9 +279,9 @@ Nhóm 5 người / 4 kịch bản ⇒ theo §5 của đề, một kịch bản �
 |---|---|:--:|:--:|:--:|
 | Checklist execution | `CL-` | 6 | 5 | 11 |
 | User testing | `US-` | 0 | 2 | 2 |
-| Cross-platform | `CP-` | _(chưa chạy Task 3)_ | | 0 |
+| Cross-platform | `CP-` | 1 | 0 | 1 |
 | Khảo sát EMS | `SV-` | 8 | 19 | 27 |
-| **Tổng** | | **14** | **26** | **40** |
+| **Tổng** | | **15** | **26** | **41** |
 
 > Đếm bằng lệnh trên `04-findings-log.md`, khớp với bảng ở §"Thống kê" của chính file đó — không đếm tay.
 
@@ -300,7 +303,7 @@ Toàn bộ đã được submit lên Google Form (https://forms.gle/CJQFQCAXcsDb
 
 ## 7. Kết luận
 
-**Tình trạng chất lượng giao diện EMS ở kịch bản B:** Ba màn hình B1/B2/B4 dùng được cho luồng chính (tìm sự kiện → đăng ký → xem lại đăng ký) và không có lỗi chặn hoàn toàn (severity 4 = 0/40), nhưng tỉ lệ pass checklist chỉ 64.5% (69/107) và điểm SUS thực đo từ 5 người dùng thật chỉ 53.0/100 — dưới mốc trung bình 68. Phần lớn vấn đề không phải lỗi hiển thị vặt mà là **thiếu phản hồi hệ thống**: sau đăng ký, sau lọc, sau khi offline, giao diện thường "im lặng" thay vì xác nhận hoặc báo lỗi rõ ràng — đúng loại lỗi khiến người dùng bấm lại nhiều lần hoặc nghi ngờ thao tác đã thành công hay chưa, được cả checklist (`SV-B2-09`) lẫn 2/5 người dùng thật (`US-B2-01`) xác nhận độc lập.
+**Tình trạng chất lượng giao diện EMS ở kịch bản B:** Ba màn hình B1/B2/B4 dùng được cho luồng chính (tìm sự kiện → đăng ký → xem lại đăng ký) và không có lỗi chặn hoàn toàn (severity 4 = 0/41), nhưng tỉ lệ pass checklist chỉ 64.5% (69/107) và điểm SUS thực đo từ 5 người dùng thật chỉ 53.0/100 — dưới mốc trung bình 68. Phần lớn vấn đề không phải lỗi hiển thị vặt mà là **thiếu phản hồi hệ thống**: sau đăng ký, sau lọc, sau khi offline, giao diện thường "im lặng" thay vì xác nhận hoặc báo lỗi rõ ràng — đúng loại lỗi khiến người dùng bấm lại nhiều lần hoặc nghi ngờ thao tác đã thành công hay chưa, được cả checklist (`SV-B2-09`) lẫn 2/5 người dùng thật (`US-B2-01`) xác nhận độc lập.
 
 **Vấn đề mang tính hệ thống (không phải bug đơn lẻ):**
 1. **Không có phản hồi trạng thái sau hành động thay đổi dữ liệu** — đăng ký (`SV-B2-09`/`US-B2-01`), lọc trên My Activities (`CL-B4-01`), thao tác lúc offline (`CL-B4-04`) đều cùng một dạng: hệ thống nhận thao tác nhưng không nói gì về kết quả. Đây là nguyên nhân gốc của ít nhất 5 finding riêng lẻ trong 04-findings-log.md, không phải 5 lỗi độc lập.
