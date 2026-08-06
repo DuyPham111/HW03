@@ -3,9 +3,9 @@
 **SUT:** EMS — https://prod-dev.ems-fitus.cloud
 **Phạm vi phủ:** IA-01 chuẩn UI chung · IA-02 forms · IA-03 navigation · IA-04 feedback/state
 **Tổng số mục:** **61** *(yêu cầu tối thiểu: > 40)*
-**Phiên bản:** v1.0 · **Ngày chốt:** _(TODO)_
+**Phiên bản:** v1.1 · **Ngày chốt:** 06/08/2026 *(v1.0 — 38 mục AI + khảo sát đợt 1 — chốt 05/08/2026; v1.1 thêm 9 mục `RV` sau khảo sát đợt 2, xem ghi chú bên dưới)*
 
-**Đóng góp:** _(TODO — điền trước khi nộp. Nếu tự dựng một mình: "Bản v1 do Phạm Vũ Ngọc Duy (23127183) dựng ngày __, dựa trên khảo sát trực tiếp EMS ngày 05/08/2026. Đã gửi cả nhóm rà soát ngày __; [kết quả]")_
+**Đóng góp:** _(TODO — điền trước khi nộp, cần xác nhận với nhóm: "Bản v1.1 do Phạm Vũ Ngọc Duy (23127183) dựng, dựa trên khảo sát trực tiếp EMS 05–06/08/2026. Đã gửi cả nhóm rà soát ngày __; [kết quả]" — mình không biết nhóm đã họp rà soát chưa nên để bạn tự điền)_
 
 > Checklist này **giống hệt nhau giữa các thành viên trong nhóm** — đề §18 nói rõ đây là trường hợp được phép trùng. Mọi thứ khác (chọn màn hình, thực thi, usability, cross-platform, findings) phải riêng của từng người.
 > Nguồn tham khảo: [`references.md`](references.md) · Prompt AI và lý do AI bỏ sót: [`ai-prompts.md`](ai-prompts.md)
@@ -161,4 +161,4 @@ Kết quả mong đợi: `G: 16 · F: 16 · N: 12 · S: 17` → tổng **61** ·
 - [ ] Mọi mục có mã nguồn heuristic ✅
 - [ ] Mọi mục có `AI` hoặc `RV` ✅
 - [ ] Số mục `RV` (23) khớp số dòng giải trình ở [`ai-prompts.md`](ai-prompts.md) §3
-- [ ] **Bạn đã tự đọc lại 61 mục** và sửa/thêm/bớt theo ý mình trước khi chốt v1.0
+- [ ] **Bạn đã tự đọc lại 61 mục** và sửa/thêm/bớt theo ý mình trước khi chốt v1.1

@@ -4,7 +4,7 @@
 > Kịch bản đầy đủ + tiêu chí chấm: [`../../02-usability-report.md`](../../02-usability-report.md) · Ghi chú phiên: [`../../appendix/a1-session-notes.md`](../../appendix/a1-session-notes.md)
 
 > **Công cụ chạy phiên:** study Maze (`app.maze.co`) — Live website testing trên `https://prod-dev.ems-fitus.cloud`, kèm block họ tên + liên hệ, nhiệm vụ, trạng thái kết quả tự nhận, SUS 10 câu. Cách dựng chi tiết: `docs/HUONG_DAN_DUNG_MAZE.md`. **Dùng SONG SONG với cuộc gọi có chia sẻ màn hình** (Zalo/Meet) — Maze không thay được người quan sát trực tiếp think-aloud, kể cả khi có bật ghi màn hình/camera trong Maze.
-> _(TODO: dán link Maze study ở đây sau khi publish)_
+> ⬜ _(TODO: dán link Maze study **dành cho participant** ở đây — khác với link report `https://app.maze.co/report/New-study-1/dj3mw7msh009jy/intro` đã dùng để lấy dữ liệu phân tích; link participant là link gửi trước khi phiên bắt đầu, bạn tự tìm lại trong lịch sử gửi cho 5 người)_
 > Dự phòng nếu Maze trục trặc: [Vé tham gia kiểm thử EMS](https://claude.ai/code/artifact/aa535ccc-fb5d-4888-aa4b-c5ba924fe107) — trang tự dựng làm việc tương tự, không cần tài khoản.
 > Nội dung markdown bên dưới vẫn giữ lại làm **bản dự phòng giấy** (đọc miệng qua điện thoại) nếu participant không mở được link, và làm bằng chứng quy trình cho đề §12.
 

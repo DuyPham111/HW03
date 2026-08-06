@@ -146,10 +146,10 @@ Xác nhận: dù chọn phương án nào, **không có hai thành viên nào tr
 
 | Nguồn | Tiền tố ID | Bug | Usability | Tổng | Đã submit form |
 |---|---|:--:|:--:|:--:|:--:|
-| Checklist execution | `CL-` | **6** | **5** | **11** | _(TODO)_ |
-| User testing | `US-` | **0** | **2** | **2** | _(TODO)_ |
-| Cross-platform | `CP-` | | | | |
-| Khảo sát EMS | `SV-` | **8** | **19** | **27** | _(TODO)_ |
+| Checklist execution | `CL-` | **6** | **5** | **11** | ⬜ |
+| User testing | `US-` | **0** | **2** | **2** | ⬜ |
+| Cross-platform | `CP-` | | | | *(chưa chạy Task 3)* |
+| Khảo sát EMS | `SV-` | **8** | **19** | **27** | ⬜ |
 | **Tổng** | | **14** | **26** | **40** | |
 
 Phân bố severity của 40 finding: **sev 3 — 10 · sev 2 — 14 · sev 1 — 13 · sev 0 — 3** · không có sev 4. Ba finding sev 0 (`SV-B2-08`, `SV-B1-02`, `SV-B2-03`) là ba lần tôi tự sửa lại kết luận sai của chính mình từ đợt khảo sát ban đầu, sau khi kiểm chứng trực tiếp trên EMS. Hai finding `US-` mới từ Task 2 (`US-B2-01` sev 3, `US-B2-02` sev 2) — `US-B2-01` trùng khớp độc lập với `SV-B2-09`/`S-01`/`S-14` đã có từ trước, là bằng chứng hai chiều cho cùng một chỗ hỏng.
@@ -184,19 +184,20 @@ Phân bố severity của 40 finding: **sev 3 — 10 · sev 2 — 14 · sev 1 �
 
 | # | Hạng mục | Trạng thái |
 |---|---|---|
-| 0 | Khảo sát EMS + dựng dữ liệu thử | ⬜ |
-| 1a | Checklist chung > 40 item | ⬜ |
-| 1b | Chạy checklist trên B1/B2/B4 | ⬜ |
-| 2 | 5 phiên user testing + SUS | ⬜ |
-| 3 | Ma trận cross-platform | ⬜ |
-| 4 | Findings log khớp Google Form | ⬜ |
-| 5 | Agent Skills + video demo | ⬜ |
-| — | AI Audit Report | ⬜ |
-| — | AI Critique 200–300 từ *(đếm bằng `wc -w`)* | ⬜ |
-| — | Git commit log | ⬜ |
-| — | PDF cho mọi file `.md` chính | ⬜ |
+| 0 | Khảo sát EMS + dựng dữ liệu thử | ✅ |
+| 1a | Checklist chung > 40 item | ✅ (61 item) |
+| 1b | Chạy checklist trên B1/B2/B4 | ✅ (183/183 ô) |
+| 2 | 5 phiên user testing + SUS | ✅ nội dung · ⬜ bạn tự nghe lại 5 video điền "Quan sát của moderator" ở `appendix/a1-session-notes.md` |
+| 3 | Ma trận cross-platform | ⬜ chưa bắt đầu |
+| 4 | Findings log khớp Google Form | ✅ nội dung (40 finding) · ⬜ bạn tự submit + xác nhận Google Form khớp số dòng |
+| 5 | Agent Skills + video demo | ⬜ chưa bắt đầu |
+| — | AI Audit Report | 🟡 LOG-001…007, 010 đã viết; LOG-008/009 (Task 3) và LOG-011/012 (Task 5, hoàn thiện) chờ tới lúc làm |
+| — | AI Critique 200–300 từ *(đếm bằng `wc -w`)* | ⬜ chưa viết |
+| — | Git commit log | ⬜ chưa dán output `git log` thật vào `appendix/git-log.txt` |
+| — | PDF cho mọi file `.md` chính | ⬜ chưa xuất |
 
 > 🔴 Đề §18: **thiếu bất kỳ tài liệu bắt buộc nào → 0 điểm cả bài.**
+> ✅ ở trên nghĩa là **nội dung đã viết đầy đủ dựa trên dữ liệu thật đã thu thập** — không đồng nghĩa với "đã nộp"/"đã có PDF"/"TA đã xác minh". Các việc nộp-thật (submit form, xuất PDF, chụp ảnh còn thiếu) vẫn là việc của bạn theo mục 3 của `CLAUDE.md`.
 
 ## 7. Khai báo AI
 

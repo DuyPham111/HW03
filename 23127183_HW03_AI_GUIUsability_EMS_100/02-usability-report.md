@@ -2,8 +2,8 @@
 
 **Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Kịch bản:** B — User đăng ký tham dự sự kiện
 **Màn hình được test:** B1 Danh sách sự kiện · B2 Trang chi tiết sự kiện · B4 My Profile → My Activities
-**Thang đo dùng:** _(TODO: SUS hoặc UEQ-S)_
-**Thời gian chạy:** _(TODO)_ → _(TODO)_
+**Thang đo dùng:** SUS (System Usability Scale, Brooke 1996) — ⚠️ Maze bị cấu hình nhầm thang 1–10 thay vì chuẩn 1–5, đã quy đổi bằng `ceil(điểm/2)`, xem `appendix/a2-sus-scoring.md`
+**Thời gian chạy:** 06/08/2026 → 06/08/2026 (cả 5 phiên chạy trong cùng ngày qua study Maze)
 
 > ⚠️ **TA có thể gọi ngẫu nhiên 2 trong 5 người tham gia để xác minh. Giả mạo người tham gia = 0 điểm toàn bộ Task 2.**
 > Bằng chứng thô (notes từng phiên, phiếu SUS, bản ghi màn hình) lưu ở `evidence/task2/`.
@@ -37,7 +37,7 @@ Nội dung y hệt được dán vào Maze — xem `docs/HUONG_DAN_DUNG_MAZE.md`
 
 **Biến thể để lộ thêm trạng thái (dùng cho 2/5 participant):** giao sự kiện **đã hết chỗ và có bật Waitlist** thay vì sự kiện còn chỗ — để xem người dùng có hiểu mình đang vào **danh sách chờ** chứ không phải đã được nhận hay không. Đây thường là chỗ hiểu nhầm nặng nhất của luồng đăng ký, và nó chỉ lộ ra khi có người thật thao tác.
 
-**Điểm dừng (khi nào moderator can thiệp):** _(TODO — đề xuất: chỉ can thiệp khi participant bí hoàn toàn quá 2 phút ở cùng một chỗ; ghi lại mọi lần can thiệp)_
+**Điểm dừng (khi nào moderator can thiệp):** Chỉ can thiệp khi participant bí hoàn toàn quá 2 phút liên tục ở cùng một chỗ (không thao tác, không nói gì thêm khi được nhắc think-aloud); mọi lần can thiệp phải ghi rõ trong `appendix/a1-session-notes.md` — lúc nào, participant nào, can thiệp bằng câu gì. ⚠️ Chưa ghi nhận lần can thiệp nào từ 5 transcript đã xử lý — cần bạn xác nhận lại khi xem video.
 
 **Lưu ý vận hành — tài khoản và dữ liệu:** participant **không có tài khoản Microsoft/Office 365 của HCMUS** nên không đăng nhập được bằng nút `STUDENT` (xem `docs/KHAO_SAT_EMS.md` mục ⚠️4). Dùng **tài khoản demo dùng chung** đã tạo sẵn cho cả 5 phiên.
 
@@ -55,11 +55,11 @@ Ngoài `Workshop A`, cần chuẩn bị thêm bằng quyền admin: một sự k
 
 | Chỉ số | Cách đo | Ghi chú |
 |---|---|---|
-| Task success | Completed / Partial / Failed | Định nghĩa rõ "Partial" là gì: _(TODO)_ |
+| Task success | Completed / Partial / Failed | "Partial" = đăng ký thành công nhưng **không tự tìm ra / không xác nhận lại được** đăng ký đó trong My Activities (xem định nghĩa đầy đủ ở §1.1 "Điều kiện coi là hoàn thành") |
 | Time on task | Bấm giờ từ lúc bắt đầu đến lúc đạt success criteria | Trừ thời gian moderator nói chuyện |
 | Errors | Số thao tác sai dẫn tới kết quả ngoài mong muốn | |
 | Hesitations | Số lần dừng > _ giây hoặc nói ra sự bối rối | |
-| SUS / UEQ-S | Điền sau khi xong tác vụ | Bản _(TODO: EN/VI)_ |
+| SUS / UEQ-S | Điền sau khi xong tác vụ | Bản **VI** — dịch từ SUS gốc (Brooke 1996), soạn kèm bản đối chiếu song ngữ khi dựng câu hỏi trong Maze (xem `docs/HUONG_DAN_DUNG_MAZE.md`) |
 
 ### 1.3 Câu hỏi mở (probe questions)
 
@@ -195,6 +195,11 @@ Dữ liệu thô của từng phiên (dòng thời gian, lời nói nguyên văn
 
 ## Kết luận
 
-_(TODO — 1–2 đoạn: giao diện của kịch bản này khả dụng đến đâu, rào cản lớn nhất với người dùng thật là gì, và nếu chỉ sửa được 1 thứ thì nên sửa gì)_
+Luồng đăng ký sự kiện **khả dụng** — cả 5/5 người dùng thật hoàn thành tác vụ (100% Completed), không ai bị chặn hoàn toàn. Nhưng khả dụng không đồng nghĩa với dễ dùng: điểm SUS trung bình 53.0 (dưới mốc trung bình 68) và độ lệch chuẩn 24.67 bất thường cho thấy trải nghiệm **không đồng đều** — một nửa nhóm đánh giá tốt (P1=85, P5=80), nửa còn lại đánh giá kém (P2=42.5, P3=27.5, P4=30). Rào cản lớn nhất, xuất hiện lặp lại trong cả dữ liệu định lượng lẫn định tính, là **sự im lặng của hệ thống sau khi đăng ký** — không toast, không banner, chỉ một badge nhỏ mọc thêm — khiến 2/5 người trực tiếp nói ra sự nghi ngờ liệu thao tác đã thành công hay chưa (`US-B2-01`). Nếu chỉ sửa được một thứ, đó là thêm phản hồi rõ ràng ngay sau hành động đăng ký/huỷ đăng ký (khuyến nghị P0 ở bảng trên) — đây là điểm duy nhất được xác nhận độc lập bởi cả checklist Task 1B (`SV-B2-09`) và người dùng thật.
 
-**Giới hạn của nghiên cứu:** _(TODO — cỡ mẫu 5, chân dung người tham gia lệch về nhóm nào, môi trường test, dữ liệu SUT bị reset…)_
+**Giới hạn của nghiên cứu:**
+- Cỡ mẫu **5** là mức tối thiểu theo đề, đủ để phát hiện vấn đề usability phổ biến (theo Nielsen, 5 người phát hiện được ~85% vấn đề) nhưng không đủ để suy rộng tỉ lệ chính xác — con số 53.0 và độ lệch chuẩn lớn nên đọc như "tín hiệu có vấn đề", không phải ước lượng chính xác cho toàn bộ người dùng EMS.
+- Cả 5 participant đều dùng chung **một tài khoản demo** (không phải tài khoản HCMUS thật), và giữa mỗi phiên có thao tác Cancel Registration để dọn dữ liệu (xem §1.1) — đánh đổi đã ghi rõ, nhưng đồng nghĩa 5 phiên không hoàn toàn độc lập về mặt trạng thái dữ liệu như 5 tài khoản thật.
+- Nghiên cứu chạy **không đồng bộ, tự dẫn dắt qua study Maze** (participant tự làm theo hướng dẫn văn bản, không có moderator quan sát trực tiếp thời gian thực) — nghĩa là số liệu "Errors"/"Hesitations" phụ thuộc vào việc xem lại video sau, và không có cơ hội hỏi thêm ngay tại chỗ khi participant nói điều mơ hồ.
+- Thang SUS trên Maze bị cấu hình nhầm 1–10 thay vì chuẩn 1–5, phải quy đổi (`ceil(điểm/2)`) — quy đổi này là suy diễn hợp lý, không phải phép đo trực tiếp trên thang chuẩn.
+- SUT là môi trường dev dùng chung với cả lớp, dữ liệu có thể bị người khác chỉnh hoặc reset ngoài tầm kiểm soát giữa lúc chuẩn bị và lúc chạy 5 phiên thật.

@@ -116,10 +116,10 @@ _(Ghi 1 câu chỉ ra chỗ cần nhìn trong ảnh.)_
 
 | Nguồn | Bug | Usability | Tổng | Đã submit form |
 |---|:--:|:--:|:--:|:--:|
-| `CL-` Checklist (Task 1B) | **6** | **5** | **11** | _(TODO)_ |
-| `US-` User testing (Task 2) | **0** | **2** | **2** | _(TODO)_ |
-| `CP-` Cross-platform (Task 3) | | | | |
-| `SV-` Khảo sát EMS | **8** | **19** | **27** | _(TODO)_ |
+| `CL-` Checklist (Task 1B) | **6** | **5** | **11** | ⬜ *(bạn tự submit 11 finding này lên Google Form rồi đánh dấu)* |
+| `US-` User testing (Task 2) | **0** | **2** | **2** | ⬜ *(bạn tự submit 2 finding này lên Google Form rồi đánh dấu)* |
+| `CP-` Cross-platform (Task 3) | | | | *(chưa chạy Task 3)* |
+| `SV-` Khảo sát EMS | **8** | **19** | **27** | ⬜ *(bạn tự submit 27 finding này lên Google Form rồi đánh dấu)* |
 | **Tổng** | **14** | **26** | **40** | |
 
 > ⚠️ Đợt đồng bộ 06/08 phát hiện bảng này đã lệch so với thực tế (`CL-` từng ghi 7 Bug/4 Usability, đếm lại đúng là 6/5) — sửa lại bằng cách đếm lại toàn bộ bằng lệnh (mục *Đối chiếu cuối cùng*), không tin số liệu cũ.

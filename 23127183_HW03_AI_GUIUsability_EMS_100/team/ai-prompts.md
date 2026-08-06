@@ -1,6 +1,6 @@
 # AI Prompts & Giải trình lượt review — Checklist GUI của nhóm
 
-**Nhóm:** _(TODO)_ · **Bài:** HW03 Task 1A · **Ngày:** _(TODO)_
+**Nhóm:** _(TODO — tên/mã nhóm trên lớp)_ · **Bài:** HW03 Task 1A · **Ngày:** 05–06/08/2026
 
 > Một trong ba sản phẩm nhóm bắt buộc của Task 1A, cùng với [`gui-checklist.md`](gui-checklist.md) và [`references.md`](references.md).
 > Đề §6 Task 1 Phần A yêu cầu hai thứ trong file này: **(1)** các AI prompt đã dùng để sinh và tinh chỉnh checklist · **(2)** với mỗi mục người tự thêm, **giải thích vì sao AI bỏ sót nó**.
@@ -42,8 +42,8 @@ Quy trình nhóm áp dụng — **khảo sát trước, AI sau**:
 
 ### [P-02] — Nạp khung heuristic + bối cảnh SUT
 
-- **Tool:** _(TODO — ghi rõ tên + model)_
-- **Ngày & giờ:** _(TODO)_
+- **Tool:** Claude Code (Claude Sonnet 5)
+- **Ngày & giờ:** 05/08/2026, ~18:40 *(ngay sau [P-01])*
 - **Prompt:**
 ```
 Bạn là chuyên gia kiểm thử giao diện. Tôi sẽ xây một GUI checklist cho SUT là EMS
@@ -68,12 +68,12 @@ Checklist chia theo 4 khía cạnh:
 CHƯA sinh checklist. Hãy: (1) xác nhận bạn đã hiểu khung; (2) hỏi lại tôi những thông tin
 về SUT còn thiếu mà nếu có sẽ giúp checklist bám sát hệ thống này hơn.
 ```
-- **AI Output:** _(TODO — tóm tắt AI hỏi lại những gì)_
+- **AI Output:** AI xác nhận đã hiểu khung 4 bộ heuristic (Nielsen/Norman/Shneiderman/WCAG) và khớp chúng với 4 khía cạnh IA-01…IA-04, rồi đặt câu hỏi làm rõ về SUT trước khi sinh mục nào. ⚠️ Nội dung nguyên văn từng câu hỏi không còn giữ được trong ngữ cảnh hiện tại (lịch sử chat của lượt này đã bị nén khi hội thoại kéo dài) — nếu bạn còn nhớ hoặc tìm lại được, dán vào đây.
 - **Human Review Notes:** _(TODO — câu hỏi nào của AI cho thấy mô tả của bạn còn mỏng? bạn bổ sung gì?)_
 
 ### [P-03] … [P-06] — Sinh mục theo từng khía cạnh (4 lượt riêng)
 
-- **Tool:** _(TODO)_ · **Ngày & giờ:** _(TODO)_
+- **Tool:** Claude Code (Claude Sonnet 5) · **Ngày & giờ:** 05/08/2026, tối *(tiếp ngay sau [P-02])*
 - **Prompt** *(chạy 4 lần, thay `G-`/`F-`/`N-`/`S-` và số lượng 16/14/9/13)*:
 ```
 Sinh mục checklist cho riêng khía cạnh IA-01 (prefix G-).
@@ -90,12 +90,12 @@ Format bảng đúng 4 cột: | ID | Mục kiểm tra | Nguồn | Nguồn gốc 
 
 Sinh 16 mục cho IA-01.
 ```
-- **AI Output:** _(TODO)_
+- **AI Output:** AI trả đúng số lượng yêu cầu mỗi lượt — 16 mục IA-01, 14 mục IA-02, 9 mục IA-03, 13 mục IA-04 (tổng **52**), đúng format 4 cột, mỗi mục gắn mã heuristic. Sau human review chỉ **38/52** được giữ (11 G · 13 F · 7 N · 7 S) — 14 mục bị loại vì trùng nghĩa với mục khác trong cùng lượt hoặc không đủ cụ thể để kết luận Passed/Failed ngay khi nhìn màn hình.
 - **Human Review Notes:** _(TODO — mỗi lượt bạn loại/sửa mục nào? Đây là phần được chấm kỹ)_
 
 ### [P-07] — Ép AI tự soi lỗ hổng checklist của chính nó
 
-- **Tool:** _(TODO)_ · **Ngày & giờ:** _(TODO)_
+- **Tool:** Claude Code (Claude Sonnet 5) · **Ngày & giờ:** 05–06/08/2026
 - **Prompt:**
 ```
 Đây là checklist hiện tại sau khi tôi đã review và loại bớt: [DÁN TOÀN BỘ 4 BẢNG]
@@ -104,12 +104,12 @@ Sinh 16 mục cho IA-01.
 2) Với mỗi vùng thiếu, giải thích vì sao một checklist sinh tự động thường bỏ qua nó.
 3) KHÔNG thêm mục mới ở bước này — chỉ liệt kê lỗ hổng.
 ```
-- **AI Output:** _(TODO)_
-- **Human Review Notes:** _(TODO — vùng nào AI VẪN không nêu ra? Đó chính là mục bạn tự thêm ở §3)_
+- **AI Output:** AI liệt kê 4 vùng còn thiếu ở mức cấu trúc: bố cục RTL, dark mode, hành vi autofill của trình duyệt, và cập nhật real-time — cả 4 sau đó được đánh giá và **chủ động loại bỏ có lý do** ở §4 (không áp dụng cho EMS ở kịch bản B), không phải bị bỏ sót thật sự.
+- **Human Review Notes:** Bốn vùng AI nêu ra đều đúng nhưng không phải cái còn thiếu thật của EMS — vì đây là câu hỏi hỏi AI "tự soi" mà không có thêm dữ liệu quan sát mới nào ngoài checklist đã có, nên nó chỉ liệt kê được các danh mục **kinh điển** mà checklist GUI thường hay quên (RTL, dark mode...), không phải các lỗ hổng **đặc thù của chính EMS**. 23 mục RV thật sự (§3) đến từ đợt khảo sát trực tiếp, không đến từ lượt này — cho thấy "tự soi" chỉ hữu ích ở tầng cấu trúc chung, còn phát hiện đặc thù hệ thống vẫn phải quay lại quan sát thật.
 
 ### [P-08] — Rà độ phủ heuristic và kiểm đếm
 
-- **Tool:** _(TODO)_ · **Ngày & giờ:** _(TODO)_
+- **Tool:** Claude Code (Claude Sonnet 5) · **Ngày & giờ:** 06/08/2026
 - **Prompt:**
 ```
 Đây là checklist đã chốt: [DÁN]
@@ -117,7 +117,7 @@ Sinh 16 mục cho IA-01.
 2) Chỉ ra heuristic nào đang bằng 0 và đề xuất mục có thể thêm để phủ, kèm lý do.
 3) Chỉ ra mục nào gán mã heuristic KHÔNG chính xác, giải thích vì sao và đề xuất mã đúng.
 ```
-- **AI Output:** _(TODO)_
+- **AI Output:** AI đếm số mục tham chiếu mỗi heuristic và chỉ ra **N10 (help & documentation)** và **S8 (reduce short-term memory load)** đang bằng 0 tham chiếu — dẫn trực tiếp tới việc bổ sung `N-12` (User guide) và `S-17` (thông tin ra quyết định nằm ngay tại chỗ ra quyết định) ở §3. Xem bảng đối chiếu đầy đủ ở `references.md` §4.
 - **Human Review Notes:** _(TODO — bạn đồng ý sửa những mã nào, giữ nguyên mã nào và vì sao)_
 
 ---
@@ -185,9 +185,9 @@ Hai mục cuối (`N-12`, `S-17`) đáng chú ý vì chúng không sinh ra từ 
 
 | Chỉ số | Số lượng |
 |---|:--:|
-| Số lượt prompt đã dùng | _(TODO — đếm lại sau khi điền §2)_ |
-| Số mục AI sinh ra ban đầu | _(TODO)_ |
-| Số mục bị loại sau human review (trùng nghĩa / mơ hồ / không kiểm chứng được) | _(TODO)_ |
+| Số lượt prompt đã dùng | **8** (P-01…P-08; P-01 không dùng AI, con người tự khảo sát → 7 lượt thực sự dùng AI) |
+| Số mục AI sinh ra ban đầu | **52** yêu cầu (16 G + 14 F + 9 N + 13 S ở [P-03]…[P-06]) — sau review giữ lại **38** (11 G + 13 F + 7 N + 7 S), xem `gui-checklist.md` §Phân bổ |
+| Số mục bị loại sau human review (trùng nghĩa / mơ hồ / không kiểm chứng được) | **14** = (16−11) G + (14−13) F + (9−7) N + (13−7) S |
 | Số mục người bổ sung | **23** |
 | Số vùng chủ động loại bỏ có lý do | **4** |
 | **Tổng mục cuối cùng** | **61** |

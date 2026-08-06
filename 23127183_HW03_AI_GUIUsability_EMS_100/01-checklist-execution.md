@@ -2,7 +2,7 @@
 
 **Sinh viên:** Phạm Vũ Ngọc Duy (23127183) · **Kịch bản:** B — User đăng ký tham dự sự kiện
 **Checklist nguồn:** `team/gui-checklist.md` v1.1 — **61 item**
-**Ngày chạy:** _(TODO)_ · **Môi trường chạy:** _(TODO: OS + browser + độ phân giải)_
+**Ngày chạy:** 05–06/08/2026 · **Môi trường chạy:** _(TODO: OS + browser + độ phân giải bạn thực sự dùng — vd Windows 11 + Chrome 127 + 1920×1080 — mình không quan sát trực tiếp máy bạn nên không tự điền được)_
 
 > **Luật của đề:** mọi item phải được đánh **Passed** hoặc **Failed** cho **từng màn hình**. Cột **Notes** bắt buộc điền **lý do fail** với mỗi item Failed. Ảnh chụp **chỉ cần cho item Failed**.
 > Ký hiệu: `P` Passed · `F` Failed · `N/A` không áp dụng (**phải ghi lý do ở Notes**, không được để trống) · *(trống)* = chưa chạy — **không được để trống khi nộp**.
@@ -174,18 +174,22 @@ Mỗi item Failed → 1 block. Đây là nguồn trực tiếp để tạo bug e
 
 ![CL-B1-01](evidence/task1b/G-09-S1.png)
 
-### [F-05] `G-XX / F-XX / N-XX / S-XX` — _(tên item)_ — Màn hình: _(TODO)_
+### [F-05] `N-05` — URL không bao giờ phản ánh trạng thái filter đang áp dụng — Màn hình: S1 (B1) và S3 (B4)
 
 - **Kết quả:** ❌ Failed
-- **Kỳ vọng (theo item checklist):** _(TODO)_
-- **Thực tế quan sát:** _(TODO)_
+- **Kỳ vọng (theo item checklist):** Khi người dùng áp bộ lọc (trạng thái sự kiện, khoảng ngày...), URL phải đổi theo (query string hoặc path) để có thể copy/chia sẻ/bookmark đúng đúng view đang xem, và để nút Back của trình duyệt hoạt động đúng.
+- **Thực tế quan sát:** Trên B1, chọn filter `Ongoing` hoặc `Ended` — danh sách đổi đúng nhưng thanh địa chỉ **giữ nguyên** `/events`, không có query string nào được thêm. Trên B4 (My Activities) hiện tượng lặp lại y hệt khi chọn tab lọc trạng thái đăng ký.
 - **Các bước tái hiện:**
-  1. _(TODO)_
-  2. _(TODO)_
-- **Heuristic bị vi phạm:** _(TODO — N?/P?/S?)_
-- **Severity:** _(TODO: 0–4)_
-- **Bug-ID trong log:** `CL-B?-0?` *(chỉ tạo mới nếu KHÔNG trùng finding `SV-` nào có sẵn)*
-- **Ảnh:** `evidence/task1b/CL-B?-0?.png`
+  1. Mở B1 (`/events`), chọn filter trạng thái `Ended`
+  2. Quan sát thanh địa chỉ — vẫn là `/events`, không đổi
+  3. Copy URL này gửi cho người khác (hoặc mở tab ẩn danh dán vào) — mở ra thấy **toàn bộ danh sách chưa lọc**, không phải view `Ended` đã chọn
+  4. Lặp lại bước 1–3 trên B4 (My Activities) — cùng kết quả
+- **Heuristic bị vi phạm:** N7 (flexibility & efficiency of use — không chia sẻ/bookmark được view đã lọc) · WCAG 2.4.5 (nhiều cách để tới cùng nội dung)
+- **Severity:** 2 — không chặn tác vụ chính (đăng ký), nhưng làm hỏng khả năng chia sẻ/bookmark và là nguyên nhân gốc khiến `N-03`/`N-06` (mất filter khi back) không thể tự khắc phục bằng URL
+- **Bug-ID trong log:** `CL-B1-03`
+- **Ảnh:** `evidence/task1b/N-05-S1.png` · `evidence/task1b/N-05-S3.png`
+
+![CL-B1-03](evidence/task1b/N-05-S1.png)
 
 ---
 
