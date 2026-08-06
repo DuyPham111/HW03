@@ -132,7 +132,8 @@ Hệ quả: B2 có **hai nhánh phải kiểm riêng** — công khai và không
 ### 2.3 Màn hình B1 — Danh sách sự kiện
 
 **Ảnh tổng quan màn hình:**
-- [ ] ⚠️ Chưa có sẵn — chèn 1 ảnh chụp toàn màn hình B1 (đề nghị lưu tại `evidence/task1b/B1-overview.png`), overlay email MSSV + URL theo đúng quy định đề
+
+![B1 overview](evidence/task1b/B1-overview.png)
 
 **Item Failed** (danh sách đầy đủ 61 item × Passed/Failed/N/A/Notes/Ảnh nằm ở [`01-checklist-execution.md`](01-checklist-execution.md) — bảng dưới chỉ tóm tắt 11 item Failed để tránh trùng lặp dữ liệu):
 
@@ -155,7 +156,8 @@ Hệ quả: B2 có **hai nhánh phải kiểm riêng** — công khai và không
 ### 2.4 Màn hình B2 — Trang chi tiết sự kiện (gồm khối đăng ký)
 
 **Ảnh tổng quan màn hình:**
-- [ ] ⚠️ Chưa có sẵn — chèn 1 ảnh chụp toàn màn hình B2 (đề nghị lưu tại `evidence/task1b/B2-overview.png`), overlay email MSSV + URL
+
+![B2 overview](evidence/task1b/B2-overview.png)
 
 **Item Failed** (chi tiết đầy đủ ở [`01-checklist-execution.md`](01-checklist-execution.md)):
 
@@ -183,7 +185,8 @@ Hệ quả: B2 có **hai nhánh phải kiểm riêng** — công khai và không
 ### 2.5 Màn hình B4 — My Profile (QR Code + My Activities)
 
 **Ảnh tổng quan màn hình:**
-- [ ] ⚠️ Chưa có sẵn — chèn 1 ảnh chụp toàn màn hình B4 (đề nghị lưu tại `evidence/task1b/B4-overview.png`), overlay email MSSV + URL
+
+![B4 overview](evidence/task1b/B4-overview.png)
 
 **Item Failed** (chi tiết đầy đủ ở [`01-checklist-execution.md`](01-checklist-execution.md)):
 

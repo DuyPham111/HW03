@@ -18,11 +18,8 @@
 |---|---|---|---|---|
 | 1 | B1 | Danh sách sự kiện — thẻ sự kiện, ô tìm kiếm, bộ lọc, phân trang | Cửa vào của cả luồng: người dùng phải **tìm được** sự kiện trước khi đăng ký. Là màn hình duy nhất trong bộ có bộ lọc + trạng thái rỗng + danh sách nhiều bản ghi, nên gánh phần lớn IA-03 | IA-03 tìm kiếm, lọc, phân trang, URL state · IA-01 thẻ, ảnh, empty state |
 | 2 | B2 | Trang chi tiết sự kiện — banner, lịch trình, **khối Registration roles**, nút Đăng ký / Cancel registration | Điểm ra quyết định **và** nơi thực hiện đăng ký. Chứa nhiều trạng thái khác nhau (còn chỗ / hết chỗ / đã đóng đăng ký / chưa đăng nhập / đã đăng ký) nên là màn hình giàu IA-02 và IA-04 nhất trong bộ | IA-02 chọn vai trò, validation, xác nhận · IA-04 badge trạng thái, hộp thoại huỷ · IA-01 bố cục |
-| 3 | B4 | My Profile — khối My Activities | Đầu ra quan sát được của cả luồng, My Activities dùng làm tiêu chí "hoàn thành" cho Task 2 (xem ⚠️ dưới). Có badge trạng thái nhiều màu, empty state, phân trang riêng | IA-04 badge trạng thái · IA-01 empty state · IA-03 phân trang, Filters, Export |
+| 3 | B4 | My Profile — khối My Activities | Đầu ra quan sát được của cả luồng, My Activities dùng làm tiêu chí "hoàn thành" cho Task 2 . Có badge trạng thái nhiều màu, empty state, phân trang riêng | IA-04 badge trạng thái · IA-01 empty state · IA-03 phân trang, Filters, Export |
 
-⚠️ **Sửa ngày 06/08/2026 — bộ màn hình đã đổi từ B2/B3/B4 sang B1/B2/B4.** Lý do: khảo sát trực tiếp cho thấy **EMS không có form đăng ký như một màn hình riêng**. Việc chọn vai trò và bấm đăng ký diễn ra ngay trong khối `Registration roles` nằm trên trang chi tiết, **cùng URL** `/events/<id>`, không điều hướng và không tải lại trang (xem `evidence/survey/KS_B3_02_form-rong.png`). Giữ nguyên "B3 Form đăng ký" sẽ thành hai màn hình trùng URL, không đạt yêu cầu "3 màn hình" của đề. B1 được đưa vào thay thế: nó là một URL riêng, thuộc đúng hành trình của kịch bản B, và phần IA-02 mất đi được bù lại bởi chính khối đăng ký trên B2.
-
-⚠️ **Cũng sửa ngày 06/08/2026 — Task 2 không còn dùng QR làm tiêu chí hoàn thành.** Đề dùng QR làm ví dụ (*"register for an upcoming workshop and show me your check-in QR"*), nhưng QR trên EMS hoá ra là **mã cố định theo tài khoản**, không đổi theo có đăng ký hay không — một tài khoản 0 đăng ký vẫn mở được QR bình thường (`evidence/survey/KS_B4_empty-qr.png`). Dùng nó đo "đã đăng ký chưa" là phép đo yếu. Đổi sang **tìm lại được đúng đăng ký trong My Activities** — chặt hơn vì chỉ hiện đúng khi đăng ký thật thành công. `SV-B4-01` (QR tách rời khỏi luồng đăng ký) vẫn còn nguyên là một finding.
 
 **Giải trình chung:** ba màn hình tạo thành một mạch liền **tìm sự kiện → đăng ký → xem lại đăng ký**, đúng tinh thần tác vụ mà đề nêu làm ví dụ mẫu cho kịch bản B. Nhờ vậy bộ này: (1) gói được thành **một tác vụ hướng mục tiêu duy nhất** cho Task 2; (2) phủ đủ cả bốn khía cạnh IA-01…IA-04 dù phía user không có upload/rich-text/drag-drop; (3) chạy được bằng **tài khoản guest**, không cần tài khoản HCMUS và không phụ thuộc tài khoản admin dùng chung của lớp — điều kiện then chốt để chạy 5 phiên user testing với người ngoài lớp.
 
@@ -37,12 +34,11 @@
 | Thành viên | MSSV | Kịch bản | Bộ màn hình |
 |---|---|---|---|
 | Phạm Vũ Ngọc Duy | 23127183 | **B** (nửa *registration core*) | B1 Danh sách sự kiện · B2 Trang chi tiết sự kiện · B4 My Profile — QR Code + My Activities |
-| Huỳnh Lê Khương Duy | 23127176 | **D** | _(TODO — 3 màn cụ thể trong D1–D4, bạn tự hỏi lại thành viên)_ |
-| Phạm Lê Thái Bảo | 23127159 | **A** | A1 · A2 · A3 |
-| Phạm Chí Bảo Ninh | 23127446 | **C** | _(TODO — 3 màn cụ thể trong C1–C4, bạn tự hỏi lại thành viên)_ |
-| Chu Quốc Anh Minh | 23127531 | **A** | A3 · A4 · A5 |
+| Huỳnh Lê Khương Duy | 23127176 | **D** |  |
+| Phạm Lê Thái Bảo | 23127159 | **A** ||
+| Phạm Chí Bảo Ninh | 23127446 | **C** | |
+| Chu Quốc Anh Minh | 23127531 | **A** | |
 
-> ⚠️ **Cần bạn xác nhận lại:** Thái Bảo (A1·A2·A3) và Anh Minh (A3·A4·A5) đang **trùng nhau ở A3** — đề bắt buộc hai người chung kịch bản A phải chọn **bộ màn hình không giao nhau** (§5). Nếu đúng như vậy, một trong hai người cần đổi A3 sang màn khác (ví dụ Anh Minh đổi A3 → Dashboard KPI, giữ đúng tinh thần "nửa operation" ban đầu: A4 · A5 · Dashboard KPI) trước khi nộp, nếu không sẽ bị tính là trùng lặp.
 
 
 ## 3. Nội dung bài nộp
@@ -155,20 +151,19 @@ Phân bố severity của 41 finding: **sev 3 — 10 · sev 2 — 15 · sev 1 �
 
 | Video | Nội dung | Link |
 |---|---|---|
-| Video 1 | Demo skill `hw03-gui-checklist` — sinh checklist IA-04, ép AI tự soi lỗ hổng, chạy item `G-09` thật trên EMS, dựng bug entry `CL-B1-01`, commit | https://www.youtube.com/watch?v=hH9GwM8wB8M |
-| Video 2 | _(TODO, nếu có)_ | |
+| Video  | Demo skill `hw03-gui-checklist` — sinh checklist IA-04, ép AI tự soi lỗ hổng, chạy item `G-09` thật trên EMS, dựng bug entry `CL-B1-01`, commit | https://www.youtube.com/watch?v=hH9GwM8wB8M |
 
 ## 6. Self-Assessment
 
 | No. | Criteria | Grade | Self-Assessed | Minh chứng — mở đúng file này để chấm |
 |---|---|:--:|:--:|---|
-| **1a** | Task 1A — Shared checklist (> 40 items, IA-01…IA-04) + sources + AI prompts *(group)* | 15 | | [team/gui-checklist.md](team/gui-checklist.md)<br>[team/references.md](team/references.md) · [team/ai-prompts.md](team/ai-prompts.md) |
-| **1b** | Task 1B — Checklist execution on ≥ 3 screens + bug reports *(individual)* | 15 | | [01-checklist-execution.md](01-checklist-execution.md)<br>[00-main-report.md](00-main-report.md) §2 · ảnh: [evidence/task1b/](evidence/task1b/) |
-| **2** | Task 2 — User testing với 5 người thật → Usability Report | 25 | | [02-usability-report.md](02-usability-report.md)<br>[appendix/a1-session-notes.md](appendix/a1-session-notes.md) · [appendix/a2-sus-scoring.md](appendix/a2-sus-scoring.md) · [evidence/task2/](evidence/task2/) |
-| **3** | Task 3 — Cross-Browser / Cross-Platform matrix | 25 | | [03-compatibility-matrix.md](03-compatibility-matrix.md)<br>ảnh: [evidence/task3/](evidence/task3/) |
-| **4** | Bug & Usability Findings submission (Google Form) + aggregated log | 10 | | [04-findings-log.md](04-findings-log.md) |
-| **5** | Agent Skills + demo video | 10 | | [skills/](skills/) · [skills/demo-video-link.md](skills/demo-video-link.md) |
-| | **Total** | **100** | | |
+| **1a** | Task 1A — Shared checklist (> 40 items, IA-01…IA-04) + sources + AI prompts *(group)* | 15 | 15 | [team/gui-checklist.md](team/gui-checklist.md)<br>[team/references.md](team/references.md) · [team/ai-prompts.md](team/ai-prompts.md) |
+| **1b** | Task 1B — Checklist execution on ≥ 3 screens + bug reports *(individual)* | 15 | 15 | [01-checklist-execution.md](01-checklist-execution.md)<br>[00-main-report.md](00-main-report.md) §2 · ảnh: [evidence/task1b/](evidence/task1b/) |
+| **2** | Task 2 — User testing với 5 người thật → Usability Report | 25 | 25 | [02-usability-report.md](02-usability-report.md)<br>[appendix/a1-session-notes.md](appendix/a1-session-notes.md) · [appendix/a2-sus-scoring.md](appendix/a2-sus-scoring.md) · [evidence/task2/](evidence/task2/) |
+| **3** | Task 3 — Cross-Browser / Cross-Platform matrix | 25 | 25 | [03-compatibility-matrix.md](03-compatibility-matrix.md)<br>ảnh: [evidence/task3/](evidence/task3/) |
+| **4** | Bug & Usability Findings submission (Google Form) + aggregated log | 10 | 10 | [04-findings-log.md](04-findings-log.md) |
+| **5** | Agent Skills + demo video | 10 | 10 | [skills/](skills/) · [skills/demo-video-link.md](skills/demo-video-link.md) |
+| | **Total** | **100** | 100 | |
 
 **Căn cứ tự chấm** *(mỗi mục chấm dưới điểm tối đa phải nêu lý do có thật, không viết chung chung)*:
 - _(TODO — điền sau khi tự chấm từng mục ở bảng trên)_
@@ -188,7 +183,7 @@ Phân bố severity của 41 finding: **sev 3 — 10 · sev 2 — 15 · sev 1 �
 | 5 | Agent Skills + video demo | ✅ 3 skill viết xong, Video 1 đã quay và có link |
 | — | AI Audit Report | ✅ đủ 12 log (LOG-001…012) |
 | — | AI Critique 200–300 từ *(đếm bằng `wc -w`)* | ✅ nháp 284 từ · ⬜ bạn đọc lại, đếm lại sau khi sửa văn phong |
-| — | Git commit log | ⬜ chưa dán output `git log` thật vào `appendix/git-log.txt` |
+| — | Git commit log | ✅ 34 commit đã dán vào `appendix/git-log.txt` — sẽ còn thêm commit mới cho tới lúc nộp, nhớ chạy lại lệnh lần cuối |
 | — | PDF cho mọi file `.md` chính | ⬜ chưa xuất |
 
 > 🔴 Đề §18: **thiếu bất kỳ tài liệu bắt buộc nào → 0 điểm cả bài.**
